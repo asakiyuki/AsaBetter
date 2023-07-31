@@ -1,0 +1,1526 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+{
+    "namespace": "asa_command_block_content",
+    "asa_see_more_button": {
+        "type": "image",
+        "texture": "textures/ui/plus",
+        "size": [
+            12,
+            12
+        ],
+        "layer": 35
+    },
+    "asa_text_button": {
+        "type": "label",
+        "text": "$asa_button_text",
+        "max_size": [
+            "default",
+            10
+        ],
+        "layer": 35
+    },
+    "asa_second_tick": {
+        "type": "label",
+        "size": [
+            "default",
+            10
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+            0,
+            15
+        ],
+        "text": "#asa_delay_tick",
+        "bindings": [
+            {
+                "binding_type": "global",
+                "binding_condition": "always",
+                "binding_name": "#command_tick_delay"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('asa' + #command_tick_delay - 'asa')",
+                "target_property_name": "#asa_cmd_delay_tick"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_cmd_delay_tick / 20)",
+                "target_property_name": "#delay_second"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#delay_second / 60)",
+                "target_property_name": "#asa_minute"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#delay_second / 60)",
+                "target_property_name": "#delay_minute"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#delay_minute / 60)",
+                "target_property_name": "#delay_time_hours"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#delay_minute - (#delay_time_hours * 60))",
+                "target_property_name": "#delay_time_minutes"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#delay_second - (#asa_minute * 60))",
+                "target_property_name": "#delay_time_seconds"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(((#asa_cmd_delay_tick * 10) / 2) - (#delay_second * 100))",
+                "target_property_name": "#delay_time_demical_seconds"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(('§f0' + ((('§f' + #delay_time_demical_seconds + '§f') - '§f5§f' - '§f0§f') - '§f')) - '§f010' - '§f015' - '§f020' - '§f025' - '§f030' - '§f035' - '§f040' - '§f045' - '§f050' - '§f055' - '§f060' - '§f065' - '§f070' - '§f075' - '§f080' - '§f085' - '§f090' - '§f095')",
+                "target_property_name": "#asa_fixed_number"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§zTimes: ' + #delay_time_hours + 'h:' + #delay_time_minutes + 'm:' + #delay_time_seconds + '.' + #asa_fixed_number + #delay_time_demical_seconds + 's')",
+                "target_property_name": "#asa_delay_tick"
+            }
+        ]
+    },
+    "asa_command_block_screen": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_java_command_block_help.asa_horizontal_command_stack": {
+                    "$asa_command_type": "gamemode"
+                }
+            },
+            {
+                "asa_command_block_button_panel": {
+                    "type": "stack_panel",
+                    "size": [
+                        375,
+                        "100%c"
+                    ],
+                    "$default_checked_text_color": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "$hover_checked_text_color": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "controls": [
+                        {
+                            "asa_input_text_panel": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    10
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_input_text": {
+                                            "type": "label",
+                                            "text": "Set Console Command for Block",
+                                            "offset": [
+                                                1,
+                                                0
+                                            ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    5
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_command_type_panel": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_input_text_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "100%",
+                                                10
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "asa_input_text": {
+                                                        "type": "label",
+                                                        "text": "Console Command",
+                                                        "anchor_from": "left_middle",
+                                                        "anchor_to": "left_middle",
+                                                        "offset": [
+                                                            1,
+                                                            0
+                                                        ],
+                                                        "size": [
+                                                            "default",
+                                                            10
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_input_command": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_text_box_common.asa_text_box_template": {
+                                                        "size": [
+                                                            "fill",
+                                                            22
+                                                        ],
+                                                        "text_box_name": "command_block.command_text",
+                                                        "max_length": 32500,
+                                                        "button_mappings": [
+                                                            {
+                                                                "from_button_id": "button.menu_select",
+                                                                "to_button_id": "button.menu_select",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "pressed"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_ok",
+                                                                "to_button_id": "button.menu_select",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "pressed"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_cancel",
+                                                                "to_button_id": "$cancel_button_id",
+                                                                "handle_select": false,
+                                                                "handle_deselect": true,
+                                                                "mapping_type": "global"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_autocomplete",
+                                                                "to_button_id": "button.chat_autocomplete",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "global"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_autocomplete_back",
+                                                                "to_button_id": "button.chat_autocomplete_back",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "global"
+                                                            }
+                                                        ],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "global",
+                                                                "binding_condition": "visible",
+                                                                "binding_name": "#command_text_edit",
+                                                                "binding_name_override": "#item_name"
+                                                            }
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_label_box@asa_text_box_common.text_box_label": {
+                                                                    "max_size": [
+                                                                        "100% - 4px",
+                                                                        10
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "global",
+                                                                            "binding_condition": "visible",
+                                                                            "binding_name": "#command_text_edit",
+                                                                            "binding_name_override": "#item_name"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        0,
+                                                                        0,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "hover@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "pressed@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default": {
+                                                                    "type": "label",
+                                                                    "text": "Enter your command here",
+                                                                    "size": [
+                                                                        "default",
+                                                                        10
+                                                                    ],
+                                                                    "anchor_from": "left_middle",
+                                                                    "anchor_to": "left_middle",
+                                                                    "alpha": 0.7,
+                                                                    "offset": [
+                                                                        2,
+                                                                        0
+                                                                    ],
+                                                                    "layer": 10,
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_control_name": "asa_label_box",
+                                                                            "source_property_name": "(#item_name = '')",
+                                                                            "target_property_name": "#visible",
+                                                                            "resolve_sibling_scope": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "space": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            1,
+                                                            1
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "@player_screen_button_common.asa_play_button_template": {
+                                                        "size": [
+                                                            22,
+                                                            22
+                                                        ],
+                                                        "$toggle_group": 1,
+                                                        "$asa_toggle_name": "asa_command_textbox_size",
+                                                        "$asa_toggle_bindings": "asa_seemore_panel",
+                                                        "$button_content": "asa_command_block_content.asa_see_more_button"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    6
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_delay_ticks_and_hover_name": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
+                                "orientation": "horizontal",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_hover_text": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "fill",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "asa_input_text_panel": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            "100%",
+                                                            10
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_input_text": {
+                                                                    "type": "label",
+                                                                    "text": "commandBlockScreen.hoverNote",
+                                                                    "anchor_from": "left_middle",
+                                                                    "anchor_to": "left_middle",
+                                                                    "offset": [
+                                                                        1,
+                                                                        0
+                                                                    ],
+                                                                    "size": [
+                                                                        "default",
+                                                                        10
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "space": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            1,
+                                                            1
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_text_box_common.asa_text_box_template": {
+                                                        "size": [
+                                                            "100%",
+                                                            22
+                                                        ],
+                                                        "text_box_name": "command_block.hover_note_textbox",
+                                                        "max_length": 125,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "global",
+                                                                "binding_condition": "visible",
+                                                                "binding_name": "#command_hover_note",
+                                                                "binding_name_override": "#item_name"
+                                                            }
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_label_box@asa_text_box_common.text_box_label": {
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "global",
+                                                                            "binding_condition": "visible",
+                                                                            "binding_name": "#command_hover_note",
+                                                                            "binding_name_override": "#item_name"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        0,
+                                                                        0,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "hover@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "pressed@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default": {
+                                                                    "type": "label",
+                                                                    "text": "Note the command block on hover",
+                                                                    "size": [
+                                                                        "default",
+                                                                        10
+                                                                    ],
+                                                                    "anchor_from": "left_middle",
+                                                                    "anchor_to": "left_middle",
+                                                                    "alpha": 0.7,
+                                                                    "layer": 10,
+                                                                    "offset": [
+                                                                        2,
+                                                                        0
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_control_name": "asa_label_box",
+                                                                            "source_property_name": "(#item_name = '')",
+                                                                            "target_property_name": "#visible",
+                                                                            "resolve_sibling_scope": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                3,
+                                                6
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_delay_tick_stack": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "fill",
+                                                "100%cm"
+                                            ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "asa_delay_ticks_panel": {
+                                                        "type": "stack_panel",
+                                                        "size": [
+                                                            "fill",
+                                                            "100%c - 11px"
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_input_text_panel": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        10
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "asa_input_text": {
+                                                                                "type": "label",
+                                                                                "text": "commandBlockScreen.tickDelay",
+                                                                                "anchor_from": "left_middle",
+                                                                                "anchor_to": "left_middle",
+                                                                                "offset": [
+                                                                                    1,
+                                                                                    0
+                                                                                ],
+                                                                                "size": [
+                                                                                    "default",
+                                                                                    10
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "space": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "@asa_text_box_common.asa_text_box_template": {
+                                                                    "size": [
+                                                                        "100%",
+                                                                        22
+                                                                    ],
+                                                                    "text_box_name": "command_block.tick_delay_textbox",
+                                                                    "max_length": 20,
+                                                                    "text_type": "NumberChars",
+                                                                    "text_control": "18627765_asa_delay_tick",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "global",
+                                                                            "binding_condition": "visible",
+                                                                            "binding_name": "#command_tick_delay",
+                                                                            "binding_name_override": "#item_name"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "18627765_asa_delay_tick@asa_text_box_common.text_box_label": {
+                                                                                "bindings": [
+                                                                                    {
+                                                                                        "binding_type": "global",
+                                                                                        "binding_condition": "visible",
+                                                                                        "binding_name": "#command_tick_delay",
+                                                                                        "binding_name_override": "#item_name"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "default@asa_text_box_common.asa_text_box_image": {
+                                                                                "color": [
+                                                                                    0,
+                                                                                    0,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "hover@asa_text_box_common.asa_text_box_image": {
+                                                                                "color": [
+                                                                                    1,
+                                                                                    1,
+                                                                                    1
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "pressed@asa_text_box_common.asa_text_box_image": {
+                                                                                "color": [
+                                                                                    1,
+                                                                                    1,
+                                                                                    1
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "121231": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "asa_inpu253163t_text_panel": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        10
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "@asa_second_tick": {
+                                                                                "offset": [
+                                                                                    1,
+                                                                                    0
+                                                                                ],
+                                                                                "anchor_from": "left_middle",
+                                                                                "anchor_to": "left_middle"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "space": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            1,
+                                                            1
+                                                        ],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#execute_on_first_tick_enabled",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "exectue_on_first_tick_panel": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            "100%cm",
+                                                            22
+                                                        ],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#execute_on_first_tick_enabled",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "output_toggle@asa_toggle_common.asa_setting_toggle": {
+                                                                    "size": [
+                                                                        55,
+                                                                        22
+                                                                    ],
+                                                                    "offset": [
+                                                                        0,
+                                                                        11
+                                                                    ],
+                                                                    "$option_enabled_binding_name": "#execute_on_first_tick_enabled",
+                                                                    "$asa_binding_toggle": "#execute_on_first_tick",
+                                                                    "$asa_state_toggle": "execute_on_first_tick",
+                                                                    "anchor_from": "center",
+                                                                    "anchor_to": "center",
+                                                                    "$disable_toggle_name": "FT: OFF",
+                                                                    "$enable_toggle_name": "FT: ON"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    6
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_output_command": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_input_text_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "100%",
+                                                10
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "asa_input_text": {
+                                                        "type": "label",
+                                                        "text": "advMode.previousOutput",
+                                                        "anchor_from": "left_middle",
+                                                        "anchor_to": "left_middle",
+                                                        "offset": [
+                                                            1,
+                                                            0
+                                                        ],
+                                                        "size": [
+                                                            "default",
+                                                            10
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_output_stack": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_text_box_common.asa_text_box_template": {
+                                                        "size": [
+                                                            "fill",
+                                                            22
+                                                        ],
+                                                        "text_box_name": "command_block.output_text",
+                                                        "max_length": 32500,
+                                                        "button_mappings": [],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "global",
+                                                                "binding_condition": "visible",
+                                                                "binding_name": "#command_output_text",
+                                                                "binding_name_override": "#item_name"
+                                                            }
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_label_box@asa_text_box_common.text_box_label": {
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "global",
+                                                                            "binding_condition": "visible",
+                                                                            "binding_name": "#command_output_text",
+                                                                            "binding_name_override": "#item_name"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        0,
+                                                                        0,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "hover@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "pressed@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "space": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            1,
+                                                            1
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "output_toggle@asa_toggle_common.asa_setting_toggle": {
+                                                        "size": [
+                                                            35,
+                                                            22
+                                                        ],
+                                                        "$option_enabled_binding_name": "#close_button_visible_binding_name",
+                                                        "$asa_binding_toggle": "#track_output_binding",
+                                                        "$asa_state_toggle": "track_output",
+                                                        "$disable_toggle_name": "OFF",
+                                                        "$enable_toggle_name": "ON"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    6
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_block_type_stack": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
+                                "orientation": "horizontal",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "@asa_toggle_common.asa_state_button_toggle": {
+                                            "$asa_state_toggle": "#command_impulse_mode",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                            "$button_text": "commandBlockScreen.blockType.impulse"
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_toggle_common.asa_state_button_toggle": {
+                                            "$asa_state_toggle": "#command_chain_mode",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                            "$button_text": "commandBlockScreen.blockType.chain"
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_toggle_common.asa_state_button_toggle": {
+                                            "$asa_state_toggle": "#command_repeat_mode",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                            "$button_text": "commandBlockScreen.blockType.repeat"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    2
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_toggle_contents": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
+                                "orientation": "horizontal",
+                                "$default_checked_text_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "$hover_checked_text_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_compact_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_button_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "@asa_toggle_common.asa_state_button_toggle": {
+                                                        "$asa_state_toggle": "#command_conditional_mode",
+                                                        "size": [
+                                                            "100%",
+                                                            22
+                                                        ],
+                                                        "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                                        "$button_text": "commandBlockScreen.condition.unconditional",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_unconditional_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_toggle_common.asa_state_button_toggle": {
+                                                        "$asa_state_toggle": "#command_unconditional_mode",
+                                                        "size": [
+                                                            "100%",
+                                                            22
+                                                        ],
+                                                        "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                                        "$button_text": "commandBlockScreen.condition.conditional",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_conditional_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                2,
+                                                2
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_button_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "@asa_toggle_common.asa_state_button_toggle": {
+                                                        "$asa_state_toggle": "#command_always_on_mode",
+                                                        "size": [
+                                                            "100%",
+                                                            22
+                                                        ],
+                                                        "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                                        "$button_text": "commandBlockScreen.redstone.needs_redstone",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_needs_redstone_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_toggle_common.asa_state_button_toggle": {
+                                                        "$asa_state_toggle": "#command_needs_redstone_mode",
+                                                        "size": [
+                                                            "100%",
+                                                            22
+                                                        ],
+                                                        "$button_type_panel": "asa_toggle_common.button_text_panel",
+                                                        "$button_text": "commandBlockScreen.redstone.always_on",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_always_on_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_input_text_panel": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    10
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_seemore_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_input_text": {
+                                            "type": "label",
+                                            "text": "Set Console Command for Block",
+                                            "offset": [
+                                                1,
+                                                0
+                                            ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    5
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_seemore_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_command_type_panel": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_seemore_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_input_text_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "100%",
+                                                10
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "asa_input_text": {
+                                                        "type": "label",
+                                                        "text": "Console Command",
+                                                        "anchor_from": "left_middle",
+                                                        "anchor_to": "left_middle",
+                                                        "offset": [
+                                                            1,
+                                                            0
+                                                        ],
+                                                        "size": [
+                                                            "default",
+                                                            10
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_input_command": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_text_box_common.asa_text_box_template": {
+                                                        "size": [
+                                                            "fill",
+                                                            130
+                                                        ],
+                                                        "text_box_name": "command_block.command_text",
+                                                        "max_length": 32500,
+                                                        "button_mappings": [
+                                                            {
+                                                                "from_button_id": "button.menu_select",
+                                                                "to_button_id": "button.menu_select",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "pressed"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_ok",
+                                                                "to_button_id": "button.menu_select",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "pressed"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_cancel",
+                                                                "to_button_id": "$cancel_button_id",
+                                                                "handle_select": false,
+                                                                "handle_deselect": true,
+                                                                "mapping_type": "global"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_autocomplete",
+                                                                "to_button_id": "button.chat_autocomplete",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "global"
+                                                            },
+                                                            {
+                                                                "from_button_id": "button.menu_autocomplete_back",
+                                                                "to_button_id": "button.chat_autocomplete_back",
+                                                                "handle_select": true,
+                                                                "handle_deselect": false,
+                                                                "mapping_type": "global"
+                                                            }
+                                                        ],
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "global",
+                                                                "binding_condition": "visible",
+                                                                "binding_name": "#command_text_edit",
+                                                                "binding_name_override": "#item_name"
+                                                            }
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "asa_label_box@asa_text_box_common.text_box_label": {
+                                                                    "max_size": [
+                                                                        "100% - 4px",
+                                                                        "100% - 10px"
+                                                                    ],
+                                                                    "anchor_from": "top_left",
+                                                                    "anchor_to": "top_left",
+                                                                    "offset": [
+                                                                        2,
+                                                                        2
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "global",
+                                                                            "binding_condition": "visible",
+                                                                            "binding_name": "#command_text_edit",
+                                                                            "binding_name_override": "#item_name"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        0,
+                                                                        0,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "hover@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "pressed@asa_text_box_common.asa_text_box_image": {
+                                                                    "color": [
+                                                                        1,
+                                                                        1,
+                                                                        1
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "default": {
+                                                                    "type": "label",
+                                                                    "text": "Enter your command here",
+                                                                    "size": [
+                                                                        "default",
+                                                                        10
+                                                                    ],
+                                                                    "anchor_from": "top_left",
+                                                                    "anchor_to": "top_left",
+                                                                    "alpha": 0.7,
+                                                                    "offset": [
+                                                                        2,
+                                                                        2
+                                                                    ],
+                                                                    "layer": 10,
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_control_name": "asa_label_box",
+                                                                            "source_property_name": "(#item_name = '')",
+                                                                            "target_property_name": "#visible",
+                                                                            "resolve_sibling_scope": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    3
+                                ]
+                            }
+                        },
+                        {
+                            "@player_screen_button_common.asa_play_button_template": {
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
+                                "$toggle_group": 0,
+                                "$asa_toggle_bindings": "asa_compact_panel",
+                                "$asa_toggle_name": "asa_command_textbox_size",
+                                "$asa_button_text": "Compact",
+                                "$button_content": "asa_command_block_content.asa_text_button",
+                                "$asa_toggle_state_default": true,
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_seemore_panel",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    3
+                                ]
+                            }
+                        },
+                        {
+                            "asa_toggle_contents": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
+                                "orientation": "horizontal",
+                                "$default_checked_text_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "$hover_checked_text_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "controls": [
+                                    {
+                                        "@asa_start_button_template.asa_start_button_text": {
+                                            "$asa_button_text": "Done",
+                                            "size": [
+                                                "fill",
+                                                22
+                                            ],
+                                            "$asa_pressed_action": "button.menu_exit"
+                                        }
+                                    },
+                                    {
+                                        "space": {
+                                            "type": "panel",
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_start_button_template.asa_start_button_image": {
+                                            "size": [
+                                                22,
+                                                22
+                                            ],
+                                            "$asa_pressed_action": "button.menu_leave_screen",
+                                            "$asa_button_text": "gui.cancel",
+                                            "$asa_button_icon": "textures/ui/close_button_default_light"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "asa_command_block_screen_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_command_block_screen": {}
+            }
+        ]
+    }
+}

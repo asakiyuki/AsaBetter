@@ -1,0 +1,175 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_pressed_anims",
+
+    //Mod Menu Anims
+    "asa_mod_menu_open_wait": {
+        "anim_type": "offset",
+        "from": [ 0, "-150%" ],
+        "to": [ 0, "-150%" ],
+        "$anims_wait_duration": 0.1,
+        "duration": "$anims_wait_duration",
+        "next": "@asa_pressed_anims.asa_mod_menu_open"
+    },
+
+    "asa_mod_menu_open": {
+        "anim_type": "offset",
+        "$asa_menu_from|default": [ 0, "-110%" ],
+        "from": "$asa_menu_from",
+        "to": [ 0, 0 ],
+        "easing": "out_sine",
+        "duration": 0.8
+    },
+
+    //Close panel
+    "asa_start_notication_close_panel": {
+        "anim_type": "offset",
+        "from": [ 0, 10000 ],
+        "to": [ 0, 10000 ],
+        "duration": 0,
+        "play_event": "button.menu_settings"
+    },
+
+    //Section Tabs
+    "asa_open_section_tab": {
+        "anim_type": "offset",
+        "from": [ 0, 0 ],
+        "to": [ "30%", 0 ],
+        "easing": "in_sine",
+        "duration": 0,
+        "reset_event": "asa_pressed.exit_section"
+    },
+
+    "asa_open_section": {
+        "anim_type": "offset",
+        "from": [ "30%", 0 ],
+        "to": [ 0, 0 ],
+        "easing": "out_sine",
+        "duration": 0.6,
+        "play_event": "asa_pressed.open_section"
+    },
+
+    //Other Screen Start
+    "asa_open_screen_section_start": {
+        "anim_type": "offset",
+        "from": [ "200%", 0 ],
+        "to": [ 0, 0 ],
+        "easing": "out_sine",
+        "duration": 0,
+        "play_event": "asa_pressed.open_section"
+    },
+
+    "asa_open_screen_section_start_alpha_wait": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 0,
+        "duration": 0,
+        "play_event": "asa_pressed.open_section",
+        "next": "asa_pressed_anims.asa_open_screen_section_start_alpha"
+    },
+
+    "asa_open_screen_section_start_alpha": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 0.5,
+        "duration": 0.6
+    },
+
+    "asa_exit_screen_section_start_wait": {
+        "anim_type": "offset",
+        "from": [ "100%", 0 ],
+        "to": [ "100%", 0 ],
+        "easing": "out_sine",
+        "duration": 0
+    },
+
+    "asa_exit_screen_section_start_alpha": {
+        "anim_type": "alpha",
+        "from": 0.5,
+        "to": 0,
+        "duration": 0
+    },
+
+    //Noti Music Player
+    "asa_music_offset": {
+        "anim_type": "offset",
+        "from": [ 0, 25 ],
+        "to": [ 0, 25 ],
+        "duration": 1,
+        "next": "asa_pressed_anims.asa_music_offset_1"
+    },
+
+    "asa_music_offset_1": {
+        "anim_type": "offset",
+        "from": [ 0, 25 ],
+        "to": [ 0, -150 ],
+        "easing": "in_circ",
+        "duration": 0.8
+    },
+
+
+
+    "asa_music_played": {
+        "anim_type": "alpha",
+        "from": 1,
+        "to": 1,
+        "duration": 3,
+        "next": "asa_pressed_anims.asa_music_played_2"
+    },
+
+    "asa_music_played_2": {
+        "anim_type": "alpha",
+        "from": 1,
+        "to": 0,
+        "duration": 1
+    },
+    
+
+    "asa_noti_default": {
+        "anim_type": "offset",
+        "from": [ 0, -1000 ],
+        "to": [ 0, -1000 ],
+        "duration": 0
+    },
+
+    "asa_noti_played": {
+        "anim_type": "offset",
+        "from": [ 0, 0 ],
+        "to": [ 0, 0 ],
+        "play_event": "asa_music_pressed.play_music",
+        "duration": 0
+    },
+
+    "asa_noti_exit": {
+        "anim_type": "offset",
+        "from": [ 0, 0 ],
+        "to": [ 0, 0 ],
+        "play_event": "asa_music_pressed.stop_music",
+        "duration": 0
+    },
+
+
+    "asa_better_noti_played": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 0,
+        "play_event": "asa_music_pressed.play_music",
+        "duration": 10
+    },
+
+    "asa_better_noti_exit": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 0,
+        "play_event": "asa_music_pressed.stop_music",
+        "duration": 10
+    }
+}

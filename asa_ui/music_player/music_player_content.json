@@ -1,0 +1,134 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_music_player_content",
+
+    "asa_music_player_selected": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "67883549_search_music",
+                "source_property_name": "#item_name",
+                "target_property_name": "#asa_search"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_search = '')",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_font_setup.text_and_background": {
+                    "$header_text": "Anime Music",
+                    "size": [ "100%", 20 ]
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_music_button_common.asa_main_menu_selected": {
+                    "size": [ "100%", 30 ],
+                    "$asa_button_text": "Date a Live",
+                    "$asa_music_player_icon": "asa_textures/music_player_thumbnail/music_player_selected_icon/date_a_live",
+                    "$asa_toggle_name": "asa_date_a_live",
+
+                    "$asa_selected_bindings": "asa_music_player_date_a_live"
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_music_button_common.asa_main_menu_selected": {
+                    "size": [ "100%", 30 ],
+                    "$asa_button_text": "Masamune-kun's Revenge",
+                    "$asa_music_player_icon": "asa_textures/music_player_thumbnail/music_player_selected_icon/masamune_revenge",
+                    "$asa_toggle_name": "asa_masamune_revenge",
+
+                    "$asa_selected_bindings": "asa_music_player_masamune_revenge"
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_music_button_common.asa_main_menu_selected": {
+                    "size": [ "100%", 30 ],
+                    "$asa_button_text": "Gotoubun no Hanayome",
+                    "$asa_music_player_icon": "asa_textures/music_player_thumbnail/music_player_selected_icon/gotoubun_no_hanayome",
+                    "$asa_toggle_name": "asa_gotoubun_no_hanayome",
+
+                    "$asa_selected_bindings": "asa_music_player_gotoubun_no_hanayome"
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_music_button_common.asa_main_menu_selected": {
+                    "size": [ "100%", 30 ],
+                    "$asa_button_text": "Majo no Tabitabi",
+                    "$asa_music_player_icon": "asa_textures/music_player_thumbnail/music_player_selected_icon/majo_no_tabitabi",
+                    "$asa_toggle_name": "asa_majo_no_tabitabi",
+
+                    "$asa_selected_bindings": "asa_music_player_majo_no_tabitabi"
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_music_button_common.asa_main_menu_selected": {
+                    "size": [ "100%", 30 ],
+                    "$asa_button_text": "No Game No Life",
+                    "$asa_music_player_icon": "asa_textures/music_player_thumbnail/music_player_selected_icon/no_game_no_life",
+                    "$asa_toggle_name": "asa_no_game_no_life",
+
+                    "$asa_selected_bindings": "asa_music_player_no_game_no_life"
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "@asa_font_setup.text_and_background": {
+                    "$header_text": "Default Music",
+                    "size": [ "100%", 20 ]
+                }
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "music_stack_2": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%cm" ],
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "@asa_music_button_common.asa_main_menu_selected": {
+                                "size": [ "100%", 30 ],
+                                "$asa_button_text": "Custom Music (Total: 30)",
+                                "$asa_music_player_icon": "textures/blocks/jukebox_top",
+                                "$asa_toggle_name": "asa_custom_music",
+            
+                                "$asa_selected_bindings": "asa_music_player_custom_music"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

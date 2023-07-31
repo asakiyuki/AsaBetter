@@ -1,0 +1,137 @@
+{
+    "namespace": "asa_background_common",
+
+    "overworld_dimension_bg@asa_dimension_screen.asa_dimension_background": {
+        "$asa_bg_image": "asa_textures/asa_background/anime_theme/dimension_progess_background/overworld_bg"
+    },
+
+    "nether_dimension_bg@asa_dimension_screen.asa_dimension_background": {
+        "$asa_bg_image": "asa_textures/asa_background/anime_theme/dimension_progess_background/nether_bg"
+    },
+
+    "the_end_dimension_bg@asa_dimension_screen.asa_dimension_background": {
+        "$asa_bg_image": "asa_textures/asa_background/anime_theme/dimension_progess_background/the_end_bg"
+    },
+
+    "start_bg@start_bg_temp": {
+        "$background_image": "asa_textures/asa_background/anime_theme/start_bg",
+        "$asa_bg_anim_reset": "button.show_start_screen",
+        "$asa_bg_anims": [
+            "asa_start_anims.asa_start_background_color_in",
+            "asa_start_anims.asa_start_background_color_out",
+            "asa_start_anims.asa_start_background_size_in",
+            "asa_start_anims.asa_start_background_size_out",
+            "asa_start_anims.asa_start_background_offset_in",
+            "asa_start_anims.asa_start_background_offset_out"
+        ]
+    },
+
+    "setting_bg@background_template": {
+        "$background_image": "asa_textures/asa_background/anime_theme/setting_bg",
+        "$background_color": [ 0.35, 0.35, 0.35 ],
+        "$ignored": "(not $is_pregame)"
+    },
+
+    "play_bg@background_template": {
+        "$background_image": "asa_textures/asa_background/anime_theme/play_bg"
+    },
+
+    "music_player_bg@background_template": {
+        "$background_image": "asa_textures/asa_background/anime_theme/music_player_bg"
+    },
+
+    "progress_screen@asa_progress_screen_panel.background_with_panel": {
+        "$background_image": "asa_textures/asa_background/anime_theme/into_world_bg"
+    },
+
+     //Test
+    "background_template": {
+        "layer": "$custom_layer",
+        "$custom_layer|default": -30,
+        "type": "image",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "image": {
+                    "type": "image",
+                    "layer": "$custom_layer",
+                    "$custom_layer|default": -30,
+                    "fill": true,
+                    "uv_size": [ "100%c",  "100%" ],
+                    "size": "$background_size",
+                    "color": "$background_color",
+                    "texture": "$background_image",
+                    "$ignored|default": false, 
+                    "ignored": "$ignored"
+                }
+            },
+            {
+                "black_image": {
+                    "type": "image",
+                    "layer": -29,
+                    "fill": true,
+                    "uv_size": [  "100%c",  "100%" ],
+                    "texture": "textures/ui/Black",
+                    "alpha": 0.5
+                }
+            }
+        ]
+    },
+
+    //Temp 2
+    "start_bg_temp": {
+        "layer": "$custom_layer",
+        "$custom_layer|default": -30,
+        "type": "image",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "image": {
+                    "type": "image",
+                    "layer": "$custom_layer",
+                    "$custom_layer|default": -30,
+                    "fill": true,
+                    "uv_size": [  "100%c",  "100%" ],
+                    "size": "$background_size",
+                    "color": "$background_color",
+                    "texture": "$background_image",
+                    "$asa_bg_anim_reset|default": "none",
+                    "$asa_bg_anims|default": [],
+                    "animation_reset_name": "$asa_bg_anim_reset",
+                    "anims": "$asa_bg_anims"
+                }
+            },
+            {
+                "background": {
+                    "type": "screen",
+                    "layer": 9,
+                    "animation_reset_name": "asa_pressed.exit_section",
+                    "anims": [
+                        "@asa_pressed_anims.asa_open_screen_section_start",
+                        "@asa_pressed_anims.asa_exit_screen_section_start_wait"
+                    ],
+                    "controls": [
+                        {
+                            "background": {
+                                "type": "image",
+                                "fill": true,
+                                "uv_size": [  "100%c",  "100%" ],
+                                "texture": "textures/ui/Black",
+                                "alpha": 0.5,
+                                "animation_reset_name": "asa_pressed.exit_section",
+                                "anims": [
+                                    "@asa_pressed_anims.asa_open_screen_section_start_alpha_wait",
+                                    "@asa_pressed_anims.asa_exit_screen_section_start_alpha"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

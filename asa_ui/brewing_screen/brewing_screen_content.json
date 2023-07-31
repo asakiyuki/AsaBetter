@@ -1,0 +1,20 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_brewing_screen_content",
+
+    "asa_fuel_percent@asa_percent_template.asa_percent_template": {
+        "$asa_binding_name": "#brewing_fuel_ratio",
+        "$percent_color": [ 0.3, 0.3, 0.3 ],
+        "offset": [ -100, 0 ],
+        "$percent_layer": 20,
+        "$asa_binding_condition": "alway"
+    }
+}

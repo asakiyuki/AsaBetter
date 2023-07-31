@@ -1,0 +1,1077 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_hud_debug",
+
+    "asa_armor_hud": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_armorhud_left": {
+                    "renderer": "live_player_renderer",
+                    "size": [ 20, 20 ],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "layer": 50,
+                    "type": "custom",
+                    "offset": [ 1, 618 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_armor_hud_left_middle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }            
+            },
+            {
+                "asa_armorhud_right": {
+                    "renderer": "live_player_renderer",
+                    "size": [ 20, 20 ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "layer": 50,
+                    "type": "custom",
+                    "offset": [ 1, 618 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_armor_hud_right_middle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }            
+            },
+            {
+                "asa_armorhud_right": {
+                    "renderer": "live_player_renderer",
+                    "size": [ 20, 20 ],
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "layer": 50,
+                    "type": "custom",
+                    "offset": [ 1, 565 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_armor_hud_right_bottom",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }            
+            },
+            {
+                "asa_armorhud_right": {
+                    "renderer": "live_player_renderer",
+                    "size": [ 20, 20 ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "layer": 50,
+                    "type": "custom",
+                    "offset": [ 1, 565 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_armor_hud_left_bottom",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }            
+            }
+        ]
+    },
+
+    "asa_offhand_hud": {
+        "renderer": "live_player_renderer",
+        "size": [ 20, 20 ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "layer": 999,
+        "type": "custom",
+        "offset": "$asa_offhand_offset",
+        "$asa_offhand_offset|default": [ -124, -1077.6 ],
+        "variables": [
+            {
+                "requires": "$pocket_edition",
+                "$asa_offhand_offset": [ -136, -1077.6 ]
+            }
+        ]
+    },
+
+    "asa_offhand_hud_2": {
+        "renderer": "live_player_renderer",
+        "size": [ 20, 20 ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "layer": 999,
+        "type": "custom",
+        "offset": [ -124, -1077.6 ]
+    },
+
+    //Clock, Compass, Lodestone Compass, Recovery Compass
+    "asa_item_renderer_template": {
+        "type": "custom",
+        "renderer": "inventory_item_renderer",
+        "size": [ 16, 16 ],
+        "property_bag": {
+            "#item_id_aux": "$asa_item_id"
+        }
+    },
+
+    "asa_lodestone_panel@asa_item_renderer_template": {
+        "property_bag": {
+            "#item_id_aux": "$asa_item_id",
+            "#item_lodestone_tracking_handle": "$asa_lodestone_compass_id"
+        },
+        "$asa_item_id": "(39452672 + (65536 * $asa_item_id_offset))",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_lodestone_compass_id",
+                "source_property_name": "$asa_lodestone_id_bindings",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "asa_lodestone_panel_content": {
+        "type": "panel",
+        "size": [ 16, 16 ],
+        "controls": [
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 0,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 0)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 1,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 1)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 2,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 2)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 3,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 3)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 4,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 4)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 5,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 5)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 6,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 6)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 7,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 7)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 8,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 8)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 9,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 9)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 10,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 10)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 11,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 11)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 12,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 12)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 13,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 13)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 14,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 14)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 15,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 15)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 16,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 16)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 17,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 17)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 18,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 18)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 19,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 19)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 20,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 20)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 21,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 21)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 22,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 22)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 23,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 23)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 24,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 24)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 25,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 25)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 26,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 26)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 27,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 27)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 28,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 28)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 29,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 29)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 30,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 30)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 31,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 31)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 32,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 32)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 33,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 33)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 34,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 34)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 35,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 35)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 36,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 36)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 37,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 37)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 38,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 38)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 39,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 39)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 40,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 40)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 41,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 41)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 42,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 42)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 43,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 43)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 44,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 44)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 45,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 45)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 46,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 46)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 47,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 47)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 48,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 48)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 49,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 49)"
+                }
+            },
+            {
+                "@asa_lodestone_panel": {
+                    "$asa_lodestone_compass_id": 50,
+                    "$asa_lodestone_id_bindings": "(#slider_value = 50)"
+                }
+            }
+        ]
+    },
+
+    "asa_c_c_rc_stack": {
+        "size": [ "100%c", "100%cm" ],
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_item_tools",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "clocks@asa_item_renderer_template": {
+                    "$asa_item_id|default": 25755648,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_clock",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "$win10_edition",
+                            "$asa_item_id": "(25755648 + (65536 * $asa_item_id_offset))"
+                        }
+                    ]
+                }
+            },
+            {
+                "clocks@asa_item_renderer_template": {
+                    "$asa_item_id|default": 25788416,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_clock",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "$win10_edition",
+                            "$asa_item_id": "(25788416 + (65536 * $asa_item_id_offset))"
+                        }
+                    ]
+                }
+            },
+            {
+                "compass@asa_item_renderer_template": {
+                    "$asa_item_id|default": 25624576,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_compass",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "$win10_edition",
+                            "$asa_item_id": "(25624576 + (65536 * $asa_item_id_offset))"
+                        }
+                    ]
+                }
+            },
+            {
+                "compass@asa_item_renderer_template": {
+                    "$asa_item_id|default": 25657344,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_compass",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "$win10_edition",
+                            "$asa_item_id": "(25657344 + (65536 * $asa_item_id_offset))"
+                        }
+                    ]
+                }
+            },
+            {
+                "lodestone_compass_panel": {
+                    "type": "panel",
+                    "size": [ "100%c", "100%c" ],
+                    "ignored": "$is_on_3p_server",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_lodestone_compass",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "lodestone_compass@asa_lodestone_panel_content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "recovery_compass_panel": {
+                    "type": "panel",
+                    "size": [ "100%c", "100%c" ],
+                    "ignored": "$is_on_3p_server",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "add_recovery_compass",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "(not #toggle_state)",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "recovery_compass@asa_item_renderer_template": {
+                                "$asa_item_id": "(42336256 + (65536 * $asa_item_id_offset))"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "recovery_compass_panel": {
+                    "type": "panel",
+                    "size": [ "100%c", "100%c" ],
+                    "ignored": "$is_on_3p_server",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "add_recovery_compass",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa1"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_item_tolls_enchant",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#asa2"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#asa1 and #asa2)",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "recovery_compass@asa_item_renderer_template": {
+                                "$asa_item_id": "(42369024 + (65536 * $asa_item_id_offset))"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    
+    //Debug
+    "device_debug": {
+        "type": "image",
+        "size": [ "100%c + 4px", "100%c + 2px" ],
+        "texture": "textures/ui/Black",
+        "alpha": 0.5,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_device",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "variables": [
+            {
+                "requires": "$pocket_edition",
+                "$asa_label_debug": "Device: Mobile"
+            },
+            {
+                "requires": "$console_edition",
+                "$asa_label_debug": "Device: Console"
+            },
+            {
+                "requires": "$win10_edition",
+                "$asa_label_debug": "Device: Windows"
+            }
+        ],
+        "controls": [
+            {
+                "device_label": {
+                    "type": "label",
+                    "size": [ "default", "default" ],
+                    "text": "$asa_label_debug",
+                    "layer": 10,
+                    "font_type": "smooth",
+                    "shadow": false
+                }
+            }
+        ]
+    },
+
+    "ui_profile_debug": {
+        "type": "image",
+        "size": [ "100%c + 4px", "100%c + 2px" ],
+        "texture": "textures/ui/Black",
+        "alpha": 0.5,
+        "variables": [
+            {
+                "requires": "$desktop_screen",
+                "$asa_label_debug": "UI Profile: Classic"
+            },
+            {
+                "requires": "$pocket_screen",
+                "$asa_label_debug": "UI Profile: Pocket"
+            }
+        ],
+        "controls": [
+            {
+                "ui_profile_lebel": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "$asa_label_debug",
+                    "font_type": "smooth",
+                    "shadow": false
+                }
+            }
+        ]
+    },
+
+    "operating_system_debug": {
+        "type": "image",
+        "size": [ "100%c + 4px", "100%c + 2px" ],
+        "texture": "textures/ui/Black",
+        "ignored": "(not $pocket_edition)",
+        "alpha": 0.5,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_os",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "variables": [
+            {
+                "requires": "$is_android",
+                "$asa_label_debug": "Operating System: Android"
+            },
+            {
+                "requires": "$ios",
+                "$asa_label_debug": "Operating System: iOS"
+            },
+            {
+                "requires": "$is_ios",
+                "$asa_label_debug": "Operating System: iOS"
+            }
+        ],
+        "controls": [
+            {
+                "operating_system_label": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "font_type": "smooth",
+                    "text": "$asa_label_debug",
+                    "shadow": false
+                }
+            }
+        ]
+    },
+
+    "gamemode_debug": {
+        "type": "image",
+        "size": [ "100%c + 4px", "100%c + 2px" ],
+        "texture": "textures/ui/Black",
+        "alpha": 0.5,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_gamemode",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "creative": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "Gamemode: Creative",
+                    "shadow": false,
+                    "font_type": "smooth",
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "survival": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "Gamemode: Survival",
+                    "shadow": false,
+                    "font_type": "smooth",
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#show_survival_ui",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        },
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#is_not_creative_mode",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "spectator": {
+                    "type": "panel", "size": [ "100%c", "100%c" ],
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "(not #show_survival_ui)",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        },
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "(not #is_not_creative_mode)",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "spectator": {
+                                "type": "label",
+                                "layer": 10,
+                                "size": [ "default", "default" ],
+                                "text": "Gamemode: Spectator",
+                                "shadow": false,
+                                "font_type": "smooth",
+                                "bindings": [
+                                    {
+                                        "binding_condition": "always",
+                                        "binding_name": "(not #is_creative_mode)",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "input_debug": {
+        "type": "image",
+        "size": [ "100%c + 4px", "100%c + 2px" ],
+        "texture": "textures/ui/Black",
+        "alpha": 0.5,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_input",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "touch": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "Input: Touch",
+                    "shadow": false,
+                    "font_type": "smooth",
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#inventory_touch_button",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "keyboard_and_mouse": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "Input: Keyboard and Mouse",
+                    "shadow": false,
+                    "font_type": "smooth",
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#keyboard_helper_visible",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "controller": {
+                    "type": "label",
+                    "layer": 10,
+                    "size": [ "default", "default" ],
+                    "text": "Input: Controller",
+                    "shadow": false,
+                    "font_type": "smooth",
+                    "bindings": [
+                        {
+                            "binding_condition": "always",
+                            "binding_name": "#gamepad_helper_visible",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Stack
+    "asa_debug_stack": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "item_id@asa_hud_content.asa_mainhand_item_id": {}
+            },
+            {
+                "item_aux_id@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_item_aux_viewer",
+                    "$asa_item_binding_name": "#item_id_aux",
+                    "$asa_item_debug_property_viewer": "(not (#item_id_aux = -1))",
+                    "$asa_name_panel": "Aux ID"
+                }
+            },
+            {
+                "charged_item@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_charged_item_viewer",
+                    "$asa_item_binding_name": "#charged_item",
+                    "$asa_item_debug_property_viewer": "(not (#charged_item = 0))",
+                    "$asa_name_panel": "Charged Item"
+                }
+            },
+            {
+                "item_custom_color@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_item_custom_color_viewer",
+                    "$asa_item_binding_name": "#item_custom_color",
+                    "$asa_item_debug_property_viewer": "(not (#item_custom_color = -1))",
+                    "$asa_name_panel": "Item Custom Color"
+                }
+            },
+            {
+                "item_pickup_time@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_item_pickup_time_viewer",
+                    "$asa_item_binding_name": "#item_pickup_time",
+                    "$asa_item_debug_property_viewer": "(not (#item_pickup_time = 0))",
+                    "$asa_name_panel": "Item Pickup Time"
+                }
+            },
+            {
+                "show_item_pickup@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_show_item_pickup_viewer",
+                    "$asa_item_binding_name": "#show_item_pickup",
+                    "$asa_item_debug_property_viewer": "(not (#show_item_pickup = false))",
+                    "$asa_name_panel": "Show Item Pickup"
+                }
+            },
+            {
+                "banner_patterns@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_banner_patterns_viewer",
+                    "$asa_item_binding_name": "#banner_patterns",
+                    "$asa_item_debug_property_viewer": "(not (#banner_patterns = ''))",
+                    "$asa_name_panel": "Banner Patterns"
+                }
+            },
+            {
+                "banner_colors@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_banner_colors_viewer",
+                    "$asa_item_binding_name": "#banner_colors",
+                    "$asa_item_debug_property_viewer": "(not (#banner_colors = ''))",
+                    "$asa_name_panel": "Banner Colors"
+                }
+            },
+            {
+                "banner_type@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_banner_type_viewer",
+                    "$asa_item_binding_name": "#banner_type",
+                    "$asa_item_debug_property_viewer": "(not (#banner_type = 0))",
+                    "$asa_name_panel": "Banner Type"
+                }
+            },
+            {
+                "shield_is_active@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_shield_is_active_viewer",
+                    "$asa_item_binding_name": "#shield_is_active",
+                    "$asa_item_debug_property_viewer": "(not (#shield_is_active = false))",
+                    "$asa_name_panel": "Shield is Active"
+                }
+            },
+            {
+                "item_lodestone_tracking_handle@asa_hud_content.asa_item_debug_template": {
+                    "$asa_panel_binding_view": "asa_item_lodestone_tracking_handle_viewer",
+                    "$asa_item_binding_name": "#item_lodestone_tracking_handle",
+                    "$asa_item_debug_property_viewer": "(not (#item_lodestone_tracking_handle = 0))",
+                    "$asa_name_panel": "Item Lodestone Tracking Handle Viewer"
+                }
+            },
+            {
+                "item_id_offset@asa_hud_content.asa_item_id_offset_stack": {}
+            },
+            {
+                "device@device_debug": {}
+            },
+            /*{
+                "up_pro@ui_profile_debug": {}
+            },*/
+            {
+                "gamemode@gamemode_debug": {}
+            },
+            {
+                "gamemode@input_debug": {}
+            },
+            {
+                "operating_system@operating_system_debug": {}
+            }
+        ]
+    }
+}

@@ -1,0 +1,57 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_screen_common",
+    
+    "asa_screen_base": {
+        "type": "screen",
+        "controls": [
+            {
+                "asa_better_input": {
+                    "type": "input_panel",
+                    "hover_enabled": false,
+                    "prevent_touch_input": false,
+                    "ttsSectionContainer": true,
+                    "button_mappings": [
+                        {
+                            "from_button_id": "button.menu_up",
+                            "to_button_id": "button.menu_up",
+                            "mapping_type": "global",
+                            "scope": "view"
+                        },
+                        {
+                            "from_button_id": "button.menu_down",
+                            "to_button_id": "button.menu_down",
+                            "mapping_type": "global",
+                            "scope": "view"
+                        },
+                        {
+                            "from_button_id": "button.menu_left",
+                            "to_button_id": "button.menu_left",
+                            "mapping_type": "global",
+                            "scope": "view"
+                        },
+                        {
+                            "from_button_id": "button.menu_right",
+                            "to_button_id": "button.menu_right",
+                            "mapping_type": "global",
+                            "scope": "view"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "asa_custom_bg@asa_background_common.setting_bg": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

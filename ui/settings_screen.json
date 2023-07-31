@@ -1,0 +1,277 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+{
+    /*/"settings_screen_base@settings_common.screen_base": {
+        "$selector_stack_panel": "asa_setting_button_common.empty",
+        "$section_content_panels": "asa_setting_button_common.empty",
+        "$section_header_panels": "asa_setting_button_common.empty",
+        "$section_footer_panels": "asa_setting_button_common.empty"
+    }//*/
+
+    // OLD
+    "settings_screen_base": {
+        "$selector_stack_panel": "asa_setting_common.asa_setting_common",
+        "$section_content_panels": "settings.section_content_panels",
+        "$section_header_panels": "settings.section_header_panels",
+        "$section_footer_panels": "settings.section_footer_panels"
+    },
+
+    "section_content_panels/general_and_controls_sections/language_section": {
+        "ignored": false
+    },
+
+    "section_content_panels/general_and_controls_sections/storage_management_section": {
+        "ignored": false
+    },
+
+    "section_content_panels/general_and_controls_sections": {
+        "modifications": [
+            {
+                "control_name": "global_texture_pack_section",
+                "operation": "remove"
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "asa_resouce_packs_screen@asa_resouce_packs_screen.asa_resource_pack_screen": {
+                            "visible": false,
+                            "ignored": "$ignore_global_resources_section"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "section_content_panels/packs_sections": {
+        "modifications": [
+            {
+                "control_name": "level_texture_pack_section",
+                "operation": "remove"
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "asa_resouce_packs_screen@asa_resouce_packs_screen.asa_world_resource_pack_screen": {
+                            "visible": false
+                        }
+                    }
+                ]
+            },
+            {
+                "control_name": "addon_section",
+                "operation": "remove"
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "asa_addon_screen@asa_resouce_packs_screen.asa_addon_screen": {
+                            "visible": false
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    "section_header_panels": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "asa_stack": {
+                            "type": "stack_panel",
+                            "size": [ "100%", "100%c" ],
+                            "controls": [
+                                {
+                                    "asa_top_button_stack": {
+                                        "size": [ "100% - 5px", "100%cm" ],
+                                        "type": "stack_panel",
+                                        "orientation": "horizontal",
+                                        "$default_selector_toggle_index": 0,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "visible": false,
+                                        "bindings": [
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "global_texture_pack_button_toggle",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#asa1"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "level_texture_pack_button_toggle",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#asa2"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "addon_button_toggle",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#asa3"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_property_name": "(#asa1 or #asa2 or #asa3)",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ],
+                                        "controls": [
+                                            {
+                                                "global_rsp_ac@asa_resource_packs.asa_nav_rps_toggle": {
+                                                    "$asa_toggle_name": "global_rsp",
+                                                    "$asa_toggle_state_default": true,
+                                                    "$toggle_group": 0,
+                                                    "$button_text": "Active",
+                                                    "size": [ "50%", 25 ]
+                                                }
+                                            },
+                                            {
+                                                "global_rsp_un@asa_resource_packs.asa_nav_rps_toggle": {
+                                                    "$asa_toggle_name": "global_rsp",
+                                                    "$toggle_group": 1,
+                                                    "$button_text": "Available",
+                                                    "size": [ "50%", 25 ]
+                                                }
+                                            },
+                                            {
+                                                "spcae231": {
+                                                    "type": "panel",
+                                                    "size": [ 1, 1 ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "asa_top_panel": {
+                                        "type": "panel",
+                                        "visible": "$show_checkbox",
+                                        "ignored": "(not $include_world_section)",
+                                        "size": [
+                                            "100%",
+                                            30
+                                        ],
+                                        "$force_pack_download_binding_type|default": "none",
+                                        "$selected_pack_items": "#selected_pack_items_level",
+                                        "$available_pack_items": "#available_pack_items_level",
+                                        "$realms_pack_items": "#realms_pack_items_level",
+                                        "$unowned_pack_items": "#unowned_pack_items_level",
+                                        "$default_item_texture": "#default_item_texture_level",
+                                        "$default_item_file_system": "#default_item_file_system_level",
+                                        "$default_item_zip": "#default_item_zip_level",
+                                        "$default_item_title": "menu.globalpacks",
+                                        "$default_item_description": "resourcePack.description.default.level",
+                                        "$no_packs_text": "resourcePack.available.none.text",
+                                        "$selected_grid_dimensions": "#selected_grid_dimensions_level",
+                                        "$available_grid_dimensions": "#available_grid_dimensions_level",
+                                        "$realms_grid_dimensions": "#realms_grid_dimensions_level",
+                                        "$unowned_grid_dimensions": "#unowned_grid_dimensions_level",
+                                        "$unowned_visible": "#unowned_visible_level",
+                                        "$button.selected_pack": "button.selected_pack_level",
+                                        "$button.deselected_pack": "button.deselected_pack_level",
+                                        "$button.available_pack": "button.available_pack_level",
+                                        "$button.realms_pack": "button.realms_pack_level",
+                                        "$button.unowned_pack": "button.unowned_pack_level",
+                                        "$button.move_left": "button.move_left_level",
+                                        "$button.sort_up": "button.sort_up_level",
+                                        "$button.sort_down": "button.sort_down_level",
+                                        "$button.expand_selected": "button.expand_selected_level",
+                                        "$button.expand_available": "button.expand_available_level",
+                                        "$button.expand_realms": "button.expand_realms_level",
+                                        "$button.expand_unowned": "button.expand_unowned_level",
+                                        "$button.store": "button.store_level",
+                                        "$button.read_toggle": "button.read_toggle_level",
+                                        "$button.report_errors": "button.report_errors_level",
+                                        "$bottom_description_text": "resourcePack.description.bottom.level",
+                                        "$selected_label_text": "resourcePack.selected.title.packs",
+                                        "$available_label_text": "resourcePack.available.title.packs",
+                                        "$realms_label_text": "resourcePack.realmsPlus.title.packs",
+                                        "$unowned_label_text": "resourcePack.suggestedContent.title",
+                                        "$platform_locked": "#platform_locked_level",
+                                        "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
+                                        "$read_more_label": "read_more_label_level",
+                                        "$read_less_label": "read_less_label_level",
+                                        "$total_size_binding": "#total_size_binding_level",
+                                        "$in_game_error_text": "resourcePack.error.ingame.packs",
+                                        "$invalid_pack_items": "#invalid_pack_items_level",
+                                        "$invalid_grid_dimensions": "#invalid_grid_dimensions_level",
+                                        "$button.invalid_pack": "button.invalid_pack_level",
+                                        "$button.pack_warning": "button.pack_warning_level",
+                                        "$invalid_label_text": "resourcePack.invalid.title.packs",
+                                        "$view_in_store": "resourcePack.description.store",
+                                        "$errors_text": "resourcePack.errors",
+                                        "$warnings_text": "resourcePack.warnings",
+                                        "$expired_text": "resourcePack.realmsPlus.expired",
+                                        "$top_label_box": true,
+                                        "$show_checkbox": true,
+                                        "$button.resource_pack_options_exit": "button.resource_pack_options_exit_level",
+                                        "$button.pack_settings": "button.pack_settings_level",
+                                        "$button.add": "resourcePack.available.add",
+                                        "$button.remove": "resourcePack.selected.remove",
+                                        "$options_slider_name": "content_tier_slider_level",
+                                        "$display_suggested_content_offers": true,
+                                        "$suggested_content_offers_collection": "#suggested_offers_collection_level",
+                                        "$suggested_content_offers_loading_binding": "#suggested_offers_loading_level",
+                                        "$button.more_suggested_content_offers": "button.more_suggested_content_offers_level",
+                                        "$button.select_offer": "button.select_offer_level",
+                                        "$suggested_content_offers_label_text": "#suggested_offers_title_level",
+                                        "$no_available_packs_visibility_binding": "#no_available_packs_visibility_level",
+                                        "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_level",
+                                        "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_level",
+                                        "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_level",
+                                        "$force_pack_download_binding_type": "global",
+                                        "controls": [
+                                            {
+                                                "panel_bg@resource_packs.panel_bg": {}
+                                            },
+                                            {
+                                                "header_control@resource_packs.header_control": {}
+                                            }
+                                        ],
+                                        "bindings": [
+                                            {
+                                                "binding_name": "#force_pack_download_enabled_level",
+                                                "binding_type": "$force_pack_download_binding_type"
+                                            },
+                                            {
+                                                "binding_name": "#force_pack_download_locked_level",
+                                                "binding_type": "$force_pack_download_binding_type"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "level_texture_pack_button_toggle",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#asa2"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_property_name": "(#force_pack_download_enabled_level and #asa2)",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }//*/
+}

@@ -1,0 +1,291 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_dimension_screen",
+
+    //Screen Panel
+    "asa_dimension_background": {
+        "layer": "$custom_layer",
+        "$custom_layer|default": -30,
+        "type": "image",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "asa_dimension_background": {
+                    "type": "image",
+                    "fill": true,
+                    "uv_size": [ "100%c", "100%" ],
+                    "$asa_bg_image|default": "asa_textures/ui/asa_none",
+                    "color": [ 0.5, 0.5, 0.5 ],
+                    "texture": "$asa_bg_image"
+                }
+            }
+        ]
+    },
+
+    "asa_progress_screen_content": {
+        "type": "panel",
+        "$is_overword|default": false,
+        "$is_nether|default": false,
+        "$is_the_end|default": false,
+        "$total": "#loading_bar_total_amount",
+        "$current": "#loading_bar_current_amount",
+        "$reverser_percent_count": true,
+        "$asa_percent_bindings":  [
+            {
+                "binding_name": "$total"
+            },
+            {
+                "binding_name": "$current"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(((($current / $total) > $min) and (($current / $total) < $max)) or (($current / $total) = $max))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "variables": [
+            {
+                "requires": "$is_overword",
+                "$asa_text": "Regenerating the Overworld"
+            },
+            {
+                "requires": "$is_nether",
+                "$asa_text": "Regenerating the Nether"
+            },
+            {
+                "requires": "$is_the_end",
+                "$asa_text": "Regenerating The End"
+            }
+        ],
+        "controls": [
+            {
+                "asa_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%cm", "100%c" ],
+                    "controls": [
+                        {
+                            "asa_text_panel": {
+                                "type": "panel",
+                                "size": [ "100%cm", "100%cm" ],
+                                "controls": [
+                                    {
+                                        "asa_text": {
+                                            "type": "label",
+                                            "text": "$asa_text",
+                                            "$asa_text|default": "none",
+                                            "shadow": true
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_pickaxe_progregress": {
+                                "type": "panel",
+                                "size": [ "100%sm", "100%cm" ],
+                                "controls": [
+                                    {
+                                        "@asa_frame_panel": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_percent_panel": {
+                                "type": "panel",
+                                "size": [ "100%sm", "100%cm" ],
+                                "controls": [
+                                    {
+                                        "asa_percent@asa_percent_template.asa_percent_template": {
+                                            "$asa_font": "MinecraftTen",
+                                            "$font_scale": 1.2,
+                                            "$asa_binding_name": "#loading_bar_current_amount"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //frame animation
+    "asa_frame_panel": {
+        "type": "panel",
+        "size": [ 28, 28 ],
+        "clips_children": true,
+        "controls": [
+            {
+                "@asa_frame_stack": {}
+            }
+        ]
+    },
+
+    "asa_frame_stack": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%" ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "anims": [
+            "@asa_dimension_screen.frame_1"
+        ],
+        "controls": [
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_1"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_2"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_3"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_4"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_5"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_6"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_7"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_8"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_9"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_10"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_11"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_12"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_13"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_14"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_15"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_16"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_17"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_18"
+                }
+            },
+            {
+                "@asa_image_template": {
+                    "texture": "asa_textures/animation_frame/pickaxe/pickaxe_frame_19"
+                }
+            }
+        ]
+    },
+
+    "asa_image_template": {
+        "type": "image",
+        "size": [ "100%", "100%" ]
+    },
+
+    "asa_frame_anims_template": {
+        "anim_type": "offset",
+        "from": "$asa_frame_offset",
+        "to": "$asa_frame_offset",
+        "duration": "$asa_duration",
+        "next": "$anim_next"
+    },
+
+    "frame_1@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1800%" ], "$asa_duration": 0.75, "$anim_next": "asa_dimension_screen.frame_2" },
+    "frame_2@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1700%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_3" },
+    "frame_3@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1600%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_4" },
+    "frame_4@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1500%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_5" },
+    "frame_5@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1400%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_6" },
+    "frame_6@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1300%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_7" },
+    "frame_7@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1200%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_8" },
+    "frame_8@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1000%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_9" },
+    "frame_9@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-900%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_10" },
+    "frame_10@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-800%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_11" },
+    "frame_11@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-700%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_12" },
+    "frame_12@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-600%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_13" },
+    "frame_13@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-500%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_14" },
+    "frame_14@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-400%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_15" },
+    "frame_15@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-300%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_16" },
+    "frame_16@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-200%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_17" },
+    "frame_17@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-100%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_18" },
+    "frame_18@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "0%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_19" },
+    "frame_19@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-100%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_20" },
+    "frame_20@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-200%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_21" },
+    "frame_21@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-300%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_22" },
+    "frame_22@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-400%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_23" },
+    "frame_23@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-500%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_24" },
+    "frame_24@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-600%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_25" },
+    "frame_25@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-700%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_26" },
+    "frame_26@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-800%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_27" },
+    "frame_27@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-900%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_28" },
+    "frame_28@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1000%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_29" },
+    "frame_29@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1100%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_30" },
+    "frame_30@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1200%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_31" },
+    "frame_31@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1300%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_32" },
+    "frame_32@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1400%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_33" },
+    "frame_33@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1500%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_34" },
+    "frame_34@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1600%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_35" },
+    "frame_35@asa_frame_anims_template": { "$asa_frame_offset": [ 0, "-1700%" ], "$asa_duration": 0.045, "$anim_next": "asa_dimension_screen.frame_1" }
+}

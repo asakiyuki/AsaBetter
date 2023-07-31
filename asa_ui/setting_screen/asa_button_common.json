@@ -1,0 +1,111 @@
+{
+    "namespace": "asa_setting_button_common",
+
+    "asa_button_template": {
+        "type": "button",
+        "default_control": "asa_default",
+        "hover_control": "asa_hover",
+        "pressed_control": "asa_pressed",
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+        "$asa_button_content|default": "asa_setting_button_common.asa_button_content",
+        "$asa_button_texture_content|default": "asa_setting_button_common.asa_default_button_texture",
+        "$asa_button_content_content|default": "asa_setting_button_common.asa_exit_button_texture",
+        
+        "$default_state_texture|default": "textures/ui/button_borderless_light",
+        "$hover_state_texture|default": "textures/ui/button_borderless_lighthover",
+        "$pressed_state_texture|default": "textures/ui/button_borderless_lightpressednohover",
+        "$pressed_button_name|default": "none",
+
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "asa_default@$asa_button_content": {
+                    "$asa_button_texture": "$default_state_texture",
+                    "$asa_border_color": [ 0, 0, 0 ],
+                    "$asa_icon_color": [ 0.3, 0.3, 0.3 ]
+                }
+            },
+            {
+                "asa_hover@$asa_button_content": {
+                    "$asa_button_texture": "$hover_state_texture",
+                    "$asa_border_color": [ 1, 1, 1 ],
+                    "$asa_icon_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "asa_pressed@$asa_button_content": {
+                    "$asa_button_texture": "$pressed_state_texture",
+                    "$asa_border_color": [ 1, 1, 1 ],
+                    "$asa_icon_color": [ 1, 1, 1 ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_button_texture@$asa_button_texture_content": {
+                    "layer": 0
+                }
+            },
+            {
+                "asa_button_content@$asa_button_content_content": {
+                    "layer": 8
+                }
+            }
+        ]
+    },
+
+    "asa_default_button_texture": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_focus": {
+                    "type": "image",
+                    "layer": "$outline_layer",
+                    "$outline_layer|default": 0,
+                    "$button_outline_texture|default": "textures/ui/focus_border_selected",
+                    "texture": "$button_outline_texture",
+                    "color": "$asa_border_color",
+                    "$asa_border_color|default": [ 0, 0, 0 ]
+                }
+            },
+            {
+                "button_texture": {
+                    "type": "image",
+                    "layer": 2,
+                    "texture": "$asa_button_texture",
+                    "size": [ "100% - 2px", "100% - 2px" ],
+                    "$asa_button_texture|default": "textures/ui/button_borderless_light"
+                }
+            }
+        ]
+    },
+
+    "asa_exit_button_texture": {
+        "type": "image",
+        "layer": 6,
+        "texture": "textures/ui/close_button_default_light",
+        "color": "$asa_icon_color",
+        "$asa_icon_color|default": [ 0.3, 0.3, 0.3 ]
+    },
+
+    "empty": {
+        "type": "panel"
+    }
+}

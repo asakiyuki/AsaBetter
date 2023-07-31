@@ -1,0 +1,48 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_pause_button_template",
+
+    "asa_button_toggle_template": {
+        "type": "panel",
+
+        "$toggle_view_binding_name|default": "asa_null",
+        "$template_toggle|default": "asa_toggle_common.toggle_template",
+
+        "$button_type_panel": "asa_pause_button_template.asa_button_text_template",
+
+        "$radio_toggle_group": true,
+        "$toggle_name|default": "asa_exit_world",
+        "controls": [
+            {
+                "$toggle_view_binding_name@$template_toggle": {}
+            }
+        ]
+    },
+
+    "asa_pause_buttom_template@asa_common_button.asa_text_button": {
+        "$button_type_panel": "asa_pause_button_template.asa_button_text_template"
+    },
+
+    "asa_button_text_template": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "size": [ "default", "default" ],
+                    "max_size": [ "100% - 6px", 10 ],
+                    "text": "$button_text"
+                }
+            }
+        ]
+    }
+}

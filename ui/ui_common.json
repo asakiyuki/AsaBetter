@@ -1,0 +1,147 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+{
+
+    "highlight_slot_panel/highlight": {
+        "bindings": [
+            {
+                "binding_name": "none",
+                "binding_name_override": "#visible"
+            }
+        ]
+    },
+
+    "highlight_slot_panel/white_border": {
+        "bindings": [
+            {
+                "binding_name": "none",
+                "binding_name_override": "#visible"
+            }
+        ]
+    },
+
+    "slot_selected": {
+        "ignored": true
+    },
+    
+    "inventory_icon_panel/hover_text": {
+        "ignored": true
+    },
+
+    "selected_item_details/item_panel_image": {
+        "ignored": true
+    },
+
+    "container_item/item_cell": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "asa_enchant_texture@asa_enchant_book_viewer.asa_enchant_viewer_controls": {}
+                    }
+                ]
+            }
+        ]
+    },
+
+    "container_item/item_button_ref": {
+        "ignored": true
+    },
+
+    "container_item": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "inventory_mode_panel": {
+                            "type": "panel",
+                            "controls": [
+                                {
+                                    "asa_default": {
+                                        "type": "panel",
+                                        "bindings": [
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "asa_inven_normal",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ],
+                                        "controls": [
+                                            {
+                                                "button@$button_ref": {
+                                                    "tts_ignore_count": true,
+                                                    "tts_skip_message": true,
+                                                    "tts_inherit_siblings": true,
+                                                    "layer": 5
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "asa_auto_place": {
+                                        "type": "panel",
+                                        "visible": false,
+                                        "bindings": [
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "asa_inven_auto_place",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ],
+                                        "controls": [
+                                            {
+                                                "button@asa_auto_place.asa_auto_place_slot": {
+                                                    "tts_ignore_count": true,
+                                                    "tts_skip_message": true,
+                                                    "tts_inherit_siblings": true,
+                                                    "layer": 5
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "asa_drop_one": {
+                                        "type": "panel",
+                                        "visible": false,
+                                        "bindings": [
+                                            {
+                                                "binding_type": "view",
+                                                "source_control_name": "asa_inven_drop_one",
+                                                "source_property_name": "#toggle_state",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ],
+                                        "controls": [
+                                            {
+                                                "button@asa_drop_one_common.asa_drop_one_slot": {
+                                                    "tts_ignore_count": true,
+                                                    "tts_skip_message": true,
+                                                    "tts_inherit_siblings": true,
+                                                    "layer": 5
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

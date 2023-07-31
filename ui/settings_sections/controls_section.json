@@ -1,0 +1,19 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "touch_section/common_touch_settings/option_enable_new_touch_control_schemes_button": {
+        "bindings": [
+            {
+                "binding_name": "",
+                "binding_name_override": "#visible"
+            }
+        ]
+    }
+}

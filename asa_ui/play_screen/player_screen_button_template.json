@@ -1,0 +1,166 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "player_screen_button_common",
+
+    "asa_play_button_template": {
+        "type": "panel",
+        "$button_content|default": "asa_button_icon_and_text_template",
+        "controls": [
+            {
+                "$asa_toggle_bindings@asa_nav_tab_play_toggle": {}
+            }
+        ]
+    },
+
+    "asa_nav_tab_play_toggle": {
+        "type": "toggle",
+        "radio_toggle_group": true,
+        "toggle_group_forced_index": "$toggle_group",
+        "toggle_name": "$asa_toggle_name",
+        "toggle_default_state": "$asa_toggle_state_default",
+
+        "$toggle_group|default": 0,
+        "$asa_toggle_name|default": "asa_play_tab",
+        "$asa_toggle_content|default": "asa_toggle_texture",
+
+        "unchecked_control": "asa_default",
+        "unchecked_hover_control": "asa_pressed",
+        "checked_control": "asa_enable_default",
+        "checked_hover_control": "asa_enable_pressed",
+
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+
+        "property_bag": {
+            "#toggle_state": true
+        },
+        
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "focused"
+            }
+        ],
+
+        "controls": [
+            {
+                "asa_default@$asa_toggle_content": {
+                    "$asa_button_color": [ 0.0, 0.0, 0.0 ],
+                    "$not_pressed_state": true
+                }
+            },
+            {
+                "asa_pressed@$asa_toggle_content": {
+                    "$asa_button_color": "@asa_button_animation.asa_button_color_1"
+                }
+            },
+            {
+                "asa_enable_default@$asa_toggle_content": {
+                    "$asa_button_color": [ 0.0, 0.0, 0.0 ],
+                    "$asa_text_color": [ 0.333, 1, 1 ],
+                    "$not_pressed_state": true
+                }
+            },
+            {
+                "asa_enable_pressed@$asa_toggle_content": {
+                    "$asa_button_color": "@asa_button_animation.asa_button_color_1",
+                    "$asa_text_color": [ 0.333, 1, 1 ]
+                }
+            }
+        ]
+    },
+
+    "asa_toggle_texture": {
+        "type": "image",
+        "size": [ "100%", "100%" ],
+        "texture": "$asa_button_textures",
+        "$asa_button_textures|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "color": "$asa_button_color",
+        "controls": [
+            {
+                "content@$button_content": {}
+            }
+        ]
+    },
+
+    "asa_button_icon_and_text_template": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "button_icon": {
+                    "type": "panel",
+                    "size": [ 12, "100%" ],
+                    "controls": [
+                        {
+                            "button_icon": {
+                                "type": "image",
+                                "size": [ "100%", "100%" ],
+                                "texture": "$button_icon_texture",
+                                "layer": 5
+                            }
+                        },
+                        {
+                            "button_icon_outline": {
+                                "type": "image",
+                                "size": [ "100%", "100%" ],
+                                "texture": "$button_icon_outline_texture",
+                                "layer": 4,
+                                "color": "$glyph_color"
+                            }
+                        },
+                        {
+                            "toggle_tabs_border": {
+                                "type": "image",
+                                "anchor_from": "right_middle",
+                                "anchor_to": "right_middle",
+                                "size": [ "100%cm + 1px", "100%cm + 1px" ],
+                                "texture": "asa_textures/ui/button_and_toggle/square_button",
+                                "layer": 299,
+                                "ignored": "$not_pressed_state",
+                                "offset": [ -21, 0 ],
+                                "controls": [
+                                    {
+                                        "toggle_tabs": {
+                                            "type": "image",
+                                            "size": [ "100%cm + 3px", "100%cm + 3px" ],
+                                            "color": [ 0, 0, 0 ],
+                                            "texture": "asa_textures/ui/button_and_toggle/square_button",
+                                            "layer": 300,
+                                            "controls": [
+                                                {
+                                                    "mod_des": {
+                                                        "type": "label",
+                                                        "size": [ "default", "default" ],
+                                                        "max_size": [ 150, "default" ],
+                                                        "layer": 301,
+                                                        "text": "$button_name"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

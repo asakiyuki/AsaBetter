@@ -1,0 +1,106 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+
+{
+    "namespace": "asa_setting_anims",
+
+    //Twinkle Anims
+    "twinkle_anims": {
+        "anim_type": "flip_book",
+        "initial_uv": [ 0, 0 ],
+        "frame_count": 50,
+        "easing": "linear",
+        "fps": 8
+    },
+
+    //selector panel
+
+    "asa_selector_stack_panel_anims_entrance": {
+        "anim_type": "offset",
+        "easing": "out_sine",
+        "duration": 0.8,
+        "from": [ "-50%", 21 ],
+        "to": [ 2, 21 ],
+        "play_event": "screen.entrance_pop",
+        "end_event": "screen.entrance_end"
+    },
+
+    "asa_selector_stack_panel_anims_entrance_2": {
+        "anim_type": "offset",
+        "easing": "out_sine",
+        "duration": 0.8,
+        "from": [ "-50%", 21 ],
+        "to": [ 2, 21 ],
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+
+    "asa_selector_stack_panel_anims_exit": {
+        "anim_type": "offset",
+        "easing": "in_sine",
+        "duration": 0.6,
+        "from": [ 2, 21 ],
+        "to": [ "-50%", 21 ],
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+
+    "asa_selector_stack_panel_anims_exit_2": {
+        "anim_type": "offset",
+        "easing": "in_sine",
+        "duration": 0.6,
+        "from": [ 2, 21 ],
+        "to": [ "-50%", 21 ],
+        "play_event": "screen.exit_push",
+        "end_event": "screen.exit_end"
+    },
+
+    //section panel
+
+    "asa_section_stack_panel_anims_entrance": {
+        "anim_type": "offset",
+        "easing": "out_cubic",
+        "duration": 1.2,
+        "from": [ "70%", 21 ],
+        "to": [ 2, 21 ],
+        "play_event": "screen.entrance_pop",
+        "end_event": "screen.entrance_end"
+    },
+
+    "asa_section_stack_panel_anims_entrance_2": {
+        "anim_type": "offset",
+        "easing": "out_cubic",
+        "duration": 1.2,
+        "from": [ "70%", 21 ],
+        "to": [ 2, 21 ],
+        "play_event": "screen.entrance_push",
+        "end_event": "screen.entrance_end"
+    },
+
+    "asa_section_stack_panel_anims_exit": {
+        "anim_type": "offset",
+        "easing": "in_sine",
+        "duration": 0.6,
+        "from": [ 2, 21 ],
+        "to": [ "70%", 21 ],
+        "play_event": "screen.exit_pop",
+        "end_event": "screen.exit_end"
+    },
+
+    "asa_section_stack_panel_anims_exit_2": {
+        "anim_type": "offset",
+        "easing": "in_sine",
+        "duration": 0.6,
+        "from": [ 2, 21 ],
+        "to": [ "70%%", 21 ],
+        "play_event": "screen.exit_push",
+        "end_event": "screen.exit_end"
+    }
+}

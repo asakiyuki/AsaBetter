@@ -1,0 +1,51 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_mp_secs_majo_no_tabitabi",
+
+    "sections_panel": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_majo_no_tabitabi",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Literatune",
+                    "$asa_author_name": "Reina Ueda",
+                    "$time_duration": "03:56",
+
+                    "$asa_music_play": "asa_music.majo_no_tabitabi.literatune",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/majo_no_tabitabi/literatune"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Haiiro no Saga",
+                    "$asa_author_name": "ChouCho",
+                    "$time_duration": "03:28",
+
+                    "$asa_music_play": "asa_music.majo_no_tabitabi.haiiro_no_saga",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/majo_no_tabitabi/haiiro_no_saga"
+                }
+            }
+        ]
+    }
+}

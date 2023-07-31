@@ -1,0 +1,602 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+
+        //Coordinates X
+        "controller.render.player.force_coor_x_negative": {
+            "geometry": "Geometry.force_coor_x_negative",
+            "part_visibility": [
+				{
+					"*": "query.position(0) < 0"
+				}
+			],
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "textures": [
+                "texture.asa_negative"
+            ]
+        },
+
+        "controller.render.force_coor_x_1": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"array.asa_coordinates[v.force_coor_x]"
+			],
+			"geometry": "Geometry.force_coor_x_1",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+        
+        "controller.render.force_coor_x_2": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(0) > 10 || query.position(0) < -9"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_x / 10]"
+			],
+			"geometry": "Geometry.force_coor_x_2",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_x_3": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(0) > 100 || query.position(0) < -99"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_x / 100]"
+			],
+			"geometry": "Geometry.force_coor_x_3",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_x_4": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(0) > 1000 || query.position(0) < -999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_x / 1000]"
+			],
+			"geometry": "Geometry.force_coor_x_4",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_x_5": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(0) > 10000 || query.position(0) < -9999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_x / 10000]"
+			],
+			"geometry": "Geometry.force_coor_x_5",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        //Coordinates Y
+        "controller.render.player.force_coor_y_negative": {
+            "geometry": "Geometry.force_coor_y_negative",
+            "part_visibility": [
+				{
+					"*": "query.position(1) < 0"
+				}
+			],
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "textures": [
+                "texture.asa_negative"
+            ]
+        },
+
+        "controller.render.force_coor_y_1": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"array.asa_coordinates[v.force_coor_y]"
+			],
+			"geometry": "Geometry.force_coor_y_1",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+        
+        "controller.render.force_coor_y_2": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(1) > 10 || query.position(1) < -9"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_y / 10]"
+			],
+			"geometry": "Geometry.force_coor_y_2",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_y_3": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(1) > 100 || query.position(1) < -99"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_y / 100]"
+			],
+			"geometry": "Geometry.force_coor_y_3",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_y_4": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(1) > 1000 || query.position(1) < -999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_y / 1000]"
+			],
+			"geometry": "Geometry.force_coor_y_4",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_y_5": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(1) > 10000 || query.position(1) < -9999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_y / 10000]"
+			],
+			"geometry": "Geometry.force_coor_y_5",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        //Coordinates Z
+        "controller.render.player.force_coor_z_negative": {
+            "geometry": "Geometry.force_coor_z_negative",
+            "part_visibility": [
+				{
+					"*": "query.position(2) < 0"
+				}
+			],
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "textures": [
+                "texture.asa_negative"
+            ]
+        },
+
+        "controller.render.force_coor_z_1": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"array.asa_coordinates[v.force_coor_z]"
+			],
+			"geometry": "Geometry.force_coor_z_1",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+        
+        "controller.render.force_coor_z_2": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(2) > 10 || query.position(2) < -9"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_z / 10]"
+			],
+			"geometry": "Geometry.force_coor_z_2",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_z_3": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(2) > 100 || query.position(2) < -99"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_z / 100]"
+			],
+			"geometry": "Geometry.force_coor_z_3",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_z_4": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(2) > 1000 || query.position(2) < -999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_z / 1000]"
+			],
+			"geometry": "Geometry.force_coor_z_4",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+        "controller.render.force_coor_z_5": {
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+            "part_visibility": [
+				{
+					"*": "query.position(2) > 10000 || query.position(2) < -9999"
+				}
+			],
+			"textures": [
+				"array.asa_coordinates[v.force_coor_z / 10000]"
+			],
+			"geometry": "Geometry.force_coor_z_5",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		}
+    }
+}

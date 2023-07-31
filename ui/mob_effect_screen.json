@@ -1,0 +1,22 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    /*"mob_effect_screen": {
+        "close_on_player_hurt": false,
+        "is_showing_menu": false,
+        "should_steal_mouse": true,
+        "low_frequency_rendering": true,
+        "absorbs_input": false,
+        "send_telemetry": false,
+        "force_render_below": true,
+        "$screen_animations": [],
+        "$screen_content": "asa_effect_timer_screen.asa_effect_timer_content"
+    }*/
+}

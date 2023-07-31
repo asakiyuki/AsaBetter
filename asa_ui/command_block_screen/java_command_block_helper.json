@@ -1,0 +1,1634 @@
+{
+    "namespace": "asa_java_command_block_help",
+
+    "asa_horizontal_command_stack": {
+        "orientation": "horizontal",
+        "type": "stack_panel",
+        "size": [ "100%c", "100%cm" ],
+        "anchor_to": "top_left",
+        "anchor_from": "center",
+        "offset": [ -187.5, -55 ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_compact_panel",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_command_stack": {}
+            },
+            {
+                "@asa_sub_command": {}
+            }
+        ]
+    },
+
+    "asa_command_stack": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "controls": [
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ability"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "alwaysday"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "camerashake"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "clear"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "clearspawnpoint"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "clone"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "damage"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "daylock"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "dialogue"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "difficulty"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "effect"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "enchant"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "event"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "execute"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "fill"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "fog"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "function"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "gamemode"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "gamerule"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "give"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "immutableworld"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "kick"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "kill"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "list"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "locate"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "loot"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "me"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "mobevent"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "msg"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "music"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "playanimation"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "playsound"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "reload"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "replaceitem"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ride"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "say"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "schedule"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "scoreboard"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "setblock"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "setworldspawn"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "spawnpoint"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "spreadplayers"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "stopsound"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "structure"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "summon"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tag"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "teleport"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tell"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tellraw"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "testfor"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "testforblock"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "testforblocks"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tickingarea"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "time"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "title"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "titleraw"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "toggledownfall"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tp"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "volumearea"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "w"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "weather"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "xp"
+                }
+            }
+        ]
+    },
+
+    "asa_sub_command": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "controls": [
+            {
+                "@asa_java_command_block_help.asa_summon_command_stack": {}
+            },
+            {
+                "@asa_java_command_block_help.asa_particle_command_stack": {}
+            }
+        ]
+    },
+
+    "asa_particle_command_stack": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "$bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_label_box",
+                "source_property_name": "(#item_name - '/' - 'particle ')",
+                "target_property_name": "#asa_command"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (($asa_command_type - #asa_command) = $asa_command_type))",
+                "binding_condition": "always",
+                "target_property_name": "#visible"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_label_box",
+                "source_property_name": "(#item_name - '/')",
+                "target_property_name": "#asa_command"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#asa_command - 'particle ') = #asa_command))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:arrow_spell_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:balloon_gas_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_bubble_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_bubble_particle_manual"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_crit_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_flame_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_portal_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:basic_smoke_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:bleach"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:block_destruct"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:block_slide"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:blue_flame_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:breaking_item_icon"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:breaking_item_terrain"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:bubble_column_bubble"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:bubble_column_down_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:bubble_column_up_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:camera_shoot_explosion"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:campfire_smoke_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:campfire_tall_smoke_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:candle_flame_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:cauldron_bubble_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:cauldron_splash_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:cauldron_spell_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:colored_flame_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:conduit_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:conduit_absorb_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:conduit_attack_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:critical_hit_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:crop_growth_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:crop_growth_area_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dolphin_move_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_breath_fire"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_breath_lingering"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_breath_trail"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_death_explosion_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_destroy_block"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:dragon_dying_explosion"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:stalactite_lava_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:stalactite_water_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:electric_spark_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:enchanting_table_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:end_chest"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:endrod"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:elephant_tooth_paste_vapor_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:evocation_fang_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:evoker_spell"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:cauldron_explosion_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:death_explosion_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:egg_destroy_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:eyeofender_death_explode_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:misc_fire_vapor_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:explosion_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:explosion_manual"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:eye_of_ender_bubble_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_border_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_concrete_powder_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_dragon_egg_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_gravel_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_red_sand_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_sand_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_scaffolding_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:falling_dust_top_snow_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:fish_hook_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:fish_pos_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:glow_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:guardian_attack_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:guardian_water_move_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:heart_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:honey_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:huge_explosion_lab_misc_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:huge_explosion_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:ice_evaporation_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:ink_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:knockback_roar_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:lab_table_heatblock_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:lab_table_misc_mystical_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:large_explosion"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:lava_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:lava_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:llama_spit_smoke"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:magnesium_salts_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mob_block_spawn_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mob_portal"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mobflame_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mobflame_single"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mobspell_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:mycelium_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:nectar_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:note_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:obsidian_glow_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:obsidian_tear_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:phantom_trail_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:portal_directional"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:portal_east_west"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:portal_north_south"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:portal_reverse_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:rain_splash_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:redstone_ore_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:redstone_repeater_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:redstone_torch_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:redstone_wire_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:rising_border_dust_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sculk_charge_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sculk_charge_pop_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sculk_sensor_redstone_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sculk_soul_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:shriek_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:shulker_bullet"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:silverfish_grief_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:snowflake_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sonic_explosion"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:soul_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sparkler_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:splash_spell_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:sponge_absorb_water_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:spore_blossom_ambient_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:spore_blossom_shower_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:squid_flee_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:squid_ink_bubble"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:squid_move_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:stunned_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:totem_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:totem_manual"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:underwater_torch_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:vibration_signal"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:villager_angry"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:villager_happy"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:warden_dig"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_drip_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_evaporation_actor_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_evaporation_bucket_emitter"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_evaporation_manual"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_splash_particle_manual"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_splash_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:water_wake_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:wax_particle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecraft:wither_boss_invulnerable"
+                }
+            }
+        ]
+    },
+
+    "asa_summon_command_stack": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "$bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_label_box",
+                "source_property_name": "(#item_name - '/' - 'summon ')",
+                "target_property_name": "#asa_command"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (($asa_command_type - #asa_command) = $asa_command_type))",
+                "binding_condition": "always",
+                "target_property_name": "#visible"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_label_box",
+                "source_property_name": "(#item_name - '/')",
+                "target_property_name": "#asa_command"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#asa_command - 'summon ') = #asa_command))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "allay"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "armor_stand"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "arrow"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "axolotl"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "bat"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "bee"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "blaze"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "boat"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "cat"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "spider"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "chest_minecart"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "chest_boat"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "chicken"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "command_block_minecart"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "cow"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "creeper"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "dolphin"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "donkey"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "drowned"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "egg"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "elder_guardian"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "elder_guardian_ghost"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ender_crystal"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ender_dragon"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "enderman"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "endermite"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "evocation_fang"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "evocation_illager"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "fireworks_rocket"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "fox"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "frog"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ghast"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "glow_squid"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "goat"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "guardian"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "hoglin"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "hopper_minecart"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "horse"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "husk"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "iron_golem"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "lightning_bolt"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "llama"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "trader_llama"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "armor_stand"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "magma_cube"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "minecart"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "mooshroom"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "mule"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "npc"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ocelot"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "panda"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "parrot"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "phantom"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "pig"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "piglin_brute"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "piglin"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "pillager"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "polar_bear"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "pufferfish"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "rabbit"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "ravager"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "salmon"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "sheep"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "shulker"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "silverfish"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "skeleton_horse"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "skeleton"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "slime"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "snow_golem"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "snowball"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "spider"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "squid"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "stray"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "strider"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tadpole"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tnt_minecart"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tnt"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "tropicalfish"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "turtle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "vex"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "villager"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "vindicator"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "wandering_trader"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "warden"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "witch"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "wither_skeleton"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "wither"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "wolf"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "xp_bottle"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "xp_orb"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "zoglin"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "zombie_horse"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "zombie_pigman"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "zombie_villager"
+                }
+            },
+            {
+                "@asa_java_command_block_help.asa_text_background": {
+                    "$asa_command_type": "zombie"
+                }
+            }
+        ]
+    },
+
+    "asa_text_background": {
+        "type": "image",
+        "texture": "textures/ui/Black",
+        "alpha": 0.75,
+        "layer": 100,
+        "size": [ "100%cm + 2px", "100%cm + 2px" ],
+        "controls": [
+            {
+                "asa_text_bindings": {
+                    "type": "label",
+                    "text": "$asa_command_type",
+                    "localize": false,
+                    "layer": 120
+                }
+            }
+        ],
+        "bindings": "$bindings",
+        "$bindings|default": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_label_box",
+                "source_property_name": "(#item_name - '/')",
+                "target_property_name": "#asa_command"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (($asa_command_type - #asa_command) = $asa_command_type))",
+                "binding_condition": "always",
+                "target_property_name": "#visible"
+            }
+        ]
+    }
+}

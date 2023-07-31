@@ -1,0 +1,613 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_better_bossbar",
+
+    //Default Bossbar (Used to correct bugs when using another language)
+    "asa_progress_default_bar": {
+        "type": "panel",
+        "size": [ 182, 5 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_control_name_bindings",
+                "source_property_name": "$asa_property_name_bindings",
+                "resolve_sibling_scope": true,
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "empty_progress_bar": {
+                    "type": "image",
+                    "texture": "textures/ui/empty_progress_bar",
+                    "size": [ 182, 5 ],
+                    "layer": 1,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "color": "#color",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "filled_progress_bar": {
+                    "type": "image",
+                    "texture": "textures/ui/filled_progress_bar",
+                    "clip_direction": "left",
+                    "color": "#color",
+                    "clip_pixelperfect": false,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "layer": 2,
+                    "size": [ 182, 5 ],
+                    "bindings": [
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio"
+                        },
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio",
+                            "binding_type": "collection",
+                            "binding_collection_name": "$progress_bar_collection"
+                        },
+                        {
+                            "binding_name": "#bar_color",
+                            "binding_name_override": "#color",
+                            "binding_type": "collection",
+                            "binding_collection_name": "$progress_bar_collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Better Bossbar
+    "asa_boss_name": {
+        "type": "label",
+        "max_size": [ "default", 10 ],
+        "text": "#bossName",
+        "shadow": true,
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "layer": 10,
+        "bindings": [
+            {
+                "binding_name": "#bossName",
+                "binding_type": "collection",
+                "binding_collection_name": "boss_bars"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_bossname",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "asa_progress_bar": {
+        "type": "panel",
+        "size": [ 182, 5 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_control_name_bindings",
+                "source_property_name": "$asa_property_name_bindings",
+                "resolve_sibling_scope": true,
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "empty_progress_bar": {
+                    "type": "image",
+                    "texture": "asa_textures/ui/bossbar/bossbar_empty",
+                    "size": [ 182, 13 ],
+                    "layer": 1,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "color": "$asa_empty_boss_bar_color",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "filled_progress_bar": {
+                    "type": "image",
+                    "texture": "asa_textures/ui/bossbar/bossbar_progress",
+                    "clip_direction": "left",
+                    "color": "$asa_boss_bar_color",
+                    "clip_pixelperfect": false,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "layer": 2,
+                    "size": [ 182, 13 ],
+                    "bindings": [
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio"
+                        },
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio",
+                            "binding_type": "collection",
+                            "binding_collection_name": "$progress_bar_collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_wither_bossbar@asa_progress_bar": {
+        "$asa_boss_bar_color": [ 0.2, 0.2, 0.2 ]
+    },
+
+    "asa_ender_dragon_bossbar@asa_progress_bar": {
+        "$asa_boss_bar_color": [ 0.667, 0.0, 0.667 ]
+    },
+
+    "asa_raid_bossbar@asa_progress_bar": {
+        "$asa_boss_bar_color": [ 1.0, 0, 0 ]
+    },
+
+    "boss_face_panel": {
+        "type": "panel",
+        "size": [ 182, 13 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "$asa_bossface_size|default": [ 12, 12 ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_control_name_bindings",
+                "source_property_name": "$asa_property_name_bindings",
+                "resolve_sibling_scope": true,
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "boss_face_left": {
+                    "type": "image",
+                    "texture": "$asa_boss_face_texture",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": "$asa_bossface_size",
+                    "layer": 3,
+                    "offset": [ 15, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "boss_face_right": {
+                    "type": "image",
+                    "texture": "$asa_boss_face_texture",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": "$asa_bossface_size",
+                    "layer": 3,
+                    "offset": [ -15, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "boss_face_panel_raid": {
+        "type": "panel",
+        "size": [ 182, 13 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "$asa_bossface_size|default": [ 12, 12 ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_control_name_bindings",
+                "source_property_name": "$asa_property_name_bindings",
+                "resolve_sibling_scope": true,
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "boss_face_left": {
+                    "type": "image",
+                    "texture": "$asa_boss_face_texture",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": "$asa_bossface_size",
+                    "layer": 3,
+                    "offset": [ 15, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "boss_face_right": {
+                    "type": "image",
+                    "texture": "$asa_boss_face_texture",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": "$asa_bossface_size",
+                    "layer": 3,
+                    "offset": [ -15, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "crossbow_left": {
+                    "type": "image",
+                    "texture": "asa_textures/ui/bossbar/crossbow_left",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": [ 13, 13 ],
+                    "layer": 4,
+                    "offset": [ 5, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "crossbow_right": {
+                    "type": "image",
+                    "texture": "asa_textures/ui/bossbar/crossbow_right",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": [ 13, 13 ],
+                    "layer": 4,
+                    "offset": [ -5, 0 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_better_bossface",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_raid_bossface@boss_face_panel_raid": {
+        "$asa_boss_face_texture": "asa_textures/ui/bossbar/illager_face",
+        "$asa_bossface_size|default": [ 14, 14 ]
+    },
+
+    "asa_wither_bossface@boss_face_panel": {
+        "$asa_boss_face_texture": "asa_textures/ui/bossbar/wither_face"
+    },
+
+    "asa_ender_dragon_bossface@boss_face_panel": {
+        "$asa_boss_face_texture": "asa_textures/ui/bossbar/ender_dragon_face"
+    },
+
+    //Panel
+    "asa_bossbar_panel": {
+        "type": "panel",
+        "size": [ "100%", 18 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "$progress_bar_collection": "boss_bars",
+
+        "$asa_control_name_bindings": "asa_boss_name",
+        "bindings": [
+            {
+                "binding_name": "#bar_visible",
+                "binding_type": "collection",
+                "binding_collection_name": "boss_bars",
+                "binding_name_override": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "$asa_control_name_bindings@asa_boss_name": {
+                    "offset": [ 0, 2 ]
+                }
+            },
+
+            {
+                "@asa_wither_bossface": {
+                    "$asa_property_name_bindings": "(#bossName = Wither)"
+                }
+            },
+            {
+                "@asa_ender_dragon_bossbar": {
+                    "offset": [ 0, 6 ],
+                    "$asa_property_name_bindings": "((#bossName = 'Ender Dragon') or (#bossName = 'Rồng Ender'))"
+                }
+            },
+            {
+                "@asa_raid_bossface": {
+                    "offset": [ 0, -1 ],
+                    "$asa_property_name_bindings": "((#bossName = 'Cuộc xâm lược') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 2') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 1') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 0') or (#bossName = 'Cuộc xâm lược - Một cuộc xâm lược đã hết hạn') or (#bossName = 'Cuộc xâm lược - Chiến thắng') or (#bossName = 'Cuộc xâm lược - Thất bại') or (#bossName = 'Raid') or (#bossName = 'Raid - Mobs remaining: 2') or (#bossName = 'Raid - Mobs remaining: 1') or (#bossName = 'Raid - Mobs remaining: 0') or (#bossName = 'Raid - A raid has expired') or (#bossName = 'Raid - Victory') or (#bossName = 'Raid - Defeat'))"
+                }
+            },
+
+            {
+                "@asa_wither_bossbar": {
+                    "offset": [ 0, 6 ],
+                    "$asa_property_name_bindings": "(#bossName = Wither)"
+                }
+            },
+
+            {
+                "@asa_ender_dragon_bossface": {
+                    "$asa_property_name_bindings": "((#bossName = 'Ender Dragon') or (#bossName = 'Rồng Ender'))"
+                }
+            },
+
+            {
+                "@asa_raid_bossbar": {
+                    "offset": [ 0, 6 ],
+                    "$asa_property_name_bindings": "((#bossName = 'Cuộc xâm lược') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 2') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 1') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 0') or (#bossName = 'Cuộc xâm lược - Một cuộc xâm lược đã hết hạn') or (#bossName = 'Cuộc xâm lược - Chiến thắng') or (#bossName = 'Cuộc xâm lược - Thất bại') or (#bossName = 'Raid') or (#bossName = 'Raid - Mobs remaining: 2') or (#bossName = 'Raid - Mobs remaining: 1') or (#bossName = 'Raid - Mobs remaining: 0') or (#bossName = 'Raid - A raid has expired') or (#bossName = 'Raid - Victory') or (#bossName = 'Raid - Defeat'))"
+                }
+            },
+            
+            {
+                "progress_bar_for_collections@asa_progress_default_bar": {
+                    "offset": [ 0, 12 ],
+                    "$asa_property_name_bindings": "(not ((#bossName = 'Cuộc xâm lược') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 2') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 1') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 0') or (#bossName = 'Cuộc xâm lược - Một cuộc xâm lược đã hết hạn') or (#bossName = 'Cuộc xâm lược - Chiến thắng') or (#bossName = 'Cuộc xâm lược - Thất bại') or (#bossName = Wither) or (#bossName = 'Ender Dragon') or (#bossName = 'Rồng Ender') or (#bossName = 'Raid') or (#bossName = 'Raid - Mobs remaining: 2') or (#bossName = 'Raid - Mobs remaining: 1') or (#bossName = 'Raid - Mobs remaining: 0') or (#bossName = 'Raid - A raid has expired') or (#bossName = 'Raid - Victory') or (#bossName = 'Raid - Defeat')))"
+                }
+            }
+        ]
+    },
+
+    "asa_boss_health_gird": {
+        "type": "grid",
+        "grid_dimension_binding": "#boss_grid_dimension",
+        "grid_item_template": "asa_better_bossbar.asa_bossbar_panel",
+        "grid_fill_direction": "vertical",
+        "collection_name": "boss_bars",
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "size": [ 182, "30%" ]
+    },
+
+    //Java Bossbar
+    "asa_java_boss_health_gird": {
+        "type": "grid",
+        "grid_dimension_binding": "#boss_grid_dimension",
+        "grid_item_template": "asa_better_bossbar.asa_java_bossbar_panel",
+        "grid_fill_direction": "vertical",
+        "collection_name": "boss_bars",
+        "anchor_to": "top_middle",
+        "anchor_from": "top_middle",
+        "size": [ 182, "30%" ]
+    },
+
+    "asa_java_bossbar_panel": {
+        "type": "panel",
+        "size": [ "100%", 20 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "$progress_bar_collection": "boss_bars",
+        "$asa_control_name_bindings": "asa_boss_name",
+
+        "bindings": [
+            {
+                "binding_name": "#bar_visible",
+                "binding_type": "collection",
+                "binding_collection_name": "boss_bars",
+                "binding_name_override": "#visible"
+            }
+        ],
+        
+        "controls": [
+            {
+                "$asa_control_name_bindings@asa_boss_name": {}
+            },
+            {
+                "@asa_java_wither_bossbar": {
+                    "offset": [ 0, 10 ],
+                    "$asa_property_name_bindings": "(#bossName = Wither)"
+                }
+            },
+            {
+                "@asa_java_ender_dragon_bossbar": {
+                    "offset": [ 0, 10 ],
+                    "$asa_property_name_bindings": "((#bossName = 'Ender Dragon') or (#bossName = 'Rồng Ender'))"
+                }
+            },
+            {
+                "@asa_java_raid_bossbar": {
+                    "offset": [ 0, 10 ],
+                    "$asa_property_name_bindings": "((#bossName = 'Cuộc xâm lược') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 2') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 1') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 0') or (#bossName = 'Cuộc xâm lược - Một cuộc xâm lược đã hết hạn') or (#bossName = 'Cuộc xâm lược - Chiến thắng') or (#bossName = 'Cuộc xâm lược - Thất bại') or (#bossName = 'Raid') or (#bossName = 'Raid - Mobs remaining: 2') or (#bossName = 'Raid - Mobs remaining: 1') or (#bossName = 'Raid - Mobs remaining: 0') or (#bossName = 'Raid - A raid has expired') or (#bossName = 'Raid - Victory') or (#bossName = 'Raid - Defeat'))"
+                }
+            },
+            {
+                "progress_bar_for_collections@asa_progress_default_bar": {
+                    "offset": [ 0, 10 ],
+                    "$asa_property_name_bindings": "(not ((#bossName = 'Cuộc xâm lược') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 2') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 1') or (#bossName = 'Cuộc xâm lược - Số kẻ xâm lược còn lại: 0') or (#bossName = 'Cuộc xâm lược - Một cuộc xâm lược đã hết hạn') or (#bossName = 'Cuộc xâm lược - Chiến thắng') or (#bossName = 'Cuộc xâm lược - Thất bại') or (#bossName = Wither) or (#bossName = 'Ender Dragon') or (#bossName = 'Rồng Ender') or (#bossName = 'Raid') or (#bossName = 'Raid - Mobs remaining: 2') or (#bossName = 'Raid - Mobs remaining: 1') or (#bossName = 'Raid - Mobs remaining: 0') or (#bossName = 'Raid - A raid has expired') or (#bossName = 'Raid - Victory') or (#bossName = 'Raid - Defeat')))"
+                }
+            }
+        ]
+    },
+
+    "asa_java_wither_bossbar@asa_java_bossbar": {
+        "$asa_empty_bar": [ 0, 50 ],
+        "$asa_progress_bar": [ 0, 55 ]
+    },
+
+    "asa_java_ender_dragon_bossbar@asa_java_bossbar": {
+        "$asa_progress_bar": [ 0, 5 ]
+    },
+
+    "asa_java_raid_bossbar@asa_java_bossbar": {
+        "$asa_empty_bar": [ 0, 20 ],
+        "$asa_progress_bar": [ 0, 25 ],
+        "$show_extra_bar": true
+    },
+
+    "asa_java_bossbar": {
+        "type": "image",
+        "size": [ 182, 5 ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+
+        "$asa_empty_bar|default": [ 0, 0 ],
+        "$asa_progress_bar|default": [ 0, 5 ],
+        "$asa_extra_bar|default": [ 0, 95 ],
+        "$show_extra_bar|default": false,
+
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_control_name_bindings",
+                "source_property_name": "$asa_property_name_bindings",
+                "resolve_sibling_scope": true,
+                "target_property_name": "#visible"
+            }
+        ],
+
+        "controls": [
+            {
+                "asa_empty_bossbar": {
+                    "type": "image",
+                    "size": [ 182, 5 ],
+                    "uv_size": [ 182, 5 ],
+                    "uv": "$asa_empty_bar",
+                    "texture": "asa_textures/ui/bossbar/bars",
+                    "layer": 10,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_bar_progress": {
+                    "type": "image",
+                    "size": [ 182, 5 ],
+                    "uv_size": [ 182, 5 ],
+                    "uv": "$asa_progress_bar",
+                    "texture": "asa_textures/ui/bossbar/bars",
+                    "layer": 11,
+                    "clip_direction": "left",
+                    "clip_pixelperfect": false,
+                    "bindings": [
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio"
+                        },
+                        {
+                            "binding_name": "#progress_percentage",
+                            "binding_name_override": "#clip_ratio",
+                            "binding_type": "collection",
+                            "binding_collection_name": "$progress_bar_collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "extra_bar_panel": {
+                    "type": "panel",
+                    "size": [ "100%cm", "100%cm" ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "asa_bar_extra": {
+                                "type": "image",
+                                "size": [ 182, 5 ],
+                                "uv_size": [ 182, 5 ],
+                                "uv": "$asa_extra_bar",
+                                "texture": "asa_textures/ui/bossbar/bars",
+                                "visible": "$show_extra_bar",
+                                "layer": 12
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

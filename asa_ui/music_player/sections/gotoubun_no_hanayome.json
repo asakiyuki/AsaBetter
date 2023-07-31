@@ -1,0 +1,99 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_mp_secs_gotoubun_no_hanayome",
+
+    "sections_panel": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_gotoubun_no_hanayome",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Gotoubun no Kimochi",
+                    "$asa_author_name": "Nakanoke no Itsutguso",
+                    "$time_duration": "03:40",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.gotoubun_no_kimochi",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/gotoubun_no_kimochi"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Sign",
+                    "$asa_author_name": "Aya Uchida",
+                    "$time_duration": "03:56",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.sign",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/sign"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Gotoubun no Katachi",
+                    "$asa_author_name": "Nakanoke no Itsutguso",
+                    "$time_duration": "04:02",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.gotoubun_no_katachi",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/gotoubun_no_katachi"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Hatsukoi",
+                    "$asa_author_name": "Nakanoke no Itsutguso",
+                    "$time_duration": "05:15",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.hatsukoi",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/gotoubun_no_katachi"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Gotoubun no Kiseki",
+                    "$asa_author_name": "Nakanoke no Itsutguso",
+                    "$time_duration": "04:09",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.gotoubun_no_kiseki",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/gotoubun_no_kiseki"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Arigatou no Hana",
+                    "$asa_author_name": "Nakanoke no Itsutguso",
+                    "$time_duration": "03:27",
+
+                    "$asa_music_play": "asa_music.gotoubun_no_hanayome.arigatou_no_hana",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/gotoubun_no_hanayome/gotoubun_no_kiseki"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,89 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_effect_timer_screen",
+
+    "asa_effect_timer_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_effect_time_gird": {}
+            }
+        ]
+    },
+
+    "asa_effect_icon": {
+        "type": "image",
+        "texture": "#texture",
+        "size": [ 16, 16 ],
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_name": "#texture",
+                "binding_collection_name": "mob_effects_collection",
+                "binding_condition": "visible"
+            }
+        ]
+    },
+
+    "asa_effect_time": {
+        "type": "label",
+        "text": "#mob_effect_timer",
+        "shadow": true,
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_name": "#mob_effect_timer",
+                "binding_collection_name": "mob_effects_collection",
+                "binding_condition": "always_when_visible"
+            }
+        ]
+    },
+
+    "asa_mob_effect_stack_item": {
+        "type": "stack_panel",
+        "size": [ "100%c", 17 ],
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "@asa_effect_icon": {}
+            },
+            {
+                "panel": { "type": "panel", "size": [ 1, 1 ]}
+            },
+            {
+                "effect_time": {
+                    "type": "panel",
+                    "size": [ "100%cm", "100%" ],
+                    "controls": [
+                        {
+                            "@asa_effect_time": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_effect_time_gird": {
+        "type": "grid",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "size": [ "100%cm", "default" ],
+        "grid_item_template": "asa_effect_timer_screen.asa_mob_effect_stack_item",
+        "grid_dimension_binding": "#mob_effect_grid_size",
+        "collection_name": "mob_effects_collection",
+        "bindings": [
+            {
+                "binding_name": "#mob_effect_grid_size"
+            }
+        ]
+    }
+}

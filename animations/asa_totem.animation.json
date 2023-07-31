@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.asa_totem.third_person": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						90,
+						0,
+						-180
+					],
+					"position": [
+						0,
+						-2,
+						-7
+					],
+					"scale": 0.4
+				},
+				"leftitem": {
+					"rotation": [
+						90,
+						0,
+						-180
+					],
+					"position": [
+						0,
+						-2,
+						-7
+					],
+					"scale": 0.4
+				}
+			}
+		},
+
+		"animation.asa_totem.first_person_mainhand": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						65,
+						15,
+						35
+					],
+					"position": [
+						-2,
+						2,
+						0
+					],
+					"scale": 1.2
+				}
+			}
+		},
+
+		"animation.asa_totem.first_person_offhand": {
+			"loop": true,
+			"bones": {
+				"leftitem": {
+					"rotation": [
+						-90,
+						115,
+						0
+					],
+					"position": [
+						-42,
+						-16,
+						40
+					],
+					"scale": 3.2
+				}
+			}
+		}
+	}
+}

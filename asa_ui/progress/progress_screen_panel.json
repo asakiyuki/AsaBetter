@@ -1,0 +1,296 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_progress_screen_panel",
+    //Loading World Percent
+    "percentage_bindings": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$total": "#loading_bar_total_amount",
+        "$current": "#loading_bar_current_amount",
+        "bindings": [
+            {
+                "binding_name": "$total"
+            },
+            {
+                "binding_name": "$current"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((($current / $total) > $min) and (($current / $total) < $max))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "percen_label@percentage_bindings": {
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "type": "stack_panel",
+        "layer": 100,
+        "orientation": "horizontal",
+        "size": [
+            "100%c",
+            12
+        ],
+        "$number_text|default": "",
+        "controls": [
+            {
+                "number": {
+                    "type": "label",
+                    "text": "$number_text",
+                    "shadow": true,
+                    "font_type": "smooth",
+                    "font_scale_factor": 1.2,
+                    "layer": 100,
+                    "localize": false,
+                    "size": [
+                        "default",
+                        12
+                    ]
+                }
+            },
+            {
+                "percentage": {
+                    "type": "label",
+                    "text": "%",
+                    "shadow": true,
+                    "font_type": "smooth",
+                    "font_scale_factor": 1.2,
+                    "layer": 100,
+                    "localize": false,
+                    "size": [
+                        "default",
+                        12
+                    ]
+                }
+            }
+        ]
+    },
+
+    "cancel_button_world_loading@progress.cancel_button": {
+        "offset": [
+            -5,
+            -34
+        ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right"
+    },
+
+    //Loading Panel Template
+    "asa_none": {
+        "type": "panel",
+        "size": [
+            0,
+            0
+        ]
+    },
+
+    "background_with_panel": {
+        "type": "panel",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "image": {
+                    "type": "image",
+                    "layer": -30,
+                    "fill": true,
+                    "uv_size": [
+                        "100%c",
+                        "100%"
+                    ],
+                    "color": "$background_color",
+                    "texture": "$background_image"
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "layer": 30,
+                    "controls": [
+                        {
+                            "@cancel_button_world_loading": {
+                                "layer": 10
+                            }
+                        },
+                        {
+                            "asa_bottom_background": {
+                                "type": "image",
+                                "size": [
+                                    "100%",
+                                    33
+                                ],
+                                "color": [
+                                    0.1,
+                                    0.1,
+                                    0.3
+                                ],
+                                "alpha": 0.8,
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "texture": "asa_textures/ui/bar/date_a_live_bar",
+                                "controls": [
+                                    {
+                                        "@asa_percent_template.asa_percent_template": {
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
+                                            "$asa_binding_name": "#loading_bar_current_amount",
+                                            "offset": [
+                                                -5,
+                                                0
+                                            ],
+                                            "$total": "#loading_bar_total_amount",
+                                            "$current": "#loading_bar_current_amount",
+                                            "$reverser_percent_count": true,
+                                            "$asa_font": "smooth",
+                                            "visible": "$asa_percent_visible",
+                                            "$asa_percent_visible|default": true,
+                                            "$asa_percent_bindings": [
+                                                {
+                                                    "binding_name": "$total"
+                                                },
+                                                {
+                                                    "binding_name": "$current"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(((($current / $total) > $min) and (($current / $total) < $max)) or (($current / $total) = $max))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_bar_stack": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "100%cm",
+                                                "100%c"
+                                            ],
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left",
+                                            "offset": [
+                                                5,
+                                                0
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "generator_text": {
+                                                        "type": "label",
+                                                        "size": [
+                                                            "default",
+                                                            "default"
+                                                        ],
+                                                        "font_scale_factor": 1.2,
+                                                        "text": "#title_text",
+                                                        "font_type": "smooth",
+                                                        "layer": 50,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#title_text"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "progress_text": {
+                                                        "type": "label",
+                                                        "size": [
+                                                            "default",
+                                                            "default"
+                                                        ],
+                                                        "text": "#progress_text",
+                                                        "font_type": "smooth",
+                                                        "layer": 50,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#progress_text"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "credit": {
+                                                        "type": "label",
+                                                        "size": [
+                                                            "default",
+                                                            "default"
+                                                        ],
+                                                        "text": "AsaBetter made by Asaki Zuki",
+                                                        "font_type": "smooth",
+                                                        "font_scale_factor": 0.8,
+                                                        "layer": 50,
+                                                        "localize": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_empty_bar": {
+                                            "type": "image",
+                                            "size": [
+                                                "100%",
+                                                2
+                                            ],
+                                            "color": [
+                                                0.1,
+                                                0.1,
+                                                0.3
+                                            ],
+                                            "alpha": 0.6,
+                                            "anchor_from": "bottom_middle",
+                                            "anchor_to": "bottom_middle",
+                                            "texture": "asa_textures/ui/bar/date_a_live_bar",
+                                            "$asa_bar_visible|default": true,
+                                            "visible": "$asa_bar_visible",
+                                            "controls": [
+                                                {
+                                                    "asa_bar_loading": {
+                                                        "type": "image",
+                                                        "color": "@asa_extra_animation.rgb_1",
+                                                        "texture": "asa_textures/ui/bar/asa_bar_loading",
+                                                        "size": [ "100%", 2 ],
+                                                        "clip_direction": "left",
+                                                        "clip_pixelperfect": false,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#loading_bar_percentage",
+                                                                "binding_name_override": "#clip_ratio"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@progresss.popup_dialog_factory": {}
+            }
+        ]
+    }
+}

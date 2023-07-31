@@ -1,0 +1,178 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_crafting_button",
+
+    //Quick Crafting Button
+    "asa_quick_crafting_button_icon": {
+        "type": "image",
+        "size": [ 16, 16 ],
+        "texture": "$button_icon",
+        "layer": 20,
+        "controls": [
+            {
+                "hover_text_bg": {
+                    "type": "image",
+                    "size": [ "100%c + 6px", "100%c + 4px" ],
+                    "texture": "textures/ui/purpleBorder",
+                    "$asa_hover_text_offset|default": [ 9, 9 ],
+                    "offset": "$asa_hover_text_offset",
+                    "ignored": "(not $hover_state and not $toggle_checked_hover)",
+                    "$button_anchor|default": "bottom_left",
+                    "anchor_from": "$button_anchor",
+                    "anchor_to": "$button_anchor",
+                    "layer": 20,
+                    "controls": [
+                        {
+                            "hover_name_text": {
+                                "type": "label",
+                                "size": [ "default", "default" ],
+                                "layer": 20,
+                                "text": "$button_hover_name_text"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_quick_craft_button@asa_common_button.asa_text_button": {
+        "size": [ 20, 20 ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "$button_type_panel": "asa_crafting_button.asa_quick_crafting_button_icon",
+        "$button_icon": "textures/blocks/crafting_table_top",
+        "$button_hover_name_text": "Quick Crafting",
+        "$asa_hover_text_offset": [ 9, 9 ],
+        "property_bag": {
+			"#collection_name": "crafting_output_items",
+			"#collection_index": 0
+		},
+        "button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.crafting_output_tertiary",
+				"mapping_type": "pressed"
+			}
+		]
+    },
+
+    "asa_quick_trade@asa_common_button.asa_text_button": {
+        "size": [ 20, 20 ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "$button_type_panel": "asa_crafting_button.asa_quick_crafting_button_icon",
+        "$button_icon": "textures/ui/trade_icon",
+        "$button_hover_name_text": "Quick Trade",
+        "$asa_hover_text_offset": [ 9, 9 ],
+        "property_bag": {
+			"#collection_name": "trade2_result_item",
+			"#collection_index": 0
+		},
+        "button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.container_auto_place",
+				"mapping_type": "pressed"
+			}
+		]
+    },
+
+    "asa_quick_cutter@asa_common_button.asa_text_button": {
+        "size": [ 20, 20 ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "$button_type_panel": "asa_crafting_button.asa_quick_crafting_button_icon",
+        "$button_icon": "textures/ui/gear",
+        "$button_hover_name_text": "Quick Crafting",
+        "$asa_hover_text_offset": [ 9, 9 ],
+        "property_bag": {
+			"#collection_name": "stonecutter_result_items",
+			"#collection_index": 0
+		},
+        "button_mappings": [
+			{
+				"from_button_id": "button.menu_select",
+				"to_button_id": "button.container_auto_place",
+				"mapping_type": "pressed"
+			}
+		]
+    },
+
+    //Other button
+    "asa_button_item_renderer_template": {
+        "type": "panel",
+        "size": [ 16, 16 ],
+        "controls": [
+            {
+                "item_renderer": {
+                    "type": "custom",
+                    "renderer": "inventory_item_renderer",
+                    "size": [ 16, 16 ],
+                    "layer": 10,
+                    "property_bag": {
+                        "#item_id_aux": "$item_aux_id"
+                    }
+                }
+            },
+            {
+                "icon": {
+                    "type": "image",
+                    "size": [ 10, 10 ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "layer": 11,
+                    "visible": "$asa_icon_visible",
+                    "texture": "$button_icon"
+                }
+            },
+            {
+                "hover_text_bg": {
+                    "type": "image",
+                    "size": [ "100%c + 6px", "100%c + 4px" ],
+                    "texture": "textures/ui/purpleBorder",
+                    "offset": "$asa_hover_text_offset",
+                    "ignored": "$not_pressed_state",
+                    "$button_anchor|default": "bottom_left",
+                    "anchor_from": "$button_anchor",
+                    "anchor_to": "$button_anchor",
+                    "$asa_hover_text_offset|default": [ 9, 9 ],
+                    "layer": 20,
+                    "controls": [
+                        {
+                            "hover_name_text": {
+                                "type": "label",
+                                "size": [ "default", "default" ],
+                                "layer": 20,
+                                "text": "$button_hover_name_text"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_inventory_button_template@asa_common_button.asa_text_button": {
+        "size": [ 20, 20 ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right"
+    },
+
+    "asa_exit_button@asa_inventory_button_template": {
+        "$button_type_panel": "asa_crafting_button.asa_quick_crafting_button_icon",
+        "$button_icon": "textures/ui/close_button_default_light",
+        "$pressed_button_name": "$asa_button_pressed",
+        "$asa_button_pressed|default": "button.menu_exit",
+        "$button_hover_name_text": "Close",
+        "$asa_hover_text_offset": [ 9, 9 ]
+    }
+}

@@ -1,0 +1,1871 @@
+{
+    "namespace": "asa_furnace_recipe_toggle_common",
+
+    //Asa Recipe 
+    "asa_furnace_recipe_panel": {
+        "type": "panel",
+
+        "$asa_item_id_output|default": 65536,
+        "$asa_item_id_input|default": 65536,
+        "$asa_default_controls|default": [
+            { "@asa_item_icon_renderer": {} }
+        ],
+        "$asa_item_offset_animation|default": [ 0, 0 ],
+
+        "$asa_bindings_toggle_name|default": "none",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_bindings_toggle_name",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_recipe_view_input_slot": {}
+            },
+            {
+                "@asa_recipe_view_output_slot": {}
+            }
+        ]
+    },
+
+    "asa_recipe_view_output_slot": {
+        "type": "image",
+        "size": [ 26, 26 ],
+        "texture": "textures/ui/cell_image_red",
+        "layer": 10,
+        "$item_layer": 16,
+        "offset": [ 33, -40.5 ],
+
+        "$asa_item_id": "$asa_item_id_output",
+
+        "controls": [
+            { "@asa_item_icon_renderer": {} }
+        ]
+    },
+
+    "asa_recipe_view_input_slot": {
+        "type": "image",
+        "size": [ 18, 18 ],
+        "texture": "textures/ui/cell_image_red",
+        "layer": 10,
+        "$item_layer": 16,
+        "offset": [ -29, -59.5 ],
+        "$asa_item_id": "$asa_item_id_input",
+        "controls": [
+            {
+                "asa_panel": {
+                    "type": "panel",
+                    "size": [ 16, 16 ],
+                    "clips_children": true,
+                    "controls": [
+                        {
+                            "asa_icon_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": "$asa_item_offset_animation",
+                                "controls": "$asa_default_controls"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_furnace_full_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_furnace_recipe_panel": {
+                    "$asa_bindings_toggle_name": "asa_recipe_cooked_chicken",
+                    "$asa_item_id_output": 18087936,
+                    "$asa_item_id_input": 18022400
+                }
+            }
+        ]
+    },
+
+    //Asa Tab
+    "asa_recipe_book_scroll@crafting.scroll_panel": {
+        "$scrolling_content": "asa_furnace_recipe_toggle_common.asa_block",
+        "$collection_name": "none"
+    },
+
+    "asa_block": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+            {
+                "asa_tab_center": {
+                    "type": "panel",
+                    "size": [ "100%", "100%cm" ],
+                    "controls": [
+                        {
+                            "asa_food_tab_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%cm", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_recipe_food_tab",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "tab_1": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 1,
+                                                        "$asa_item_aux_id": 18087936,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z18022400'))",
+                                                        "$asa_hover_text": "item.cooked_chicken.name",
+                                                        "$asa_item_selected": "asa_recipe_cooked_chicken"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 2,
+                                                        "$asa_item_aux_id": 17235968,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z17170432'))",
+                                                        "$asa_item_selected": "asa_recipe_cooked_porkchop"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 3,
+                                                        "$asa_item_aux_id": 17956864,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z17891328'))",
+                                                        "$asa_item_selected": "asa_recipe_cooked_beef"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 4,
+                                                        "$asa_item_aux_id": 36110336,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z36044800'))",
+                                                        "$asa_item_selected": "asa_recipe_cooked_mutton"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 5,
+                                                        "$asa_item_aux_id": 18939904,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z18874368'))",
+                                                        "$asa_item_selected": "asa_recipe_cooked_rabbit"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 6,
+                                                        "$asa_item_aux_id": 17563648,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z17301504'))",
+                                                        "$asa_item_selected": "asa_recipe_coodked_cod"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 7,
+                                                        "$asa_item_aux_id": 17629184,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z17367040'))",
+                                                        "$asa_item_selected": "asa_recipe_cooked_salmon"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tab_2": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 8,
+                                                        "$asa_item_aux_id": 18415616,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z18350080'))",
+                                                        "$asa_item_selected": "asa_recipe_baked_potato"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 9,
+                                                        "$asa_item_aux_id": 17694720,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z25034752'))",
+                                                        "$asa_item_selected": "asa_recipe_dried_kelp"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+
+                        {
+                            "asa_food_tab_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%cm", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_recipe_block_tab",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "tab_1": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 201,
+                                                        "$asa_item_aux_id": 1310720,
+                                                        "$asa_item_id": "$asa_item_aux_id",
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z786432') or (#asa_item_aux_id = '§z786433')))",
+                                                        "$asa_item_selected": "asa_recipe_glass"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 202,
+                                                        "$asa_item_aux_id": -19857408,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z7340032'))",
+                                                        "$asa_item_selected": "asa_recipe_cracked_nether_brick"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 203,
+                                                        "$asa_item_aux_id": 6422530,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z6422528'))",
+                                                        "$asa_item_selected": "asa_recipe_cracked_stone_brick"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 204,
+                                                        "$asa_item_aux_id": -18350080,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-17956864'))",
+                                                        "$asa_item_selected": "asa_recipe_cracked_polished_blackstone_brick"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 205,
+                                                        "$asa_item_aux_id": -26804224,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-25362432'))",
+                                                        "$asa_item_selected": "asa_recipe_cracked_deepslate_tiles"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 206,
+                                                        "$asa_item_aux_id": -26869760,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-25624576'))",
+                                                        "$asa_item_selected": "asa_recipe_cracked_deepslate_bricks"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 207,
+                                                        "$asa_item_aux_id": -11993088,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z65536'))",
+                                                        "$asa_item_selected": "asa_recipe_smooth_stone"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tab_2": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 208,
+                                                        "$asa_item_aux_id": 1572867,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z1572864'))",
+                                                        "$asa_item_selected": "asa_recipe_smooth_sandtone"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 209,
+                                                        "$asa_item_aux_id": 11730947,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z11730944'))",
+                                                        "$asa_item_selected": "asa_recipe_smooth_red_sandtone"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 210,
+                                                        "$asa_item_aux_id": 10158083,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10158080'))",
+                                                        "$asa_item_selected": "asa_recipe_smooth_quartz_block"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 211,
+                                                        "$asa_item_aux_id": 11272192,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z5373952'))",
+                                                        "$asa_item_selected": "asa_recipe_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 212,
+                                                        "$asa_item_aux_id": 14417920,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420224'))",
+                                                        "$asa_item_selected": "asa_recipe_white_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 213,
+                                                        "$asa_item_aux_id": 14942208,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420232'))",
+                                                        "$asa_item_selected": "asa_recipe_light_gray_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 214,
+                                                        "$asa_item_aux_id": 14876672,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420231'))",
+                                                        "$asa_item_selected": "asa_recipe_gray_glazed_terracotta"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tab_3": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 215,
+                                                        "$asa_item_aux_id": 15400960,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420239'))",
+                                                        "$asa_item_selected": "asa_recipe_black_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 215,
+                                                        "$asa_item_aux_id": 15204352,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420236'))",
+                                                        "$asa_item_selected": "asa_recipe_brown_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 217,
+                                                        "$asa_item_aux_id": 15335424,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420238'))",
+                                                        "$asa_item_selected": "asa_recipe_red_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 218,
+                                                        "$asa_item_aux_id": 14483456,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420225'))",
+                                                        "$asa_item_selected": "asa_recipe_orange_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 219,
+                                                        "$asa_item_aux_id": 14680064,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420228'))",
+                                                        "$asa_item_selected": "asa_recipe_yellow_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 220,
+                                                        "$asa_item_aux_id": 14745600,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420229'))",
+                                                        "$asa_item_selected": "asa_recipe_lime_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 221,
+                                                        "$asa_item_aux_id": 15269888,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420237'))",
+                                                        "$asa_item_selected": "asa_recipe_green_glazed_terracotta"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+
+                                    {
+                                        "tab_4": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 222,
+                                                        "$asa_item_aux_id": 15007744,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420233'))",
+                                                        "$asa_item_selected": "asa_recipe_cyan_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 223,
+                                                        "$asa_item_aux_id": 14614528,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420227'))",
+                                                        "$asa_item_selected": "asa_recipe_light_blue_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 224,
+                                                        "$asa_item_aux_id": 15138816,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420235'))",
+                                                        "$asa_item_selected": "asa_recipe_blue_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 225,
+                                                        "$asa_item_aux_id": 14352384,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420234'))",
+                                                        "$asa_item_selected": "asa_recipe_purple_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 226,
+                                                        "$asa_item_aux_id": 14548992,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420226'))",
+                                                        "$asa_item_selected": "asa_recipe_magenta_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 227,
+                                                        "$asa_item_aux_id": 14811136,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10420230'))",
+                                                        "$asa_item_selected": "asa_recipe_pink_glazed_terracotta"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 228,
+                                                        "$asa_item_aux_id": 24444928,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z4784128') or (#asa_item_aux_id = '§z-26411008')))",
+                                                        "$asa_item_selected": "asa_recipe_redstone_dust"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+
+                                    {
+                                        "tab_4": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 229,
+                                                        "$asa_item_aux_id": -24707072,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-15335424'))",
+                                                        "$asa_item_selected": "asa_recipe_smooth_basalt"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 230,
+                                                        "$asa_item_aux_id": 65536,
+                                                        "$asa_item_id": "$asa_item_aux_id",
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z262144'))",
+                                                        "$asa_item_selected": "asa_recipe_stone"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 231,
+                                                        "$asa_item_aux_id": -24772608,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-24838144'))",
+                                                        "$asa_item_selected": "asa_recipe_deepslate"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 232,
+                                                        "$asa_item_aux_id": 1245184,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z1245185'))",
+                                                        "$asa_item_selected": "asa_recipe_sponge"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+
+                        {
+                            "asa_food_tab_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%cm", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_recipe_item_tab",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "tab_1": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 401,
+                                                        "$asa_item_aux_id": 19791872,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z1048576') or (#asa_item_aux_id = '§z-26607616')))",
+                                                        "$asa_item_selected": "asa_recipe_coal"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 402,
+                                                        "$asa_item_aux_id": 19857408,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z1114112') or (#asa_item_aux_id = '§z1114113') or (#asa_item_aux_id = '§z1114114') or (#asa_item_aux_id = '§z1114115') or (#asa_item_aux_id = '§z10616832') or (#asa_item_aux_id = '§z10616833')  or (#asa_item_aux_id = '§z-31718424') or (#asa_item_aux_id = '§z-655360')or (#asa_item_aux_id = '§z-327680') or (#asa_item_aux_id = '§z-393216') or (#asa_item_aux_id = '§z-458752') or (#asa_item_aux_id = '§z-524288') or (#asa_item_aux_id = '§z-589824') or (#asa_item_aux_id = '§z-31784960') or (#asa_item_aux_id = '§z-13893632') or (#asa_item_aux_id = '§z-13893631') or (#asa_item_aux_id = '§z-13893630') or (#asa_item_aux_id = '§z-13893629') or (#asa_item_aux_id = '§z-13893628') or (#asa_item_aux_id = '§z-13893627') or (#asa_item_aux_id = '§z-32571392') or (#asa_item_aux_id = '§z-13893624') or (#asa_item_aux_id = '§z-13893623') or (#asa_item_aux_id = '§z-13893622') or (#asa_item_aux_id = '§z-13893621') or (#asa_item_aux_id = '§z-13893620') or (#asa_item_aux_id = '§z-13893619') or (#asa_item_aux_id = '§z-32636928')))",
+                                                        "$asa_item_selected": "asa_recipe_charcoal"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 403,
+                                                        "$asa_item_aux_id": 19922944,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z3670016') or (#asa_item_aux_id = '§z-26542080')))",
+                                                        "$asa_item_selected": "asa_recipe_diamond"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 404,
+                                                        "$asa_item_aux_id": 37289984,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z22478808') or (#asa_item_aux_id = '§z22544384') or (#asa_item_aux_id = '§z22609920') or (#asa_item_aux_id = '§z22675456') or (#asa_item_aux_id = '§z20119552') or (#asa_item_aux_id = '§z19529728') or (#asa_item_aux_id = '§z19464192') or (#asa_item_aux_id = '§z19398656') or (#asa_item_aux_id = '§z21692416') or (#asa_item_aux_id = '§z34799616')))",
+                                                        "$asa_item_selected": "asa_recipe_iron_nugget"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 405,
+                                                        "$asa_item_aux_id": 33030144,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z33226752') or (#asa_item_aux_id = '§z-26738688') or (#asa_item_aux_id = '§z-20381696')))",
+                                                        "$asa_item_selected": "asa_recipe_copper_ingot"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 406,
+                                                        "$asa_item_aux_id": 19988480,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z-26279936') or (#asa_item_aux_id = '§z983040') or (#asa_item_aux_id = '§z33095680')))",
+                                                        "$asa_item_selected": "asa_recipe_iron_ingot"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 407,
+                                                        "$asa_item_aux_id": 40173568,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-17760256'))",
+                                                        "$asa_item_selected": "asa_recipe_netherite_scrap"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tab_2": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 408,
+                                                        "$asa_item_aux_id": 27852800,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z23003136') or (#asa_item_aux_id = '§z23068672') or (#asa_item_aux_id = '§z23134208') or (#asa_item_aux_id = '§z23199744') or (#asa_item_aux_id = '§z21102592') or (#asa_item_aux_id = '§z21299200') or (#asa_item_aux_id = '§z21233664') or (#asa_item_aux_id = '§z21168128') or (#asa_item_aux_id = '§z21823488') or (#asa_item_aux_id = '§z34865152')))",
+                                                        "$asa_item_selected": "asa_recipe_gold_nugget"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 409,
+                                                        "$asa_item_aux_id": 20054016,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z917504') or (#asa_item_aux_id = '§z-18874368') or (#asa_item_aux_id = '§z-26345472') or (#asa_item_aux_id = '§z33161216')))",
+                                                        "$asa_item_selected": "asa_recipe_gold_ingot"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 410,
+                                                        "$asa_item_aux_id": 33554432,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z8454144') or (#asa_item_aux_id = '§z-26673152')))",
+                                                        "$asa_item_selected": "asa_recipe_emerald"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 411,
+                                                        "$asa_item_aux_id": 34340864,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z10027008'))",
+                                                        "$asa_item_selected": "asa_recipe_nether_quartz"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 412,
+                                                        "$asa_item_aux_id": 25100288,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z25165824'))",
+                                                        "$asa_item_selected": "asa_recipe_brick"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 413,
+                                                        "$asa_item_aux_id": 34275328,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z5701632'))",
+                                                        "$asa_item_selected": "asa_recipe_nether_brick"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 414,
+                                                        "$asa_item_aux_id": 26542080,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z-10223616'))",
+                                                        "$asa_item_selected": "asa_recipe_lime_dye"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tab_3": {
+                                            "type": "stack_panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "size": [ "100%c", 18 ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 415,
+                                                        "$asa_item_aux_id": 26017792,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z5308416'))",
+                                                        "$asa_item_selected": "asa_recipe_green_dye"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 416,
+                                                        "$asa_item_aux_id": 27131904,
+                                                        "$asa_item_aux_id_detect": "(not ((#asa_item_aux_id = '§z1376256') or (#asa_item_aux_id = '§z-26214400')))",
+                                                        "$asa_item_selected": "asa_recipe_lapis_lazuli"
+                                                    }
+                                                },
+                                                {
+                                                    "@asa_recipe_selected_panel": {
+                                                        "$asa_toggle_group": 417,
+                                                        "$asa_item_aux_id": 36634624,
+                                                        "$asa_item_aux_id_detect": "(not (#asa_item_aux_id = '§z36569088'))",
+                                                        "$asa_item_selected": "asa_recipe_popped_chorus_fruit"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Asa Nav Tab Stack
+    "asa_nav_tab_stack": {
+        "size": [ 30, 27 ],
+        "offset": [ -30, 0 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "type": "stack_panel",
+
+        "$asa_toggle_radio": true,
+        "$toggle_controls": "asa_tabs_toggle_texture_content",
+
+        "$asa_toggle_disabled_texture": "textures/ui/TabLeftBack",
+        "$asa_hover_toggle_disabled_texture": "textures/ui/TabLeftBackHover",
+        "$asa_toggle_enabled_texture": "textures/ui/TabLeftFront",
+        "$asa_hover_toggle_enabled_texture": "textures/ui/TabLeftFrontHover",
+
+        "$asa_toggle_content": "asa_tab_item_icon_renderer",
+        "$toggle_controls_1": "$toggle_controls",
+
+        "controls": [
+            {
+                "asa_recipe_food_tab@asa_toggle_template": {
+                    "$asa_toggle_state": true,
+                    "$asa_toggle_group": 0,
+
+                    "$asa_toggle_disabled_texture": "textures/ui/TabLeftBackTopMost",
+                    "$asa_hover_toggle_disabled_texture": "textures/ui/TabLeftBackTopMostHover",
+                    "$asa_toggle_enabled_texture": "textures/ui/TabLeftFrontTopMost",
+                    "$asa_hover_toggle_enabled_texture": "textures/ui/TabLeftFrontTopMostHover",
+
+                    "$asa_item_aux_id": 17170432,
+
+                    "sound_name": "random.click",
+                    "sound_volume": 1.0,
+                    "sound_pitch": 1.0
+                }
+            },
+            {
+                "asa_recipe_block_tab@asa_toggle_template": {
+                    "$asa_toggle_group": 1,
+
+                    "sound_name": "random.click",
+                    "sound_volume": 1.0,
+                    "sound_pitch": 1.0
+                }
+            },
+            {
+                "asa_recipe_item_tab@asa_toggle_template": {
+                    "$asa_toggle_group": 2,
+
+                    "$asa_item_aux_id": 19988480,
+
+                    "sound_name": "random.click",
+                    "sound_volume": 1.0,
+                    "sound_pitch": 1.0
+                }
+            }
+        ]
+    },
+
+    "asa_tabs_toggle_texture_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_toggle_textures": {
+                    "type": "image",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": [ "100% + 4px", "100%" ],
+                    "layer": 10,
+                    "$asa_toggle_texture|default": "asa_textures/ui/none",
+                    "texture": "$asa_toggle_texture"
+                }
+            },
+            {
+                "asa_content@$asa_toggle_content": {
+                    "offset": [ 1.5, 0 ]
+                }
+            }
+        ]
+    },
+
+    "asa_tab_item_icon_renderer": {
+        "type": "custom",
+        "layer": 15,
+        "renderer": "inventory_item_renderer",
+        "$asa_item_icon_size|default": [ 16, 16 ],
+        "size": "$asa_item_icon_size",
+        "$asa_item_aux_id|default": 65536,
+        "$asa_item_id|default": "($asa_item_aux_id + (65536 * $asa_item_id_offset))",
+        "property_bag": {
+            "#item_id_aux": "$asa_item_id"
+        }
+    },
+
+    //Asa Toggle
+    "asa_click_to_craft": {
+        "type": "panel",
+        "size": [ 18, 18 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "controls": [
+            {
+                "asa_hotbar_stack": {
+                    "type": "stack_panel",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "size": [ 18, 18 ],
+                    "collection_name": "$asa_collection_tags",
+                    "$asa_collection_tags": "hotbar_items",
+                    "controls": [
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 0,
+                                "$asa_button_layer": 36
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 1,
+                                "$asa_button_layer": 35
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 2,
+                                "$asa_button_layer": 34
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 3,
+                                "$asa_button_layer": 33
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 4,
+                                "$asa_button_layer": 32
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 5,
+                                "$asa_button_layer": 31
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 6,
+                                "$asa_button_layer": 30
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 7,
+                                "$asa_button_layer": 29
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 8,
+                                "$asa_button_layer": 28
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_inventory_stack": {
+                    "type": "stack_panel",
+                    "size": [ 1, 1 ],
+                    "collection_name": "$asa_collection_tags",
+                    "$asa_collection_tags": "inventory_items",
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls": [
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 0,
+                                "$asa_button_layer": 27
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 1,
+                                "$asa_button_layer": 26
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 2,
+                                "$asa_button_layer": 25
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 3,
+                                "$asa_button_layer": 24
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 4,
+                                "$asa_button_layer": 23
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 5,
+                                "$asa_button_layer": 22
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 6,
+                                "$asa_button_layer": 21
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 7,
+                                "$asa_button_layer": 20
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 8,
+                                "$asa_button_layer": 19
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 9,
+                                "$asa_button_layer": 18
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 10,
+                                "$asa_button_layer": 17
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 11,
+                                "$asa_button_layer": 16
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 12,
+                                "$asa_button_layer": 15
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 13,
+                                "$asa_button_layer": 14
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 14,
+                                "$asa_button_layer": 13
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 15,
+                                "$asa_button_layer": 12
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 16,
+                                "$asa_button_layer": 11
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 17,
+                                "$asa_button_layer": 10
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 18,
+                                "$asa_button_layer": 9
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 19,
+                                "$asa_button_layer": 8
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 20,
+                                "$asa_button_layer": 7
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 21,
+                                "$asa_button_layer": 6
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 22,
+                                "$asa_button_layer": 5
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 23,
+                                "$asa_button_layer": 4
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 24,
+                                "$asa_button_layer": 3
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 25,
+                                "$asa_button_layer": 2
+                            }
+                        },
+                        {
+                            "@asa_auto_place_furnace_button": {
+                                "collection_index": 26,
+                                "$asa_button_layer": 1
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_auto_place_furnace_button": {
+        "type": "panel",
+        "size": [ 0, 0 ],
+        "layer": "$asa_button_layer",
+        "bindings": [
+            {
+                "binding_name": "#item_id_aux",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_collection_tags"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#item_id_aux / #item_id_aux)",
+                "target_property_name": "#asa_item_one"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_item_one * 65536)",
+                "target_property_name": "#offset_id"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#offset_id * $asa_item_id_offset)",
+                "target_property_name": "#asa_offset_2"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#item_id_aux - #asa_offset_2)",
+                "target_property_name": "#asa_offset_3"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z' + #asa_offset_3)",
+                "target_property_name": "#asa_item_aux_id"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$asa_item_aux_id_detect",
+                "target_property_name": "#asa_item_id_detect_default"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not #asa_item_id_detect_default)",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_auto_place_furnace_button_template": {}
+            }
+        ]
+    },
+    
+    "asa_auto_place_furnace_button_template": {
+        "type": "button",
+        "size": [ 18, 18 ],
+        "layer": "$asa_button_layer",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "hover_control": "asa_hover_button",
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.container_auto_place",
+                "mapping_type": "pressed"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "$asa_collection_tags",
+                "binding_condition": "once"
+            }
+        ]
+    },
+
+    "asa_recipe_selected_panel": {
+        "type": "panel",
+        "size": [ 18, 18 ],
+        "$asa_item_selected|default": "asa_null",
+
+        "$asa_toggle_radio": true,
+        "$asa_toggle_name": "recipe_selected",
+
+        "controls": [
+            {
+                "$asa_item_selected@asa_toggle_template": {}
+            },
+            {
+                "asa_button_auto_place@asa_click_to_craft": {}
+            }
+        ]
+    },
+
+    "asa_toggle_template": {
+        "type": "toggle",
+
+        "layer": 0,
+
+        "$asa_toggle_name|default": "recipe_tabs",
+        "toggle_name": "$asa_toggle_name",
+        "$asa_toggle_state|default": false,
+        "toggle_default_state": "$asa_toggle_state",
+
+        "$asa_toggle_radio|default": false,
+        "radio_toggle_group": "$asa_toggle_radio",
+        "$asa_toggle_group|default": 0,
+        "toggle_group_forced_index": "$asa_toggle_group",
+        "$asa_group_selected|default": 0,
+        "toggle_group_default_selected": "$asa_group_selected",
+
+        "unchecked_control": "asa_toggle_diabled",
+        "unchecked_hover_control": "asa_hover_toggle_diabled",
+        "checked_control": "asa_toggle_enabled",
+        "checked_hover_control": "asa_hover_toggle_enabled",
+
+        "$toggle_controls|default": "asa_toggle_texture_content",
+        "$asa_toggle_content|default": "none",
+        "$asa_no_state_toggle_content|default": "asa_item_icon_renderer",
+        
+        "$asa_border_button_state": "$hover_state",
+        "$toggle_controls_1|default": "asa_toggle_texture_content_1",
+
+        "$asa_toggle_disabled_texture|default": "textures/ui/recipe_book_item_bg",
+        "$asa_hover_toggle_disabled_texture|default": "textures/ui/highlight_slot",
+        "$asa_toggle_enabled_texture|default": "textures/ui/recipe_book_button_borderless_lighthover",
+        "$asa_hover_toggle_enabled_texture|default": "textures/ui/highlight_slot",
+
+        "property_bag": {
+            "#toggle_state": true
+        },
+
+        "button_mappings": [{ "from_button_id": "button.menu_select", "to_button_id": "button.menu_select", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" }],
+
+        "controls": [
+            {
+                "asa_toggle_diabled@$toggle_controls_1": {
+                    "$asa_toggle_texture": "$asa_toggle_disabled_texture",
+                    "$is_not_default_state": true
+                }
+            },
+            {
+                "asa_hover_toggle_diabled@$toggle_controls": {
+                    "$asa_toggle_texture": "$asa_hover_toggle_disabled_texture",
+                    "$is_not_hover_state": true
+                }
+            },
+            {
+                "asa_toggle_enabled@$toggle_controls": {
+                    "$asa_toggle_texture": "$asa_toggle_enabled_texture",
+                    "$is_not_default_state": true
+                }
+            },
+            {
+                "asa_hover_toggle_enabled@$toggle_controls": {
+                    "$asa_toggle_texture": "$asa_hover_toggle_enabled_texture",
+                    "$is_not_hover_state": true
+                }
+            },
+            {
+                "asa_no_state@$asa_no_state_toggle_content": {}
+            }
+        ]
+    },
+
+    "asa_toggle_texture_content_1": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_toggle_textures": {
+                    "type": "image",
+                    "$asa_toggle_texture|default": "asa_textures/ui/none",
+                    "texture": "$asa_toggle_texture",
+                    "controls": [
+                        {
+                            "can_crafting_this_recipe": {
+                                "type": "image",
+                                "layer": 2,
+                                "$asa_canbe_craft|default": "textures/ui/recipe_book_red_button",
+                                "texture": "$asa_canbe_craft",
+                                "$asa_item_aux_id_detect|default": "(not (#asa_item_aux_id = '§z65536'))",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_1",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_1"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_2",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_2"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_3",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_3"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_4",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_4"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_5",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_5"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_6",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_6"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_7",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_7"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_8",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_8"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "19823568_asa_hotbar_slot_9",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_hotbar_9"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#asa_item_hotbar_1 and  #asa_item_hotbar_2 and  #asa_item_hotbar_3 and  #asa_item_hotbar_4 and  #asa_item_hotbar_5 and  #asa_item_hotbar_6 and  #asa_item_hotbar_7 and  #asa_item_hotbar_8 and  #asa_item_hotbar_9 and  #asa_item_inventory_1 and  #asa_item_inventory_2 and  #asa_item_inventory_3 and  #asa_item_inventory_4 and  #asa_item_inventory_5 and  #asa_item_inventory_6 and  #asa_item_inventory_7 and  #asa_item_inventory_8 and  #asa_item_inventory_9 and  #asa_item_inventory_10 and  #asa_item_inventory_11 and  #asa_item_inventory_12 and  #asa_item_inventory_13 and  #asa_item_inventory_14 and  #asa_item_inventory_15 and  #asa_item_inventory_16 and  #asa_item_inventory_17 and  #asa_item_inventory_18 and  #asa_item_inventory_19 and  #asa_item_inventory_20 and  #asa_item_inventory_21 and  #asa_item_inventory_22 and  #asa_item_inventory_23 and  #asa_item_inventory_24 and  #asa_item_inventory_25 and  #asa_item_inventory_26 and  #asa_item_inventory_27)",
+                                        "target_property_name": "#visible"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_1",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_1"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_2",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_2"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_3",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_3"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_4",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_4"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_5",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_5"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_6",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_6"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_7",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_7"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_8",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_8"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_9",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_9"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_10",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_10"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_11",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_11"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_12",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_12"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_13",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_13"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_14",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_14"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_15",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_15"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_16",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_16"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_17",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_17"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_18",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_18"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_19",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_19"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_20",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_20"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_21",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_21"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_22",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_22"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_23",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_23"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_24",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_24"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_25",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_25"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_26",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_26"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "25667932_asa_inventory_slot_27",
+                                        "source_property_name": "$asa_item_aux_id_detect",
+                                        "target_property_name": "#asa_item_inventory_27"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "button_border": {
+                                "type": "image",
+                                "layer": 3,
+                                "texture": "textures/ui/focus_border_selected",
+                                "size": [ "100%", "100%" ],
+                                "ignored": "$is_not_default_state",
+                                "$asa_border_color|default": [ 1, 1, 1 ],
+                                "color": "$asa_border_color"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_toggle_textures": {
+                    "type": "image",
+                    "$asa_toggle_texture|default": "asa_textures/ui/none",
+                    "texture": "$asa_toggle_texture",
+                    "controls": [
+                        {
+                            "button_border": {
+                                "type": "image",
+                                "layer": 2,
+                                "texture": "textures/ui/focus_border_selected",
+                                "size": [ "100%", "100%" ],
+                                "ignored": "$is_not_default_state",
+                                "$asa_border_color|default": [ 1, 1, 1 ],
+                                "color": "$asa_border_color"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_hover_text": {
+                    "type": "custom",
+                    "renderer": "hover_text_renderer",
+                    "allow_clipping": false,
+                    "$is_not_default_state|default": false,
+                    "ignored": "$is_not_default_state",
+                    "property_bag": {
+                        "#hover_text": "Asa Test"
+                    }
+                }
+            },
+            {
+                "asa_content@$asa_toggle_content": {}
+            }
+        ]
+    },
+
+    "asa_toggle_texture_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_toggle_textures": {
+                    "type": "image",
+                    "$asa_toggle_texture|default": "asa_textures/ui/none",
+                    "texture": "$asa_toggle_texture",
+                    "controls": [
+                        {
+                            "button_border": {
+                                "type": "image",
+                                "layer": 3,
+                                "texture": "textures/ui/focus_border_selected",
+                                "size": [ "100%", "100%" ],
+                                "ignored": "$is_not_default_state",
+                                "$asa_border_color|default": [ 1, 1, 1 ],
+                                "color": "$asa_border_color"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_toggle_textures": {
+                    "type": "image",
+                    "$asa_toggle_texture|default": "asa_textures/ui/none",
+                    "texture": "$asa_toggle_texture",
+                    "controls": [
+                        {
+                            "button_border": {
+                                "type": "image",
+                                "layer": 2,
+                                "texture": "textures/ui/focus_border_selected",
+                                "size": [ "100%", "100%" ],
+                                "ignored": "$is_not_default_state",
+                                "$asa_border_color|default": [ 1, 1, 1 ],
+                                "color": "$asa_border_color"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_hover_text": {
+                    "type": "custom",
+                    "renderer": "hover_text_renderer",
+                    "allow_clipping": false,
+                    "$is_not_default_state|default": false,
+                    "ignored": "$is_not_default_state",
+                    "layer": 50,
+                    "$asa_hover_text|default": "Asa Empty item Name",
+                    "property_bag": {
+                        "#hover_text": "$asa_hover_text"
+                    }
+                }
+            },
+            {
+                "asa_content@$asa_toggle_content": {}
+            }
+        ]
+    },
+
+    "asa_empty": {
+        "type": "panel"
+    },
+
+    "asa_item_icon_renderer": {
+        "type": "custom",
+        "$item_layer|default": 3,
+        "layer": "$item_layer",
+        "renderer": "inventory_item_renderer",
+        "$asa_item_icon_size|default": [ 16, 16 ],
+        "size": "$asa_item_icon_size",
+        "$asa_item_aux_id|default": 65536,
+        "$asa_item_id|default": "($asa_item_aux_id + (65536 * $asa_item_id_offset))",
+        "property_bag": {
+            "#item_id_aux": "$asa_item_id"
+        }
+    },
+
+    //Detect System
+    "asa_collection_item_template": {
+        "type": "panel",
+        "size": [ 1, 1 ],
+        "bindings": [
+            {
+                "binding_name": "#item_id_aux",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_collection_tags"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#item_id_aux / #item_id_aux)",
+                "target_property_name": "#asa_item_one"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_item_one * 65536)",
+                "target_property_name": "#offset_id"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#offset_id * $asa_item_id_offset)",
+                "target_property_name": "#asa_offset_2"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#item_id_aux - #asa_offset_2)",
+                "target_property_name": "#asa_offset_3"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z' + #asa_offset_3)",
+                "target_property_name": "#asa_item_aux_id"
+            }
+        ]
+    },
+
+    "asa_is_can_be_furnace_items": {
+        "type": "panel",
+        "size": [ 1, 1 ],
+        "controls": [
+            {
+                "asa_hotbar_stack": {
+                    "type": "stack_panel",
+                    "size": [ 1, 1 ],
+                    "collection_name": "$asa_collection_tags",
+                    "$asa_collection_tags": "hotbar_items",
+                    "controls": [
+                        {
+                            "19823568_asa_hotbar_slot_1@asa_collection_item_template": {
+                                "collection_index": 0
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_2@asa_collection_item_template": {
+                                "collection_index": 1
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_3@asa_collection_item_template": {
+                                "collection_index": 2
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_4@asa_collection_item_template": {
+                                "collection_index": 3
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_5@asa_collection_item_template": {
+                                "collection_index": 4
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_6@asa_collection_item_template": {
+                                "collection_index": 5
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_7@asa_collection_item_template": {
+                                "collection_index": 6
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_8@asa_collection_item_template": {
+                                "collection_index": 7
+                            }
+                        },
+                        {
+                            "19823568_asa_hotbar_slot_9@asa_collection_item_template": {
+                                "collection_index": 8
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_inventory_stack": {
+                    "type": "stack_panel",
+                    "size": [ 1, 1 ],
+                    "collection_name": "$asa_collection_tags",
+                    "$asa_collection_tags": "inventory_items",
+                    "controls": [
+                        {
+                            "25667932_asa_inventory_slot_1@asa_collection_item_template": {
+                                "collection_index": 0
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_2@asa_collection_item_template": {
+                                "collection_index": 1
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_3@asa_collection_item_template": {
+                                "collection_index": 2
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_4@asa_collection_item_template": {
+                                "collection_index": 3
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_5@asa_collection_item_template": {
+                                "collection_index": 4
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_6@asa_collection_item_template": {
+                                "collection_index": 5
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_7@asa_collection_item_template": {
+                                "collection_index": 6
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_8@asa_collection_item_template": {
+                                "collection_index": 7
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_9@asa_collection_item_template": {
+                                "collection_index": 8
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_10@asa_collection_item_template": {
+                                "collection_index": 9
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_11@asa_collection_item_template": {
+                                "collection_index": 10
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_12@asa_collection_item_template": {
+                                "collection_index": 11
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_13@asa_collection_item_template": {
+                                "collection_index": 12
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_14@asa_collection_item_template": {
+                                "collection_index": 13
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_15@asa_collection_item_template": {
+                                "collection_index": 14
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_16@asa_collection_item_template": {
+                                "collection_index": 15
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_17@asa_collection_item_template": {
+                                "collection_index": 16
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_18@asa_collection_item_template": {
+                                "collection_index": 17
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_19@asa_collection_item_template": {
+                                "collection_index": 18
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_20@asa_collection_item_template": {
+                                "collection_index": 19
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_21@asa_collection_item_template": {
+                                "collection_index": 20
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_22@asa_collection_item_template": {
+                                "collection_index": 21
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_23@asa_collection_item_template": {
+                                "collection_index": 22
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_24@asa_collection_item_template": {
+                                "collection_index": 23
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_25@asa_collection_item_template": {
+                                "collection_index": 24
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_26@asa_collection_item_template": {
+                                "collection_index": 25
+                            }
+                        },
+                        {
+                            "25667932_asa_inventory_slot_27@asa_collection_item_template": {
+                                "collection_index": 26
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

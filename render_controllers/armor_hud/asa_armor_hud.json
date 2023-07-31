@@ -1,0 +1,339 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.asa_armor_indicator_icon": {
+			"part_visibility": [
+				{
+					"*": "v.asa_armor_indicator_total > 0 && q.is_alive && !q.is_in_ui && !variable.map_face_icon && !variable.is_first_person && !variable.is_paperdoll"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"texture.armor_icon"
+			],
+			"geometry": "Geometry.armor_icon",
+			"materials": [
+				{
+					"*": "Material.player_xray"
+				}
+			]
+		},
+
+		"controller.render.array_controls_test": {
+			"part_visibility": [
+				{
+					"*": "v.asa_armor_indicator_total > 0 && q.is_alive && !q.is_in_ui && !variable.map_face_icon && !variable.is_first_person && !variable.is_paperdoll"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"array.asa_coordinates[v.asa_armor_indicator_total]"
+			],
+			"geometry": "Geometry.armor_indicator_1",
+			"materials": [
+				{
+					"*": "Material.player_xray"
+				}
+			]
+		},
+
+		"controller.render.array_controls_test_2": {
+			"part_visibility": [
+				{
+					"*": "v.asa_armor_indicator_total > 9 && q.is_alive && !q.is_in_ui && !variable.map_face_icon && !variable.is_first_person && !variable.is_paperdoll"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"array.asa_coordinates": [
+						"texture.number_0",
+						"texture.number_1",
+						"texture.number_2",
+						"texture.number_3",
+						"texture.number_4",
+						"texture.number_5",
+						"texture.number_6",
+						"texture.number_7",
+						"texture.number_8",
+						"texture.number_9"
+					]
+				}
+			},
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"textures": [
+				"array.asa_coordinates[v.asa_armor_indicator_total / 10]"
+			],
+			"geometry": "Geometry.armor_indicator_2",
+			"materials": [
+				{
+					"*": "Material.player_xray"
+				}
+			]
+		},
+
+		//HUD Controls
+		"controller.render.asa_offhand_slots": {
+			"arrays": {
+				"textures": {
+					"array.armor": [
+						"texture.totem",
+						"texture.arrow",
+						"texture.fireworks",
+						"texture.nautilus",
+						"texture.map_filled",
+						"texture.shield"
+					]
+				}
+			},
+			"part_visibility": [
+				{
+					"*": "q.get_equipped_item_name(1) == 'totem_of_undying' || q.get_equipped_item_name(1) == 'arrow' || q.get_equipped_item_name(1) == 'firework_rocket' || q.get_equipped_item_name(1) == 'nautilus_shell' || q.get_equipped_item_name(1) == 'filled_map' || q.get_equipped_item_name(1) == 'shield'"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"ignore_lighting": true,
+			"textures": [
+				"array.armor[(((q.get_equipped_item_name(1) == 'totem_of_undying') ? 0) + (q.get_equipped_item_name(1) == 'arrow') + ((q.get_equipped_item_name(1) == 'firework_rocket') ? 2) + ((q.get_equipped_item_name(1) == 'nautilus_shell') ? 3) + ((q.get_equipped_item_name(1) == 'filled_map') ? 4) + ((q.get_equipped_item_name(1) == 'shield') ? 5)) ]"
+			],
+			"geometry": "Geometry.offhand_slot",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+		"controller.render.asa_offhand_slots_background": {
+			"part_visibility": [
+				{
+					"*": "q.get_equipped_item_name(1) == 'totem_of_undying' || q.get_equipped_item_name(1) == 'arrow' || q.get_equipped_item_name(1) == 'firework_rocket' || q.get_equipped_item_name(1) == 'nautilus_shell' || q.get_equipped_item_name(1) == 'filled_map' || q.get_equipped_item_name(1) == 'shield'"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {},
+			"overlay_color": {},
+			"ignore_lighting": true,
+			"textures": [
+				"texture.item_background"
+			],
+			"geometry": "Geometry.offhand_slot_bg",
+			"materials": [
+				{
+					"*": "Material.alpha_opacity"
+				}
+			]
+		},
+		
+		"controller.render.asa_armor_hud_helmet": {
+			"arrays": {
+				"textures": {
+					"array.armor": [
+						"texture.empty_helmet",
+						"texture.leather_helmet",
+						"texture.chain_helmet",
+						"texture.iron_helmet",
+						"texture.diamond_helmet",
+						"texture.gold_helmet",
+						"texture.turtle_helmet",
+						"texture.netherite_helmet",
+						"texture.pumpkin"
+					]
+				}
+			},
+			"ignore_lighting": true,
+			"is_hurt_color": {
+				"r": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3",
+				"a": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.30"
+			},
+			"on_fire_color": {
+				"r": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3",
+				"a": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.30"
+			},
+			"overlay_color": {
+				"r": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3",
+				"a": "query.armor_material_slot(0) == 1 || query.armor_material_slot(0) == 3 ? 0.30"
+			},
+			"textures": [
+				"array.armor[(q.armor_texture_slot(0) > 4 ? -1) + (q.armor_texture_slot(0) > -1 ? 1 + q.armor_texture_slot(0)) + (q.is_item_name_any('slot.armor.head', 0, 'minecraft:carved_pumpkin') ? 8)]"
+			],
+			"geometry": "Geometry.helmet_hud",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+		"controller.render.asa_armor_hud_chest": {
+			"arrays": {
+				"textures": {
+					"array.armor": [
+						"texture.empty_chestplate",
+						"texture.leather_chestplate",
+						"texture.chain_chestplate",
+						"texture.iron_chestplate",
+						"texture.diamond_chestplate",
+						"texture.gold_chestplate",
+						"texture.elytra",
+						"texture.netherite_chestplate"
+					]
+				}
+			},
+			"ignore_lighting": true,
+			"is_hurt_color": {
+				"r": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3",
+				"a": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.30"
+			},
+			"on_fire_color": {
+				"r": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3",
+				"a": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.30"
+			},
+			"overlay_color": {
+				"r": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3",
+				"a": "query.armor_material_slot(1) == 1 || query.armor_material_slot(1) == 3 ? 0.30"
+			},
+			"textures": [
+				"array.armor[(q.armor_texture_slot(1) > -1 ? 1) + (q.armor_texture_slot(1) > 4 ? 0) + (q.armor_texture_slot(1) > 5 ? -1) + (q.armor_texture_slot(1))]"
+			],
+			"geometry": "Geometry.chestplate_hud",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+		"controller.render.asa_armor_hud_leggings": {
+			"arrays": {
+				"textures": {
+					"array.armor": [
+						"texture.empty_leggings",
+						"texture.leather_leggings",
+						"texture.chain_leggings",
+						"texture.iron_leggings",
+						"texture.diamond_leggings",
+						"texture.gold_leggings",
+						"texture.netherite_leggings"
+					]
+				}
+			},
+			"ignore_lighting": true,
+			"is_hurt_color": {
+				"r": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3",
+				"a": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.30"
+			},
+			"on_fire_color": {
+				"r": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3",
+				"a": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.30"
+			},
+			"overlay_color": {
+				"r": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3",
+				"a": "query.armor_material_slot(2) == 1 || query.armor_material_slot(2) == 3 ? 0.30"
+			},
+			"textures": [
+				"array.armor[(q.armor_texture_slot(2) > -1 ? 1) + (q.armor_texture_slot(2) > 4 ? -2) + (q.armor_texture_slot(2))]"
+			],
+			"geometry": "Geometry.leggings_hud",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		},
+
+		"controller.render.asa_armor_hud_boots": {
+			"arrays": {
+				"textures": {
+					"array.armor": [
+						"texture.empty_boots",
+						"texture.leather_boots",
+						"texture.chain_boots",
+						"texture.iron_boots",
+						"texture.diamond_boots",
+						"texture.gold_boots",
+						"texture.netherite_boots"
+					]
+				}
+			},
+			"ignore_lighting": true,
+			"is_hurt_color": {
+				"r": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3",
+				"a": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.30"
+			},
+			"on_fire_color": {
+				"r": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3",
+				"a": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.30"
+			},
+			"overlay_color": {
+				"r": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.4 : 0.0",
+				"g": 0.0,
+				"b": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3",
+				"a": "query.armor_material_slot(3) == 1 || query.armor_material_slot(3) == 3 ? 0.30"
+			},
+			"textures": [
+				"array.armor[(q.armor_texture_slot(3) > -1 ? 1) + (q.armor_texture_slot(3) > 4 ? -2) + (q.armor_texture_slot(3))]"
+			],
+			"geometry": "Geometry.boots_hud",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			]
+		}
+	}
+}

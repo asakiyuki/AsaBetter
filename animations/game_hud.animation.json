@@ -1,0 +1,42 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.armor_hud": {
+			"loop": true,
+			"bones": {
+				"armor_hud_and_offhand_hud": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"q.is_swimming ? -17",
+						0
+					],
+					"scale": 1
+				}
+			}
+		},
+
+		"animation.player.armor_indicator": {
+			"loop": true,
+			"bones": {
+				"armor_indicator": {
+					"rotation": [ "-query.camera_rotation(0)", "-query.body_y_rotation + query.camera_rotation(1) + 180", 0 ],
+					"position": [ -4, "q.is_swimming ? -17", 0 ]
+				}
+			}
+		}
+	}
+}

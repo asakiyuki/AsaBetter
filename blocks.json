@@ -1,0 +1,33 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "format_version": [ 0, 1, 1 ],
+
+    "barrel": {
+        "carried_textures": {
+            "up": "barrel_top",
+            "down": "barrel_bottom",
+            "north": "barrel_side",
+            "south": "barrel_side",
+            "east": "rotate_barrel_side",
+            "west": "rotate_barrel_side"
+        },
+
+        "textures": {
+            "up": "barrel_side",
+            "down": "barrel_side",
+            "north": "barrel_top",
+            "south": "barrel_bottom",
+            "east": "barrel_side",
+            "west": "barrel_side"
+        },
+        "sound": "wood"
+    }
+}

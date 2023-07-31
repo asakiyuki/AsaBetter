@@ -1,0 +1,232 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_mp_secs_date_a_live",
+
+    "sections_panel": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_date_a_live",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Date a Live",
+                    "$asa_author_name": "Sweet ARMS",
+                    "$time_duration": "04:35",
+
+                    "$asa_music_play": "asa_music.date_a_live.date_a_live",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/date_a_live"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Save the World",
+                    "$asa_author_name": "Lori Nomizu",
+                    "$time_duration": "03:57",
+
+                    "$asa_music_play": "asa_music.date_a_live.save_the_world",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/save_the_world"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Save my Heart",
+                    "$asa_author_name": "Lori Nomizu",
+                    "$time_duration": "03:49",
+
+                    "$asa_music_play": "asa_music.date_a_live.save_my_heart",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/save_my_heart"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Strawberry Rain",
+                    "$asa_author_name": "Lori Nomizu",
+                    "$time_duration": "04:58",
+
+                    "$asa_music_play": "asa_music.date_a_live.strawberry_rain",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/strawberry_rain"
+                }
+            },
+
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Hatsukoi Winding Road",
+                    "$asa_author_name": "Ai Yamabuki (CV: Risako Murai), Mai Hazakura (CV: Kayoko Tsumita) & Mii Fujibakama (CV: Midori Tsukimiya)",
+                    "$time_duration": "03:55",
+
+                    "$asa_music_play": "asa_music.date_a_live.hatsukoi_winding_road",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/hatsukoi_winding_road"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Trust in You",
+                    "$asa_author_name": "Sweet ARMS",
+                    "$time_duration": "04:33",
+
+                    "$asa_music_play": "asa_music.date_a_live.trust_in_you",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/trust_in_you"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Day to Story",
+                    "$asa_author_name": "Sadohara Kaori",
+                    "$time_duration": "04:47",
+
+                    "$asa_music_play": "asa_music.date_a_live.day_to_story",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/day_to_story"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Mermaid Lovestory",
+                    "$asa_author_name": "Miku Izayoi (CV: Minori Chihara)",
+                    "$time_duration": "03:36",
+
+                    "$asa_music_play": "asa_music.date_a_live.mermaid_lovestory",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/mermaid_lovestory"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Go Summer Girl",
+                    "$asa_author_name": "Miku Izayoi (CV: Minori Chihara)",
+                    "$time_duration": "05:13",
+
+                    "$asa_music_play": "asa_music.date_a_live.go_summer_girl",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/go_summer_girl"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Monochrome Sky",
+                    "$asa_author_name": "Miku Izayoi (CV: Minori Chihara)",
+                    "$time_duration": "04:35",
+
+                    "$asa_music_play": "asa_music.date_a_live.monochrome_sky",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/monochrome_sky"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Q&A",
+                    "$asa_author_name": "Tohka Yatogami (CV: Marina Inoue) & Shiori Itsuka (CV: Saeko Zogo)",
+                    "$time_duration": "03:53",
+
+                    "$asa_music_play": "asa_music.date_a_live.q&a",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/q&a"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "My Treasure",
+                    "$asa_author_name": "Miku Izayoi (CV: Minori Chihara)",
+                    "$time_duration": "06:21",
+
+                    "$asa_music_play": "asa_music.date_a_live.my_treasure",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/my_treasure"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Invisible Date",
+                    "$asa_author_name": "Sweet ARMS",
+                    "$time_duration": "04:27",
+
+                    "$asa_music_play": "asa_music.date_a_live.invisible_date",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/invisible_date"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "I Swear",
+                    "$asa_author_name": "Sweet ARMS",
+                    "$time_duration": "05:09",
+
+                    "$asa_music_play": "asa_music.date_a_live.i_swear",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/i_swear"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Last Promise",
+                    "$asa_author_name": "Erii Yamazaki",
+                    "$time_duration": "03:45",
+
+                    "$asa_music_play": "asa_music.date_a_live.last_promise",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/last_promise"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "OveR",
+                    "$asa_author_name": "Miyu Tomita",
+                    "$time_duration": "04:00",
+
+                    "$asa_music_play": "asa_music.date_a_live.over",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/over"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "S.O.S",
+                    "$asa_author_name": "Sweet ARMS",
+                    "$time_duration": "04:28",
+
+                    "$asa_music_play": "asa_music.date_a_live.sos",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/date_a_live/sos"
+                }
+            }
+        ]
+    }
+}

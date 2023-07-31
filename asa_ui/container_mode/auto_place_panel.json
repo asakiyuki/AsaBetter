@@ -1,0 +1,25 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_auto_place_panel",
+
+    "asa_chest_auto_place_panel": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "offset": [ 22, 0 ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+            {
+                "@asa_crafting_button.asa_exit_button": {}
+            }
+        ]
+    }
+}

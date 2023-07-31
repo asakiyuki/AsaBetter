@@ -1,0 +1,96 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_text_box_common",
+
+    "asa_text_box_template": {
+        "type": "edit_box",
+
+        "max_length": 50,
+        "text_box_name": "#text_box_name",
+        "text_type": "ExtendedASCII",
+
+        "text_control": "asa_label_box",
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "locked_control": "locked",
+
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "handle_select": false,
+                "handle_deselect": true,
+                "mapping_type": "global",
+                "consume_event": false
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "handle_select": false,
+                "handle_deselect": true,
+                "mapping_type": "global"
+            }
+        ],
+
+        "controls": [
+            {
+                "asa_label_box@text_box_label": {}
+            },
+            {
+                "default@asa_text_box_common.asa_text_box_image": {
+                    "color": [ 0, 0, 0 ]
+                }
+            },
+            {
+                "locked@asa_text_box_common.asa_text_box_image": {
+                    "color": [ 0, 0, 0 ]
+                }
+            },
+            {
+                "hover@asa_text_box_common.asa_text_box_image": {
+                    "color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "pressed@asa_text_box_common.asa_text_box_image": {
+                    "color": [ 1, 1, 1 ]
+                }
+            }
+        ]
+    },
+
+    "asa_text_box_image": {
+        "type": "image",
+        "texture": "asa_textures/ui/asa_text_box"
+    },
+
+    "text_box_label": {
+        "type": "label",
+        "localize": false,
+        "text": "#item_name",
+        "layer": 12,
+        "size": [ "100% - 4px", "default" ],
+        "property_bag": {
+            "#property_field": "#item_name"
+        }
+    }
+}

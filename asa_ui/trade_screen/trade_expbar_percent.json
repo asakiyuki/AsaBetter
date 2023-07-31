@@ -1,0 +1,903 @@
+/*
+
+You can use my code without my permission, as long as you don't delete this text
+
+Youtube: https://www.youtube.com/channel/UCqz1oL2R-iO9Sw9FlribnXg
+Facebook: https://facebook.com/creator.asakizuki
+Discord: Asaki Zuki#0001
+
+*/
+
+{
+    "namespace": "asa_trade_expbar_percent",
+
+    //Villager Percent
+    "villager_current_percentage": {
+        "type": "panel",
+        "size": [ "100%c", "100%cm" ],
+        "$progress_percent_bindings": "#exp_progress",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 0, 1 ],
+        "controls": [
+            {
+                "@asa_percent_stack": {}
+            }
+        ]
+    },
+
+    "villager_possible_percentage": {
+        "type": "panel",
+        "size": [ "100%c", "100%cm" ],
+        "$progress_percent_bindings": "#exp_possible_progress",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [ 0, 1 ],
+        "controls": [
+            {
+                "@asa_percent_stack_2": {}
+            }
+        ]
+    },
+
+    //Template
+    "asa_bindings_code": {
+        "color": "$asa_text_color",
+        "$asa_text_color|default": [ 0.3, 0.3, 0.3 ],
+        "layer": 10,
+        "type": "label",
+        "size": [ "default", 10 ],
+        "localize": false,
+        "$bindings_math|default": "(($progress_percent_bindings > $min_exp_bar) and ($progress_percent_bindings < $max_exp_bar) or ($progress_percent_bindings = $max_exp_bar))",
+        "$no_use_this_bindings|default": true,
+        "bindings": "$asa_progress_bindings",
+        "$asa_progress_bindings|default": [
+            {
+                "binding_name": "$progress_percent_bindings",
+                "binding_type": "global",
+                "binding_condition": "always"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$bindings_math",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "asa_percent_stack": {
+        "type": "stack_panel",
+        "size": [ "100%c", "100%cm" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "@asa_progress": {}
+            },
+            {
+                "@asa_bindings_code": {
+                    "text": "%",
+                    "$min_exp_bar": -1,
+                    "$max_exp_bar": 1
+                }
+            }
+        ]
+    },
+
+    "asa_percent_stack_2": {
+        "type": "stack_panel",
+        "size": [ "100%c", "100%cm" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "@asa_bindings_code": {
+                    "text": "Next: ",
+                    "$min_exp_bar": -1,
+                    "$max_exp_bar": 1
+                }
+            },
+            {
+                "@asa_progress": {}
+            },
+            {
+                "@asa_bindings_code": {
+                    "text": "%",
+                    "$min_exp_bar": -1,
+                    "$max_exp_bar": 1
+                }
+            },
+            {
+                "@asa_bindings_code": {
+                    "text": " (+",
+                    "$min_exp_bar": -1,
+                    "$max_exp_bar": 1
+                }
+            },
+            {
+                "@asa_progress": {
+                    "$asa_progress_bindings": [
+                        {
+                            "binding_name": "#exp_possible_progress",
+                            "binding_type": "global",
+                            "binding_condition": "always"
+                        },
+                        {
+                            "binding_name": "#exp_progress",
+                            "binding_type": "global",
+                            "binding_condition": "always"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(1 - (#exp_progress - #exp_possible_progress))",
+                            "target_property_name": "#exp_villager"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#exp_villager > $min_exp_bar) and (#exp_villager < $max_exp_bar) or (#exp_villager = $max_exp_bar))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_bindings_code": {
+                    "text": "%)",
+                    "$min_exp_bar": -1,
+                    "$max_exp_bar": 1
+                }
+            }
+        ]
+    },
+
+    "asa_progress": {
+        "type": "panel",
+        "size": [ "100%cm", "100%cm" ],
+        "controls": [
+            {
+                "5@asa_bindings_code": {
+                    "text": "5",
+                    "$min_exp_bar": -0.06,
+                    "$max_exp_bar": -0.05
+                }
+            },
+            {
+                "4@asa_bindings_code": {
+                    "text": "4",
+                    "$min_exp_bar": -0.05,
+                    "$max_exp_bar": -0.04
+                }
+            },
+            {
+                "3@asa_bindings_code": {
+                    "text": "3",
+                    "$min_exp_bar": -0.04,
+                    "$max_exp_bar": -0.03
+                }
+            },
+            {
+                "2@asa_bindings_code": {
+                    "text": "2",
+                    "$min_exp_bar": -0.03,
+                    "$max_exp_bar": -0.02
+                }
+            },
+            {
+                "1@asa_bindings_code": {
+                    "text": "1",
+                    "$min_exp_bar": -0.02,
+                    "$max_exp_bar": -0.01
+                }
+            },
+            {
+                "100@asa_bindings_code": {
+                    "text": "100",
+                    "$min_exp_bar": -0.01,
+                    "$max_exp_bar": 0
+                }
+            },
+            {
+                "100@asa_bindings_code": {
+                    "text": "99",
+                    "$min_exp_bar": 0,
+                    "$max_exp_bar": 0.01
+                }
+            },
+            {
+                "99@asa_bindings_code": {
+                    "text": "98",
+                    "$min_exp_bar": 0.01,
+                    "$max_exp_bar": 0.02
+                }
+            },
+            {
+                "98@asa_bindings_code": {
+                    "text": "97",
+                    "$min_exp_bar": 0.02,
+                    "$max_exp_bar": 0.03
+                }
+            },
+            {
+                "97@asa_bindings_code": {
+                    "text": "96",
+                    "$min_exp_bar": 0.03,
+                    "$max_exp_bar": 0.04
+                }
+            },
+            {
+                "96@asa_bindings_code": {
+                    "text": "95",
+                    "$min_exp_bar": 0.04,
+                    "$max_exp_bar": 0.05
+                }
+            },
+            {
+                "95@asa_bindings_code": {
+                    "text": "94",
+                    "$min_exp_bar": 0.05,
+                    "$max_exp_bar": 0.06
+                }
+            },
+            {
+                "94@asa_bindings_code": {
+                    "text": "93",
+                    "$min_exp_bar": 0.06,
+                    "$max_exp_bar": 0.07
+                }
+            },
+            {
+                "93@asa_bindings_code": {
+                    "text": "92",
+                    "$min_exp_bar": 0.07,
+                    "$max_exp_bar": 0.08
+                }
+            },
+            {
+                "92@asa_bindings_code": {
+                    "text": "91",
+                    "$min_exp_bar": 0.08,
+                    "$max_exp_bar": 0.09
+                }
+            },
+            {
+                "91@asa_bindings_code": {
+                    "text": "90",
+                    "$min_exp_bar": 0.09,
+                    "$max_exp_bar": 0.10
+                }
+            },
+            {
+                "90@asa_bindings_code": {
+                    "text": "89",
+                    "$min_exp_bar": 0.10,
+                    "$max_exp_bar": 0.11
+                }
+            },
+            {
+                "89@asa_bindings_code": {
+                    "text": "88",
+                    "$min_exp_bar": 0.11,
+                    "$max_exp_bar": 0.12
+                }
+            },
+            {
+                "88@asa_bindings_code": {
+                    "text": "87",
+                    "$min_exp_bar": 0.12,
+                    "$max_exp_bar": 0.13
+                }
+            },
+            {
+                "87@asa_bindings_code": {
+                    "text": "86",
+                    "$min_exp_bar": 0.13,
+                    "$max_exp_bar": 0.14
+                }
+            },
+            {
+                "86@asa_bindings_code": {
+                    "text": "85",
+                    "$min_exp_bar": 0.14,
+                    "$max_exp_bar": 0.15
+                }
+            },
+            {
+                "85@asa_bindings_code": {
+                    "text": "84",
+                    "$min_exp_bar": 0.15,
+                    "$max_exp_bar": 0.16
+                }
+            },
+            {
+                "84@asa_bindings_code": {
+                    "text": "83",
+                    "$min_exp_bar": 0.16,
+                    "$max_exp_bar": 0.17
+                }
+            },
+            {
+                "83@asa_bindings_code": {
+                    "text": "82",
+                    "$min_exp_bar": 0.17,
+                    "$max_exp_bar": 0.18
+                }
+            },
+            {
+                "82@asa_bindings_code": {
+                    "text": "81",
+                    "$min_exp_bar": 0.18,
+                    "$max_exp_bar": 0.19
+                }
+            },
+            {
+                "81@asa_bindings_code": {
+                    "text": "80",
+                    "$min_exp_bar": 0.19,
+                    "$max_exp_bar": 0.20
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "79",
+                    "$min_exp_bar": 0.20,
+                    "$max_exp_bar": 0.21
+                }
+            },
+            {
+                "79@asa_bindings_code": {
+                    "text": "78",
+                    "$min_exp_bar": 0.21,
+                    "$max_exp_bar": 0.22
+                }
+            },
+            {
+                "78@asa_bindings_code": {
+                    "text": "77",
+                    "$min_exp_bar": 0.22,
+                    "$max_exp_bar": 0.23
+                }
+            },
+            {
+                "77@asa_bindings_code": {
+                    "text": "76",
+                    "$min_exp_bar": 0.23,
+                    "$max_exp_bar": 0.24
+                }
+            },
+            {
+                "76@asa_bindings_code": {
+                    "text": "75",
+                    "$min_exp_bar": 0.24,
+                    "$max_exp_bar": 0.25
+                }
+            },
+            {
+                "75@asa_bindings_code": {
+                    "text": "74",
+                    "$min_exp_bar": 0.25,
+                    "$max_exp_bar": 0.26
+                }
+            },
+            {
+                "74@asa_bindings_code": {
+                    "text": "73",
+                    "$min_exp_bar": 0.26,
+                    "$max_exp_bar": 0.27
+                }
+            },
+            {
+                "73@asa_bindings_code": {
+                    "text": "72",
+                    "$min_exp_bar": 0.27,
+                    "$max_exp_bar": 0.28
+                }
+            },
+            {
+                "72@asa_bindings_code": {
+                    "text": "71",
+                    "$min_exp_bar": 0.28,
+                    "$max_exp_bar": 0.29
+                }
+            },
+            {
+                "71@asa_bindings_code": {
+                    "text": "70",
+                    "$min_exp_bar": 0.29,
+                    "$max_exp_bar": 0.30
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "69",
+                    "$min_exp_bar": 0.30,
+                    "$max_exp_bar": 0.31
+                }
+            },
+            {
+                "69@asa_bindings_code": {
+                    "text": "68",
+                    "$min_exp_bar": 0.31,
+                    "$max_exp_bar": 0.32
+                }
+            },
+            {
+                "68@asa_bindings_code": {
+                    "text": "67",
+                    "$min_exp_bar": 0.32,
+                    "$max_exp_bar": 0.33
+                }
+            },
+            {
+                "67@asa_bindings_code": {
+                    "text": "66",
+                    "$min_exp_bar": 0.33,
+                    "$max_exp_bar": 0.34
+                }
+            },
+            {
+                "66@asa_bindings_code": {
+                    "text": "65",
+                    "$min_exp_bar": 0.34,
+                    "$max_exp_bar": 0.35
+                }
+            },
+            {
+                "65@asa_bindings_code": {
+                    "text": "64",
+                    "$min_exp_bar": 0.35,
+                    "$max_exp_bar": 0.36
+                }
+            },
+            {
+                "64@asa_bindings_code": {
+                    "text": "63",
+                    "$min_exp_bar": 0.36,
+                    "$max_exp_bar": 0.37
+                }
+            },
+            {
+                "63@asa_bindings_code": {
+                    "text": "62",
+                    "$min_exp_bar": 0.37,
+                    "$max_exp_bar": 0.38
+                }
+            },
+            {
+                "62@asa_bindings_code": {
+                    "text": "61",
+                    "$min_exp_bar": 0.38,
+                    "$max_exp_bar": 0.39
+                }
+            },
+            {
+                "61@asa_bindings_code": {
+                    "text": "60",
+                    "$min_exp_bar": 0.39,
+                    "$max_exp_bar": 0.40
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "59",
+                    "$min_exp_bar": 0.40,
+                    "$max_exp_bar": 0.41
+                }
+            },
+            {
+                "59@asa_bindings_code": {
+                    "text": "58",
+                    "$min_exp_bar": 0.41,
+                    "$max_exp_bar": 0.42
+                }
+            },
+            {
+                "58@asa_bindings_code": {
+                    "text": "57",
+                    "$min_exp_bar": 0.42,
+                    "$max_exp_bar": 0.43
+                }
+            },
+            {
+                "57@asa_bindings_code": {
+                    "text": "56",
+                    "$min_exp_bar": 0.43,
+                    "$max_exp_bar": 0.44
+                }
+            },
+            {
+                "56@asa_bindings_code": {
+                    "text": "55",
+                    "$min_exp_bar": 0.44,
+                    "$max_exp_bar": 0.45
+                }
+            },
+            {
+                "55@asa_bindings_code": {
+                    "text": "54",
+                    "$min_exp_bar": 0.45,
+                    "$max_exp_bar": 0.46
+                }
+            },
+            {
+                "54@asa_bindings_code": {
+                    "text": "53",
+                    "$min_exp_bar": 0.46,
+                    "$max_exp_bar": 0.47
+                }
+            },
+            {
+                "53@asa_bindings_code": {
+                    "text": "52",
+                    "$min_exp_bar": 0.47,
+                    "$max_exp_bar": 0.48
+                }
+            },
+            {
+                "52@asa_bindings_code": {
+                    "text": "51",
+                    "$min_exp_bar": 0.48,
+                    "$max_exp_bar": 0.49
+                }
+            },
+            {
+                "51@asa_bindings_code": {
+                    "text": "50",
+                    "$min_exp_bar": 0.49,
+                    "$max_exp_bar": 0.50
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "49",
+                    "$min_exp_bar": 0.50,
+                    "$max_exp_bar": 0.51
+                }
+            },
+            {
+                "49@asa_bindings_code": {
+                    "text": "48",
+                    "$min_exp_bar": 0.51,
+                    "$max_exp_bar": 0.52
+                }
+            },
+            {
+                "48@asa_bindings_code": {
+                    "text": "47",
+                    "$min_exp_bar": 0.52,
+                    "$max_exp_bar": 0.53
+                }
+            },
+            {
+                "47@asa_bindings_code": {
+                    "text": "46",
+                    "$min_exp_bar": 0.53,
+                    "$max_exp_bar": 0.54
+                }
+            },
+            {
+                "46@asa_bindings_code": {
+                    "text": "45",
+                    "$min_exp_bar": 0.54,
+                    "$max_exp_bar": 0.55
+                }
+            },
+            {
+                "45@asa_bindings_code": {
+                    "text": "44",
+                    "$min_exp_bar": 0.55,
+                    "$max_exp_bar": 0.56
+                }
+            },
+            {
+                "44@asa_bindings_code": {
+                    "text": "43",
+                    "$min_exp_bar": 0.56,
+                    "$max_exp_bar": 0.57
+                }
+            },
+            {
+                "43@asa_bindings_code": {
+                    "text": "42",
+                    "$min_exp_bar": 0.57,
+                    "$max_exp_bar": 0.58
+                }
+            },
+            {
+                "42@asa_bindings_code": {
+                    "text": "41",
+                    "$min_exp_bar": 0.58,
+                    "$max_exp_bar": 0.59
+                }
+            },
+            {
+                "41@asa_bindings_code": {
+                    "text": "40",
+                    "$min_exp_bar": 0.59,
+                    "$max_exp_bar": 0.60
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "39",
+                    "$min_exp_bar": 0.60,
+                    "$max_exp_bar": 0.61
+                }
+            },
+            {
+                "39@asa_bindings_code": {
+                    "text": "38",
+                    "$min_exp_bar": 0.61,
+                    "$max_exp_bar": 0.62
+                }
+            },
+            {
+                "38@asa_bindings_code": {
+                    "text": "37",
+                    "$min_exp_bar": 0.62,
+                    "$max_exp_bar": 0.63
+                }
+            },
+            {
+                "37@asa_bindings_code": {
+                    "text": "36",
+                    "$min_exp_bar": 0.63,
+                    "$max_exp_bar": 0.64
+                }
+            },
+            {
+                "36@asa_bindings_code": {
+                    "text": "35",
+                    "$min_exp_bar": 0.64,
+                    "$max_exp_bar": 0.65
+                }
+            },
+            {
+                "35@asa_bindings_code": {
+                    "text": "34",
+                    "$min_exp_bar": 0.65,
+                    "$max_exp_bar": 0.66
+                }
+            },
+            {
+                "34@asa_bindings_code": {
+                    "text": "33",
+                    "$min_exp_bar": 0.66,
+                    "$max_exp_bar": 0.67
+                }
+            },
+            {
+                "33@asa_bindings_code": {
+                    "text": "32",
+                    "$min_exp_bar": 0.67,
+                    "$max_exp_bar": 0.68
+                }
+            },
+            {
+                "32@asa_bindings_code": {
+                    "text": "31",
+                    "$min_exp_bar": 0.68,
+                    "$max_exp_bar": 0.69
+                }
+            },
+            {
+                "31@asa_bindings_code": {
+                    "text": "30",
+                    "$min_exp_bar": 0.69,
+                    "$max_exp_bar": 0.70
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "29",
+                    "$min_exp_bar": 0.70,
+                    "$max_exp_bar": 0.71
+                }
+            },
+            {
+                "29@asa_bindings_code": {
+                    "text": "28",
+                    "$min_exp_bar": 0.71,
+                    "$max_exp_bar": 0.72
+                }
+            },
+            {
+                "28@asa_bindings_code": {
+                    "text": "27",
+                    "$min_exp_bar": 0.72,
+                    "$max_exp_bar": 0.73
+                }
+            },
+            {
+                "27@asa_bindings_code": {
+                    "text": "26",
+                    "$min_exp_bar": 0.73,
+                    "$max_exp_bar": 0.74
+                }
+            },
+            {
+                "26@asa_bindings_code": {
+                    "text": "25",
+                    "$min_exp_bar": 0.74,
+                    "$max_exp_bar": 0.75
+                }
+            },
+            {
+                "25@asa_bindings_code": {
+                    "text": "24",
+                    "$min_exp_bar": 0.75,
+                    "$max_exp_bar": 0.76
+                }
+            },
+            {
+                "24@asa_bindings_code": {
+                    "text": "23",
+                    "$min_exp_bar": 0.76,
+                    "$max_exp_bar": 0.77
+                }
+            },
+            {
+                "23@asa_bindings_code": {
+                    "text": "22",
+                    "$min_exp_bar": 0.77,
+                    "$max_exp_bar": 0.78
+                }
+            },
+            {
+                "22@asa_bindings_code": {
+                    "text": "21",
+                    "$min_exp_bar": 0.78,
+                    "$max_exp_bar": 0.79
+                }
+            },
+            {
+                "21@asa_bindings_code": {
+                    "text": "20",
+                    "$min_exp_bar": 0.79,
+                    "$max_exp_bar": 0.80
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "19",
+                    "$min_exp_bar": 0.80,
+                    "$max_exp_bar": 0.81
+                }
+            },
+            {
+                "19@asa_bindings_code": {
+                    "text": "18",
+                    "$min_exp_bar": 0.81,
+                    "$max_exp_bar": 0.82
+                }
+            },
+            {
+                "18@asa_bindings_code": {
+                    "text": "17",
+                    "$min_exp_bar": 0.82,
+                    "$max_exp_bar": 0.83
+                }
+            },
+            {
+                "17@asa_bindings_code": {
+                    "text": "16",
+                    "$min_exp_bar": 0.83,
+                    "$max_exp_bar": 0.84
+                }
+            },
+            {
+                "16@asa_bindings_code": {
+                    "text": "15",
+                    "$min_exp_bar": 0.84,
+                    "$max_exp_bar": 0.85
+                }
+            },
+            {
+                "15@asa_bindings_code": {
+                    "text": "14",
+                    "$min_exp_bar": 0.85,
+                    "$max_exp_bar": 0.86
+                }
+            },
+            {
+                "14@asa_bindings_code": {
+                    "text": "13",
+                    "$min_exp_bar": 0.86,
+                    "$max_exp_bar": 0.87
+                }
+            },
+            {
+                "13@asa_bindings_code": {
+                    "text": "12",
+                    "$min_exp_bar": 0.87,
+                    "$max_exp_bar": 0.88
+                }
+            },
+            {
+                "12@asa_bindings_code": {
+                    "text": "11",
+                    "$min_exp_bar": 0.88,
+                    "$max_exp_bar": 0.89
+                }
+            },
+            {
+                "11@asa_bindings_code": {
+                    "text": "10",
+                    "$min_exp_bar": 0.89,
+                    "$max_exp_bar": 0.90
+                }
+            },
+            {
+                "80@asa_bindings_code": {
+                    "text": "9",
+                    "$min_exp_bar": 0.90,
+                    "$max_exp_bar": 0.91
+                }
+            },
+            {
+                "9@asa_bindings_code": {
+                    "text": "8",
+                    "$min_exp_bar": 0.91,
+                    "$max_exp_bar": 0.92
+                }
+            },
+            {
+                "8@asa_bindings_code": {
+                    "text": "7",
+                    "$min_exp_bar": 0.92,
+                    "$max_exp_bar": 0.93
+                }
+            },
+            {
+                "7@asa_bindings_code": {
+                    "text": "6",
+                    "$min_exp_bar": 0.93,
+                    "$max_exp_bar": 0.94
+                }
+            },
+            {
+                "6@asa_bindings_code": {
+                    "text": "5",
+                    "$min_exp_bar": 0.94,
+                    "$max_exp_bar": 0.95
+                }
+            },
+            {
+                "5@asa_bindings_code": {
+                    "text": "4",
+                    "$min_exp_bar": 0.95,
+                    "$max_exp_bar": 0.96
+                }
+            },
+            {
+                "4@asa_bindings_code": {
+                    "text": "3",
+                    "$min_exp_bar": 0.96,
+                    "$max_exp_bar": 0.97
+                }
+            },
+            {
+                "3@asa_bindings_code": {
+                    "text": "2",
+                    "$min_exp_bar": 0.97,
+                    "$max_exp_bar": 0.98
+                }
+            },
+            {
+                "2@asa_bindings_code": {
+                    "text": "1",
+                    "$min_exp_bar": 0.98,
+                    "$max_exp_bar": 0.99
+                }
+            },
+            {
+                "1@asa_bindings_code": {
+                    "text": "0",
+                    "$min_exp_bar": 0.99,
+                    "$max_exp_bar": 1.00
+                }
+            }
+        ]
+    }
+}

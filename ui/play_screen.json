@@ -1,0 +1,23 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "play_screen": {
+        "$screen_bg_content": "asa_background_common.play_bg",
+        "$screen_content": "asa_play_screen_common.asa_play_screen_content",
+        "$transition_time_push": 0.5,
+        "$transition_time_pop": 0.5,
+        "$screen_animations": [
+            "@common.screen_exit_animation_push_fade",
+            "@common.screen_exit_animation_pop_fade",
+            "@common.screen_entrance_animation_push_fade",
+            "@common.screen_entrance_animation_pop_fade"
+        ]
+    }
+}

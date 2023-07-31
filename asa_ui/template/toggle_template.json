@@ -1,0 +1,943 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_toggle_common",
+
+    "asa_header_toggle": {
+        "type": "panel",
+        "size": [ "100%", 20 ],
+        "controls": [
+            {
+                "$asa_binding_type_toggle@asa_header_toggle_template": {}
+            }
+        ]  
+    },
+
+    //Nav Default Toggle
+    "asa_button_icon": {
+        "type": "panel",
+        "controls": [
+            {
+                "outline": {
+                    "type": "image",
+                    "texture": "asa_textures/ui/asa_pixel",
+                    "size": [ "100%sm + 2px", "100%sm + 2px"],
+                    "layer": 3,
+                    "$asa_ignored_outline|default": false,
+                    "ignored": "$asa_ignored_outline",
+                    "color": "$glyph_color"
+                }
+            },
+            {
+                "asa_icon_panel": {
+                    "type": "panel",
+                    "size": [ 16, 16 ],
+                    "controls": "$asa_controls",
+                    "$asa_controls|default": [
+                        {
+                            "asa_icon": { "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                "texture": "$asa_icon_texture"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_toggle_nav_with_icon_template@asa_toggle_nav_template": {
+        "$button_type_panel": "asa_toggle_common.asa_button_icon"
+    },
+
+    "asa_toggle_nav_template@common.toggle": {
+        "$unchecked_control|default": "common_toggles.toggle_unchecked",
+        "$checked_control|default": "common_toggles.toggle_checked",
+        "$unchecked_hover_control|default": "common_toggles.toggle_unchecked_hover",
+        "$checked_hover_control|default": "common_toggles.toggle_checked_hover",
+        "$unchecked_locked_control|default": "common_toggles.toggle_locked",
+        "$unchecked_locked_hover_control|default": "common_toggles.toggle_locked",
+        "$checked_locked_control|default": "common_toggles.toggle_locked",
+        "$checked_locked_hover_control|default": "common_toggles.toggle_locked",
+    
+        "$default_texture|default": "textures/ui/button_borderless_light",
+        "$hover_texture|default": "textures/ui/button_borderless_lightpressednohover",
+        "$pressed_texture|default": "textures/ui/button_borderless_lighthover",
+        "$pressed_no_hover_texture|default": "textures/ui/button_borderless_lightpressed",
+        "$locked_texture|default": "textures/ui/disabledButtonNoBorder",
+    
+        "$default_texture_alpha|default": 1.0,
+        "$default_checked_texture_alpha|default": 1.0,
+        "$hover_texture_alpha|default": 1.0,
+        "$hover_checked_texture_alpha|default": 1.0,
+    
+        "$default_texture_color|default": "$f_color_format",
+        "$default_checked_texture_color|default": "$f_color_format",
+        "$hover_texture_color|default": "$f_color_format",
+        "$hover_checked_texture_color|default": "$f_color_format",
+    
+        "$default_text_color|default": "$light_toggle_default_text_color",
+        "$hover_text_color|default": "$light_toggle_hover_text_color",
+        "$default_checked_text_color|default": "$light_toggle_checked_default_text_color",
+        "$hover_checked_text_color|default": "$light_toggle_checked_hover_text_color",
+    
+        "$default_glyph_color|default": "$light_glyph_toggle_default_color",
+        "$hover_glyph_color|default": "$light_glyph_toggle_hover_color",
+        "$default_checked_glyph_color|default": "$light_glyph_toggle_checked_default_color",
+        "$hover_checked_glyph_color|default": "$light_glyph_toggle_checked_hover_color",
+    
+        "$checked_image|default": "common.empty_panel",
+        "$default_border_visible|default": true,
+        "$hover_border_visible|default": true,
+        "$default_border_color": "$light_border_toggle_default_color",
+        "$hover_border_color": "$light_border_toggle_hover_color",
+        "$locked_alpha": 1,
+
+        "$radio_toggle_group": true,
+        
+        "$toggle_name|default": "$asa_state_toggle",
+        "$toggle_state_binding_name": "$asa_state_toggle",
+        "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+
+        "$asa_enabled|default": true,
+        "enabled": "$enabled",
+        "$toggle_enabled_binding_type": "global",
+
+        "$unchecked_image|default": "none",
+        "$locked_alpha|default": 0.5,
+
+        "$button_type_panel|default": "asa_toggle_common.button_text_panel",
+        "variables": [
+            {
+                "requires": "(not $option_enabled_binding_name or not $enabled)",
+                "$toggle_enabled_binding_name": "#not_data_bound",
+                "$toggle_enabled_binding_type": "none"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "$option_enabled_binding_type",
+                "binding_name": "$option_enabled_binding_name",
+                "binding_name_override": "#enabled"
+            },
+            {
+                "binding_type": "$toggle_binding_type",
+                "binding_condition": "$toggle_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_state_binding_name",
+                "binding_name_override": "#toggle_state"
+            },
+            {
+                "binding_type": "$toggle_enabled_binding_type",
+                "binding_condition": "$toggle_enabled_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_enabled_binding_name",
+                "binding_name_override": "#enabled"
+            },
+            {
+                "binding_type": "$toggle_collection_details_type",
+                "binding_collection_name": "$toggle_collection_detail_name"
+            },
+            {
+                "binding_type": "$toggle_tts_header_binding_type",
+                "binding_condition": "$toggle_tts_header_binding_condition",
+                "binding_collection_name": "$toggle_tts_header_binding_collection_name",
+                "binding_name": "$toggle_tts_header"
+            },
+            {
+                "binding_type": "$toggle_tts_value_binding_type",
+                "binding_condition": "$toggle_tts_value_binding_condition",
+                "binding_collection_name": "$toggle_tts_value_binding_collection_name",
+                "binding_name": "$toggle_tts_override_toggle_value"
+            },
+            {
+                "ignored": "$ignore_tts_enabled_bind",
+                "binding_type": "$toggle_tts_enabled_binding_type",
+                "binding_name": "#tts_enabled",
+                "binding_name_override": "#focus_enabled"
+            },
+            {
+                "ignored": "(($toggle_focus_bind = '') and (not $ignore_tts_enabled_bind))",
+                "binding_type": "global",
+                "binding_name": "$toggle_focus_bind",
+                "binding_name_override": "#focus_enabled"
+            }
+        ]
+    },
+
+    //Template
+    "asa_button_text_with_texture": {
+        "type": "panel",
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "$asa_button_text",
+                    "max_size": [ "100% - 25px", 10 ],
+                    "layer": 15,
+                    "shadow": true
+                }
+            },
+            {
+                "button_texture_panel": {
+                    "size": [ 20, 20 ],
+                    "type": "panel",
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "controls": [
+                        {
+                            "close_texture": {
+                                "type": "image",
+                                "size": [ 16, 16 ],
+                                "layer": 15,
+                                "ignored": "$asa_is_state_off",
+                                "texture": "asa_textures/ui/button_and_toggle/close_button"
+                            }
+                        },
+                        {
+                            "open_texture": {
+                                "type": "image",
+                                "size": [ 16, 16 ],
+                                "layer": 15,
+                                "ignored": "$asa_is_state_on",
+                                "texture": "asa_textures/ui/button_and_toggle/open_button"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_toggle_texture": {
+        "type": "image",
+        "size": [ "100%", "100% - 1px" ],
+        "texture": "asa_textures/ui/header_bg",
+        "color": "$asa_button_color",
+        "controls": [
+            {
+                "asa_content@$asa_button_content": {
+                    "size": [ "100% - 2px", "100% - 2px" ]
+                }
+            }
+        ]
+    }, 
+
+    //Asa header toggle 2
+    "asa_header_toggle_template": {
+        "type": "toggle",
+        "size": [ "100%", "100%" ],
+
+        "$asa_toggle_type|default": "asa_toggle_texture",
+        "$asa_button_content|default": "asa_button_text_with_texture",
+        "$asa_button_color|default": [ 0, 0, 0 ],
+        "$asa_toggle_name|default": "default_toggle",
+        "$asa_toggle_index|default": 0,
+        "$asa_toggle_radio|default": false,
+
+        "unchecked_control": "asa_toggle_off",
+        "unchecked_hover_control": "asa_toggle_off_pressed",
+        "checked_control": "asa_toggle_on",
+        "checked_hover_control": "asa_toggle_on_pressed",
+
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+        "toggle_name": "$asa_toggle_name",
+        "toggle_group_forced_index": "$asa_toggle_index",
+        "radio_toggle_group": "$asa_toggle_radio",
+
+        "property_bag": {
+            "#toggle_state": true
+        },
+
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "focused"
+            }
+        ],
+
+        "controls": [
+            {
+                "asa_toggle_off@$asa_toggle_type": {
+                    "$asa_is_state_on": true
+                }
+            },
+            {
+                "asa_toggle_off_pressed@$asa_toggle_type": {
+                    "$asa_is_state_on": true
+                }
+            },
+            {
+                "asa_toggle_on@$asa_toggle_type": {
+                    "$asa_is_state_off": true
+                }
+            },
+            {
+                "asa_toggle_on_pressed@$asa_toggle_type": {
+                    "$asa_is_state_off": true
+                }
+            }
+        ]
+    },
+
+
+
+
+
+
+    //Asa toggle template 1
+    //Toggle Template 2
+    "asa_action_toggle@common.toggle": {
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_left",
+                "to_button_id": "$toggle_off_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_right",
+                "to_button_id": "$toggle_on_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            }
+        ]
+    },
+
+    "asa_action_light_template_toggle@common_toggles.light_template_toggle": {
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_left",
+                "to_button_id": "$toggle_off_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_right",
+                "to_button_id": "$toggle_on_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            }
+        ]
+    },
+
+    //Quick setting toggle
+    "asa_state_button_toggle@common.toggle": {
+
+        "$unchecked_control|default": "asa_toggle_common.toggle_unchecked",
+        "$checked_control|default": "asa_toggle_common.toggle_checked",
+        "$unchecked_hover_control|default": "asa_toggle_common.toggle_unchecked_hover",
+        "$checked_hover_control|default": "asa_toggle_common.toggle_checked_hover",
+        "$unchecked_locked_control|default": "asa_toggle_common.toggle_locked",
+        "$unchecked_locked_hover_control|default": "asa_toggle_common.toggle_locked",
+        "$checked_locked_control|default": "asa_toggle_common.toggle_locked",
+        "$checked_locked_hover_control|default": "asa_toggle_common.toggle_locked",
+        "$default_glyph_color|default": "$light_glyph_toggle_default_color",
+        "$hover_glyph_color|default": "$light_glyph_toggle_hover_color",
+        "$default_checked_glyph_color|default": "$light_glyph_toggle_checked_default_color",
+        "$hover_checked_glyph_color|default": "$light_glyph_toggle_checked_hover_color",
+
+        "$default_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$hover_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_no_hover_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$locked_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+
+        "$default_texture_alpha|default": 1.0,
+        "$default_checked_texture_alpha|default": 1.0,
+        "$hover_texture_alpha|default": 1.0,
+        "$hover_checked_texture_alpha|default": 1.0,
+
+        "$default_texture_color|default": [ 0.0, 0.0, 0.0 ],
+        "$default_checked_texture_color|default": [ 0.0, 0.0, 0.0 ],
+        "$hover_texture_color|default": [ 1, 1, 1 ],
+        "$hover_checked_texture_color|default": [ 1, 1, 1 ],
+
+        "$default_text_color|default": [ 1, 1, 1 ],
+        "$hover_text_color|default": [ 1, 1, 1 ],
+        "$default_checked_text_color|default": [ 0.333, 1, 1 ],
+        "$hover_checked_text_color|default": [ 0.333, 1, 1 ],
+
+        "$radio_toggle_group": true,
+        
+        "$toggle_name|default": "$asa_state_toggle",
+        "$toggle_state_binding_name": "$asa_state_toggle",
+        "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+
+        "$asa_enabled|default": true,
+        "enabled": "$enabled",
+        "$toggle_enabled_binding_type": "global",
+
+        "$unchecked_image|default": "none",
+        "$locked_alpha|default": 0.5,
+
+        "$button_type_panel|default": "asa_toggle_common.button_text_panel",
+        "variables": [
+            {
+                "requires": "(not $option_enabled_binding_name or not $enabled)",
+                "$toggle_enabled_binding_name": "#not_data_bound",
+                "$toggle_enabled_binding_type": "none"
+            }
+        ]
+    },
+
+    "asa_setting_toggle@asa_state_button_toggle": {
+        "$radio_toggle_group": false,
+        "$enabled|default": "",
+        "$checked_image|default": "",
+
+        "$toggle_disable|default": "none",
+        "$toggle_enable|default": "none",
+        "$locked_alpha|default": "none",
+
+
+        "$default_text_color|default": [ 1, 1, 1 ],
+        "$hover_text_color|default": [ 1, 1, 1 ],
+        "$default_checked_text_color|default": [ 1, 1, 1 ],
+        "$hover_checked_text_color|default": [ 1, 1, 1 ],
+
+        "$toggle_name|default": "$asa_state_toggle",
+        "$toggle_state_binding_name": "$asa_binding_toggle",
+        "$toggle_enabled_binding_name": "$option_enabled_binding_name",
+
+        "$button_type_panel": "asa_toggle_common.asa_toggle_text_controls",
+
+        "variables": [
+            {
+                "requires": "(not $option_enabled_binding_name or not $enabled)",
+                "$toggle_enabled_binding_name": "#not_data_bound",
+                "$toggle_enabled_binding_type": "none"
+            }
+        ]
+    },
+
+    //Text Panel
+
+    "button_text_panel": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "$button_text",
+                    "color": "$text_color",
+                    "size": [ "default", "default" ],
+                    "max_size": [ "100% - 4px", 10 ]
+                }
+            }
+        ]
+    },
+
+    "button_text_panel_third": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "$button_text",
+                    "color": "$text_color",
+                    "size": [ "100%", 10 ],
+                    "text_alignment": "center"
+                }
+            },
+            {
+                "text_2": {
+                    "type": "label",
+                    "text": "$button_text_2",
+                    "color": "$text_color",
+                    "size": [ "100%", 10 ],
+                    "text_alignment": "center"
+                }
+            }
+        ]
+    },
+
+    //Other Toggle Test
+    "asa_darkmode_toggle": {
+        "type": "panel",
+        "$toggle_view_binding_name|default": "test",
+        "$template_toggle|default": "asa_toggle_common.toggle_template",
+        "$button_type_panel": "asa_toggle_common.button_text_panel",
+        "size": [ 100, 25 ],
+        "controls": [
+            {
+                "$toggle_view_binding_name@$template_toggle": {}
+            }
+        ]
+    },
+
+    "asa_darkmode_navigation_toggle": {
+        "type": "panel",
+        "$toggle_view_binding_name|default": "test",
+        "$template_toggle|default": "asa_toggle_common.toggle_template",
+        "$radio_toggle_group": true,
+        "$toggle_name|default": "navigation_tab",
+        "controls": [
+            {
+                "$toggle_view_binding_name@$template_toggle": {}
+            }
+        ]
+    },
+
+    //Toggle Template
+    "toggle_template@common.toggle": {
+        "$unchecked_control|default": "asa_toggle_common.toggle_unchecked",
+        "$checked_control|default": "asa_toggle_common.toggle_checked",
+        "$unchecked_hover_control|default": "asa_toggle_common.toggle_unchecked_hover",
+        "$checked_hover_control|default": "asa_toggle_common.toggle_checked_hover",
+        "$unchecked_locked_control|default": "asa_toggle_common.toggle_locked",
+        "$unchecked_locked_hover_control|default": "asa_toggle_common.toggle_locked",
+        "$checked_locked_control|default": "asa_toggle_common.toggle_locked",
+        "$checked_locked_hover_control|default": "asa_toggle_common.toggle_locked",
+
+        "$default_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$hover_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_no_hover_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+        "$locked_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
+
+        "$default_texture_alpha|default": 1.0,
+        "$default_checked_texture_alpha|default": 1.0,
+        "$hover_texture_alpha|default": 1.0,
+        "$hover_checked_texture_alpha|default": 1.0,
+
+        "$default_texture_color|default": [ 0.0, 0.0, 0.0 ],
+        "$default_checked_texture_color|default": [ 0.0, 0.0, 0.0 ],
+        "$hover_texture_color|default": "@asa_button_animation.asa_button_color_1",
+        "$hover_checked_texture_color|default": "@asa_button_animation.asa_button_color_1",
+
+        "$default_text_color|default": [ 1, 1, 1 ],
+        "$hover_text_color|default": [ 1, 1, 1 ],
+        "$default_checked_text_color|default": [ 0.333, 1, 1 ],
+        "$hover_checked_text_color|default": [ 0.333, 1, 1 ],
+
+        "$default_glyph_color|default": "$light_glyph_toggle_default_color",
+        "$hover_glyph_color|default": "$light_glyph_toggle_hover_color",
+        "$default_checked_glyph_color|default": "$light_glyph_toggle_checked_default_color",
+        "$hover_checked_glyph_color|default": "$light_glyph_toggle_checked_hover_color",
+
+        "$checked_image|default": "common.empty_panel",
+        "$unchecked_image|default": "common.empty_panel",
+
+        "$locked_alpha": 1,
+        "$toggle_binding_type|default": "none",
+        "$toggle_parent_collection_details|default": "none",
+        "$toggle_parent_collection_details_name|default": "",
+        "$toggle_parent_collection_details_prefix|default": "",
+        "$toggle_enabled_binding_type|default": "none",
+        "$toggle_property_bag_binding_type|default": "none",
+        "$toggle_property_bag_binding_condition|default": "visible",
+        "$toggle_property_bag_binding_name|default": "#fill_toggle_property_bag",
+        "$toggle_tab_focus_binding_type|default": "none",
+        "$toggle_tab_focus_id_binding_type|default": "none",
+        "$toggle_tab_focus_override_left_binding_type|default": "none",
+        "$toggle_tab_focus_override_right_binding_type|default": "none",
+        "$toggle_tab_focus_override_down_binding_type|default": "none",
+        "$toggle_tab_focus_override_up_binding_type|default": "none",
+        "$toggle_on_hover_binding_type|default": "none",
+        "$toggle_tab_focus_binding_name|default": "",
+        "$toggle_tab_focus_id_binding_name|default": "",
+        "$toggle_tab_focus_override_right|default": "#focus_override_right",
+        "$toggle_tab_focus_override_down|default": "#focus_override_down",
+        "$toggle_tab_focus_override_up|default": "#focus_override_up",
+        "$toggle_tab_focus_override_left|default": "#focus_override_left",
+        "$toggle_on_hover_binding_name|default": "",
+        "$toggle_focus_wrap_enabled|default": true,
+        "$toggle_focus_magnet_enabled|default": true,
+        "$toggle_unchecked|default": false,
+        "$toggle_unchecked_hover|default": false,
+        "$toggle_checked|default": false,
+        "$toggle_checked_hover|default": false,
+        "$default_state|default": false,
+        "$hover_state|default": false,
+        "$pressed_state|default": false,
+        "$locked_state|default": false,
+        "$enable_hover_event_mapping|default": false,
+        "$toggle_hover_event_mapping|default": "",
+        "$enable_focus_id_bind|default": false,
+        "$focus_id_binding_name|default": "",
+        "$enable_focus_enabled_bind|default": false,
+        "$focus_enabled_binding_name|default": "",
+        "$button_mappings|default": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "focused"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_left",
+                "to_button_id": "$toggle_off_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            },
+            {
+                "ignored": "(not $enable_directional_toggling)",
+                "from_button_id": "button.menu_right",
+                "to_button_id": "$toggle_on_button",
+                "mapping_type": "pressed",
+                "input_mode_condition": "gamepad_and_not_gaze"
+            },
+            {
+                "ignored": "(not $enable_hover_event_mapping)",
+                "to_button_id": "$toggle_hover_event_mapping",
+                "mapping_type": "pressed"
+            }
+        ],
+        "focus_wrap_enabled": "$toggle_focus_wrap_enabled",
+        "focus_magnet_enabled": "$toggle_focus_magnet_enabled",
+        "$custom_toggle_binding_type|default": "none",
+        "$custom_toggle_binding_condition|default": "visible",
+        "$custom_toggle_state_binding_name|default": "",
+        "$custom_toggle_state_binding_name_override|default": "",
+        "$toggle_tts_header_binding_type|default": "none",
+        "$toggle_tts_header_binding_condition|default": "visible",
+        "$toggle_tts_header_binding_collection_name|default": "",
+        "$toggle_tts_header|default": "",
+        "button_mappings": "$button_mappings",
+
+        "$asa_button_sounds|default": "random.click",
+        "$asa_button_sound_volume|default": 1.0,
+
+        "sound_name": "$asa_button_sounds",
+        "sound_volume": "$asa_button_sound_volume",
+
+        "bindings": [
+            {
+                "binding_type": "$toggle_binding_type",
+                "binding_condition": "$toggle_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_state_binding_name",
+                "binding_name_override": "#toggle_state"
+            },
+            {
+                "binding_type": "$toggle_enabled_binding_type",
+                "binding_condition": "$toggle_enabled_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_enabled_binding_name",
+                "binding_name_override": "#enabled"
+            },
+            {
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_type": "collection_details"
+            },
+            {
+                "binding_type": "$toggle_parent_collection_details",
+                "binding_collection_name": "$toggle_parent_collection_details_name",
+                "binding_collection_prefix": "$toggle_parent_collection_details_prefix"
+            },
+            {
+                "binding_type": "$toggle_property_bag_binding_type",
+                "binding_condition": "$toggle_property_bag_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_property_bag_binding_name"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_binding_type",
+                "binding_name": "$toggle_tab_focus_binding_name",
+                "binding_name_override": "#default_focus_precedence"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_id_binding_type",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_tab_focus_id_binding_name",
+                "binding_name_override": "#focus_identifier"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_override_right_binding_type",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_tab_focus_override_right",
+                "binding_name_override": "#focus_change_right"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_override_left_binding_type",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_tab_focus_override_left",
+                "binding_name_override": "#focus_change_left"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_override_down_binding_type",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_tab_focus_override_down",
+                "binding_name_override": "#focus_change_down"
+            },
+            {
+                "binding_type": "$toggle_tab_focus_override_up_binding_type",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$toggle_tab_focus_override_up",
+                "binding_name_override": "#focus_change_up"
+            },
+            {
+                "binding_type": "$toggle_on_hover_binding_type",
+                "binding_name": "$toggle_on_hover_binding_name",
+                "binding_name_override": "#toggle_on_hover"
+            },
+            {
+                "binding_type": "$custom_toggle_binding_type",
+                "binding_condition": "$custom_toggle_binding_condition",
+                "binding_collection_name": "$toggle_grid_collection_name",
+                "binding_name": "$custom_toggle_state_binding_name",
+                "binding_name_override": "$custom_toggle_state_binding_name_override"
+            },
+            {
+                "binding_type": "$toggle_tts_header_binding_type",
+                "binding_condition": "$toggle_tts_header_binding_condition",
+                "binding_collection_name": "$toggle_tts_header_binding_collection_name",
+                "binding_name": "$toggle_tts_header"
+            },
+            {
+                "ignored": "(not $enable_focus_id_bind)",
+                "binding_name": "$focus_id_binding_name",
+                "binding_name_override": "#focus_identifier"
+            },
+            {
+                "ignored": "(not $enable_focus_enabled_bind)",
+                "binding_name": "$focus_enabled_binding_name",
+                "binding_name_override": "#focus_enabled"
+            }
+        ]
+    },
+
+    //Texture Template
+
+    "toggle_unchecked@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$default_texture",
+        "$content_alpha": "$default_texture_alpha",
+        "$button_image_color": "$default_texture_color",
+        "$text_color": "$default_text_color",
+        "$glyph_color": "$default_glyph_color",
+        "$toggle_image": "$unchecked_image",
+        "$toggle_unchecked": true,
+        "$default_state": true,
+        "$toggle_disable": false,
+        "layer": 1
+    },
+    
+    "toggle_checked@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$hover_texture",
+        "$content_alpha": "$default_checked_texture_alpha",
+        "$button_image_color": "$default_checked_texture_color",
+        "$text_color": "$default_checked_text_color",
+        "$glyph_color": "$default_checked_glyph_color",
+        "$toggle_image": "$checked_image",
+        "$toggle_checked": true,
+        "$pressed_state": true,
+        "$toggle_enable": false,
+        "layer": 2
+    },
+    
+    "toggle_unchecked_hover@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$pressed_texture",
+        "$content_alpha": "$hover_texture_alpha",
+        "$button_image_color": "$hover_texture_color",
+        "$text_color": "$hover_text_color",
+        "$glyph_color": "$hover_glyph_color",
+        "$toggle_unchecked_hover": true,
+        "$hover_state": true,
+        "$toggle_disable": false,
+        "layer": 3
+    },
+    
+    "toggle_checked_hover@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$pressed_no_hover_texture",
+        "$content_alpha": "$hover_checked_texture_alpha",
+        "$button_image_color": "$hover_checked_texture_color",
+        "$text_color": "$hover_checked_text_color",
+        "$glyph_color": "$hover_checked_glyph_color",
+        "$toggle_image": "$checked_image",
+        "$toggle_checked_hover": true,
+        "$pressed_state": true,
+        "$toggle_enable": false,
+        "layer": 4
+    },
+    
+    "toggle_locked@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$locked_texture",
+        "$content_alpha": "$locked_alpha",
+        "$button_image_color": "$default_texture_color",
+        "$text_color": "$default_text_color",
+        "$glyph_color": "$default_glyph_color",
+        "$toggle_image": "$unchecked_image",
+        "$button_image": "common_buttons.locked_button_image",
+        "$toggle_locked": true,
+        "$default_state": true,
+        "layer": 1
+    },
+    
+    "toggle_unchecked_locked@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$unchecked_locked_texture",
+        "$content_alpha": "$locked_alpha",
+        "$button_image_color": "$default_texture_color",
+        "$text_color": "$default_text_color",
+        "$glyph_color": "$default_glyph_color",
+        "$toggle_image": "$unchecked_image",
+        "$toggle_locked": true,
+        "$default_state": true,
+        "layer": 1
+    },
+    
+    "toggle_checked_locked@asa_clear_button_panel": {
+        "$new_ui_button_texture": "$checked_locked_texture",
+        "$content_alpha": "$locked_alpha",
+        "$button_image_color": "$default_checked_texture_color",
+        "$text_color": "$default_text_color",
+        "$glyph_color": "$default_glyph_color",
+        "$toggle_image": "$checked_image",
+        "$toggle_locked": true,
+        "$pressed_state": true,
+        "layer": 1
+    },
+
+    "asa_clear_button_panel": {
+        "type": "panel",
+        "$button_alpha|default": 1,
+        "layer": 1,
+        "$button_size_override|default": [ "100%", "100%" ],
+        "size": "$button_size_override",
+        "$content_alpha|default": 1,
+        "$button_image|default": "asa_toggle_common.button_image",
+        "$button_image_visible|default": true,
+        "$button_image_size|default": [ "100%", "100%" ],
+        "$image_anchor|default": "center",
+        "$image_offset|default": [ 0, 0 ],
+        "$button_anchor_to|default": "center",
+        "$button_anchor_from|default": "center",
+        "anchor_to": "$button_anchor_to",
+        "anchor_from": "$button_anchor_from",
+        "$button_image_fill|default": false,
+        "$button_image_color|default": [ 1.0, 1.0, 1.0 ],
+        "controls": [
+            {
+                "$button_image@$button_image": {
+                    "ignored": "(not $button_image_visible)",
+                    "size": "$button_image_size",
+                    "offset": "$image_offset",
+                    "anchor_from": "$image_anchor",
+                    "anchor_to": "$image_anchor",
+                    "layer": 1,
+                    "fill": "$button_image_fill",
+                    "color": "$button_image_color"
+                }
+            },
+            {
+                "button_content": {
+                    "type": "panel",
+                    "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+                    "size": "$button_content_size",
+                    "controls": [
+                        {
+                            "$button_type_panel@$button_type_panel": {
+                                "layer": 3
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Toggle Image
+    "button_image": {
+        "type": "image",
+        "layer": 1,
+        "texture": "$new_ui_button_texture",
+        "$button_alpha|default": "$content_alpha",
+        "alpha": "$button_alpha",
+        "$button_image_bindings|default": [],
+        "bindings": "$button_image_bindings"
+    },
+
+    //Asa Toggle Text Controls
+    "asa_toggle_text_controls": {
+        "type": "panel",
+        "size": [
+            "100% - 6px",
+            15
+        ],
+        "$text_shadow|default": false,
+        "$asa_text_color|default": [ 1, 1, 1 ],
+
+        "$toggle_enable|default": "none",
+        "$toggle_disable|default": "none",
+
+        "controls": [
+            {
+                "enable_text": {
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "type": "label",
+                    "size": [
+                        "default",
+                        10
+                    ],
+                    "text": "$enable_toggle_name",
+                    "color": "$asa_text_color",
+                    "$button_text_visible|default": "$toggle_disable",
+                    "visible": "$button_text_visible",
+                    "shadow": "$text_shadow"
+                }
+            },
+            {
+                "disable_text": {
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "type": "label",
+                    "size": [
+                        "default",
+                        10
+                    ],
+                    "text": "$disable_toggle_name",
+                    "color": "$asa_text_color",
+                    "$button_text_visible|default": "$toggle_enable",
+                    "visible": "$button_text_visible",
+                    "shadow": "$text_shadow"
+                }
+            }
+        ]
+    }
+}

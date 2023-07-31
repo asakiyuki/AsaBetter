@@ -1,0 +1,701 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_hud_screen",
+    
+    //Custom Panel
+    "asa_custom_root_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_hud_content.asa_player_joid_pop_up": {}
+            },
+            {
+                "@asa_hud_content.asa_player_list_panel": {}
+            },
+            {
+                "@asa_hud_content.asa_world_name_bg": {}
+            },
+            {
+                "@asa_hud_content.asa_bossbar_percent": {}
+            },
+            {
+                "@asa_hud_content.asa_main_hand_info_stack": {}
+            },
+            {
+                "@asa_hud_content.asa_pvp_hotbar_system": {}
+            },
+            {
+                "@asa_hud_content.asa_detect_stack": {}
+            },
+            {
+                "debug@asa_hud_debug.asa_debug_stack": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_debug",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "item_tools@asa_hud_debug.asa_c_c_rc_stack": {}
+            },
+            {
+                "armor_hud@asa_hud_debug.asa_armor_hud": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_armor_hud",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "offhand_slot_panel": {
+                    "type": "panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_offhand_hud",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "is_touch_input": {
+                                "type": "panel",
+                                "bindings": [
+                                    {
+                                        "binding_condition": "always",
+                                        "binding_name": "#inventory_touch_button",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "offhand_slot@asa_hud_debug.asa_offhand_hud": {
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_hide_inventory_button",
+                                                    "source_property_name": "(not #toggle_state)",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "offhand_slot@asa_hud_debug.asa_offhand_hud_2": {
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_hide_inventory_button",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+
+                        {
+                            "not_touch_input@asa_hud_debug.asa_offhand_hud_2": {
+                                "bindings": [
+                                    {
+                                        "binding_condition": "always",
+                                        "binding_name": "(not #inventory_touch_button)",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+
+            {
+                "position_chat_panel": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "offset": [ 1, 1 ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls": [
+                        {
+                            "paper_doll_padding": {
+                                "type": "panel",
+                                "size": [ "100%", 42 ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#paper_doll_visible",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_position@asa_hud_content.asa_position": {
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_coordinates",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel", "size": [ 1, 1 ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_coordinates",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "auto_chat_settings": {
+                                "type": "panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_automatic_chat",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "touch_chat": {
+                                            "type": "panel",
+                                            "size": [ "100%", "100%c" ],
+                                            "bindings": [
+                                                {
+                                                    "binding_condition": "always",
+                                                    "binding_name": "#inventory_touch_button",
+                                                    "binding_name_override": "#visible",
+                                                    "binding_type": "global"
+                                                }
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "asa_chat_panel@asa_hud_content.asa_chat_panel": {
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "view",
+                                                                "source_control_name": "asa_chat",
+                                                                "source_property_name": "#toggle_state",
+                                                                "target_property_name": "#visible"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "chat_panel": {
+                                "type": "panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_top_chat",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_chat_panel@asa_hud_content.asa_chat_panel": {
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_chat",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+
+            {
+                "auto_chat_settings": {
+                    "type": "panel",
+                    "size": [ "100%", "100%c" ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [ 0, -50 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_automatic_chat",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "k&m": {
+                                "type": "panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_condition": "always",
+                                        "binding_name": "#keyboard_helper_visible",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_chat_panel@asa_hud_content.asa_chat_panel": {
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_chat",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "controller": {
+                                "type": "panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_condition": "always",
+                                        "binding_name": "#gamepad_helper_visible",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "asa_chat_panel@asa_hud_content.asa_chat_panel": {
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_chat",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+
+            {
+                "chat_panel": {
+                    "type": "panel",
+                    "size": [ "100%", "100%c" ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [ 0, -50 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bottom_chat",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "asa_chat_panel@asa_hud_content.asa_bottom_chat_panel": {
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_chat",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+
+            {
+                "boss_health_panel": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [ "100%", "100%" ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_bossbar_all",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "boss_hud_padding": {
+                                "type": "panel",
+                                "size": [ "100%", 20 ],
+                                "visible": "#boss_hud_padding",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#boss_hud_padding",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "boss_hud_panel": {
+                                "type": "panel",
+                                "controls": [
+                                    {
+                                        "better_bossbar_gird@asa_better_bossbar.asa_boss_health_gird": {
+                                            "offset": [ 0, 2 ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_better_bossbar",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "java_bossbar_gird@asa_better_bossbar.asa_java_boss_health_gird": {
+                                            "offset": [ 0, 2 ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_java_bossbar",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "normal_bossbar_gird@hud.boss_health_grid": {
+                                            "offset": [ 0, 2 ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_default_bossbar",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    
+    //Full Screen Panel
+    "asa_full_screen_root_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "@asa_hud_content.asa_brighter": {}
+            },
+            {
+                "@asa_hud_content.asa_3rd_crosshair": {}
+            },
+            {
+                "@asa_hud_content.asa_slot_number_and_item_count": {}
+            },
+            {
+                "@asa_hud_content.asa_throw_items_crosshair_panel": {}
+            },
+            {
+                "@asa_hud_content.asa_saturation_screen": {}
+            }
+        ]
+    },
+
+    //Mojang Default Panel
+    "asa_default_root_panel": {
+        "type": "panel",
+        "$xp_control_offset|default": [
+            0,
+            -13
+        ],
+        "controls": [
+            {
+                "left_helpers@$left_helpers": {}
+            },
+            {
+                "right_helpers@hud.right_helpers": {}
+            },
+            {
+                "emote_helpers@hud.emote_helpers": {}
+            },
+            {
+                "centered_gui_elements@hud.centered_gui_elements": {}
+            },
+            {
+                "centered_gui_elements_at_bottom_middle@hud.centered_gui_elements_at_bottom_middle": {}
+            },
+            {
+                "centered_ridingvr_gui_elements@hud.centered_gui_elements_at_bottom_middle": {
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        60
+                    ],
+                    "size": [
+                        180,
+                        50
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_visible_centered_ridingvr",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "not_centered_gui_elements@not_centered_gui_elements": {}
+            },
+            {
+                "gamertag_label_for_splitscreen": {
+                    "type": "label",
+                    "size": [
+                        "default",
+                        "default"
+                    ],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [
+                        -4,
+                        4
+                    ],
+                    "color": "$hud_gamertag_color",
+                    "text_alignment": "right",
+                    "text": "#gamertag",
+                    "bindings": [
+                        {
+                            "binding_name": "#gamertag"
+                        }
+                    ]
+                }
+            },
+            {
+                "exp_rend@hud.exp_progress_bar_and_hotbar": {
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "bindings": [
+                        {
+                            "binding_name": "#hotbar_visible_not_centered",
+                            "binding_name_override": "#visible",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "hud_tip_text_factory": {
+                    "type": "factory",
+                    "control_name": "@hud.hud_tip_text"
+                }
+            },
+            {
+                "hud_actionbar_text_area": {
+                    "type": "panel",
+                    "$asa_action_bar|default": false,
+                    "ignored": "$asa_action_bar",
+                    "factory": {
+                        "name": "hud_actionbar_text_factory",
+                        "control_ids": {
+                            "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text"
+                        }
+                    }
+                }
+            },
+            {
+                "hud_title_text_area": {
+                    "type": "panel",
+                    "factory": {
+                        "name": "hud_title_text_factory",
+                        "control_ids": {
+                            "hud_title_text": "hud_title_text@hud.hud_title_text"
+                        }
+                    }
+                }
+            },
+            {
+                "mob_effects_renderer@hud.mob_effects_renderer": {
+                    "size": [
+                        "100%",
+                        "75%"
+                    ],
+                    "offset": [
+                        0,
+                        24
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "vignette_rend@hud.vignette_renderer": {}
+            },
+            {
+                "curor_rend@hud.cursor_renderer": {}
+            },
+            {
+                "game_tip@game_tip.game_tip_panel": {
+                    "$offset": [
+                        0,
+                        "-90px"
+                    ],
+                    "variables": [
+                        {
+                            "requires": "$pocket_screen",
+                            "$offset": [
+                                0,
+                                "-60px"
+                            ]
+                        }
+                    ],
+                    "offset": "$offset"
+                }
+            },
+            {
+                "sidebar@scoreboard.scoreboard_sidebar": {
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "scoreboard",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "progress_rend@hud.progress_indicator_renderer": {
+                    "offset": [
+                        "50%",
+                        "50%"
+                    ]
+                }
+            },
+            {
+                "chat_stack": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "40%",
+                        "100%"
+                    ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls": [
+                        {
+                            "vr_riding_chat_padding": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    132
+                                ],
+                                "visible": "#vr_riding",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#vr_riding",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "vr_chat_padding": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "visible": "#vr_non_riding",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#vr_non_riding",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "non_centered_gui_padding": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    32
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#hud_visible_not_centered",
+                                        "binding_name_override": "#visible",
+                                        "binding_type": "global"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "save_icon@hud.auto_save": {}
+            }
+        ]
+    }
+}

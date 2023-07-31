@@ -1,0 +1,48 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+
+    //Waifu Bed asa_textures
+    "bed": {
+      "textures": [
+        "asa_textures/anime_theme/items/blanc_neptunia",
+        "asa_textures/anime_theme/items/elaina",
+        "asa_textures/anime_theme/items/honjou_nia",
+        "asa_textures/anime_theme/items/kotori_itsuka",
+        "asa_textures/anime_theme/items/marvelous_aql",
+        "asa_textures/anime_theme/items/mio_takamiya",
+        "asa_textures/anime_theme/items/mirai_kuriyama",
+        "asa_textures/anime_theme/items/misaka_mikoto",
+        "asa_textures/anime_theme/items/nakano_nino",
+        "asa_textures/anime_theme/items/nao_tomori",
+        "asa_textures/anime_theme/items/natsumi_kyouno",
+        "asa_textures/anime_theme/items/rinne_sonogami",
+        "asa_textures/anime_theme/items/shiro",
+        "asa_textures/anime_theme/items/tohru",
+        "asa_textures/anime_theme/items/tokisaki_kurumi",
+        "asa_textures/anime_theme/items/yatogami_tohka"
+      ]
+    }/*,
+
+    "sword": {
+      "textures": [
+        "asa_textures/anime_theme/items/camael",
+        "asa_textures/anime_theme/items/raphael",
+        "asa_textures/anime_theme/items/sandalphon",
+        "textures/items/gold_sword",  //Not editor
+        "asa_textures/anime_theme/items/nahemah",
+        "asa_textures/anime_theme/items/shekinah"
+      ]
+    }*/
+  }
+}

@@ -1,0 +1,773 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_mega_mod_menu",
+
+    //Mod Menu Option
+    "asa_mega_mod_menu_option": {
+        "type": "panel",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_mega_mod_menu",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_chat_screen",
+                    "$asa_radio_tab": "chat_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_chat_panel",
+                    "$asa_header_text": "Chats"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_utility_screen",
+                    "$asa_radio_tab": "utility_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_utility_panel",
+                    "$asa_header_text": "Utility Section"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_hotbar_screen",
+                    "$asa_radio_tab": "hotbar_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_hotbar_panel",
+                    "$asa_header_text": "Hotbar Mode"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_item_name_screen",
+                    "$asa_radio_tab": "item_name_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_itemname_panel",
+                    "$asa_header_text": "Item Name"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_debug_screen",
+                    "$asa_radio_tab": "debug_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_debug_panel",
+                    "$asa_header_text": "Debug (Dev)"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_creative_screen",
+                    "$asa_radio_tab": "creative_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_creative_panel",
+                    "$asa_header_text": "Creative Mode"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_bossbar_screen",
+                    "$asa_radio_tab": "bossbar_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_bossbar_panel",
+                    "$asa_header_text": "Bossbar"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_armor_hud_screen",
+                    "$asa_radio_tab": "armor_hud_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_armor_hud_panel",
+                    "$asa_header_text": "Custom Armor HUD Position"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_hunger_perview_screen",
+                    "$asa_radio_tab": "hunger_perview_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_hunger_preview_panel",
+                    "$asa_header_text": "Hunger Preview"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_potion_icons_screen",
+                    "$asa_radio_tab": "potion_icons_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_potion_icon_panel",
+                    "$asa_header_text": "Absorption Effect Viewer"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_item_durability_percent_screen",
+                    "$asa_radio_tab": "item_durability_percent_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_item_durability_percent_panel",
+                    "$asa_header_text": "Item Durability Percent"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_brighter_screen",
+                    "$asa_radio_tab": "brighter_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_brighter_panel",
+                    "$asa_header_text": "Brighter"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_jukerbox_name_screen",
+                    "$asa_radio_tab": "jukerbox_name_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_jukebox_name_panel",
+                    "$asa_header_text": "Jukebox Name"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_lodestone_compass_screen",
+                    "$asa_radio_tab": "lodestone_compass_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_lodestone_panel",
+                    "$asa_header_text": "Lodestone Compass"
+                }
+            },
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_saturation_screen_screen",
+                    "$asa_radio_tab": "saturation_screen_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_saturation_screen_panel",
+                    "$asa_header_text": "Saturation Screen"
+                }
+            }/*,
+            {
+                "@asa_mod_menu.asa_menu_screen": {
+                    "$asa_toggle_binding_screen": "asa_addon_compatible_screen",
+                    "$asa_radio_tab": "addon_compatible_screen",
+                    "$asa_middle_menu": "asa_mod_menu_panel.asa_compatible_addon_panel",
+                    "$asa_header_text": "List of Compatible Addons"
+                }
+            }*/
+        ]
+    },
+
+    //Asa Slider
+    "asa_slider@common.slider": {
+        "$option_enabled_binding_name": "slider_enabled",
+        "$slider_name":"asa_slider",
+
+        "$slider_box_layout":"asa_mega_mod_menu.asa_slider_button_layout",
+        "$slider_box_hover_layout": "asa_mega_mod_menu.asa_slider_button_layout",
+        "$slider_box_indent_layout": "asa_mega_mod_menu.asa_slider_button_layout",
+        "$slider_box_locked_layout": "asa_mega_mod_menu.asa_slider_button_layout",
+
+        "$option_label":"",
+        "$asa_slider_step_enable|default": 0,
+        "$asa_slider_steps|default": 1,
+        "$asa_slider_value_bindings|default": "(((#slider_steps * 0) + $asa_slider_step_enable) * 10)",
+        "property_bag": {
+            "#slider_steps": "$asa_slider_steps"
+        },
+        "bindings": [
+            {
+				"binding_name":"#slider_steps"
+			},
+			{
+				"binding_type": "view",
+				"source_property_name": "$asa_slider_value_bindings",
+				"target_property_name": "#slider_value"
+			}
+        ],
+
+        "factory": "$asa_factory",
+        "$asa_factory|default": {
+            "name": "slider_step_factory",
+            "control_ids": {
+                "slider_step": "@asa_mega_mod_menu.asa_step",
+                "slider_step_hover": "@asa_mega_mod_menu.asa_step",
+                "slider_step_progress": "@asa_mega_mod_menu.asa_step",
+                "slider_step_progress_hover": "@asa_mega_mod_menu.asa_step"
+            }
+        },
+
+        "controls": [
+            {
+                "slider_box@common.slider_box": {}
+            },
+            {
+                "slider_bar_default@asa_mega_mod_menu.asa_slider_bar_default": {}
+            },
+            {
+                "slider_bar_hover@asa_mega_mod_menu.asa_slider_bar_hover": {}
+            }
+        ]
+    },
+
+    "asa_slider_background": {
+        "type": "image",
+        "layer": 9,
+        "texture": "asa_textures/ui/button_and_toggle/square_button",
+        "color": "$asa_slider_color"
+    },
+
+    "asa_step": {
+        "type": "image",
+        "size": [ 1, 10 ],
+        "layer": 15,
+        "offset": "$step_offset",
+        "texture": "asa_textures/ui/button_and_toggle/square_button"
+    },
+
+    "asa_slider_progress": {
+        "type": "image",
+        "color": "$asa_slider_progress_color",
+        "layer": 10,
+        "texture": "asa_textures/ui/button_and_toggle/square_button"
+    },
+
+    "asa_slider_button_layout@common.slider_button_state": {
+        "size": [ 4, 17 ],
+        "texture": "asa_textures/ui/button_and_toggle/square_button"
+    },
+
+    "asa_slider_panel": {
+        "type": "panel",
+        "layer": 100,
+        "clips_children": true,
+        "controls": [
+            {
+                "$asa_slider_binding_controls_name@asa_slider": {
+                    "size": [ "100% - 2px", "100% - 2px" ]
+                }
+            },
+            {
+                "@common.slider_border": {
+                    "color": [ 0, 0, 0 ]
+                }
+            }
+        ]
+    },
+
+    "asa_slider_bar_default@asa_slider_bar": {
+        "color": "$slider_hover_border_color",
+        "$background_control": "asa_mega_mod_menu.asa_slider_background",
+        "$progress_control": "asa_mega_mod_menu.asa_slider_progress",
+        "$background_control_name": "slider_background",
+        "$asa_slider_color": [ 0.1, 0.1, 0.1 ],
+        "$asa_slider_progress_color": [ 0.3, 0.8, 0.8 ],
+        "$progress_control_name": "slider_progress"
+    },
+
+    "asa_slider_bar_hover@asa_slider_bar": {
+        "color": "$slider_hover_border_color",
+        "$background_control": "asa_mega_mod_menu.asa_slider_background",
+        "$progress_control": "asa_mega_mod_menu.asa_slider_progress",
+        "$background_control_name": "slider_background_hover",
+        "$asa_slider_color": [ 0.05, 0.05, 0.05 ],
+        "$asa_slider_progress_color": [ 0.3, 0.65, 0.65 ],
+        "$progress_control_name": "slider_progress_hover"
+    },
+
+    "asa_slider_bar": {
+        "type": "panel",
+        "controls": [
+            {
+                "sizing_panel": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "$background_control_name@$background_control": {
+                                "layer": 1
+                            }
+                        },
+                        {
+                            "$progress_control_name@$progress_control": {
+                                "layer": 3,
+                                "clip_direction": "left",
+                                "clip_pixelperfect": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_slider_text": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+            {
+                "asa_label": {
+                    "type": "label",
+                    "text": "$asa_text",
+                    "font_scale_factor": 0.8,
+                    "offset": [ 1, 0 ],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$slider_name_controls",
+                            "source_property_name": "(#slider_value = $slider_value)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Other Toggle
+    "asa_mega_double_toggle": {
+        "type": "stack_panel",
+        "size": [ "100%", 15 ],
+        "orientation": "horizontal",
+        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
+        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
+
+        "$asa_toggle_tags_bindings|default": "198387_asa_button_tab_null",
+        "$asa_locked_alpha": 1,
+        "controls": [
+            {
+                "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
+                    "toggle_name": "asa_mega_hack_mod_toggle",
+                    "$button_content": "asa_is_mod_button",
+                    "enabled": "$not_tab_button",
+                    "$asa_texture_alpha": 1,
+                    "size": [ "fill", 15 ]
+                }
+            },
+            {
+                "asa_toggle_panel": {
+                    "type": "panel",
+                    "size": [ 15, 15 ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$asa_toggle_tags_bindings",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#enabled"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "$asa_open_panel_toggle_bindings@mega_hack_toggle_template": {
+                                "toggle_name": "$asa_radio_tab",
+                                "radio_toggle_group": true,
+                                "toggle_group_forced_index": 1,
+                                "size": [ 15, 15 ],
+                                "$button_content": "asa_is_mod_list",
+                                "$asa_mod_toggle_color": [ 1, 1, 1 ],
+                                "toggle_group_default_selected": false
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    
+    //Toggle Panel
+    "asa_header_toggle": {
+        "type": "panel",
+
+        "$asa_toggle_tags_bindings|default": "null",
+        "$button_content": "asa_is_header_button",
+        "$asa_toggle_tags|default": true,
+
+        "$asa_button_color": "@asa_extra_animation.rgb_1",
+        "size": [ "100%", 15 ],
+
+        "controls": [
+            {
+                "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
+                    "toggle_name": "asa_mega_hack_mod_header"
+                }
+            }
+        ]
+    },
+
+    "asa_mod_toggle": {
+        "type": "panel",
+
+        "$asa_toggle_tags_bindings|default": "null",
+        "$button_content": "asa_is_mod_button",
+
+        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
+        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
+        "size": [ "100%", 15 ],
+
+        "controls": [
+            {
+                "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
+                    "toggle_name": "asa_mega_hack_mod_toggle"
+                }
+            }
+        ]
+    },
+
+    "asa_mod_radio_toggle": {
+        "type": "panel",
+
+        "$asa_toggle_tags_bindings|default": "null",
+        "$button_content": "asa_is_mod_button",
+
+        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
+        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
+        "size": [ "100%", 15 ],
+        "$asa_toggle_group_enable|default": 0, 
+        "$asa_mod_toggle_color": [ 0.5, 1.0, 0.5 ],
+
+        "controls": [
+            {
+                "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
+                    "toggle_name": "$asa_mod_radio",
+                    "radio_toggle_group": true,
+                    "toggle_group_forced_index": "$asa_toggle_group",
+                    "toggle_group_default_selected": "$asa_toggle_group_enable"
+                }
+            }
+        ]
+    },
+
+    "asa_mod_list_toggle": {
+        "type": "panel",
+
+        "$asa_toggle_tags_bindings|default": "null",
+        "$button_content": "asa_is_mod_list_button",
+        "size": [ "100%", 15 ],
+        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
+        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
+
+        "controls": [
+            {
+                "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
+                    "toggle_name": "asa_mega_hack_mod_list"
+                }
+            }
+        ]
+    },
+
+    //Toggle Template
+
+    "mega_hack_toggle_template": {
+        "type": "toggle",
+
+        "toggle_default_state": "$asa_toggle_tags",
+
+        "unchecked_control": "toggle_disable",
+        "unchecked_hover_control": "toggle_disable_hover",
+        "checked_control": "toggle_enable",
+        "checked_hover_control": "toggle_enable_hover",
+
+        "unchecked_locked_control": "toggle_disable_lock",
+        "unchecked_locked_hover_control": "toggle_disable_hover_lock",
+        "checked_locked_control": "toggle_enable_lock",
+        "checked_locked_hover_control": "toggle_enable_hover_lock",
+
+        "$toggle_strings": "asa_toggle_content",
+
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+
+        "controls": [
+            {
+                "toggle_disable@$toggle_strings": {
+                    "$is_disable": true,
+                    "$asa_button_color|default": "$asa_default_button_color",
+                    "$asa_mod_toggle_color": "$asa_mod_disable_color",
+                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "toggle_disable_hover@$toggle_strings": {
+                    "$is_disable": true,
+                    "$is_hover": true,
+                    "$asa_button_color|default": "$asa_hover_button_color",
+                    "$asa_mod_toggle_color": "$asa_mod_disable_color",
+                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "toggle_enable@$toggle_strings": {
+                    "$is_enable": true,
+                    "$asa_button_color|default": "$asa_default_button_color",
+                    "$asa_mod_toggle_color|default": "@asa_extra_animation.rgb_1"
+                }
+            },
+            {
+                "toggle_enable_hover@$toggle_strings": {
+                    "$is_enable": true,
+                    "$is_hover": true,
+                    "$asa_button_color|default": "$asa_hover_button_color",
+                    "$asa_mod_toggle_color|default": "@asa_extra_animation.rgb_1"
+                }
+            },
+
+            {
+                "toggle_disable_lock@$toggle_strings": {
+                    "$is_disable": true,
+                    "$asa_button_color|default": "$asa_default_button_color",
+                    "$asa_mod_toggle_color": "$asa_mod_disable_color",
+                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "toggle_disable_hover_lock@$toggle_strings": {
+                    "$is_disable": true,
+                    "$is_hover": true,
+                    "$asa_button_color|default": "$asa_hover_button_color",
+                    "$asa_mod_toggle_color": "$asa_mod_disable_color",
+                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "toggle_enable_lock@$toggle_strings": {
+                    "$is_enable": true,
+                    "$asa_button_color|default": "$asa_default_button_color",
+                    "$asa_mod_toggle_color|default": "@asa_extra_animation.rgb_1"
+                }
+            },
+            {
+                "toggle_enable_hover_lock@$toggle_strings": {
+                    "$is_enable": true,
+                    "$is_hover": true,
+                    "$asa_button_color|default": "$asa_hover_button_color",
+                    "$asa_mod_toggle_color|default": "@asa_extra_animation.rgb_1"
+                }
+            }
+        ],
+
+        "property_bag": { "#toggle_state": true },
+        "button_mappings": [{ "from_button_id": "button.menu_select", "to_button_id": "button.menu_select", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" }]
+    },
+
+    "asa_toggle_content": {
+        "type": "image",
+        "texture": "asa_textures/ui/button_and_toggle/square_button",
+        "color": "$asa_button_color",
+        "layer": "$asa_content_layer",
+        "$asa_content_layer|default": 99,
+        "controls": [
+            {
+                "@$button_content": {}
+            }
+        ]
+    },
+
+    "asa_menu_space_line": {
+        "type": "image",
+        "texture": "asa_textures/ui/button_and_toggle/square_button",
+        "color": [ 1, 1, 1 ],
+        "size": [ "100%", 1 ],
+        "layer": "$asa_content_layer",
+        "$asa_content_layer|default": 99
+    },
+
+    "asa_is_header_button": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "max_size": [ "100% - 25px", 10 ],
+                    "text": "$asa_button_text",
+                    "color": "$asa_button_text_color",
+                    "font_scale_factor": 0.8,
+                    "layer": "$asa_panel_content_layer",
+                    "$asa_panel_content_layer|default": 100
+                }
+            },
+            {
+                "button_texture": {
+                    "size": [ "100%y", "100% - 8px" ],
+                    "type": "panel",
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [ -4, 0 ],
+                    "controls": [
+                        {
+                            "is_hide": {
+                                "type": "image",
+                                "size": [ "100%", "100%" ],
+                                "texture": "asa_textures/ui/button_and_toggle/close_button",
+                                "layer": "$asa_panel_content_layer",
+                                "$asa_panel_content_layer|default": 100,
+                                "ignored": "$is_enable"
+                            }
+                        },
+                        {
+                            "is_show": {
+                                "type": "image",
+                                "size": [ "100%", "100%" ],
+                                "texture": "asa_textures/ui/button_and_toggle/open_button",
+                                "layer": "$asa_panel_content_layer",
+                                "$asa_panel_content_layer|default": 100,
+                                "ignored": "$is_disable"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_is_mod_button": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "max_size": [ "100% - 5px", 10 ],
+                    "text": "$asa_button_text",
+                    "color": "$asa_button_text_color",
+                    "font_scale_factor": 0.8,
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [ 2, 0 ],
+                    "layer": "$asa_panel_content_layer",
+                    
+                    "locked_alpha": "$asa_locked_alpha",
+                    "$asa_locked_alpha|default": 0.25,
+                    "$asa_panel_content_layer|default": 100
+                }
+            },
+            {
+                "toggle_tabs": {
+                    "type": "image",
+                    "size": [ 2, "100% - 4px" ],
+                    "offset": [ -2, 0 ],
+                    "color": "$asa_mod_toggle_color",
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "texture": "asa_textures/ui/button_and_toggle/square_button",
+                    "layer": "$asa_panel_content_layer",
+                    "visible": "$not_tab_button",
+                    
+                    "locked_alpha": "$asa_locked_alpha",
+                    "$asa_locked_alpha|default": 0.25,
+                    "$asa_panel_content_layer|default": 100
+                }
+            },
+            {
+                "mod_description": {
+                    "$open_mod_description|default": false,
+                    "ignored": "(not $open_mod_description)",
+                    "type": "panel",
+                    "$asa_description_text|default": "Mod Descriptions", 
+                    "layer": 300,
+                    "size": [ "100%cm", "100%cm" ],
+                    "anchor_from": "$description_anchor_from",
+                    "anchor_to": "$description_anchor_to",
+                    "offset": "$description_offset",
+
+                    "$description_anchor_from|default": "right_middle",
+                    "$description_anchor_to|default": "left_middle",
+                    "$description_offset|default": [ 2, 0 ],
+                    "controls": [
+                        {
+                            "toggle_tabs_border": {
+                                "type": "image",
+                                "size": [ "100%cm + 1px", "100%cm + 1px" ],
+                                "texture": "asa_textures/ui/button_and_toggle/square_button",
+                                "layer": 299,
+                                "ignored": "(not $is_hover)",
+                                "controls": [
+                                    {
+                                        "toggle_tabs": {
+                                            "type": "image",
+                                            "size": [ "100%cm + 3px", "100%cm + 3px" ],
+                                            "color": [ 0, 0, 0 ],
+                                            "texture": "asa_textures/ui/button_and_toggle/square_button",
+                                            "layer": 300,
+                                            "controls": [
+                                                {
+                                                    "mod_des": {
+                                                        "type": "label",
+                                                        "size": [ "default", "default" ],
+                                                        "max_size": [ 150, "default" ],
+                                                        "layer": 301,
+                                                        "font_scale_factor": 0.8,
+                                                        "text": "$asa_description_text"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_is_mod_list_button": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "max_size": [ "100% - 25px", 10 ],
+                    "text": "$asa_button_text",
+                    "color": "$asa_button_text_color",
+                    "font_scale_factor": 0.8,
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [ 2, 0 ],
+                    
+                    "locked_alpha": "$asa_locked_alpha",
+                    "$asa_locked_alpha|default": 0.25,
+                    "layer": 100
+                }
+            },
+            {
+                "toggle_tabs": {
+                    "type": "image",
+                    "size": [ "100%y", "100% - 4px" ],
+                    "offset": [ -2, 0 ],
+                    "color": "$asa_mod_toggle_color",
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "texture": "asa_textures/ui/button_and_toggle/list_button",
+                    
+                    "locked_alpha": "$asa_locked_alpha",
+                    "$asa_locked_alpha|default": 0.25,
+                    "layer": 100
+                }
+            }
+        ]
+    },
+
+    "asa_is_mod_list": {
+        "type": "panel",
+        "controls": [
+            {
+                "toggle_tabs": {
+                    "type": "image",
+                    "locked_alpha": "$asa_locked_alpha",
+                    "$asa_locked_alpha|default": 0.25,
+                    "size": [ "100%y", "100% - 4px" ],
+                    "offset": [ -2, 0 ],
+                    "color": "$asa_mod_toggle_color",
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "texture": "asa_textures/ui/button_and_toggle/list_button",
+                    "layer": 100
+                }
+            }
+        ]
+    },
+
+    "asa_done": {
+        "type": "label",
+        "text": "Done",
+        "font_scale_factor": 0.8,
+        "layer": 200
+    }
+}

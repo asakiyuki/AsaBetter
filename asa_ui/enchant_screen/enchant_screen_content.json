@@ -1,0 +1,182 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_enchant_screen_content",
+
+    "asa_item_viewer_stack": {
+        "type": "stack_panel",
+        "size": [ "100%cm", "100%c" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 2, 0 ],
+        "controls": [
+            /*{
+                "@asa_item_name_text_viewer": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 2, 2 ]
+                }
+            },*/
+            {
+                "@asa_enchant_viewer_gird": {}
+            }
+        ]
+    },
+
+    //Item Name
+    "asa_item_name_text_viewer": {
+        "type": "label",
+        "text": "#hover_text",
+        "layer": 20,
+        "shadow": true,
+        "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_name_override": "#hover_text",
+                "binding_type": "collection",
+                "binding_condition": "always",
+                "binding_collection_name": "enchanting_input_items"
+            }
+        ]
+    },
+
+    //Enchant viewer
+    "asa_enchant_viewer_gird": {
+        "type": "grid",
+        "collection_name": "#enchant_buttons",
+        "size": [ "100%cm", "100%c" ],
+        "grid_dimensions": [ 1, 3 ],
+        "grid_item_template": "asa_enchant_screen_content.asa_enchant_viewer_panel"
+    },
+
+    "asa_enchant_viewer_panel": {
+        "type": "panel",
+        "size": [ "100%cm", 15 ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "controls": [
+            {
+                "success@asa_enchant_viewer": {
+                    "$enchant_bindings": "#selectable_button_visibility",
+                    "$enchant_cost_color": "$enchanting_cost_success_color"
+                }
+            },
+            {
+                "fail@asa_enchant_viewer": {
+                    "$enchant_bindings": "#unselectable_button_visibility",
+                    "$enchant_cost_color": "$anvil_cost_fail_text_color"
+                }
+            }
+        ]
+    },
+
+    "asa_enchant_viewer": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "size": [ "100%c", "100%cm" ],
+        "bindings": [
+            {
+                "binding_name": "$enchant_bindings",
+                "binding_name_override": "#visible",
+                "binding_collection_name": "#enchant_buttons",
+                "binding_type": "collection"
+            }
+        ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "text": "Cost:",
+                    "layer": 10,
+                    "color": "$enchant_cost_color"
+                }
+            },
+            {
+                "label": {
+                    "type": "label",
+                    "text": " ",
+                    "localize": false
+                }
+            },
+            {
+                "@asa_enchant_cost": {}
+            },
+            {
+                "label": {
+                    "type": "label",
+                    "text": " - ",
+                    "layer": 10,
+                    "localize": false
+                }
+            },
+            {
+                "@asa_enchant_name_panel": {}
+            }
+        ]
+    },
+
+    "asa_enchant_name_panel": {
+        "type": "panel",
+        "size": [ "100%cm + 4px", "100%c" ],
+        "max_size": [ "100%cm + 4px", 11 ],
+        "clips_children": true,
+        "controls": [
+            {
+                "@asa_enchant_name": {}
+            }
+        ]
+    },
+
+    "asa_enchant_name": {
+        "type": "label",
+        "text": "#text",
+        "shadow": true,
+        "layer": 10,
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_collection_name": "#enchant_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(((#hover_text - '§f§o') - ' . . . ?'))",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+
+    "asa_enchant_cost": {
+        "type": "label",
+        "text": "#text",
+        "shadow": true,
+        "localize": false,
+        "layer": 10,
+        "color": "$enchant_cost_color",
+        "bindings": [
+            {
+                "binding_name": "#cost",
+                "binding_collection_name": "#enchant_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#cost)",
+                "target_property_name": "#text"
+            }
+        ]
+    }
+}

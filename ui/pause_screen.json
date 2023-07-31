@@ -1,0 +1,23 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "pause_screen@common.base_screen": {
+        "force_render_below": true,
+        "render_game_behind": true,
+        "button_mappings": [],
+        "variables": [
+            {
+                "requires": "$ignore_edu_pause",
+                "$screen_content": "asa_pause_screen_panel.asa_pause_screen_content",
+                "$screen_bg_content": "asa_exit_world_confirm_panel.asa_pause_background"
+            }
+        ]
+    }
+}

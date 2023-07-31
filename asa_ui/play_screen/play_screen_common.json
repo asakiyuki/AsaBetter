@@ -1,0 +1,251 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_play_screen_common",
+
+    "asa_play_screen_content": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "popup_dialog_factory": {
+                    "type": "factory",
+                    "layer": 100,
+                    "control_ids": {
+                        "join_by_code": "@play.popup_dialog_join_by_code",
+                        "high_ping_warning": "@play.popup_dialog_high_ping"
+                    }
+                }
+            },
+            {
+                "button_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%cm", "100%c" ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [ -2, 0 ],
+                    "controls": [
+                        {
+                            "@player_screen_button_common.asa_play_button_template": {
+                                "$button_name": "Worlds",
+                                "size": [ 26, 26 ],
+                                "$toggle_group": 0,
+                                "$asa_toggle_bindings": "asa_world_toggles",
+                                "$button_icon_texture": "textures/ui/world_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/world_glyph"
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel",
+                                "size": [ 1, 1 ]
+                            }
+                        },
+                        {
+                            "@player_screen_button_common.asa_play_button_template": {
+                                "$button_name": "Multiplayer",
+                                "size": [ 26, 26 ],
+                                "$toggle_group": 1,
+                                "$asa_toggle_bindings": "asa_multiplayer_toggles",
+                                "$button_icon_texture": "textures/ui/multiplayer_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/multiplayer_glyph"
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel",
+                                "size": [ 1, 1 ]
+                            }
+                        },
+                        {
+                            "@player_screen_button_common.asa_play_button_template": {
+                                "$button_name": "Servers",
+                                "size": [ 26, 26 ],
+                                "$toggle_group": 2,
+                                "$asa_toggle_bindings": "asa_server_toggles",
+                                "$button_icon_texture": "textures/ui/servers",
+                                "$button_icon_outline_texture": "asa_textures/ui/none"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "section_panel": {
+                    "type": "panel",
+                    "size": [ "80%", "100% - 25px" ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [
+                        "@asa_play_anims.asa_section_panel_anims_entrance",
+                        "@asa_play_anims.asa_section_panel_anims_entrance_2",
+                        "@asa_play_anims.asa_section_panel_anims_exit",
+                        "@asa_play_anims.asa_section_panel_anims_exit_2"
+                    ],
+                    "controls": [
+                        {
+                            "@asa_play_content.world_scroll": {
+                                "offset": [ 0, 10 ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_world_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@play.friends_scroll_content": {
+                                "offset": [ 0, 10 ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_multiplayer_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        /*{
+                            "@asa_play_content.multiplayer_scroll_2": {
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_multiplayer_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "@asa_play_content.multiplayer_scroll": {
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_multiplayer_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },*/
+                        {
+                            "@play.server_scroll_content": {
+                                "offset": [ 0, 10 ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_server_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+
+            //Header
+            {
+                "text_bg": {
+                    "type": "image",
+                    "size": [ "100%", 20 ],
+                    "texture": "asa_textures/ui/bar/date_a_live_bar",
+                    "color": [ 0, 0, 0 ],
+                    "alpha": 0.7,
+                    "layer": -10,
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [
+                        "@asa_play_anims.asa_header_anims_entrance",
+                        "@asa_play_anims.asa_header_anims_entrance_2",
+                        "@asa_play_anims.asa_header_anims_exit",
+                        "@asa_play_anims.asa_header_anims_exit_2"
+                    ]
+                }
+            },
+            {
+                "text_panel": {
+                    "type": "panel",
+                    "size": [ "100%", 10 ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [
+                        "@asa_play_anims.asa_header_text_anims_entrance",
+                        "@asa_play_anims.asa_header_text_anims_entrance_2"
+                    ],
+                    "offset": [ 0, 5 ],
+                    "controls": [
+                        {
+                            "back_button@asa_start_button_template.asa_start_button_template": {
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "size": [ 75, 15 ],
+                                "offset": [ 10, -2.5 ],
+                                "$pressed_button_name": "button.menu_exit",
+                                "$button_text": "Go Back"
+                            }
+                        },
+                        {
+                            "world": {
+                                "type": "label", "size": [ "default", "default" ], "layer": 1,
+                                "text": "Worlds",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_world_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Multiplayer": {
+                                "type": "label", "size": [ "default", "default" ], "layer": 1,
+                                "text": "Multiplayer",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_multiplayer_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Servers": {
+                                "type": "label", "size": [ "default", "default" ], "layer": 1,
+                                "text": "Servers",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_server_toggles",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

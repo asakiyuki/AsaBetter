@@ -1,0 +1,957 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_resouce_packs_screen",
+
+    "asa_resource_pack_screen": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "$selected_pack_items": "#selected_pack_items_global",
+        "$available_pack_items": "#available_pack_items_global",
+        "$realms_pack_items": "#realms_pack_items_global",
+        "$unowned_pack_items": "#unowned_pack_items_global",
+        "$selected_grid_dimensions": "#selected_grid_dimensions_global",
+        "$available_grid_dimensions": "#available_grid_dimensions_global",
+        "$realms_grid_dimensions": "#realms_grid_dimensions_global",
+        "$unowned_grid_dimensions": "#unowned_grid_dimensions_global",
+        "$unowned_visible": "#unowned_visible_global",
+        "$button.selected_pack": "button.selected_pack_global",
+        "$button.deselected_pack": "button.deselected_pack_global",
+        "$button.available_pack": "button.available_pack_global",
+        "$button.realms_pack": "button.realms_pack_global",
+        "$button.unowned_pack": "button.unowned_pack_global",
+        "$button.move_left": "button.move_left_global",
+        "$button.sort_up": "button.sort_up_global",
+        "$button.sort_down": "button.sort_down_global",
+        "$button.expand_selected": "button.expand_selected_global",
+        "$button.expand_available": "button.expand_available_global",
+        "$button.expand_realms": "button.expand_realms_global",
+        "$button.expand_unowned": "button.expand_unowned_global",
+        "$button.store": "button.store_global",
+        "$button.read_toggle": "button.read_toggle_global",
+        "$button.report_errors": "button.report_errors_global",
+        "$bottom_description_text": "resourcePack.description.bottom.global",
+        "$selected_label_text": "resourcePack.selected.title.packs",
+        "$available_label_text": "resourcePack.available.title.packs",
+        "$realms_label_text": "resourcePack.realmsPlus.title.packs",
+        "$unowned_label_text": "resourcePack.suggestedContent.title",
+        "$platform_locked": "#platform_locked_global",
+        "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
+        "$default_item_texture": "#default_item_texture_global",
+        "$default_item_file_system": "#default_item_file_system_global",
+        "$default_item_zip": "#default_item_zip_global",
+        "$default_item_title": "resourcePack.vanilla.name",
+        "$default_item_description": "resourcePack.vanilla.description",
+        "$no_packs_text": "resourcePack.available.none.text",
+        "$read_more_label": "read_more_label_global",
+        "$read_less_label": "read_less_label_global",
+        "$total_size_binding": "#total_size_binding_global",
+        "$in_game_error_text": "resourcePack.error.ingame.packs",
+        "$invalid_pack_items": "#invalid_pack_items_global",
+        "$invalid_grid_dimensions": "#invalid_grid_dimensions_global",
+        "$button.invalid_pack": "button.invalid_pack_global",
+        "$button.pack_warning": "button.pack_warning_global",
+        "$invalid_label_text": "resourcePack.invalid.title.packs",
+        "$view_in_store": "resourcePack.description.store",
+        "$errors_text": "resourcePack.errors",
+        "$warnings_text": "resourcePack.warnings",
+        "$expired_text": "resourcePack.realmsPlus.expired",
+        "$top_label_box": false,
+        "$show_checkbox": false,
+        "$button.resource_pack_options_exit": "button.resource_pack_options_exit_global",
+        "$button.pack_settings": "button.pack_settings_global",
+        "$button.add": "resourcePack.available.add",
+        "$button.remove": "resourcePack.selected.remove",
+        "$options_slider_name": "content_tier_slider_global",
+        "$display_suggested_content_offers": true,
+        "$suggested_content_offers_collection": "#suggested_offers_collection_global",
+        "$suggested_content_offers_loading_binding": "#suggested_offers_loading_global",
+        "$button.more_suggested_content_offers": "button.more_suggested_content_offers_global",
+        "$button.select_offer": "button.select_offer_global",
+        "$suggested_content_offers_label_text": "#suggested_offers_title_global",
+        "$no_available_packs_visibility_binding": "#no_available_packs_visibility_global",
+        "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_global",
+        "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_global",
+        "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_global",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "global_texture_pack_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "rsp_panel": {
+                    "type": "stack_panel",
+                    "size": [ "100% - 1px", "100%c" ],
+                    "controls": [
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_ac",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "selected_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "selected_pack_factory",
+                                                "control_name": "resource_packs.selected_pack_panel"
+                                            },
+                                            "collection_name": "$selected_pack_items",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$selected_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_minecraft_default": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "size": [ "100%", "100%cm" ],
+                                            "controls": [
+                                                {
+                                                    "asa_minecraft_default_image": {
+                                                        "type": "image",
+                                                        "size": [ 40, 40 ],
+                                                        "texture_file_system": "#icon_file_system",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#default_item_texture_global",
+                                                                "binding_name_override": "#texture"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_file_system_global",
+                                                                "binding_name_override": "#texture_file_system"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_zip_global",
+                                                                "binding_name_override": "#zip_folder"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "panel": {
+                                                        "type": "panel",
+                                                        "size": [ 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "asa_pack_name_stack": {
+                                                        "type": "stack_panel",
+                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "controls": [
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "text": "resourcePack.vanilla.name",
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "layer": 1
+                                                                }
+                                                            },
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "layer": 1,
+                                                                    "color": [ 0.8, 0.8, 0.8 ],
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "text": "resourcePack.vanilla.description",
+                                                                    "font_type": "smooth"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 1 ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_mega_mod_menu.asa_menu_space_line": {}
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 2, 2 ]
+                                        }
+                                    },
+                                    {
+                                        "white_label@resource_packs.white_label": {
+                                            "text": "resourcePack.description.bottom.global",
+                                            "max_size": [ "100%", "default" ],
+                                            "layer": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_un",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "asa_my_pack@asa_resource_packs.asa_nav_rps_toggle": {
+                                            "$button_text": "My packs",
+                                            "radio_toggle_group": false,
+                                            "$default_texture": "textures/ui/button_borderless_light",
+                                            "$hover_texture": "textures/ui/button_borderless_light",
+                                            "$pressed_texture": "textures/ui/button_borderless_lighthover",
+                                            "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
+                                            "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
+                                            "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
+                                            "size": [ "100%", 25 ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "available_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "available_pack_factory",
+                                                "control_name": "resource_packs.available_pack_panel"
+                                            },
+                                            "collection_name": "$available_pack_items",
+                                            "$available_grid_visible_binding_name|default": "",
+                                            "$available_grid_visible_binding_type|default": "none",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$available_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                },
+                                                {
+                                                    "binding_name": "$available_grid_visible_binding_name",
+                                                    "binding_type": "$available_grid_visible_binding_type"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_my_pack",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#asa1"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "#asa1",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "asa_get_more_packs@asa_resource_packs.asa_nav_rps_toggle": {
+                                            "$button_text": "Get more packs",
+                                            "radio_toggle_group": false,
+                                            "$default_texture": "textures/ui/button_borderless_light",
+                                            "$hover_texture": "textures/ui/button_borderless_light",
+                                            "$pressed_texture": "textures/ui/button_borderless_lighthover",
+                                            "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
+                                            "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
+                                            "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
+                                            "size": [ "100%", 25 ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "unowned_pack_grid@resource_packs.unowned_pack_grid": {
+                                            "size": [ "100%", "default" ],
+                                            "$unowned_grid_visible_binding_name": "(not #no_unowned_packs_visibility_global)",
+                                            "$unowned_grid_visible_binding_type": "global",
+                                            "$unowned_pack_items": "#unowned_pack_items_global",
+                                            "$unowned_grid_dimensions": "#unowned_grid_dimensions_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$unowned_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_get_more_packs",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "to_store_button@common_buttons.light_text_button": {
+                                            "size": [ "100%", 20 ],
+                                            "$button_text": "resourcePack.suggestedContent.button.viewMore",
+                                            "$pressed_button_name": "button.more_suggested_content_offers_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_get_more_packs",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_world_resource_pack_screen": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "$selected_pack_items": "#selected_pack_items_level",
+        "$available_pack_items": "#available_pack_items_level",
+        "$realms_pack_items": "#realms_pack_items_level",
+        "$unowned_pack_items": "#unowned_pack_items_level",
+        "$default_item_texture": "#default_item_texture_level",
+        "$default_item_file_system": "#default_item_file_system_level",
+        "$default_item_zip": "#default_item_zip_level",
+        "$default_item_title": "menu.globalpacks",
+        "$default_item_description": "resourcePack.description.default.level",
+        "$no_packs_text": "resourcePack.available.none.text",
+        "$selected_grid_dimensions": "#selected_grid_dimensions_level",
+        "$available_grid_dimensions": "#available_grid_dimensions_level",
+        "$realms_grid_dimensions": "#realms_grid_dimensions_level",
+        "$unowned_grid_dimensions": "#unowned_grid_dimensions_level",
+        "$unowned_visible": "#unowned_visible_level",
+        "$button.selected_pack": "button.selected_pack_level",
+        "$button.deselected_pack": "button.deselected_pack_level",
+        "$button.available_pack": "button.available_pack_level",
+        "$button.realms_pack": "button.realms_pack_level",
+        "$button.unowned_pack": "button.unowned_pack_level",
+        "$button.move_left": "button.move_left_level",
+        "$button.sort_up": "button.sort_up_level",
+        "$button.sort_down": "button.sort_down_level",
+        "$button.expand_selected": "button.expand_selected_level",
+        "$button.expand_available": "button.expand_available_level",
+        "$button.expand_realms": "button.expand_realms_level",
+        "$button.expand_unowned": "button.expand_unowned_level",
+        "$button.store": "button.store_level",
+        "$button.read_toggle": "button.read_toggle_level",
+        "$button.report_errors": "button.report_errors_level",
+        "$bottom_description_text": "resourcePack.description.bottom.level",
+        "$selected_label_text": "resourcePack.selected.title.packs",
+        "$available_label_text": "resourcePack.available.title.packs",
+        "$realms_label_text": "resourcePack.realmsPlus.title.packs",
+        "$unowned_label_text": "resourcePack.suggestedContent.title",
+        "$platform_locked": "#platform_locked_level",
+        "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
+        "$read_more_label": "read_more_label_level",
+        "$read_less_label": "read_less_label_level",
+        "$total_size_binding": "#total_size_binding_level",
+        "$in_game_error_text": "resourcePack.error.ingame.packs",
+        "$invalid_pack_items": "#invalid_pack_items_level",
+        "$invalid_grid_dimensions": "#invalid_grid_dimensions_level",
+        "$button.invalid_pack": "button.invalid_pack_level",
+        "$button.pack_warning": "button.pack_warning_level",
+        "$invalid_label_text": "resourcePack.invalid.title.packs",
+        "$view_in_store": "resourcePack.description.store",
+        "$errors_text": "resourcePack.errors",
+        "$warnings_text": "resourcePack.warnings",
+        "$expired_text": "resourcePack.realmsPlus.expired",
+        "$top_label_box": true,
+        "$show_checkbox": true,
+        "$button.resource_pack_options_exit": "button.resource_pack_options_exit_level",
+        "$button.pack_settings": "button.pack_settings_level",
+        "$button.add": "resourcePack.available.add",
+        "$button.remove": "resourcePack.selected.remove",
+        "$options_slider_name": "content_tier_slider_level",
+        "$display_suggested_content_offers": true,
+        "$suggested_content_offers_collection": "#suggested_offers_collection_level",
+        "$suggested_content_offers_loading_binding": "#suggested_offers_loading_level",
+        "$button.more_suggested_content_offers": "button.more_suggested_content_offers_level",
+        "$button.select_offer": "button.select_offer_level",
+        "$suggested_content_offers_label_text": "#suggested_offers_title_level",
+        "$no_available_packs_visibility_binding": "#no_available_packs_visibility_level",
+        "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_level",
+        "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_level",
+        "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_level",
+        "$force_pack_download_binding_type": "global",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "level_texture_pack_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "rsp_panel": {
+                    "type": "stack_panel",
+                    "size": [ "100% - 1px", "100%c" ],
+                    "controls": [
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_ac",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "selected_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "selected_pack_factory",
+                                                "control_name": "resource_packs.selected_pack_panel"
+                                            },
+                                            "collection_name": "$selected_pack_items",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$selected_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_minecraft_default": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "size": [ "100%", "100%cm" ],
+                                            "controls": [
+                                                {
+                                                    "asa_minecraft_default_image": {
+                                                        "type": "image",
+                                                        "size": [ 40, 40 ],
+                                                        "texture_file_system": "#icon_file_system",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#default_item_texture_global",
+                                                                "binding_name_override": "#texture"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_file_system_global",
+                                                                "binding_name_override": "#texture_file_system"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_zip_global",
+                                                                "binding_name_override": "#zip_folder"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "panel": {
+                                                        "type": "panel",
+                                                        "size": [ 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "asa_pack_name_stack": {
+                                                        "type": "stack_panel",
+                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "controls": [
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "text": "menu.globalpacks",
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "layer": 1
+                                                                }
+                                                            },
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "layer": 1,
+                                                                    "color": [ 0.8, 0.8, 0.8 ],
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "text": "resourcePack.description.default.level",
+                                                                    "font_type": "smooth"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 1 ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_mega_mod_menu.asa_menu_space_line": {}
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 2, 2 ]
+                                        }
+                                    },
+                                    {
+                                        "white_label@resource_packs.white_label": {
+                                            "text": "resourcePack.description.bottom.level",
+                                            "max_size": [ "100%", "default" ],
+                                            "layer": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_un",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "asa_my_pack@asa_resource_packs.asa_nav_rps_toggle": {
+                                            "$button_text": "My packs",
+                                            "radio_toggle_group": false,
+                                            "$default_texture": "textures/ui/button_borderless_light",
+                                            "$hover_texture": "textures/ui/button_borderless_light",
+                                            "$pressed_texture": "textures/ui/button_borderless_lighthover",
+                                            "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
+                                            "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
+                                            "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
+                                            "size": [ "100%", 25 ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "available_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "available_pack_factory",
+                                                "control_name": "resource_packs.available_pack_panel"
+                                            },
+                                            "collection_name": "$available_pack_items",
+                                            "$available_grid_visible_binding_name|default": "",
+                                            "$available_grid_visible_binding_type|default": "none",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$available_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                },
+                                                {
+                                                    "binding_name": "$available_grid_visible_binding_name",
+                                                    "binding_type": "$available_grid_visible_binding_type"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_my_pack",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#asa1"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "#asa1",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "asa_get_more_packs@asa_resource_packs.asa_nav_rps_toggle": {
+                                            "$button_text": "Get more packs",
+                                            "radio_toggle_group": false,
+                                            "$default_texture": "textures/ui/button_borderless_light",
+                                            "$hover_texture": "textures/ui/button_borderless_light",
+                                            "$pressed_texture": "textures/ui/button_borderless_lighthover",
+                                            "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
+                                            "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
+                                            "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
+                                            "size": [ "100%", 25 ]
+                                        }
+                                    },
+                                    {
+                                        "empty_panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 2.5 ]
+                                        }
+                                    },
+                                    {
+                                        "unowned_pack_grid@resource_packs.unowned_pack_grid": {
+                                            "size": [ "100%", "default" ],
+                                            "$unowned_grid_visible_binding_name": "(not #no_unowned_packs_visibility_global)",
+                                            "$unowned_grid_visible_binding_type": "global",
+                                            "$unowned_pack_items": "#unowned_pack_items_global",
+                                            "$unowned_grid_dimensions": "#unowned_grid_dimensions_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$unowned_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_get_more_packs",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "to_store_button@common_buttons.light_text_button": {
+                                            "size": [ "100%", 20 ],
+                                            "$button_text": "resourcePack.suggestedContent.button.viewMore",
+                                            "$pressed_button_name": "button.more_suggested_content_offers_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "asa_get_more_packs",
+                                                    "source_property_name": "#toggle_state",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_addon_screen": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "$selected_pack_items": "#selected_pack_items_addon",
+        "$available_pack_items": "#available_pack_items_addon",
+        "$realms_pack_items": "#realms_pack_items_addon",
+        "$unowned_pack_items": "#unowned_pack_items_addon",
+        "$selected_grid_dimensions": "#selected_grid_dimensions_addon",
+        "$available_grid_dimensions": "#available_grid_dimensions_addon",
+        "$realms_grid_dimensions": "#realms_grid_dimensions_addon",
+        "$unowned_grid_dimensions": "#unowned_grid_dimensions_addon",
+        "$unowned_visible": "#unowned_visible_addon",
+        "$default_item_texture": "#default_item_texture_addon",
+        "$default_item_file_system": "#default_item_file_system_addon",
+        "$default_item_zip": "#default_item_zip_addon",
+        "$default_item_title": "gui.default",
+        "$default_item_description": "resourcePack.description.default.behaviorPacks",
+        "$no_packs_text": "resourcePack.available.none.behavior",
+        "$button.selected_pack": "button.selected_pack_addon",
+        "$button.deselected_pack": "button.deselected_pack_addon",
+        "$button.available_pack": "button.available_pack_addon",
+        "$button.realms_pack": "button.realms_pack_addon",
+        "$button.unowned_pack": "button.unowned_pack_addon",
+        "$button.move_left": "button.move_left_addon",
+        "$button.sort_up": "button.sort_up_addon",
+        "$button.sort_down": "button.sort_down_addon",
+        "$button.expand_selected": "button.expand_selected_addon",
+        "$button.expand_available": "button.expand_available_addon",
+        "$button.expand_realms": "button.expand_realms_addon",
+        "$button.expand_unowned": "button.expand_unowned_addon",
+        "$button.store": "button.store_addon",
+        "$button.read_toggle": "button.read_toggle_addon",
+        "$button.report_errors": "button.report_errors_addon",
+        "$bottom_description_text": "resourcePack.description.bottom.behaviorPacks",
+        "$selected_label_text": "resourcePack.selected.title.packs",
+        "$available_label_text": "resourcePack.available.title.packs",
+        "$realms_label_text": "resourcePack.realmsPlus.title.packs",
+        "$unowned_label_text": "resourcePack.suggestedContent.title",
+        "$platform_locked": "#platform_locked_addon",
+        "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
+        "$read_more_label": "read_more_label_addon",
+        "$read_less_label": "read_less_label_addon",
+        "$total_size_binding": "#total_size_binding_addon",
+        "$in_game_error_text": "resourcePack.error.ingame.behaviorPacks",
+        "$invalid_pack_items": "#invalid_pack_items_addon",
+        "$invalid_grid_dimensions": "#invalid_grid_dimensions_addon",
+        "$button.invalid_pack": "button.invalid_pack_addon",
+        "$button.pack_warning": "button.pack_warning_addon",
+        "$invalid_label_text": "resourcePack.invalid.title.packs",
+        "$view_in_store": "resourcePack.description.store",
+        "$errors_text": "resourcePack.errors",
+        "$warnings_text": "resourcePack.warnings",
+        "$expired_text": "resourcePack.realmsPlus.expired",
+        "$top_label_box": true,
+        "$show_checkbox": false,
+        "$button.resource_pack_options_exit": "button.resource_pack_options_exit_addon",
+        "$button.pack_settings": "button.pack_settings_addon",
+        "$button.add": "resourcePack.available.add",
+        "$button.remove": "resourcePack.selected.remove",
+        "$options_slider_name": "content_tier_slider_addon",
+        "$display_suggested_content_offers": false,
+        "$suggested_content_offers_collection": "#suggested_offers_collection_addon",
+        "$suggested_content_offers_loading_binding": "#suggested_offers_loading_addon",
+        "$button.more_suggested_content_offers": "button.more_suggested_content_offers_addon",
+        "$button.select_offer": "button.select_offer_addon",
+        "$suggested_content_offers_label_text": "#suggested_offers_title_addon",
+        "$no_available_packs_visibility_binding": "#no_available_packs_visibility_addon",
+        "$no_realms_packs_visibility_binding": "#no_realms_packs_visibility_addon",
+        "$no_unowned_packs_visibility_binding": "#no_unowned_packs_visibility_addon",
+        "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_addon",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "addon_button_toggle",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "rsp_panel": {
+                    "type": "stack_panel",
+                    "size": [ "100% - 1px", "100%c" ],
+                    "controls": [
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_ac",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "selected_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "selected_pack_factory",
+                                                "control_name": "resource_packs.selected_pack_panel"
+                                            },
+                                            "collection_name": "$selected_pack_items",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "$selected_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "asa_minecraft_default": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "size": [ "100%", "100%cm" ],
+                                            "controls": [
+                                                {
+                                                    "asa_minecraft_default_image": {
+                                                        "type": "image",
+                                                        "size": [ 40, 40 ],
+                                                        "texture_file_system": "#icon_file_system",
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#default_item_texture_global",
+                                                                "binding_name_override": "#texture"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_file_system_global",
+                                                                "binding_name_override": "#texture_file_system"
+                                                            },
+                                                            {
+                                                                "binding_name": "#default_item_zip_global",
+                                                                "binding_name_override": "#zip_folder"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "panel": {
+                                                        "type": "panel",
+                                                        "size": [ 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "asa_pack_name_stack": {
+                                                        "type": "stack_panel",
+                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "controls": [
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "text": "gui.default",
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "layer": 1
+                                                                }
+                                                            },
+                                                            {
+                                                                "white_label@resource_packs.white_label": {
+                                                                    "layer": 1,
+                                                                    "color": [ 0.8, 0.8, 0.8 ],
+                                                                    "max_size": [ "100%", "default" ],
+                                                                    "text": "resourcePack.description.default.behaviorPacks",
+                                                                    "font_type": "smooth"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 1, 1 ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_mega_mod_menu.asa_menu_space_line": {}
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 2, 2 ]
+                                        }
+                                    },
+                                    {
+                                        "white_label@resource_packs.white_label": {
+                                            "text": "resourcePack.description.bottom.behaviorPacks",
+                                            "max_size": [ "100%", "default" ],
+                                            "layer": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "rsp_panel": {
+                                "type": "stack_panel",
+                                "size": [ "100%", "100%c" ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "global_rsp_un",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "available_pack_grid": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "factory": {
+                                                "name": "available_pack_factory",
+                                                "control_name": "resource_packs.available_pack_panel"
+                                            },
+                                            "collection_name": "$available_pack_items",
+                                            "$available_grid_visible_binding_name|default": "",
+                                            "$available_grid_visible_binding_type|default": "none",
+                                            "bindings":[
+                                                {
+                                                    "binding_name": "$available_grid_dimensions",
+                                                    "binding_name_override": "#collection_length"
+                                                },
+                                                {
+                                                    "binding_name": "$available_grid_visible_binding_name",
+                                                    "binding_type": "$available_grid_visible_binding_type"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

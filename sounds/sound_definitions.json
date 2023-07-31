@@ -1,0 +1,708 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+
+        //Music Players
+
+        //> Date A Live
+        "asa_music.date_a_live.date_a_live": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/date_a_live",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.save_the_world": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/save_the_world",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.save_my_heart": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/save_my_heart",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "asa_music.date_a_live.strawberry_rain": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/strawberry_rain",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "asa_music.date_a_live.hatsukoi_winding_road": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/hatsukoi_winding_road",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.trust_in_you": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/trust_in_you",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.day_to_story": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/day_to_story",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.mermaid_lovestory": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/mermaid_lovestory",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.go_summer_girl": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/go_summer_girl",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.monochrome_sky": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/monochrome_sky",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.q&a": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/q&a",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.my_treasure": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/my_treasure",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+
+        "asa_music.date_a_live.invisible_date": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/invisible_date",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.i_swear": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/i_swear",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.last_promise": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/last_promise",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+
+        "asa_music.date_a_live.over": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/over",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.date_a_live.sos": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/date_a_live/sos",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //Masamune Revenge
+        "asa_music.masamune_revenge.wagamama_mirror_heart": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/masamune_revenge/wagamama_mirror_heart",
+                    "stream": true,
+                    "volume": 4,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.masamune_revenge.elemental_world": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/masamune_revenge/elemental_world",
+                    "stream": true,
+                    "volume": 2,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //Gotoubun no Hanayome
+        "asa_music.gotoubun_no_hanayome.gotoubun_no_kimochi": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/gotoubun_no_kimochi",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.gotoubun_no_hanayome.sign": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/sign",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.gotoubun_no_hanayome.gotoubun_no_katachi": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/gotoubun_no_katachi",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.gotoubun_no_hanayome.hatsukoi": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/hatsukoi",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.gotoubun_no_hanayome.gotoubun_no_kiseki": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/gotoubun_no_kiseki",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.gotoubun_no_hanayome.arigatou_no_hana": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/gotoubun_no_hanayome/arigatou_no_hana",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //Majo no Tabitabi
+        "asa_music.majo_no_tabitabi.literatune": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/majo_no_tabitabi/literatune",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.majo_no_tabitabi.haiiro_no_saga": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/majo_no_tabitabi/haiiro_no_saga",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //No Game No Life
+        "asa_music.no_game_no_life.this_game": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/no_game_no_life/this_game",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.no_game_no_life.onegai_snyaiper": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/no_game_no_life/onegai_snyaiper",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.no_game_no_life.oracion": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/asa_music/no_game_no_life/oracion",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //Music Custom Songs
+        "asa_music.custom_music.songs_1": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_1",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_2": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_2",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_3": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_3",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_4": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_4",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_5": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_5",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_6": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_6",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_7": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_7",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_8": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_8",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_9": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_9",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_10": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_10",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_11": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_11",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_12": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_12",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_13": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_13",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_14": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_14",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_15": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_15",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_16": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_16",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_17": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_17",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_18": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_18",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_19": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_19",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_20": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_20",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_21": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_21",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_22": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_22",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_23": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_23",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_24": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_24",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_25": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_25",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_26": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_26",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_27": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_27",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_28": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_28",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_29": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_29",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "asa_music.custom_music.songs_30": {
+            "category": "record",
+            "sounds": [
+                {
+                    "name": "asa_music_player/custom_music/music_player/asa_music_30",
+                    "stream": true,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        //Default Sounds
+        "asa.music_menu": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "asa_sounds/asa_main_sounds/asa_menu",
+                    "stream": true,
+                    "volume": 0.8,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+
+        "random.click": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "asa_sounds/asa_main_sounds/asa_menu_click",
+                    "volume": 15,
+                    "load_on_low_memory": true
+                }
+            ]
+        }
+    }
+}

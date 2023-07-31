@@ -1,0 +1,857 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_setting_common",
+
+    "asa_setting_common": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+
+        "$asa_header_text_color|default": "none",
+        "$toggle_name|default": "asa_null",
+        "$button_text_binding_type|default": "none",
+        "$button_text_grid_collection_name|default": "none",
+        "$button_binding_condition|default": "none",
+        "$button_offset|default": [ 0, 0 ],
+
+        "controls": [
+            {
+                "@asa_world_setting_selecter": {}
+            },
+            {
+                "@asa_realm_setting_selecter": {}
+            },
+            {
+                "@asa_setting_selecter": {}
+            },
+            {
+                "@asa_world_addon_selecter": {}
+            }
+        ]
+    },
+
+    //Realm Setting Panel
+
+    "asa_realm_setting_selecter": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "ignored": "(not $include_realm_section)",
+        "controls": [
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "Realms Manage"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "1@asa_setting_button_template": {
+                    "variables": {
+                        "requires": "$is_realm_slot",
+                        "$button_text": "realmsSlotsScreen.gamesettings"
+                    },
+                    "$toggle_group_forced_index": 0,
+                    "$toggle_default_state": true,
+                    "$toggle_view_binding_name": "world_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 16, 17 ],
+                    "$button_icon_texture": "textures/ui/world_glyph",
+                    "$button_icon_outline_texture": "textures/ui/world_glyph_color",
+                    "$button_text": "realmsSettingsScreen.gameSectionTitle",
+                    "$toggle_property_bag": {
+                        "#panel_title": "realmsSettingsScreen.gameSectionTitle"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "ignored": "$is_realm_slot",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "2@asa_setting_button_template": {
+                    "ignored": "$is_realm_slot",
+                    "$toggle_group_forced_index": 250,
+                    "$toggle_view_binding_name": "members_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 22, 12 ],
+                    "$button_icon_texture": "textures/ui/multiplayer_glyph",
+                    "$button_icon_outline_texture": "textures/ui/multiplayer_glyph_color",
+                    "$button_text": "realmsSettingsScreen.membersSectionTitle",
+                    "$toggle_property_bag": {
+                        "#panel_title": "realmsSettingsScreen.membersSectionTitle"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "ignored": "$is_realm_slot",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "ignored": "$realm_no_world_edit",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "3@asa_setting_button_template": {
+                    "ignored": "$realm_no_world_edit",
+                    "$toggle_group_forced_index": 254,
+                    "$toggle_view_binding_name": "dev_options_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 14, 14 ],
+                    "$button_icon_texture": "textures/ui/dev_glyph",
+                    "$button_icon_outline_texture": "textures/ui/dev_glyph_color",
+                    "$button_text": "realmsSettingsScreen.devOptionsSectionTitle",
+                    "$toggle_property_bag": {
+                        "#panel_title": "realmsSettingsScreen.devOptionsSectionTitle"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "ignored": "$is_realm_slot",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "3@asa_setting_button_template": {
+                    "ignored": "$is_realm_slot",
+                    "$toggle_group_forced_index": 253,
+                    "$toggle_view_binding_name": "subscription_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 15, 13 ],
+                    "$button_icon_texture": "textures/ui/subscription_glyph",
+                    "$button_icon_outline_texture": "textures/ui/subscription_glyph_color",
+                    "$button_text": "realmsSettingsScreen.subscriptionSectionTitle",
+                    "$toggle_property_bag": {
+                        "#panel_title": "realmsSettingsScreen.subscriptionSectionTitle"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "ignored": "$realm_no_world_edit",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "4@asa_setting_button_template": {
+                    "ignored": "$realm_no_world_edit",
+                    "$toggle_group_forced_index": 252,
+                    "$toggle_view_binding_name": "backup_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 16, 17 ],
+                    "$button_icon_texture": "textures/ui/backup_outline",
+                    "$button_icon_outline_texture": "textures/ui/backup_noline",
+                    "$button_text": "realmsSettingsScreen.backupSection",
+                    "$toggle_property_bag": {
+                        "#panel_title": "realmsSettingsScreen.backupSection"
+                    }
+                }
+            }
+        ]
+    },
+
+    //World Setting Panel
+    "asa_world_addon_selecter": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))",
+        "controls": [
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "Add-ons"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "3@asa_resource_packs.asa_resource_packs_setting_button_template": {
+                    "$toggle_group_forced_index": 201,
+                    "$toggle_view_binding_name": "level_texture_pack_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 16, 16 ],
+                    "$cycling_icon_path": "#cycling_icon_path_level",
+                    "$cycling_icon_zip": "#cycling_icon_zip_level",
+                    "$cycling_icon_file_system": "#cycling_icon_file_system_level",
+                    "$button_text": "menu.resourcepacks",
+                    "$toggle_property_bag": {
+                        "#panel_title": "menu.resourcepacks"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "4@asa_resource_packs.asa_resource_packs_setting_button_template": {
+                    "$toggle_group_forced_index": 202,
+                    "$toggle_view_binding_name": "addon_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 16, 16 ],
+                    "$cycling_icon_path": "#cycling_icon_path_addon",
+                    "$cycling_icon_zip": "#cycling_icon_zip_addon",
+                    "$cycling_icon_file_system": "#cycling_icon_file_system_addon",
+                    "$button_text": "menu.behaviors",
+                    "$toggle_property_bag": {
+                        "#panel_title": "menu.behaviors"
+                    }
+                }
+            }
+        ]
+    },
+
+    "asa_world_setting_selecter": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "ignored": "(not $include_world_section)",
+        "controls": [
+            {
+                "world_snapshot_image": {
+                    "ignored": "(not $is_pregame)",
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%c + 2px"
+                    ],
+                    "controls": [
+                        {
+                            "thumbnail": {
+                                "type": "image",
+                                "force_texture_reload": true,
+                                "size": [
+                                    "100% - 2px",
+                                    "56.25%x + 2.25px"
+                                ],
+                                "bilinear": true,
+                                "layer": 2,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    1
+                                ],
+                                "fill": true,
+                                "controls": [
+                                    {
+                                        "border": {
+                                            "type": "image",
+                                            "size": [
+                                                "100% + 2px",
+                                                "100% + 2px"
+                                            ],
+                                            "texture": "textures/ui/BannersTransparent",
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "layer": 1
+                                        }
+                                    }
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#world_texture_name",
+                                        "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_name": "#world_texture_locationtype",
+                                        "binding_name_override": "#texture_file_system"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "world_and_realm": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%cm" ],
+                    "orientation": "horizontal",
+                    "ignored": "(not $is_pregame)",
+                    "controls": [
+                        {
+                            "create@asa_common_button.asa_text_button": {
+                                "$button_type_panel": "asa_start_button_template.asa_button_text_template",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$pressed_button_name": "play_world_button",
+                                "$button_text": "Play",
+                                "variables": {
+                                    "requires": "(not $is_world_edit)",
+                                    "$button_text": "createWorldScreen.create",
+                                    "$pressed_button_name": "create_world_button"
+                                }
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [ 1, 1 ]
+                            }
+                        },
+                        {
+                            "realm@asa_common_button.asa_text_button": {
+                                "$button_type_panel": "asa_start_button_template.asa_button_text_template",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$pressed_button_name": "play_world_on_realm_button",
+                                "$button_text": "menu.playOnRealms",
+                                "variables": [
+                                    {
+                                        "requires": "(not $is_world_edit)",
+                                        "$button_text": "createWorldScreen.createOnRealms",
+                                        "$pressed_button_name": "create_world_on_realm_button"
+                                    }
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#create_on_realm_visible",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "World Settings"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "1@asa_setting_button_template": {
+                    "$toggle_group_forced_index": "$game_forced_index",
+                    "$toggle_view_binding_name": "game_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 21, 14 ],
+                    "$button_icon_texture": "textures/ui/controller_glyph_color",
+                    "$button_icon_outline_texture": "textures/ui/controller_glyph",
+                    "$button_text": "options.category.game",
+                    "$toggle_property_bag": {
+                        "#panel_title": "createWorldScreen.game.settings"
+                    }
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "2@asa_setting_button_template": {
+                    "$toggle_group_forced_index": 200,
+                    "$toggle_view_binding_name": "multiplayer_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 22, 12 ],
+                    "$button_icon_texture": "textures/ui/multiplayer_glyph_color",
+                    "$button_icon_outline_texture": "textures/ui/multiplayer_glyph",
+                    "$button_text": "options.group.multiplayer",
+                    "$toggle_property_bag": {
+                        "#panel_title": "createWorldScreen.multiplayer.settings"
+                    }
+                }
+            }
+        ]
+    },
+
+    //Setting Panel
+
+    "asa_quick_setting": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "Quick Settings"
+                }
+            },
+            
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "paper_doll@asa_toggle_common.asa_setting_toggle": {
+                    "size": [ "100%", 20 ],
+                    "$option_enabled_binding_name": "#hide_paperdoll_enabled",
+                    "$asa_binding_toggle": "#hide_paperdoll",
+                    "$asa_state_toggle": "hide_paperdoll",
+                    "$disable_toggle_name": "Paper Doll: ON",
+                    "$enable_toggle_name": "Paper Doll: OFF"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "hand_hud": {
+                    "size": [ "100%", "100%cm" ],
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "$option_enabled_binding_name": "#third_person_dropdown_enabled",
+                    "$button_type_panel": "asa_toggle_common.button_text_panel_third",
+                    "$button_text": "Third",
+                    "controls": [
+                        {
+                            "hand@asa_toggle_common.asa_setting_toggle": {
+                                "size": [ "50% - 0.5px", 20 ],
+                                "$option_enabled_binding_name": "#hide_hand_enabled",
+                                "$asa_binding_toggle": "#hide_hand",
+                                "$asa_state_toggle": "hide_hand",
+                                "$disable_toggle_name": "Hand: ON",
+                                "$enable_toggle_name": "Hand: OFF"
+                            }
+                        },
+                        {
+                            "space": {
+                                "type": "panel",
+                                "size": [ 1, 1 ]
+                            }
+                        },
+                        {
+                            "hud@asa_toggle_common.asa_setting_toggle": {
+                                "size": [ "50% - 0.5px", 20 ],
+                                "$option_enabled_binding_name": "#hide_hud_enabled",
+                                "$asa_binding_toggle": "#hide_hud",
+                                "$asa_state_toggle": "hide_hud",
+                                "$disable_toggle_name": "HUD: ON",
+                                "$enable_toggle_name": "HUD: OFF"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "fullscreen@asa_toggle_common.asa_setting_toggle": {
+                    "size": [ "100%", 20 ],
+                    "$option_enabled_binding_name": "#full_screen_enabled",
+                    "$asa_binding_toggle": "#full_screen",
+                    "$asa_state_toggle": "full_screen",
+                    "$disable_toggle_name": "Fullscreen: OFF",
+                    "$enable_toggle_name": "Fullscreen: ON"
+                }
+            }
+        ] 
+    },
+
+    "asa_setting_selecter": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "ignored": "(not $include_controls_and_settings_sections)",
+        "controls": [
+            {
+                "@asa_quick_setting": {}
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "General Settings"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "lang_volu": {
+                    "type": "stack_panel",
+                    "size": [ "100%", 30 ],
+                    "orientation": "horizontal",
+                    "$force_index_1": 100,
+                    "$force_index_2": 101,
+                    "controls": [
+                        {
+                            "1@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$force_index_1",
+                                "$toggle_view_binding_name": "language_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 25, 13 ],
+                                "$button_icon_texture": "textures/ui/language_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/language_glyph",
+                                "$button_text": "options.language",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.language"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "2@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$force_index_2",
+                                "$toggle_view_binding_name": "sound_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 16, 12 ],
+                                "$button_icon_texture": "textures/ui/sound_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/sound_glyph",
+                                "$button_text": "options.sounds",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.sounds.title"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "vid_stora": {
+                    "type": "stack_panel",
+                    "size": [ "100%", 30 ],
+                    "orientation": "horizontal",
+                    "$force_index_2": 103,
+                    "controls": [
+                        {
+                            "1@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$accessibility_forced_index",
+                                "$toggle_view_binding_name": "video_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 15, 12 ],
+                                "$button_icon_texture": "textures/ui/video_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/video_glyph",
+                                "$button_icon_outline_offset": [ 4, 0 ],
+                                "$button_text": "options.video",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.videoTitle"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "2@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$force_index_2",
+                                "$toggle_view_binding_name": "storage_management_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 17, 16 ],
+                                "$button_icon_texture": "textures/ui/storageIconColor",
+                                "$button_icon_outline_texture": "textures/ui/storageIcon",
+                                "$button_text": "menu.storageManagement",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "menu.storageManagement"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "resource_packs@asa_resource_packs.asa_resource_packs_setting_button_template": {
+                    "$toggle_group_forced_index": 104,
+                    "$toggle_view_binding_name": "global_texture_pack_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 16, 16 ],
+                    "$cycling_icon_path": "#cycling_icon_path_global",
+                    "$cycling_icon_zip": "#cycling_icon_zip_global",
+                    "$cycling_icon_file_system": "#cycling_icon_file_system_global",
+                    "$button_text": "menu.globalpacks",
+                    "$toggle_property_bag": {
+                        "#panel_title": "menu.globalpacks"
+                    }
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "@asa_font_setup.text_and_background": {
+                    "size": [ "100%", 20 ],
+                    "$header_text": "Control Settings"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "K&M_controller": {
+                    "type": "stack_panel",
+                    "size": [ "100%", 30 ],
+                    "orientation": "horizontal",
+                    "$force_index_1": 105,
+                    "$force_index_2": 106,
+                    "controls": [
+                        {
+                            "1@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$force_index_1",
+                                "$toggle_view_binding_name": "keyboard_and_mouse_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 19, 9 ],
+                                "$button_icon_texture": "textures/ui/keyboard_and_mouse_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/keyboard_and_mouse_glyph",
+                                "$button_text": "Key & Mouse",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.keyboardAndMouseSettings"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "2@asa_setting_button_template": {
+                                "$toggle_group_forced_index": "$force_index_2",
+                                "$toggle_view_binding_name": "controller_button_toggle",
+                                "size": [ "50% - 0.5px", 30 ],
+                                "$asa_button_size": [ 21, 14 ],
+                                "$button_icon_texture": "textures/ui/controller_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/controller_glyph",
+                                "$button_text": "options.controller",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.controllerSettings"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "touch@asa_setting_button_template": {
+                    "$toggle_group_forced_index": 107,
+                    "$toggle_view_binding_name": "touch_button_toggle",
+                    "size": [ "100%", 30 ],
+                    "$asa_button_size": [ 20, 14 ],
+                    "$button_icon_texture": "textures/ui/touch_glyph_color",
+                    "$button_icon_outline_texture": "textures/ui/touch_glyph",
+                    "$button_text": "options.touch",
+                    "$toggle_property_bag": {
+                        "#panel_title": "options.touchSettings"
+                    }
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "@asa_seemore_setting_button_template": {
+                    "size": [ "100%", 20 ],
+                    "$enable_toggle_name": "HIDE SETTINGS",
+                    "$disable_toggle_name": "SEEMORE SETTINGS",
+                    "$toggle_view_binding_name": "asa_other_settings"
+                }
+            },
+            { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+            {
+                "asa_other_setting": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_other_settings",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "genereal@asa_setting_button_template": {
+                                "$toggle_group_forced_index": 200,
+                                "$toggle_view_binding_name": "general_button_toggle",
+                                "size": [ "100%", 30 ],
+                                "$asa_button_size": [ 11, 12 ],
+                                "$button_icon_texture": "textures/ui/world_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/world_glyph",
+                                "$button_text": "options.general",
+                                "$button_icon_outline_offset": [ 3, 0 ],
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.generalTitle"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "account@asa_setting_button_template": {
+                                "$toggle_group_forced_index": 108,
+                                "$toggle_view_binding_name": "account_button_toggle",
+                                "size": [ "100%", 30 ],
+                                "$asa_button_size": [ 11, 12 ],
+                                "$button_icon_texture": "textures/ui/profile_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/profile_glyph",
+                                "$button_text": "options.account",
+                                "$button_icon_outline_offset": [ 3, 0 ],
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.accountTitle"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "accessibility@asa_setting_button_template": {
+                                "$toggle_group_forced_index": 109,
+                                "$toggle_view_binding_name": "accessibility_button_toggle",
+                                "size": [ "100%", 30 ],
+                                "$asa_button_size": [ 19, 20 ],
+                                "$button_icon_texture": "textures/ui/accessibility_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/accessibility_glyph",
+                                "$button_text": "options.accessibility",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.accessibility.title"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "creator@asa_setting_button_template": {
+                                "$toggle_group_forced_index": 110,
+                                "$toggle_view_binding_name": "creator_button_toggle",
+                                "size": [ "100%", 30 ],
+                                "$asa_button_size": [ 17, 17 ],
+                                "$button_icon_texture": "textures/ui/creator_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/creator_glyph",
+                                "$button_text": "options.creator",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.creatorTitle"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}},
+                        {
+                            "subscriptions@asa_setting_button_template": {
+                                "$toggle_group_forced_index": 111,
+                                "$toggle_view_binding_name": "view_subscriptions_button_toggle",
+                                "size": [ "100%", 30 ],
+                                "$asa_button_size": [ 15, 13 ],
+                                "$button_icon_texture": "textures/ui/subscription_glyph_color",
+                                "$button_icon_outline_texture": "textures/ui/subscription_glyph",
+                                "$button_text": "options.viewSubscriptions",
+                                "$toggle_property_bag": {
+                                    "#panel_title": "options.viewSubscriptions"
+                                }
+                            }
+                        },
+                        { "panel": { "type": "panel", "size": [ 1, 1 ]}}
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Button Template
+    "asa_setting_button_template@asa_toggle_common.asa_darkmode_navigation_toggle": {
+        "$button_type_panel": "asa_setting_common.asa_button_text_and_image",
+        "$toggle_name": "navigation_tab"
+    },
+
+    "asa_seemore_setting_button_template@asa_toggle_common.asa_darkmode_toggle": {
+        "$button_type_panel": "asa_toggle_common.asa_toggle_text_controls",
+        "$default_texture_color": [ 0.5, 0.1, 0.1 ],
+        "$default_checked_texture_color": [ 0.5, 0.1, 0.1 ],
+        "$hover_texture_color": [ 0.6, 0.3, 0.3 ],
+        "$hover_checked_texture_color": [ 0.6, 0.3, 0.3 ]
+    },
+
+
+    "asa_button_text_and_image": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "$asa_button_size|default": [ 24, 24 ],
+        "$button_icon_offset": [ 2, 0 ],
+        "$button_icon_outline_offset|default": [ 2, 0 ],
+        "controls": [
+            /*{
+                "button_image": {
+                    "type": "image",
+                    "size": "$asa_button_size",
+                    "texture": "$button_icon_texture",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": "$button_icon_offset"
+                }
+            },*/
+            {
+                "button_icon_outline": {
+                    "type": "image",
+                    "size": "$asa_button_size",
+                    "texture": "$button_icon_outline_texture",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": "$button_icon_outline_offset",
+                    "color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "button_name": {
+                    "type": "label",
+                    "size": [ "default", "default" ],
+                    "max_size": [ "100% - 30px", 10 ],
+                    "offset": [ 30, 0 ],
+                    "text": "$button_text",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "color": "$text_color"
+                }
+            }
+        ]
+    }
+}

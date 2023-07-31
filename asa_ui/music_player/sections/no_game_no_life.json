@@ -1,0 +1,63 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_mp_secs_no_game_no_life",
+
+    "sections_panel": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_no_game_no_life",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "This Game",
+                    "$asa_author_name": "Konomi Suzuki",
+                    "$time_duration": "04:27",
+
+                    "$asa_music_play": "asa_music.no_game_no_life.this_game",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/no_game_no_life/this_game"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Onegai Snyaiper",
+                    "$asa_author_name": "Hatsuse Izuna (CV: Sawashiro Miyuki)",
+                    "$time_duration": "03:11",
+
+                    "$asa_music_play": "asa_music.no_game_no_life.onegai_snyaiper",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/no_game_no_life/onegai_snyaiper"
+                }
+            },
+            {
+                "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
+                    "size": [ "100%", 40 ],
+
+                    "$asa_music_name": "Oracion",
+                    "$asa_author_name": "Shiro (CV: Ai Kayano)",
+                    "$time_duration": "04:37",
+
+                    "$asa_music_play": "asa_music.no_game_no_life.oracion",
+                    "$asa_music_thumbnail": "asa_textures/music_player_thumbnail/no_game_no_life/oracion"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:totem_of_undying",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+
+            "textures": {
+                "default": "asa_textures/anime_theme/items/totem_model"
+            },
+
+            "geometry": {
+                "right_default": "geometry.asa_totem_right",
+                "left_default": "geometry.asa_totem_left"
+            },
+
+            "animations": {
+                "third_person": "animation.asa_totem.third_person"
+            },
+
+            "scripts": {
+                "animate": [
+                    "third_person"
+                ]
+            },
+
+            "render_controllers": [
+                { "controller.render.item_right": "c.item_slot == 'main_hand'" },
+                { "controller.render.item_left": "c.item_slot == 'off_hand'" }
+            ]
+        }
+    }
+}

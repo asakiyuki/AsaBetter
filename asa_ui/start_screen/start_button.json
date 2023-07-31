@@ -1,0 +1,414 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_start_button_template",
+
+    //New Button Start Screen
+    "asa_start_gamertag_button@asa_arrow_button": {
+        "$button_panel": "asa_button_gamertag_template_panel"
+    },
+
+    "asa_start_login_button@asa_arrow_button": {
+        "$button_panel": "asa_button_login_template_panel"
+    },
+
+    "asa_start_button_image@asa_arrow_button": {
+        "$button_panel": "asa_button_image_template_panel"
+    },
+
+    "asa_start_button_text@asa_arrow_button": {
+        "$button_panel": "asa_button_text_template_panel"
+    },
+
+    "asa_arrow_button": {
+        "type": "button",
+        "size": [ 18, 18 ],
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "$button_panel|default": "button_image",
+        "$visible_in_this_state|default": true,
+        "button_mappings": [
+            {
+                "mapping_type": "focused",
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$asa_pressed_action"
+            },
+            {
+                "mapping_type": "focused",
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$asa_pressed_action" 
+            }
+        ],
+        "controls": [
+            {
+                "default@$button_panel": {
+                    "$button_color": [ 0, 0, 0 ],
+                    "$visible_in_this_state": false
+                }
+            },
+            {
+                "hover@$button_panel": {
+                    "$button_color": [ 1, 1, 1 ]
+                }
+            },
+            {
+                "pressed@$button_panel": {
+                    "$button_icon_offset": [ 0, 1 ],
+                    "$button_color": [ 1, 1, 1 ]
+                }
+            }
+        ]
+    },
+
+    "button_image": {
+        "type": "image",
+        "$button_icon_offset|default": [ 0, 0 ],
+        "offset": "$button_icon_offset",
+        "texture": "$button_arrow_texture",
+        "layer": 1
+    },
+
+    "asa_button_image_template_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_button_image": {
+                    "type": "image",
+                    "color": "$button_color",
+                    "layer": 5,
+                    "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                    "controls": [
+                        {
+                            "asa_button_icon": {
+                                "type": "image",
+                                "size": [ 15, 15 ],
+                                "layer": 6,
+                                "texture": "$asa_button_icon"
+                            }
+                        },
+                        {
+                            "asa_text_background": {
+                                "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                                "size": [ "100%cm + 8px", "100%c + 8px" ],
+                                "type": "image",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "bottom_middle",
+                                "visible": "$visible_in_this_state",
+                                "color": "$button_color",
+                                "offset": [ 0, -5 ],
+                                "controls": [
+                                    {
+                                        "button_text": {
+                                            "type": "label",
+                                            "size": [ "default", "default" ],
+                                            "text": "$asa_button_text",
+                                            "layer": 10,
+                                            "$asa_text_color|default": [ 1, 1, 1 ],
+                                            "color": "$asa_text_color"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_login_template_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_button_image": {
+                    "type": "image",
+                    "color": "$button_color",
+                    "layer": 5,
+                    "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                    "controls": [
+                        {
+                            "asa_text_background": {
+                                "type": "image",
+                                "color": "$button_color",
+                                "layer": 5,
+                                "visible": "$visible_in_this_state",
+                                "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                                "anchor_from": "right_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [ 2, 0 ],
+                                "size": [ "100%cm + 8px", "100%" ],
+                                "controls": [
+                                    {
+                                        "asa_gamertag": {
+                                            "type": "label",
+                                            "max_size": [ "default", 10 ],
+                                            "layer": 6,
+                                            "text": "Login Account"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "gamerpic": {
+                                "type": "image",
+                                "size": [ 18, 18 ],
+                                "layer": 1,
+                                "texture": "textures/ui/icon_steve"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_gamertag_template_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_button_image": {
+                    "type": "image",
+                    "color": "$button_color",
+                    "layer": 5,
+                    "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                    "controls": [
+                        {
+                            "asa_text_background": {
+                                "type": "image",
+                                "color": "$button_color",
+                                "layer": 5,
+                                "visible": "$visible_in_this_state",
+                                "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                                "anchor_from": "right_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [ 2, 0 ],
+                                "size": [ "100%cm + 8px", "100%" ],
+                                "controls": [
+                                    {
+                                        "asa_text_stack": {
+                                            "type": "stack_panel",
+                                            "size": [ "100%cm", "100%c" ],
+                                            "controls": [
+                                                {
+                                                    "asa_sign_in_as": {
+                                                        "type": "label",
+                                                        "max_size": [ "default", 10 ],
+                                                        "layer": 6,
+                                                        "text": "Sign in as:"
+                                                    }
+                                                },
+                                                {
+                                                    "asa_gamertag": {
+                                                        "type": "label",
+                                                        "max_size": [ "default", 10 ],
+                                                        "layer": 6,
+                                                        "text": "#gamertag_label",
+                                                        "localize": false,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#gamertag_label"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "gamerpic": {
+                                "type": "image",
+                                "size": [ 18, 18 ],
+                                "layer": 1,
+                                "bindings": [
+                                    {
+                                        "binding_name": "#gamerpic_texture_path",
+                                        "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_name": "#gamerpic_texture_location_type",
+                                        "binding_name_override": "#texture_file_system"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_text_template_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_button_image": {
+                    "type": "image",
+                    "color": "$button_color",
+                    "layer": 5,
+                    "texture": "asa_textures/ui/button_and_toggle/asa_button",
+                    "controls": [
+                        {
+                            "asa_button_icon": {
+                                "type": "label",
+                                "max_size": [ "100% - 8px", 10 ],
+                                "layer": 6,
+                                "text": "$asa_button_text"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Button
+    "asa_button_text_template": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+
+        "$asa_text_color|default": [ 1, 1, 1 ],
+        "$button_text|default": "",
+        
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "size": [ "default", "default" ],
+                    "max_size": [ "100% - 4px", 10 ],
+                    "text": "$button_text",
+                    "color": "$asa_text_color"
+                }
+            }
+        ]
+    },
+
+    "asa_start_button_template@asa_common_button.asa_text_button": {
+        "$button_type_panel": "asa_start_button_template.asa_button_text_template"
+    },
+
+    "asa_start_toggle_template@asa_toggle_common.asa_darkmode_toggle": {
+        "$button_type_panel": "asa_start_button_template.asa_button_text_template",
+
+        "$default_texture": "asa_textures/ui/button_and_toggle/asa_button",
+        "$hover_texture": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_texture": "asa_textures/ui/button_and_toggle/asa_button",
+        "$pressed_no_hover_texture": "asa_textures/ui/button_and_toggle/asa_button",
+        "$locked_texture": "asa_textures/ui/button_and_toggle/asa_button",
+
+        "$radio_toggle_group": true,
+        "$toggle_name": "asa_nav_more_option"
+    },
+
+    "asa_button_image_and_label_template": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%" ],
+        "orientation": "horizontal",
+        "$button_icon_size|default": [ 10, 10 ],
+        "$button_icon_color|default": [ 1, 1, 1 ],
+        "$button_text_color|default": [ 1, 1, 1 ],
+
+        "$uv_offset|default": [ 0, 0 ],
+        "$asa_uv_size|default": [ 0, 0 ],
+        
+        "controls": [
+            {
+                "button_icon": {
+                    "size": "$button_icon_size",
+                    "type": "image",
+                    "texture": "$button_icon_texture",
+                    "color": "$button_icon_color",
+                    "uv_size": "$asa_uv_size",
+                    "uv": "$uv_offset"
+                }
+            },
+            {
+                "space": {
+                    "type": "panel",
+                    "size": [ 2, 1 ]
+                }
+            },
+            {
+                "button_name": {
+                    "type": "label",
+                    "size": [ "default", "default" ],
+                    "max_size": [ "default", 10 ],
+                    "text": "$button_text",
+                    "color": "$button_text_color"
+                }
+            }
+        ]
+    },
+
+    "asa_button_image_and_label_template_with_notification": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "@asa_button_image_and_label_template": {
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle"
+                }
+            },
+            {
+                "notificationtext_panel": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "type": "panel",
+                    "size": [ 10, 10 ],
+                    "controls": [
+                        {
+                            "number": {
+                                "type": "label",
+                                "size": [ "default", "default" ],
+                                "text": "#realms_notification_count",
+                                "layer": 20,
+                                "bindings": [
+                                    {
+                                        "binding_name": "#realms_notification_count"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "background": {
+                                "type": "image",
+                                "layer": 19,
+                                "offset": [ -0.5, -0.5 ],
+                                "texture": "textures/ui/invite_number_background"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Toggle
+    "asa_start_section_button@asa_common_button.asa_text_button": {
+        "$default_button_texture": "asa_textures/ui/none",
+        "$hover_button_texture": "asa_textures/ui/bar/date_a_live_bar",
+        "$pressed_button_texture": "asa_textures/ui/bar/date_a_live_bar",
+        "$locked_button_texture": "asa_textures/ui/none",
+        "$button_type_panel": "asa_start_button_template.asa_button_image_and_label_template",
+        "$hover_button_alpha": 0.5,
+        "$pressed_button_alpha": 0.5,
+
+        "$button_image_color_hover": [ 0.8, 0.8, 0.8 ],
+        "$button_image_color_pressed": [ 0.8, 0.8, 0.8 ]
+    }
+}

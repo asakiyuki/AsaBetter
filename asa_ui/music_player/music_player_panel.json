@@ -1,0 +1,521 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_music_player_panel",
+
+    "asa_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_music_header": {
+                    "type": "label",
+                    "text": "Music Player",
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "layer": 5,
+                    "offset": [ 0, 7.5 ]
+                }
+            },
+            {
+                "asa_exit_button@common_buttons.light_text_button": {
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "offset": [ 0, -7.6 ],
+                    "size": [ "70%", 24 ],
+                    "$pressed_button_name": "button.menu_exit",
+                    "$button_text": "Quit"
+                }
+            },
+            {
+                "asa_center": {
+                    "size": [ "100% - 80px", "100% - 75px" ],
+                    "offset": [ 0, -7.5 ],
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "search_bar@common.text_edit_box": {
+                                "$text_edit_text_control": "67883549_search_music",
+                                "$place_holder_text": "Search available musics...",
+                                "max_length": 100,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "size": [ "100%", 18 ]
+                            }
+                        },
+                        {
+                            "scrolling_panel@common.scrolling_panel": {
+                                "size": [ "100%", "100% - 19px" ],
+                                "$scrolling_content": "asa_music_player_panel.asa_start_content",
+                                "$show_background": false,
+                                "$scroll_size": [ "5px", "100% - 4px" ],
+                                "anchor_from": "bottom_middle",
+                                "anchor_to": "bottom_middle",
+                                "$scroll_bar_left_padding_size": [ 1, 0 ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_date_a_live",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_masamune_revenge",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_custom_music",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_gotoubun_no_hanayome",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_majo_no_tabitabi",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "asa_music_player_no_game_no_life",
+                "source_property_name": "(not #toggle_state)",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+
+    "asa_start_content": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+            {
+                "@asa_music_player_content.asa_music_player_selected": {}
+            },
+            {
+                "asa_song_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "100%c" ],
+                    "visible": false,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "67883549_search_music",
+                            "source_property_name": "#item_name",
+                            "target_property_name": "#asa_search"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#asa_search = ''))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        { "@asa_mp_secs_date_a_live.sections_panel": { "bindings": [] } },
+                        { "@asa_mp_secs_masamune_revenge.sections_panel": { "bindings": [] } },
+                        { "@asa_mp_secs_gotoubun_no_hanayome.sections_panel": { "bindings": [] } },
+                        { "@asa_mp_secs_majo_no_tabitabi.sections_panel": { "bindings": [] } },
+                        { "@asa_mp_secs_no_game_no_life.sections_panel": { "bindings": [] } },
+
+                        { "@asa_custom_music_infomation.custom_music_infomation": { "bindings": [] } }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_music_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_date_a_live@asa_music_panel_template": {
+                    "$header_section_name": "Date A Live",
+                    "$asa_toggle_name": "asa_date_a_live",
+                    "$music_scroll": "asa_mp_secs_date_a_live.sections_panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_date_a_live",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_masamune_revenge@asa_music_panel_template": {
+                    "$header_section_name": "Masamune-kun's Revenge",
+                    "$asa_toggle_name": "asa_masamune_revenge",
+                    "$music_scroll": "asa_mp_secs_masamune_revenge.sections_panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_masamune_revenge",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_custom_music_infomation@asa_music_panel_template": {
+                    "$header_section_name": "Custom Music",
+                    "$asa_toggle_name": "asa_custom_music",
+                    "$music_scroll": "asa_custom_music_infomation.custom_music_infomation",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_custom_music",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_custom_music_infomation@asa_music_panel_template": {
+                    "$header_section_name": "Gotoubun no Hanayome",
+                    "$asa_toggle_name": "asa_gotoubun_no_hanayome",
+                    "$music_scroll": "asa_mp_secs_gotoubun_no_hanayome.sections_panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_gotoubun_no_hanayome",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_custom_music_infomation@asa_music_panel_template": {
+                    "$header_section_name": "Majo no Tabitabi",
+                    "$asa_toggle_name": "asa_majo_no_tabitabi",
+                    "$music_scroll": "asa_mp_secs_majo_no_tabitabi.sections_panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_majo_no_tabitabi",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_custom_music_infomation@asa_music_panel_template": {
+                    "$header_section_name": "No Game No Life",
+                    "$asa_toggle_name": "asa_no_game_no_life",
+                    "$music_scroll": "asa_mp_secs_no_game_no_life.sections_panel",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_music_player_no_game_no_life",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_music_panel_template": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_music_header": {
+                    "type": "label",
+                    "text": "$header_section_name",
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "layer": 5,
+                    "offset": [ 0, 7.5 ]
+                }
+            },
+            {
+                "asa_bottom_stack_button": {
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "offset": [ 0, -7.6 ],
+                    "size": [ "70%", 24 ],
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "asa_button_tips@common_buttons.light_glyph_button": {
+                                "size": [ 24, 24 ],
+                                "$pressed_button_name": "button.any",
+                                "$button_content": "asa_music_player_panel.asa_tips_button_panel",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "asa_music_player_custom_music",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_exit_button@asa_music_button_common.asa_go_back_button": {
+                                "size": [ "fill", 24 ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_center": {
+                    "size": [ "100% - 80px", "100% - 75px" ],
+                    "offset": [ 0, -7.5 ],
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "scrolling_panel@common.scrolling_panel": {
+                                "$scrolling_content": "$music_scroll",
+                                "$show_background": false,
+                                "$scroll_size": [ "5px", "100% - 4px" ],
+                                "$scroll_bar_left_padding_size": [ 1, 0 ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_tips_button_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "tips_icon": {
+                    "type": "image",
+                    "layer": 5,
+                    "size": [ 16, 16 ],
+                    "texture": "textures/ui/infobulb"
+                }
+            },
+            {
+                "asa_effect_background_arrow": {
+                    "type": "image",
+                    "layer": 121,
+                    "texture": "asa_textures/ui/effect_background_arrow_down",
+                    "size": [ 22, 12 ],
+                    "ignored": "$default_state",
+                    "anchor_from": "top_middle",
+                    "anchor_to": "bottom_middle"
+                }
+            },
+            {
+                "asa_info_panel": {
+                    "type": "panel",
+                    "size": [ "100%cm", "100%cm" ],
+                    "ignored": "$default_state",
+                    "anchor_from": "top_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [ -12, -9 ],
+                    "controls": [
+                        {
+                            "text_bg": {
+                                "type": "image",
+                                "size": [ "100%cm + 16px", "100%cm + 16px" ],
+                                "layer": 120,
+                                "texture": "textures/ui/effect_background",
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "controls": [
+                                    {
+                                        "asa_label_stack": {
+                                            "type": "stack_panel",
+                                            "size": [ "100%cm", "100%c" ],
+                                            "controls": [
+                                                {
+                                                    "label1": {
+                                                        "type": "label",
+                                                        "text": "You can customize the music in:"
+                                                    }
+                                                },
+                                                {
+                                                    "label1": {
+                                                        "type": "label",
+                                                        "text": "AsaBetter/asa_music_player/custom_music/music_player/. . .",
+                                                        "font_type": "smooth"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_better_header_bar": {
+        "type": "image",
+        "texture": "textures/ui/Black",
+        "anchor_from": "$anchor",
+        "anchor_to": "$anchor"
+    },
+
+    "music_player_screen_content": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "noti_panel": {
+                    "type": "panel",
+                    "size": [ "100%cm", "100%cm" ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "anims": [
+                        "@asa_pressed_anims.asa_noti_default",
+                        "@asa_pressed_anims.asa_noti_played",
+                        "@asa_pressed_anims.asa_noti_exit"
+                    ],
+                    "controls": [
+                        {
+                            "play_music_no": {
+                                "type": "image",
+                                "size": [ "100%c + 20px", "100%c + 15px" ],
+                                "texture": "textures/ui/greyBorder",
+                                "layer": 999,
+                                "alpha": 0,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [ 0, 50 ],
+                                "animation_reset_name": "asa_music_pressed.play_music",
+                                "anims": [
+                                    "@asa_pressed_anims.asa_music_played",
+                                    "@asa_pressed_anims.asa_music_offset",
+                                    "@asa_pressed_anims.asa_better_noti_exit"
+                                ],
+                                "controls": [
+                                    {
+                                        "text": {
+                                            "layer": 1000,
+                                            "text": "Music has been played",
+                                            "type": "label",
+                                            "shadow": "true",
+                                            "alpha": 0,
+                                            "animation_reset_name": "asa_music_pressed.play_music",
+                                            "anims": [
+                                                "@asa_pressed_anims.asa_music_played",
+                                                "@asa_pressed_anims.asa_music_played_open",
+                                                "@asa_pressed_anims.asa_better_noti_exit"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+            
+                        {
+                            "stop_music_no": {
+                                "type": "image",
+                                "size": [ "100%c + 20px", "100%c + 15px" ],
+                                "texture": "textures/ui/greyBorder",
+                                "layer": 200,
+                                "alpha": 0,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [ 0, 50 ],
+                                "animation_reset_name": "asa_music_pressed.stop_music",
+                                "anims": [
+                                    "@asa_pressed_anims.asa_music_played",
+                                    "@asa_pressed_anims.asa_music_offset",
+                                    "@asa_pressed_anims.asa_better_noti_played"
+                                ],
+                                "controls": [
+                                    {
+                                        "text": {
+                                            "layer": 201,
+                                            "text": "Music has been stopped",
+                                            "type": "label",
+                                            "shadow": "true",
+                                            "alpha": 0,
+                                            "animation_reset_name": "asa_music_pressed.stop_music",
+                                            "anims": [
+                                                "@asa_pressed_anims.asa_music_played",
+                                                "@asa_pressed_anims.asa_music_played_open",
+                                                "@asa_pressed_anims.asa_better_noti_played"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_header@asa_better_header_bar": {
+                    "size": [ "130%", "10% + 25px" ],
+                    "offset": [ 0, "-10%" ],
+                    "$anchor": "top_middle",
+                    "alpha": 0.7
+                }
+            },
+            {
+                "asa_bottom@asa_better_header_bar": {
+                    "size": [ "130%", "10% + 40px" ],
+                    "offset": [ 0, "10%" ],
+                    "$anchor": "bottom_middle",
+                    "alpha": 0.7
+                }
+            },
+            {
+                "asa_left@asa_better_header_bar": {
+                    "size": [ "12% + 35px", "100% - 65px" ],
+                    "offset": [ "-12%", -7.5 ],
+                    "$anchor": "left_middle",
+                    "alpha": 0.5
+                }
+            },
+            {
+                "asa_right@asa_better_header_bar": {
+                    "size": [ "12% + 35px", "100% - 65px" ],
+                    "offset": [ "12%", -7.5 ],
+                    "$anchor": "right_middle",
+                    "alpha": 0.5
+                }
+            },
+            {
+                "asa_center": {
+                    "size": [ "100% - 80px", "100% - 75px" ],
+                    "offset": [ 0, -7.5 ],
+                    "type": "panel"
+                }
+            },
+            {
+                "@asa_panel": {}
+            },
+            {
+                "@asa_music_panel": {}
+            }
+        ]
+    }
+}

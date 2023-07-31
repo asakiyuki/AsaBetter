@@ -1,0 +1,1368 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+{
+    "namespace": "asa_search_setting",
+    "asa_search_area": {
+        "type": "panel",
+        "offset": [
+            0,
+            "21px"
+        ],
+        "size": [
+            "100% - 8px",
+            "100% - 19px"
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "visible": false,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "89367782_search_setting",
+                "source_property_name": "#item_name",
+                "target_property_name": "#asa_search"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#asa_search = ''))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "scrolling_panel@common.scrolling_panel": {
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$scrolling_content": "asa_search_setting.asa_setting_stack",
+                    "$show_background": false,
+                    "$scroll_size": [
+                        "5px",
+                        "100% - 4px"
+                    ],
+                    "$scroll_bar_left_padding_size": [
+                        1,
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "asa_setting_content": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%c + 2px"
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "89367782_search_setting",
+                "source_property_name": "#item_name",
+                "target_property_name": "#asa_search"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (($setting_name - #asa_search) = $setting_name))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "asa_setting_stack": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Brightness",
+                    "controls": [
+                        {
+                            "brightness_slider@settings_common.option_slider": {
+                                "$option_label": "#gamma_slider_label",
+                                "$slider_name": "gamma",
+                                "$slider_value_binding_name": "#gamma",
+                                "$slider_tts_text_value": "#gamma_text_value",
+                                "$option_enabled_binding_name": "#gamma_enabled",
+                                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Camera Perspective",
+                    "controls": [
+                        {
+                            "perspective_dropdown@settings_common.option_dropdown": {
+                                "$option_label": "options.thirdperson",
+                                "$dropdown_content": "general_section.third_person_dropdown_content",
+                                "$dropdown_area": "content_area",
+                                "$dropdown_name": "third_person_dropdown",
+                                "$option_enabled_binding_name": "#third_person_dropdown_enabled",
+                                "$options_dropdown_toggle_label_binding": "#third_person_dropdown_toggle_label",
+                                "$dropdown_scroll_content_size": [
+                                    "100%",
+                                    "200%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Fullscreen",
+                    "controls": [
+                        {
+                            "fullscreen_toggle@settings_common.option_toggle": {
+                                "$show_fullscreen_toggle|default": true,
+                                "$option_label": "options.fullscreen",
+                                "$option_binding_name": "#full_screen",
+                                "$option_enabled_binding_name": "#full_screen_enabled",
+                                "$toggle_name": "full_screen"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Hide Hand",
+                    "controls": [
+                        {
+                            "option_toggle_hidehand@settings_common.option_toggle": {
+                                "$option_label": "options.hidehand",
+                                "$option_binding_name": "#hide_hand",
+                                "$option_enabled_binding_name": "#hide_hand_enabled",
+                                "$toggle_name": "hide_hand"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Hide Paper Doll",
+                    "controls": [
+                        {
+                            "hide_paperdoll_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.hidepaperdoll",
+                                "$option_binding_name": "#hide_paperdoll",
+                                "$option_enabled_binding_name": "#hide_paperdoll_enabled",
+                                "$toggle_name": "hide_paperdoll"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Hide HUD",
+                    "controls": [
+                        {
+                            "option_toggle_hidehud@settings_common.option_toggle": {
+                                "$option_label": "options.hidehud",
+                                "$option_binding_name": "#hide_hud",
+                                "$option_enabled_binding_name": "#hide_hud_enabled",
+                                "$toggle_name": "hide_hud"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Screen Animations",
+                    "controls": [
+                        {
+                            "option_toggle_screen_animations@settings_common.option_toggle": {
+                                "$option_label": "options.screenAnimations",
+                                "$option_binding_name": "#screen_animations",
+                                "$option_enabled_binding_name": "#screen_animations_enabled",
+                                "$toggle_name": "screen_animations",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#screen_animations_visible",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "HUD Opacity",
+                    "controls": [
+                        {
+                            "hud_opacity_slider@settings_common.option_slider": {
+                                "$option_label": "#interface_opacity_slider_label",
+                                "$slider_name": "interface_opacity",
+                                "$slider_value_binding_name": "#interface_opacity",
+                                "$slider_tts_text_value": "#interface_opacity_text_value",
+                                "$option_enabled_binding_name": "#interface_opacity_enabled",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Change Screen Safe Area",
+                    "controls": [
+                        {
+                            "setup_safe_zone": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    32
+                                ],
+                                "controls": [
+                                    {
+                                        "action_button@settings_common.action_button": {
+                                            "$pressed_button_name": "setup_safe_zone_button",
+                                            "$button_text": "options.safeZone.title",
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "POV",
+                    "controls": [
+                        {
+                            "fov_slider@settings_common.option_slider": {
+                                "$ignored": "($is_holographic and $is_reality_mode and not $is_pregame)",
+                                "$option_label": "#field_of_view_slider_label",
+                                "$slider_tts_text_value": "#field_of_view_text_value",
+                                "$slider_name": "field_of_view",
+                                "$slider_value_binding_name": "#field_of_view",
+                                "$option_enabled_binding_name": "#field_of_view_enabled",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Show Autosave Icon",
+                    "controls": [
+                        {
+                            "auto_save_icon_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.showautosaveicon",
+                                "$option_binding_name": "#show_auto_save_icon",
+                                "$option_enabled_binding_name": "#show_auto_save_icon_enabled",
+                                "$toggle_name": "show_auto_save_icon"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Outline Selection",
+                    "controls": [
+                        {
+                            "outline_selection_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.classic_box_selection",
+                                "$option_binding_name": "#classic_box_selection",
+                                "$option_enabled_binding_name": "#classic_box_selection_enabled",
+                                "$toggle_name": "classic_box_selection"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "In-game Player Names",
+                    "controls": [
+                        {
+                            "player_names_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.ingamePlayerNames",
+                                "$option_binding_name": "#ingame_player_names",
+                                "$option_enabled_binding_name": "#ingame_player_names_enabled",
+                                "$toggle_name": "ingame_player_names"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "View Bobbing",
+                    "controls": [
+                        {
+                            "view_bobbing_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.viewBobbing",
+                                "$option_binding_name": "#view_bobbing",
+                                "$option_enabled_binding_name": "#view_bobbing_enabled",
+                                "$toggle_name": "view_bobbing"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Camera Shake",
+                    "controls": [
+                        {
+                            "camera_shake_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.screenShake",
+                                "$option_binding_name": "#camera_shake",
+                                "$option_enabled_binding_name": "#camera_shake_enabled",
+                                "$toggle_name": "camera_shake"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Fancy Leaves",
+                    "controls": [
+                        {
+                            "fancy_leaves_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.transparentleaves",
+                                "$option_binding_name": "#transparent_leaves",
+                                "$option_enabled_binding_name": "#transparent_leaves_enabled",
+                                "$toggle_name": "transparent_leaves"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Fancy Bubbles",
+                    "controls": [
+                        {
+                            "fancy_bubbles_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.bubbleparticles",
+                                "$option_binding_name": "#bubble_particles",
+                                "$option_enabled_binding_name": "#bubble_particles_enabled",
+                                "$toggle_name": "bubble_particles"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Render Clouds",
+                    "controls": [
+                        {
+                            "render_clouds_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.renderclouds",
+                                "$option_binding_name": "#render_clouds",
+                                "$option_enabled_binding_name": "#render_clouds_enabled",
+                                "$toggle_name": "render_clouds"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Beautiful Skies",
+                    "controls": [
+                        {
+                            "fancy_clouds_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.fancyskies",
+                                "$option_binding_name": "#fancy_skies",
+                                "$option_enabled_binding_name": "#fancy_skies_enabled",
+                                "$toggle_name": "fancy_skies"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Smooth Lighting",
+                    "controls": [
+                        {
+                            "smooth_lighting_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.smooth_lighting",
+                                "$option_binding_name": "#smooth_lighting",
+                                "$option_enabled_binding_name": "#smooth_lighting_enabled",
+                                "$toggle_name": "smooth_lighting"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Fancy Graphics",
+                    "controls": [
+                        {
+                            "graphics_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.graphics",
+                                "$option_binding_name": "#graphics_toggle",
+                                "$option_enabled_binding_name": "#graphics_toggle_enabled",
+                                "$toggle_name": "graphics_toggle"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "POV Can Be Altered By Gameplay",
+                    "controls": [
+                        {
+                            "field_of_view_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.fov.toggle",
+                                "$option_binding_name": "#field_of_view_toggle",
+                                "$option_enabled_binding_name": "#field_of_view_toggle_enabled",
+                                "$toggle_name": "field_of_view_toggle"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "UI Profile",
+                    "controls": [
+                        {
+                            "ui_profile_dropdown@settings_common.option_dropdown": {
+                                "$option_label": "options.uiprofile",
+                                "$dropdown_content": "general_section.ui_profile_dropdown_content",
+                                "$dropdown_area": "content_area",
+                                "$dropdown_name": "ui_profile_dropdown",
+                                "$option_enabled_binding_name": "#ui_profile_dropdown_enabled",
+                                "$options_dropdown_toggle_label_binding": "#ui_profile_dropdown_toggle_label",
+                                "$dropdown_scroll_content_size": [
+                                    "100%",
+                                    "145%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "GUI Scale Modifier",
+                    "controls": [
+                        {
+                            "gui_scale_slider@settings_common.option_slider": {
+                                "ignored": "($is_holographic)",
+                                "$option_label": "#gui_scale_slider_label",
+                                "$slider_name": "gui_scale",
+                                "$slider_value_binding_name": "#gui_scale",
+                                "$slider_tts_text_value": "#gui_scale_text_value",
+                                "$option_enabled_binding_name": "#gui_scale_enabled",
+                                "$slider_steps_binding_name": "#gui_scale_steps",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#gui_scale_visible",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "gui_scale_disabled_option@general_section.gui_scale_disabled_option": {
+                                            "$gui_scale_disabled_option_visible": "#gui_scale_disabled_option_visible",
+                                            "$gui_scale_disabled_option_is_hovered_button_event": "button.gui_scale_disabled_option_is_hovered",
+                                            "$gui_scale_disabled_option_tooltip_visible": "#gui_scale_disabled_option_tooltip_visible"
+                                        }
+                                    },
+                                    {
+                                        "option_generic_core@settings_common.option_generic_core": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Upscaling",
+                    "controls": [
+                        {
+                            "upscaling_toggle@settings_common.option_toggle": {
+                                "ignored": "($is_holographic and $win10_edition)",
+                                "$option_label": "options.upscaling",
+                                "$option_binding_name": "#graphics_upscaling",
+                                "$option_enabled_binding_name": "#graphics_upscaling_enabled",
+                                "$toggle_name": "graphics_upscaling",
+                                "controls": [
+                                    {
+                                        "rtx_disabled_option_upsell@general_section.rtx_disabled_option_upsell": {
+                                            "$rtx_disabled_option_upsell_visible": "#rtx_upscale_disabled_option_upsell_visible",
+                                            "$rtx_disabled_option_is_hovered_button_event": "button.rtx_upscale_disabled_option_is_hovered",
+                                            "$rtx_disabled_option_upsell_tooltip_visible": "#rtx_upscale_disabled_option_upsell_tooltip_visible"
+                                        }
+                                    },
+                                    {
+                                        "option_generic_core@settings_common.option_generic_core": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Ray Tracing",
+                    "controls": [
+                        {
+                            "raytracing_toggle@settings_common.option_toggle": {
+                                "ignored": "($is_holographic)",
+                                "$option_label": "options.raytracing",
+                                "$option_binding_name": "#raytracing",
+                                "$option_enabled_binding_name": "#raytracing_enabled",
+                                "$toggle_name": "raytracing",
+                                "controls": [
+                                    {
+                                        "rtx_disabled_option_upsell@general_section.rtx_disabled_option_upsell": {}
+                                    },
+                                    {
+                                        "option_generic_core@settings_common.option_generic_core": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Render Distance",
+                    "controls": [
+                        {
+                            "render_distance_slider@settings_common.option_slider": {
+                                "$option_label": "#render_distance_slider_label",
+                                "$slider_name": "render_distance",
+                                "$slider_value_binding_name": "#render_distance",
+                                "$slider_tts_text_value": "#render_distance_text_value",
+                                "$option_enabled_binding_name": "#render_distance_enabled",
+                                "$slider_steps_binding_name": "#render_distance_steps",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "render_distance_warning@general_section.render_distance_warning": {}
+                                    },
+                                    {
+                                        "option_generic_core@settings_common.option_generic_core": {}
+                                    }
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#show_render_distance",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Max Framerate",
+                    "controls": [
+                        {
+                            "max_framerate_slider@settings_common.option_slider": {
+                                "$option_label": "#max_framerate_slider_label",
+                                "$slider_name": "max_framerate",
+                                "$slider_value_binding_name": "#max_framerate",
+                                "$slider_tts_text_value": "#max_framerate_text_value",
+                                "$option_enabled_binding_name": "#max_framerate_enabled",
+                                "$slider_steps_binding_name": "#max_framerate_steps",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Anti-Aliasing",
+                    "controls": [
+                        {
+                            "msaa_slider@settings_common.option_slider": {
+                                "$option_label": "#msaa_slider_label",
+                                "$slider_name": "msaa",
+                                "$slider_value_binding_name": "#msaa",
+                                "$slider_tts_text_value": "#msaa_text_value",
+                                "$option_enabled_binding_name": "#msaa_enabled",
+                                "$slider_steps_binding_name": "#msaa_steps",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#show_msaa",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Change Gamertag",
+                    "controls": [
+                        {
+                            "change_gamertag_button@settings_common.action_button": {
+                                "ignored": "($is_windows_10_mobile or $is_ios or $is_android)",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "$pressed_button_name": "change_gamertag_button",
+                                "$button_text": "options.changeGamertag"
+                            }
+                        },
+                        {
+                            "change_gamertag_button_mobile@settings_common.link_button": {
+                                "ignored": "(not ($is_windows_10_mobile or $is_ios or $is_android))",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "$button_text": "options.changeGamertag",
+                                "property_bag": {
+                                    "#hyperlink": "https://social.xbox.com/changegamertag"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Manage Account",
+                    "controls": [
+                        {
+                            "manage_account_button@settings_common.action_button": {
+                                "ignored": "($is_ios or $is_android)",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "anchor_from": "top_right",
+                                "anchor_to": "top_right",
+                                "$pressed_button_name": "manage_account_button",
+                                "$button_text": "options.manageAccount"
+                            }
+                        },
+                        {
+                            "manage_account_button_mobile@settings_common.link_button": {
+                                "ignored": "(not ($is_ios or $is_android))",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "anchor_from": "top_right",
+                                "anchor_to": "top_right",
+                                "$button_text": "options.manageAccount",
+                                "property_bag": {
+                                    "#hyperlink": "https://account.xbox.com/Settings"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Privacy & online safely",
+                    "controls": [
+                        {
+                            "link_button@settings_common.link_button": {
+                                "anchor_from": "bottom_right",
+                                "anchor_to": "bottom_right",
+                                "$button_text": "options.xboxLive.privacyControl",
+                                "$focus_id": "manage_invites",
+                                "$focus_override_right": "manage_invites",
+                                "property_bag": {
+                                    "#hyperlink": "https://account.xbox.com/Settings"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Manage Realms membership invites",
+                    "controls": [
+                        {
+                            "realms_invites": {
+                                "ignored": "(not $is_realms_enabled or not $is_pregame)",
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    32
+                                ],
+                                "controls": [
+                                    {
+                                        "check_realms_invites_button@settings_common.action_button": {
+                                            "$pressed_button_name": "realms_invites_button",
+                                            "$button_text": "options.realms.checkInvites",
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
+                                            "offset": [
+                                                0,
+                                                2
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Sign out of your Microsoft Account",
+                    "controls": [
+                        {
+                            "sign_out": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    32
+                                ],
+                                "controls": [
+                                    {
+                                        "action_button@settings_common.action_button": {
+                                            "$pressed_button_name": "sign_out_button",
+                                            "$button_text": "xbox.signOutLong",
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
+                                            "offset": [
+                                                0,
+                                                2
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Sign in for Free!",
+                    "controls": [
+                        {
+                            "sign_in": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    32
+                                ],
+                                "controls": [
+                                    {
+                                        "action_button@settings_common.action_button": {
+                                            "$pressed_button_name": "sign_in_button",
+                                            "$button_text": "xbox.signInLong",
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
+                                            "offset": [
+                                                0,
+                                                2
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Auto Update Unlocked Packs",
+                    "controls": [
+                        {
+                            "auto_update_mode_dropdown@settings_common.option_dropdown": {
+                                "$option_label": "options.autoUpdateMode",
+                                "$dropdown_content": "general_section.auto_update_mode_dropdown_content",
+                                "$dropdown_area": "content_area",
+                                "$dropdown_name": "auto_update_mode_dropdown",
+                                "$options_dropdown_toggle_label_binding": "#auto_update_mode_dropdown_toggle_label",
+                                "$dropdown_scroll_content_size": [
+                                    "100%",
+                                    "200%"
+                                ]
+                            }
+                        },
+                        {
+                            "auto_update_enabled_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.autoUpdateEnabled",
+                                "$option_binding_name": "#auto_update_enabled",
+                                "$toggle_name": "auto_update_enabled"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Use Cellular Data",
+                    "controls": [
+                        {
+                            "option_toggle_0@settings_common.option_toggle": {
+                                "$option_label": "options.allowCellularData",
+                                "$option_binding_name": "#allow_cellular_data",
+                                "$option_enabled_binding_name": "#allow_cellular_data_enabled",
+                                "$toggle_name": "allow_cellular_data"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Require Encrypted Websockets",
+                    "controls": [
+                        {
+                            "auto_update_mode_dropdown@settings_common.option_dropdown": {
+                                "$option_label": "options.autoUpdateMode",
+                                "$dropdown_content": "general_section.auto_update_mode_dropdown_content",
+                                "$dropdown_area": "content_area",
+                                "$dropdown_name": "auto_update_mode_dropdown",
+                                "$options_dropdown_toggle_label_binding": "#auto_update_mode_dropdown_toggle_label",
+                                "$dropdown_scroll_content_size": [
+                                    "100%",
+                                    "200%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Only Allow Trusted Skins",
+                    "controls": [
+                        {
+                            "only_allow_trusted_skins_toggle@settings_common.option_toggle": {
+                                "$option_label": "options.onlyTrustedSkinsAllowed",
+                                "$option_binding_name": "#only_trusted_skins_allowed",
+                                "$option_enabled_binding_name": "#only_trusted_skins_allowed_enabled",
+                                "$toggle_name": "only_trusted_skins_allowed"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Credis",
+                    "controls": [
+                        {
+                            "credits_button@settings_common.action_button": {
+                                "$pressed_button_name": "button.credits",
+                                "$button_text": "options.credits"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Attribution",
+                    "controls": [
+                        {
+                            "attribution_link_button@settings_common.link_button": {
+                                "ignored": "($is_holographic or $fire_tv or $education_edition_china)",
+                                "$button_text": "options.attribution",
+                                "variables": [
+                                    {
+                                        "requires": "(not $nx_os)",
+                                        "$attribution_button_url": "https://www.minecraft.net/attribution/?hideChrome"
+                                    },
+                                    {
+                                        "requires": "($nx_os)",
+                                        "$attribution_button_url": "https://aka.ms/switchattribution"
+                                    }
+                                ],
+                                "property_bag": {
+                                    "#hyperlink": "$attribution_button_url"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Licensed Content",
+                    "controls": [
+                        {
+                            "licensed_content_link_button@settings_common.link_button": {
+                                "ignored": "($is_holographic or $fire_tv or $education_edition)",
+                                "$button_text": "options.licensed_content",
+                                "variables": [
+                                    {
+                                        "requires": "(not $nx_os)",
+                                        "$licensed_content_button_url": "https://www.minecraft.net/licensed-content/?hideChrome"
+                                    },
+                                    {
+                                        "requires": "($nx_os)",
+                                        "$licensed_content_button_url": "https://aka.ms/switchcontent"
+                                    }
+                                ],
+                                "property_bag": {
+                                    "#hyperlink": "$licensed_content_button_url"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Font License",
+                    "controls": [
+                        {
+                            "font_license_popup_button@settings_common.action_button": {
+                                "$pressed_button_name": "button.font_license_popup",
+                                "$button_text": "options.font_license",
+                                "$focus_override_down": "FOCUS_OVERRIDE_STOP"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Text To Speech With Device Settings",
+                    "controls": [
+                        {
+                            "option_toggle0@settings_common.option_toggle": {
+                                "$option_label": "options.enableAutoPlatformTextToSpeech",
+                                "$option_binding_name": "#enable_auto_text_to_speech",
+                                "$option_enabled_binding_name": "#enable_auto_text_to_speech_enabled",
+                                "$toggle_name": "enable_auto_text_to_speech"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Text To Speech For UI",
+                    "controls": [
+                        {
+                            "option_toggle1@settings_common.option_toggle": {
+                                "$option_label": "options.enableUITextToSpeech",
+                                "$option_binding_name": "#enable_ui_text_to_speech",
+                                "$option_enabled_binding_name": "#enable_ui_text_to_speech_enabled",
+                                "$toggle_name": "enable_ui_text_to_speech"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Text To Speech For Chat",
+                    "controls": [
+                        {
+                            "option_toggle2@settings_common.option_toggle": {
+                                "$option_label": "options.enableChatTextToSpeech",
+                                "$option_binding_name": "#enable_chat_text_to_speech",
+                                "$option_enabled_binding_name": "#enable_chat_text_to_speech_enabled",
+                                "$toggle_name": "enable_chat_text_to_speech",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#not_hide_chat",
+                                        "binding_name_override": "#enabled"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Text To Speech",
+                    "controls": [
+                        {
+                            "option_slider_0@settings_common.option_slider": {
+                                "$option_label": "#texttospeech_volume_slider_label",
+                                "$slider_name": "texttospeech_volume",
+                                "$slider_value_binding_name": "#texttospeech_volume",
+                                "$slider_tts_text_value": "#texttospeech_volume_text_value",
+                                "$option_enabled_binding_name": "#texttospeech_volume_enabled",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Enable Open Chat Messenger",
+                    "controls": [
+                        {
+                            "option_toggle3@settings_common.option_toggle": {
+                                "$option_label": "options.enableOpenChatMessage",
+                                "$option_binding_name": "#enable_open_chat_message",
+                                "$option_enabled_binding_name": "#enable_open_chat_message_enabled",
+                                "$toggle_name": "enable_open_chat_message"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Text Background Opacity",
+                    "controls": [
+                        {
+                            "text_background_opacity_slider@settings_common.option_slider": {
+                                "$option_label": "#text_background_opacity_slider_label",
+                                "$slider_name": "text_background_opacity",
+                                "$slider_value_binding_name": "#text_background_opacity",
+                                "$slider_tts_text_value": "#text_background_opacity_text_value",
+                                "$option_enabled_binding_name": "#text_background_opacity_enabled",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Darknesss Effect Strength",
+                    "controls": [
+                        {
+                            "darkness_slider@settings_common.option_slider": {
+                                "$option_label": "#darkness_slider_label",
+                                "$slider_name": "darkness",
+                                "$slider_value_binding_name": "#darkness",
+                                "$slider_tts_text_value": "#darkness_text_value",
+                                "$option_enabled_binding_name": "#darkness_enabled",
+                                "$label_bindings": [
+                                    {
+                                        "binding_name": "$option_label"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Notification Duration",
+                    "controls": [
+                        {
+                            "notification_duration_options_panel": {
+                                "type": "stack_panel",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "orientation": "vertical",
+                                "controls": [
+                                    {
+                                        "notification_duration_label_wrapper@common.tts_label_focus_wrapper": {
+                                            "$tts_label_panel": "general_section.notification_duration_label"
+                                        }
+                                    },
+                                    {
+                                        "notification_duration_info_label_wrapper@common.tts_label_focus_wrapper": {
+                                            "$tts_label_panel": "general_section.notification_duration_info_label"
+                                        }
+                                    },
+                                    {
+                                        "notification_duration_dropdown_spacer_pre": {
+                                            "type": "panel",
+                                            "size": [
+                                                "100%",
+                                                -8
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "notification_duration_dropdown@settings_common.option_dropdown": {
+                                            "$dropdown_content": "general_section.notification_duration_dropdown_content",
+                                            "$dropdown_area": "content_area",
+                                            "$dropdown_name": "notification_duration_dropdown",
+                                            "$option_enabled_binding_name": "#notification_duration_dropdown_enabled",
+                                            "$options_dropdown_toggle_label_binding": "#notification_duration_dropdown_toggle_label",
+                                            "$dropdown_scroll_content_size": [
+                                                "100%",
+                                                "200%"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Enable Copy Coordinate UI",
+                    "controls": [
+                        {
+                            "option_content_file_log@settings_common.option_toggle": {
+                                "$option_label": "options.copyCoordinateUI",
+                                "$option_binding_name": "#copy_coordinate_ui",
+                                "$toggle_name": "copy_coordinate_ui"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Go to Keybinds",
+                    "controls": [
+                        {
+                            "creator_setting_button": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#show_keybinds_button",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "go_to_keybinds@settings_common.action_button": {
+                                            "$pressed_button_name": "button.go_to_keybinds",
+                                            "$button_text": "options.go_to_keybinds",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#go_to_keybinds",
+                                                    "binding_name_override": "#enabled"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "creator_settings_section_label_spacer": {
+                                            "type": "panel",
+                                            "size": [
+                                                "1%",
+                                                "100%"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Go to Keybinds",
+                    "controls": [
+                        {
+                            "creator_setting_button": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#show_keybinds_button",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "go_to_keybinds@settings_common.action_button": {
+                                            "$pressed_button_name": "button.go_to_keybinds",
+                                            "$button_text": "options.go_to_keybinds",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#go_to_keybinds",
+                                                    "binding_name_override": "#enabled"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "creator_settings_section_label_spacer": {
+                                            "type": "panel",
+                                            "size": [
+                                                "1%",
+                                                "100%"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Enable Content Log File",
+                    "controls": [
+                        {
+                            "option_content_file_log@settings_common.option_toggle": {
+                                "$option_label": "options.content_log_file",
+                                "$option_binding_name": "#content_log_file",
+                                "$option_enabled_binding_name": "#content_log_file_enabled",
+                                "$toggle_name": "content_log_file"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Enable Content Log GUI",
+                    "controls": [
+                        {
+                            "option_content_gui_log@settings_common.option_toggle": {
+                                "$option_label": "options.content_log_gui",
+                                "$option_binding_name": "#content_log_gui",
+                                "$option_enabled_binding_name": "#content_log_gui_enabled",
+                                "$toggle_name": "content_log_gui"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": {
+                    "$setting_name": "Content Log History",
+                    "controls": [
+                        {
+                            "open_content_log_history@settings_common.action_button": {
+                                "$pressed_button_name": "button.open_content_log_history",
+                                "$button_text": "contentlog.history.title",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#content_log_gui_option_enabled",
+                                        "binding_name_override": "#enabled"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@asa_setting_content": { 
+                    "$setting_name": "Delete Old Logs",
+                    "controls": [
+                        {
+                            "clear_content_log_files@settings_common.action_button": {
+                                "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+                                "$pressed_button_name": "button.clear_content_log_files",
+                                "$button_text": "contentlog.clear_files",
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#allow_content_log_write_to_disk",
+                                        "binding_name_override": "#visible"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

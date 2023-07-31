@@ -1,0 +1,581 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_resource_packs",
+
+    //RSP Grid
+    "selected_pack_grid": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+
+        "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "asa_resource_packs.asa_global_selected_stack"
+        },
+
+        "$asa_button_collection_name": "#selected_pack_items_global",
+        "$asa_button_pressed": "button.move_left_global",
+        "$import_button_icons": "textures/ui/arrow_right",
+
+        "collection_name": "$asa_button_collection_name",
+        "bindings": [
+            {
+                "binding_name": "#selected_grid_dimensions_global",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+
+    "unselected_pack_grid": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+
+        "factory": {
+            "name": "selected_pack_factory",
+            "control_name": "asa_resource_packs.asa_unactivate_selected_stack"
+        },
+
+        "$asa_button_collection_name": "#available_pack_items_global",
+        "$asa_button_pressed": "button.move_left_global",
+        "$import_button_icons": "textures/ui/arrow_left",
+
+        "collection_name": "$asa_button_collection_name",
+        "bindings": [
+            {
+                "binding_name": "#available_grid_dimensions_global",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+
+    //Asa RSP Button Stack
+    "asa_unactivate_selected_stack": {
+        "type": "stack_panel",
+        "size": [ "100%", 43 ],
+        "controls": [
+            {
+                "@asa_selected_button_stack": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_mega_mod_menu.asa_menu_space_line": {}
+            }
+        ]
+    },
+
+    "asa_global_selected_stack": {
+        "type": "stack_panel",
+        "size": [ "100%", 64 ],
+        "controls": [
+            {
+                "@asa_selected_button_stack": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ "100%", 20 ],
+                    "controls": [
+                        {
+                            "extra_button_stack": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [ "100%c", "100%" ],
+                                "anchor_from": "right_middle",
+                                "anchor_to": "right_middle",
+                                "controls": [
+                                    {
+                                        "@asa_extra_button_panel": {
+                                            "size": [ 20, 20 ],
+                                            "$button_textures": "textures/ui/settings_glyph_color_2x",
+                                            "$button_textures_glow": "textures/ui/settings_glyph_2x",
+                                            "$pressed_button_name": "button.pack_settings_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_type": "collection_details"
+                                                },
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_name": "#has_pack_settings",
+                                                    "binding_name_override": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_extra_button_panel": {
+                                            "size": [ 20, 20 ],
+                                            "$button_textures": "textures/ui/glyph_world_template",
+                                            "$pressed_button_name": "button.store_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_type": "collection_details"
+                                                },
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_name": "#can_go_to_store",
+                                                    "binding_name_override": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_extra_button_panel": {
+                                            "size": [ 20, 20 ],
+                                            "$button_textures": "textures/ui/infobulb",
+                                            "$pressed_button_name": "button.report_errors_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_type": "collection_details"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+
+                        {
+                            "extra_button_stack_2": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [ "100%c", "100%" ],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "ignored": "(not $is_pregame)",
+                                "controls": [
+                                    {
+                                        "@asa_extra_button_panel": {
+                                            "size": [ 20, 20 ],
+                                            "$button_textures": "textures/ui/up_arrow",
+                                            "$pressed_button_name": "button.sort_up_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_type": "collection_details"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "@asa_extra_button_panel": {
+                                            "size": [ 20, 20 ],
+                                            "$button_textures": "textures/ui/down_arrow",
+                                            "$pressed_button_name": "button.sort_down_global",
+                                            "bindings": [
+                                                {
+                                                    "binding_collection_name": "$asa_button_collection_name",
+                                                    "binding_type": "collection_details"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_mega_mod_menu.asa_menu_space_line": {}
+            }
+        ]
+    },
+
+    "asa_extra_button_panel": {
+        "type": "button",
+        "default_control": "asa_default",
+        "hover_control": "asa_hover",
+        "pressed_control": "asa_pressed",
+        "$button_type_panel": "asa_button_type_panel",
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "asa_default@$button_type_panel": {
+                    "$button_textures|default": "$button_texture_default",
+                    "$not_show_this_state": false
+                }
+            },
+            {
+                "asa_hover@$button_type_panel": {
+                    "$button_textures|default": "$button_texture_pressed"
+                }
+            },
+            {
+                "asa_pressed@$button_type_panel": {
+                    "$button_textures|default": "$button_texture_pressed",
+                    "offset": [ 0, 1 ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_type_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_texture": {
+                    "type": "image",
+                    "texture": "$button_textures",
+                    "layer": 10,
+                    "size": [ 16, 16 ],
+                    "controls": [
+                        {
+                            "button_texture_outline": {
+                                "type": "image",
+                                "$button_textures_glow|default": "asa_textures/ui/none",
+                                "texture": "$button_textures_glow",
+                                "visible": "$not_show_this_state",
+                                "layer": 10,
+                                "size": [ 16, 16 ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_selected_button_stack": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [ "100%", "100%cm + 41" ],
+        "controls": [
+            {
+                "@selected_resource_pack_icon_image": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 2, 2 ]
+                }
+            },
+            {
+                "@asa_pack_name_stack": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 2, 2 ]
+                }
+            },
+            {
+                "@common_buttons.light_content_button": {
+                    "size": [ 40, 40 ],
+                    "$pressed_button_name": "$asa_button_pressed",
+                    "$button_type_panel": "asa_resource_packs.asa_button_icon",
+                    "ignored": "(not $is_pregame)",
+                    "bindings": [
+                        {
+                            "binding_collection_name": "$asa_button_collection_name",
+                            "binding_type": "collection_details"
+                        },
+                        {
+                            "binding_collection_name": "$asa_button_collection_name",
+                            "binding_name": "#is_selected",
+                            "binding_name_override": "#enabled",
+                            "binding_type": "#is_selected"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_button_icon": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_texture": {
+                    "type": "image",
+                    "size": [ 20, 20 ],
+                    "layer": 5,
+                    "texture": "$import_button_icons",
+                    "color": "$light_glyph_default_color"
+                }
+            }
+        ]
+    },
+
+    "asa_pack_name_stack": {
+        "type": "stack_panel",
+        "size": [ "fill", "100%c" ],
+        "controls": [
+            
+            {
+                "asa_pack_name_stack": {
+                    "type": "stack_panel",
+                    "size": [ "fill", 10 ],
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "pack_name": {
+                                "type": "label",
+                                "text": "#name",
+                                "max_size": [ "fill", 10 ],
+                                "bindings": [
+                                    {
+                                        "binding_collection_name": "$asa_button_collection_name",
+                                        "binding_name": "#name",
+                                        "binding_type": "collection"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel",
+                                "size": [ 2, 2 ]
+                            }
+                        },
+                        {
+                            "pack_size": {
+                                "type": "label",
+                                "text": "#size",
+                                "color": [ 0.5, 0.5, 0.5 ],
+                                "localize": false,
+                                "bindings": [
+                                    {
+                                        "binding_collection_name": "$asa_button_collection_name",
+                                        "binding_name": "#size",
+                                        "binding_type": "collection"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "pack_size": {
+                    "type": "label",
+                    "text": "#description",
+                    "font_type": "smooth",
+                    "color": [ 0.8, 0.8, 0.8 ],
+                    "max_size": [ "100%", 30 ],
+                    "bindings": [
+                        {
+                            "binding_collection_name": "$asa_button_collection_name",
+                            "binding_name": "#description",
+                            "binding_type": "collection"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "selected_resource_pack_icon_image": {
+        "type": "image",
+        "size": [ 40, 40 ],
+        "texture": "#icon_path",
+        "zip_folder": "#icon_zip",
+        "texture_file_system": "#icon_file_system",
+        "bindings": [
+            {
+                "binding_collection_name": "$asa_button_collection_name",
+                "binding_name": "#icon_path",
+                "binding_name_override": "#texture",
+                "binding_type": "collection"
+            },
+            {
+                "binding_collection_name": "$asa_button_collection_name",
+                "binding_name": "#icon_zip",
+                "binding_name_override": "#zip_folder",
+                "binding_type": "collection"
+            },
+            {
+                "binding_collection_name": "$asa_button_collection_name",
+                "binding_name": "#icon_file_system",
+                "binding_name_override": "#texture_file_system",
+                "binding_type": "collection"
+            }
+        ]
+    },
+
+    //Header Button Template
+    "asa_button_template": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "text": "$button_text",
+                    "color": "$text_color",
+                    "alpha": "$content_alpha"
+                }
+            }
+        ]
+    },
+
+    "asa_nav_rps_toggle": {
+        "type": "toggle",
+        "radio_toggle_group": true,
+        "toggle_group_forced_index": "$toggle_group",
+        "toggle_name": "$asa_toggle_name",
+        "toggle_default_state": "$asa_toggle_state_default",
+
+        "$toggle_group|default": 0,
+        "$asa_toggle_name|default": "asa_play_tab",
+        "$asa_toggle_content|default": "player_screen_button_common.asa_toggle_texture",
+
+        "unchecked_control": "asa_default",
+        "unchecked_hover_control": "asa_pressed",
+        "checked_control": "asa_enable_default",
+        "checked_hover_control": "asa_enable_pressed",
+
+        "sound_name": "random.click",
+        "sound_volume": 1.0,
+        "sound_pitch": 1.0,
+
+        "property_bag": {
+            "#toggle_state": true
+        },
+        
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "focused"
+            }
+        ],
+
+        "$default_texture|default": "textures/ui/button_borderless_light",
+        "$hover_texture|default": "textures/ui/button_borderless_lightpressednohover",
+        "$pressed_texture|default": "textures/ui/button_borderless_lighthover",
+        "$pressed_no_hover_texture|default": "textures/ui/button_borderless_lightpressed",
+
+        "$button_type_panel|default": "asa_resource_packs.asa_button_template",
+
+        "controls": [
+            {
+                "asa_default@common_toggles.toggle_unchecked": {
+                    "$border_color": [ 0, 0, 0 ],
+                    "$text_color": "$light_toggle_default_text_color",
+                    "$is_more": true
+                }
+            },
+            {
+                "asa_pressed@common_toggles.toggle_unchecked_hover": {
+                    "$border_color": "$hover_border_color",
+                    "$is_more": true
+                }
+            },
+            {
+                "asa_enable_default@common_toggles.toggle_checked": {
+                    "$border_color": [ 0, 0, 0 ],
+                    "$text_color": "$light_toggle_checked_default_text_color",
+                    "$is_less": true
+                }
+            },
+            {
+                "asa_enable_pressed@common_toggles.toggle_checked_hover": {
+                    "$border_color": "$hover_border_color",
+                    "$is_less": true
+                }
+            }
+        ]
+    },
+
+    "asa_rsp_toggle_template": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_text": {
+                    "type": "label",
+                    "text": "$button_text",
+                    "color": "$text_color",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [ 5, 0 ],
+                    "alpha": "$content_alpha"
+                }
+            },
+            {
+                "button_panel": {
+                    "type": "panel",
+                    "size": [ 15, 15 ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [ -5, 0 ],
+                    "controls": [
+                        {
+                            "more": {
+                                "type": "image",
+                                "color": "$text_color",
+                                "texture": "textures/ui/plus",
+                                "ignored": "$is_less"
+                            }
+                        },
+                        {
+                            "less": {
+                                "type": "image",
+                                "color": "$text_color",
+                                "texture": "textures/ui/minus",
+                                "ignored": "$is_more"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //I don't know what the code below is for :p
+    "asa_resource_packs_setting_button_template@asa_toggle_common.asa_darkmode_navigation_toggle": {
+        "$button_type_panel": "resource_packs.resource_packs_toggle_button_control",
+        "$toggle_name": "navigation_tab"
+    },
+
+    "asa_dropdown_setting_button_template@asa_toggle_common.asa_darkmode_toggle": {
+        "$button_type_panel": "resource_packs.resource_packs_toggle_button_control",
+        "$toggle_name": "asa_rsp_dropdown"
+    }
+}

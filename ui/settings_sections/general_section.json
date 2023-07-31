@@ -1,0 +1,289 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+  "sound_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "sound_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+    
+        { "MainVolume": { "type": "panel", "size": ["100%", 15]}},
+        
+        {
+        "Main@settings_common.option_slider": {
+	      "size": [ "95%", 16 ],
+	
+          "$option_label": "#main_volume_slider_label",
+          "$slider_name": "main_volume",
+          "$slider_value_binding_name": "#main_volume",
+          "$slider_tts_text_value": "#main_volume_text_value",
+          "$option_enabled_binding_name": "#main_volume_enabled",
+          "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+      
+      { "panel_1": { "type": "panel", "size": ["100%", 15]}},
+      
+      {
+      "stack_1": {
+        "type": "stack_panel",
+        "size": [ "95%", 16 ],
+        "orientation": "horizontal",
+        "controls": [
+            {
+              "slider_1@settings_common.option_slider": {
+                "size": [ "50% - 1px", 16 ],
+                
+                "$option_label": "#music_volume_slider_label",
+                "$slider_name": "music_volume",
+                "$slider_value_binding_name": "#music_volume",
+                "$slider_tts_text_value": "#music_volume_text_value",
+                "$option_enabled_binding_name": "#music_volume_enabled",
+                
+                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                "$label_bindings": [
+                  {
+                  "binding_name": "$option_label"
+                  }
+                ]
+              }
+            },
+            { "panel": { "type": "panel", "size": [2, 16]}},
+            {
+              "slider_2@settings_common.option_slider": {
+                "size": [ "50% - 1px", 16 ],
+                
+                "$option_label": "#sound_volume_slider_label",
+                "$slider_name": "sound_volume",
+                "$slider_value_binding_name": "#sound_volume",
+                "$slider_tts_text_value": "#sound_volume_text_value",
+                "$option_enabled_binding_name": "#sound_volume_enabled",
+                
+                "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                "$label_bindings": [
+                  {
+                  "binding_name": "$option_label"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+
+      {
+        "line": {
+          "type": "panel",
+          "size": [ "100%", "100%c + 14px" ],
+          "controls": [
+            {
+              "test": {
+                "type": "image",
+                "size": [ "100% - 30px", 1 ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 1,
+                "texture": "textures/ui/list_item_divider_line_light"
+              }
+            }
+          ]
+        }
+      },
+      
+      { "panel_2": { "type": "panel", "size": ["100%", 4]}},
+
+      {
+        "option_slider_4@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#block_volume_slider_label",
+          "$slider_name": "block_volume",
+          "$slider_value_binding_name": "#block_volume",
+          "$slider_tts_text_value": "#block_volume_text_value",
+          "$option_enabled_binding_name": "#block_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "458724824": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_5@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#hostile_volume_slider_label",
+          "$slider_name": "hostile_volume",
+          "$slider_value_binding_name": "#hostile_volume",
+          "$slider_tts_text_value": "#hostile_volume_text_value",
+          "$option_enabled_binding_name": "#hostile_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "584577": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_6@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#neutral_volume_slider_label",
+          "$slider_name": "neutral_volume",
+          "$slider_value_binding_name": "#neutral_volume",
+          "$slider_tts_text_value": "#neutral_volume_text_value",
+          "$option_enabled_binding_name": "#neutral_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "325236347": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_7@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#player_volume_slider_label",
+          "$slider_name": "player_volume",
+          "$slider_value_binding_name": "#player_volume",
+          "$slider_tts_text_value": "#player_volume_text_value",
+          "$option_enabled_binding_name": "#player_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+
+        }
+      },
+
+      { "45745845": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_8@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#record_volume_slider_label",
+          "$slider_name": "record_volume",
+          "$slider_value_binding_name": "#record_volume",
+          "$slider_tts_text_value": "#record_volume_text_value",
+          "$option_enabled_binding_name": "#record_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "2352362376": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_9@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#weather_volume_slider_label",
+          "$slider_name": "weather_volume",
+          "$slider_value_binding_name": "#weather_volume",
+          "$slider_tts_text_value": "#weather_volume_text_value",
+          "$option_enabled_binding_name": "#weather_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "6346347": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "option_slider_10@settings_common.option_slider": {
+          "size": [ "95%", 16 ],
+          "$option_label": "#texttospeech_volume_slider_label",
+          "$slider_name": "texttospeech_volume",
+          "$slider_value_binding_name": "#texttospeech_volume",
+          "$slider_tts_text_value": "#texttospeech_volume_text_value",
+          "$option_enabled_binding_name": "#texttospeech_volume_enabled",
+          "$label_bindings": [
+            {
+              "binding_name": "$option_label"
+            }
+          ]
+        }
+      },
+
+      { "1221423": { "type": "panel", "size": ["100%", 15]}},
+
+      {
+        "reset_button@settings_common.action_button": {
+          "ignored": "(not $is_pregame)",
+          "$pressed_button_name": "button.reset_settings",
+          "$button_text": "options.resetSettings",
+          "$focus_override_down": "FOCUS_OVERRIDE_STOP",
+          "property_bag": {
+            "reset_group": "audio"
+          }
+        }
+      }
+    ]
+  },
+
+  "gamertag_controls/sign_out": {
+    "ignored": false
+  },
+
+  "video_section/max_framerate_slider": {
+    "ignored": false
+  },
+
+  "video_section/ui_profile_dropdown": {
+    "$option_label": "options.uiprofile",
+    "$dropdown_content": "general_section.asa_no",
+    "$dropdown_area": "content_area",
+    "$dropdown_name": "ui_profile_dropdown",
+    "$option_enabled_binding_name": "#ui_profile_dropdown_enabled",
+    "$options_dropdown_toggle_label_binding": "#ui_profile_dropdown_toggle_label",
+    "$dropdown_scroll_content_size": ""
+  },
+
+  "asa_no": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "max_size": [ "100% - 12px", "default" ],
+          "shadow": true,
+          "text": "You can't set UI Profile as you want, the default of UI Profile will always be Classic"
+        }
+      }
+    ]
+  }
+}

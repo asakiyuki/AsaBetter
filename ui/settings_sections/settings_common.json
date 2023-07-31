@@ -1,0 +1,354 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+  "asa_setting_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "1@asa_setting_content_2": {}
+      },
+      {
+        "2@asa_quick_setting_panel.asa_quick_setting_panel": {}
+      },
+      {
+        "hoz": {
+          "type": "stack_panel",
+          "size": [ "100%c", "100%cm" ],
+          "orientation": "horizontal",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -20, 1 ],
+          "controls": [
+            {
+              "empty": {
+                "type": "panel",
+                "size": [ 2, 18 ]
+              }
+            },
+            {
+              "search_bar@common.text_edit_box": {
+                "$text_edit_text_control": "89367782_search_setting",
+                "$place_holder_text": "Search settings...",
+                "max_length": 100,
+                "size": [ 125, 18 ],
+                "bindings": [
+                  {
+                    "binding_name": "#gamertag_label"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#gamertag_label = 'AsakiZukiYT')",
+                    "target_property_name": "#asa_dev"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#gamertag_label = 'Thuat 777')",
+                    "target_property_name": "#asa_beta"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#asa_toggle_view and (#asa_dev or #asa_beta))",
+                    "target_property_name": "#visible"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "asa_quick_setting",
+                    "source_property_name": "(not #toggle_state)",
+                    "target_property_name": "#asa_toggle_view"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      
+      {
+        "dialog_titles": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "#asa_search_text",
+          "offset": [ 18, 6 ],
+          "visible": false,
+          "color": [ 0.3, 0.3, 0.3 ],
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "89367782_search_setting",
+              "source_property_name": "#item_name",
+              "target_property_name": "#asa_search"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "('Results for: ' + #asa_search)",
+              "target_property_name": "#asa_search_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#asa_search = ''))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "3@asa_notification.set_to_classic": {}
+      }
+    ]
+  },
+
+  "asa_setting_content_2": {
+    "type": "panel",
+    "controls": [
+      {
+        "tog@asa_quick_setting_panel.asa_light_ui_image_toggle": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -1, 1 ],
+          "size": [ 18, 18 ],
+          "$asa_button_icon": "textures/ui/sidebar_icons/menu_threebars",
+          "$asa_button_color": [ 0.1, 0.1, 0.1 ],
+          "$toggle_group_forced_index": 1,
+          "$toggle_view_binding_name": "asa_quick_setting",
+          "$asa_toggle_nav_name": "asa_quicksetting_section",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "asa_quick_setting",
+              "source_property_name": "(not #toggle_state)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "1@settings_content": {}
+      }
+    ]
+  },
+
+  "settings_content": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "asa_quick_setting",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "settings_content/background": {
+    "alpha": 0
+  },
+
+  "dialog_titles": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", 15 ],
+    "offset": [ 0, 1.5 ],
+    "controls": [
+      {
+        "left_padding": {
+          "type": "panel",
+          "size": [ 18, "100%" ]
+        }
+      },
+      {
+        "asa_dialog_title": {
+          "type": "panel",
+          "size": [ "100%cm", "100%" ],
+          "controls": [
+            {
+              "setting_title_panel": {
+                "text": "#dialog_title",
+                "type": "label",
+                "layer": 999,
+                "color": [ 0.3, 0.3, 0.3 ],
+                "font_scale_factor": 1.5,
+                "font_type": "MinecraftTen",
+                "offset": [ 0, -1 ],
+                "bindings": [
+                  {
+                    "binding_name": "#dialog_title"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "asdas": {
+          "size": [ 4, 15 ],
+          "type": "panel",
+          "controls": [
+            {
+              "asa_line": {
+                "type": "image",
+                "color": [ 0.3, 0.3, 0.3 ],
+                "size": [ 1, "100%" ],
+                "texture": "textures/ui/list_item_divider_line_light"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "asa_panel": {
+          "type": "panel",
+          "size": [ "100%cm", "100%" ],
+          "controls": [
+            {
+              "asa_stack": {
+                "type": "stack_panel",
+                "size": [ "100%cm", "100%c" ],
+                "controls": [
+                  {
+                    "world_seed_panel": {
+                      "type": "panel",
+                      "size": [ "100%cm", "100%sm" ],
+                      "controls": [
+                        {
+                          "4@asa_quick_setting_panel.asa_world_seed_panel": {}
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "asa_setting_panel": {
+                      "text": "#section_title",
+                      "type": "label",
+                      "layer": 999,
+                      "color": [ 0.3, 0.3, 0.3 ],
+                      "font_scale_factor": 0.75,
+                      "bindings": [
+                        {
+                          "binding_name": "#section_title"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "dynamic_dialog_screen": {
+    "$screen_bg_content": "asa_background_common.setting_bg",
+    "$asa_bg_visi": true,
+    "$asa_background_binding": "asa_quick_setting",
+    "$screen_content": "settings_common.asa_setting_content",
+    "$is_full_screen_layout": false,
+    "$screen_animations": [
+      "@common.screen_exit_animation_push_fade",
+      "@common.screen_exit_animation_pop_fade",
+      "@common.screen_entrance_animation_push_fade",
+      "@common.screen_entrance_animation_pop_fade"
+    ],
+
+    "button_mappings": "$asa_button_mappings",
+    "$asa_button_mappings|default": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_tab_left",
+        "to_button_id": "button.menu_tab_left",
+        "mapping_type": "global",
+        "scope": "view"
+      },
+      {
+        "from_button_id": "button.menu_tab_right",
+        "to_button_id": "button.menu_tab_right",
+        "mapping_type": "global",
+        "scope": "view"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "($is_realm_slot or $realm_no_world_edit)",
+        "$screen_background_control": "realms_slots.realms_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$asa_button_mappings": []
+      }
+    ]
+  },
+
+  "dialog_content": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "asa_setting_panel": {
+          "type": "panel",
+          "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "89367782_search_setting",
+                "source_property_name": "#item_name",
+                "target_property_name": "#asa_search"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_search = '')",
+                "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "dialog_titles@settings_common.dialog_titles": {}
+            },
+            {
+              "selector_area@settings_common.selector_area": {
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@asa_setting_anims.asa_selector_stack_panel_anims_entrance",
+                  "@asa_setting_anims.asa_selector_stack_panel_anims_entrance_2",
+                  "@asa_setting_anims.asa_selector_stack_panel_anims_exit",
+                  "@asa_setting_anims.asa_selector_stack_panel_anims_exit_2"
+                ]
+              }
+            },
+            {
+              "content_area@settings_common.content_area": {
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@asa_setting_anims.asa_section_stack_panel_anims_entrance",
+                  "@asa_setting_anims.asa_section_stack_panel_anims_entrance_2",
+                  "@asa_setting_anims.asa_section_stack_panel_anims_exit",
+                  "@asa_setting_anims.asa_section_stack_panel_anims_exit_2"
+                ]
+              }
+            },
+            {
+              "section_divider@settings_common.section_divider": {}
+            }
+          ]
+        }
+      },
+      {
+        "2@asa_search_setting.asa_search_area": {}
+      }
+    ]
+  }
+}

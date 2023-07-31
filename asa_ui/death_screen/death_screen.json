@@ -1,0 +1,148 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_death_screen",
+
+    "asa_death_screen_content": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_screen_stack_panel": {
+                    "type": "stack_panel",
+                    "offset": [ 0, -30 ],
+                    "size": [ "100%cm", "100%c" ],
+                    "controls": [
+                        {
+                            "label_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%sm", "100%c" ],
+                                "controls": [
+                                    {
+                                        "you_died_panel": {
+                                            "type": "panel",
+                                            "size": [ "100%", "100%c" ],
+                                            "controls": [
+                                                {
+                                                    "you_died_label": {
+                                                        "type": "label",
+                                                        "color": "$death_text_color",
+                                                        "text": "deathScreen.message",
+                                                        "shadow": true,
+                                                        "font_size": "large"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "size": [ 1, 1 ],
+                                            "type": "panel"
+                                       }
+                                    },
+                                    {
+                                        "sub_you_died": {
+                                            "type": "panel",
+                                            "size": [ "100%", "100%c" ],
+                                            "controls": [
+                                                {
+                                                    "death_reason_label": {
+                                                        "type": "label",
+                                                        "color": "$death_text_color",
+                                                        "text": "Don't get discouraged, keep going",
+                                                        "shadow": true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "size": [ 1, 4 ],
+                                            "type": "panel"
+                                       }
+                                    },
+                                    {
+                                        "reason_panel": {
+                                            "type": "panel",
+                                            "size": [ "100%", "100%c" ],
+                                            "controls": [
+                                                {
+                                                    "death_reason_label": {
+                                                        "type": "label",
+                                                        "color": "$death_text_color",
+                                                        "text": "#death_reason_text",
+                                                        "shadow": true,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#death_reason_text"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel",
+                                "size": [ 1, 25 ]
+                            }
+                        },
+                        {
+                            "respawn_button_stack": {
+                                "type": "stack_panel",
+                                "size": [ "100%c", "100%cm" ],
+                                "orientation": "horizontal",
+                                "controls": [
+                                    {
+                                        "respawn_button@common_buttons.light_text_button": {
+                                            "size": [ 125, 26 ],
+                                            "$button_text": "deathScreen.respawn",
+                                            "$pressed_button_name": "button.respawn_button",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#respawn_enabled",
+                                                    "binding_name_override": "#enabled"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "panel": {
+                                            "type": "panel",
+                                            "size": [ 15, 1 ]
+                                        }
+                                    },
+                                    {
+                                        "main_menu_button@common_buttons.light_text_button": {
+                                            "size": [ 125, 26 ],
+                                            "$button_text": "deathScreen.quit",
+                                            "$pressed_button_name": "button.main_menu_button",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#quit_enabled",
+                                                    "binding_name_override": "#enabled"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

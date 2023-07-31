@@ -1,0 +1,356 @@
+{
+    "namespace": "asa_setting_common",
+
+    "asa_setting_screen_panel": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%" ],
+        "$asa_header_screen_size|default": [ "100%", 26 ],
+        "$asa_bottom_screen_size|default": [ "100%", 38 ],
+        "$asa_setting_header|default": "asa_header_setting_screen",
+        "$asa_setting_content|default": "asa_setting_content_screen",
+        "$asa_setting_bottom_content|default": "asa_bottom_setting_screen",
+        "controls": [
+            {
+                "asa_header_panel@$asa_setting_header": {
+                    "size": "$asa_header_screen_size"
+                }
+            },
+            {
+                "asa_screen_content@$asa_setting_content": {
+                    "size": [ "100%", "fill" ]
+                }
+            },
+            {
+                "asa_bottom@$asa_setting_bottom_content": {
+                    "size": "$asa_bottom_screen_size"
+                }
+            }
+        ]
+    },
+
+    "asa_header_setting_screen": {
+        "type": "panel",
+        "controls": [
+            {
+                "header_background": {
+                    "type": "image",
+                    "size": [ "200%", "200%" ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "layer": 0,
+                    "texture": "textures/ui/StoreTopBar"
+                }
+            },
+            {
+                "asa_text": {
+                    "type": "label",
+                    "text": "#text",
+                    "font_type": "MinecraftTen",
+                    "font_scale_factor": 1.3,
+                    "offset": [ 0, -2.5 ],
+                    "color": [ 0, 0, 0 ],
+                    "bindings": [
+                        {
+                            "binding_name": "#dialog_title",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            },
+            {
+                "exit@asa_setting_button_common.asa_button_template": {
+                    "size": [ 16, 16 ],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "$pressed_button_name": "button.menu_exit",
+                    "offset": [ 3, -1 ]
+                }
+            }
+        ]
+    },
+
+    "asa_bottom_setting_screen": {
+        "type": "panel",
+        "controls": [
+            {
+                "header_background": {
+                    "type": "image",
+                    "size": [ "200%", "200%" ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "top_middle",
+                    "layer": 100,
+                    "texture": "textures/ui/TabTopFront"
+                }
+            },
+            {
+                "asa_toggle_tab_stack": {
+                    "type": "stack_panel",
+                    "size": [ "82%", "100%" ],
+                    "orientation": "horizontal",
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "$toggle_size_selected": [ "100%", "100% + 7.5px" ],
+                    "offset": [ 0, 5 ],
+                    "controls": [
+                        {
+                            "1@asa_setting_toggle_common.asa_toggle_tab_template_panel": {
+                                "size": [ "fill", "100%" ],
+                                "$asa_toggle_binding_name": "toggle_tab_general_section",
+                                "$asa_toggle_group": 0
+                            }
+                        },
+                        {
+                            "1@asa_setting_toggle_common.asa_toggle_tab_template_panel": {
+                                "size": [ "fill", "100%" ],
+                                "$asa_toggle_binding_name": "toggle_tab_package_section",
+                                "$asa_toggle_texture_outline": "textures/ui/bookshelf_flat_border",
+                                "$asa_toggle_texture_icon": "textures/ui/bookshelf_flat",
+                                "$asa_button_text": "Package",
+                                "$asa_toggle_group": 2
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_setting_content_screen": {
+        "type": "panel",
+        "controls": [
+            {
+                "asa_setting_stack": {
+                    "type": "stack_panel",
+                    "offset": [ 0, 2 ],
+                    "size": [ "78%", "100% - 6px" ],
+                    "controls": [
+                        {
+                            "general@asa_setting_scroll": {
+                                "$asa_section_controls": "toggle_tab_general_section",
+                                "$asa_selected_content_panels": "asa_setting_screen.asa_general_selected_stack",
+                                "$asa_section_content_panels": "asa_general_setting.asa_general_section_stack",
+                                "$asa_top_controls": [
+                                    {
+                                        "1@asa_top_toggle": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "package@asa_package_scroll": {
+                                "$asa_section_controls": "toggle_tab_package_section",
+                                "$asa_activate_panel": "asa_general_setting.activate_pack",
+                                "$asa_available_panel": "asa_general_setting.available_pack",
+                                "$asa_top_controls": [
+                                    {
+                                        "1@asa_general_setting.asa_top_pack_type_selected": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_top_toggle": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+            {
+                "graphic_section": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "$asa_selected_toggle_name": "graphic_section",
+                    "size": [ "100%", "100%cm + 2px" ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "video_button_toggle",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "@asa_setting_toggle_common.asa_toggle_top_tab_template_panel": {
+                                "$asa_button_text": "Player",
+                                "$asa_toggle_binding_name": "asa_video_section_player",
+                                "$asa_toggle_default": true,
+                                "$asa_toggle_group": 0
+                            }
+                        },
+                        {
+                            "@asa_setting_toggle_common.asa_toggle_top_tab_template_panel": {
+                                "$asa_button_text": "Graphic",
+                                "$asa_toggle_binding_name": "asa_video_section_graphic",
+                                "$asa_toggle_group": 1
+                            }
+                        },
+                        {
+                            "@asa_setting_toggle_common.asa_toggle_top_tab_template_panel": {
+                                "$asa_button_text": "Advanced",
+                                "$asa_toggle_binding_name": "asa_video_section_advanced",
+                                "$asa_toggle_group": 2
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_setting_scroll": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [ "100%", "100%" ],
+        "visible": false,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_section_controls",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "selected_scroll_panel": {
+                    "type": "panel",
+                    "size": [ "35%", "100%" ],
+                    "controls": [
+                        {
+                            "scrolling_panel@common.scrolling_panel": {
+                                "size": [ "100%", "100%" ],
+                                "$scrolling_content": "$asa_selected_content_panels",
+                                "$show_background": false,
+                                "$scroll_size": [ "5px", "100% - 4px" ],
+                                "$scroll_bar_left_padding_size": [ 1, 0 ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "empty": {
+                    "type": "panel",
+                    "size": [ 4, 2 ]
+                }
+            },
+            {
+                "section_scroll_panel": {
+                    "type": "stack_panel",
+                    "size": [ "fill", "100%" ],
+                    "controls": [
+                        {
+                            "asa_top_section@top_section_stack": {}
+                        },
+                        {
+                            "asa_scroll_panel": {
+                                "type": "panel",
+                                "size": [ "100%", "fill" ],
+                                "controls": [
+                                    {
+                                        "scrolling_panel@common.scrolling_panel": {
+                                            "size": [ "100%", "100%" ],
+                                            "$scrolling_content": "$asa_section_content_panels",
+                                            "$show_background": false,
+                                            "$scroll_size": [ "5px", "100% - 4px" ],
+                                            "$scroll_bar_left_padding_size": [ 1, 0 ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_package_scroll": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%" ],
+        "visible": false,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$asa_section_controls",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "@top_section_stack": {}
+            },
+            {
+                "asa_activate_and_available": {
+                    "type": "stack_panel",
+                    "size": [ "100%", "fill" ],
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "selected_scroll_panel": {
+                                "type": "panel",
+                                "size": [ "fill", "100%" ],
+                                "controls": [
+                                    {
+                                        "scrolling_panel@common.scrolling_panel": {
+                                            "size": [ "100%", "100%" ],
+                                            "$scrolling_content": "$asa_activate_panel",
+                                            "$show_background": false,
+                                            "$scroll_size": [ "5px", "100% - 4px" ],
+                                            "$scroll_bar_left_padding_size": [ 1, 0 ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "empty": {
+                                "type": "panel",
+                                "size": [ 8, "100%" ],
+                                "controls": [
+                                    {
+                                        "line": {
+                                            "type": "image",
+                                            "size": [ 1, "100%" ],
+                                            "color": [ 0.333, 0.333, 0.333 ],
+                                            "texture": "textures/ui/list_item_divider_line_light"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "asa_scroll_panel": {
+                                "type": "panel",
+                                "size": [ "fill", "100%" ],
+                                "controls": [
+                                    {
+                                        "scrolling_panel@common.scrolling_panel": {
+                                            "size": [ "100%", "100%" ],
+                                            "$scrolling_content": "$asa_available_panel",
+                                            "$show_background": false,
+                                            "$scroll_size": [ "5px", "100% - 4px" ],
+                                            "$scroll_bar_left_padding_size": [ 1, 0 ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "top_section_stack": {
+        "type": "stack_panel",
+        "size": [ "100%", "100%c" ],
+        "controls": "$asa_top_controls",
+        "$asa_top_controls|default": []
+    }
+}

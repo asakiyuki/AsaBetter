@@ -1,0 +1,42 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_exit_world_confirm",
+
+    "asa_button_template": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "max_size": [ "100% - 6px", 10 ],
+                    "size": [ "default", "default" ],
+                    "text": "$button_text",
+                    "color": "$text_color"
+                }
+            }
+        ]
+    },
+
+    "asa_light_button_text_toggle@common_toggles.light_ui_toggle": {
+        "$button_type_panel": "common_buttons.button_content_panel",
+        "$button_content": "asa_exit_world_confirm.asa_button_template",
+        "$button_offset": [ 0, 0 ],
+        "$hover_texture": "textures/ui/button_borderless_light",
+        "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
+        "$radio_toggle_group": true,
+        "$toggle_name|default": "asa_exit_world",
+        "$toggle_view_binding_name|default": null,
+
+        "$default_text_color": "$light_toggle_default_text_color",
+        "$default_checked_text_color": "$light_toggle_default_text_color"
+    }
+}

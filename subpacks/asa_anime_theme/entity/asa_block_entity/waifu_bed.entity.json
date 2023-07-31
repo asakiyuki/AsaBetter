@@ -1,0 +1,41 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+  "format_version": "1.8.0",
+
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:bed",
+      "textures": {
+        "default": "asa_textures/anime_theme/bed/blanc_neptunia",
+        "white": "asa_textures/anime_theme/bed/blanc_neptunia",
+        "orange": "asa_textures/anime_theme/bed/elaina",
+        "magenta": "asa_textures/anime_theme/bed/honjou_nia",
+        "light_blue": "asa_textures/anime_theme/bed/kotori_itsuka",
+        "yellow": "asa_textures/anime_theme/bed/marvelous_aql",
+        "lime": "asa_textures/anime_theme/bed/mio_takamiya",
+        "pink": "asa_textures/anime_theme/bed/mirai_kuriyama",
+        "gray": "asa_textures/anime_theme/bed/misaka_mikoto",
+        "silver": "asa_textures/anime_theme/bed/nakano_nino",
+        "cyan": "asa_textures/anime_theme/bed/nao_tomori",
+        "purple": "asa_textures/anime_theme/bed/natsumi_kyouno",
+        "blue": "asa_textures/anime_theme/bed/rinne_sonogami",
+        "brown": "asa_textures/anime_theme/bed/shiro",
+        "green": "asa_textures/anime_theme/bed/tohru",
+        "red": "asa_textures/anime_theme/bed/tokisaki_kurumi",
+        "black": "asa_textures/anime_theme/bed/yatogami_tohka"
+      },
+
+      "geometry": {
+        "default": "geometry.bed"
+      }
+    }
+  }
+}

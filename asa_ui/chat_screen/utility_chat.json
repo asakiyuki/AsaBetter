@@ -1,0 +1,74 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_chat_utility",
+
+    "chat_auto_complete_stack": {
+        "type": "stack_panel",
+        "size": [ "100%c", "100%cm" ],
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "@chat_button_template": {
+                    "$asa_button_icon": "textures/ui/arrow_right",
+                    "$pressed_button_name": "button.chat_autocomplete"
+                }
+            },
+            {
+                "@chat_button_template": {
+                    "$asa_button_icon": "textures/ui/arrow_left",
+                    "$pressed_button_name": "button.chat_autocomplete_back"
+                }
+            }
+        ]
+    },
+
+    "chat_message_stack": {
+        "type": "stack_panel",
+        "size": [ "100%c", "100%cm" ],
+        "orientation": "horizontal",
+        "$button_size": [ 12, 12 ],
+        "controls": [
+            {
+                "@chat_button_template": {
+                    "$asa_button_icon": "textures/ui/chevron_white_up",
+                    "$pressed_button_name": "button.chat_previous_message"
+                }
+            },
+            {
+                "@chat_button_template": {
+                    "$asa_button_icon": "textures/ui/chevron_white_down",
+                    "$pressed_button_name": "button.chat_next_message"
+                }
+            }
+        ]
+    },
+
+    "chat_button_template@common_buttons.light_content_button": {
+        "$button_type_panel": "asa_chat_utility.asa_chat_button_template",
+        "size": [ 27, 27 ]
+    },
+
+    "asa_chat_button_template": {
+        "type": "panel",
+        "controls": [
+            {
+                "button_icon": {
+                    "type": "image",
+                    "$button_size|default": [ 16, 16 ],
+                    "size": "$button_size",
+                    "texture": "$asa_button_icon",
+                    "layer": 5,
+                    "color": "$text_color"
+                }
+            }
+        ]
+    }
+}

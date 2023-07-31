@@ -1,0 +1,518 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_crafting_panel",
+
+    "asa_armor_render_gird": {
+        "type": "grid",
+        "layer": 1,
+        "size": [
+            18,
+            90
+        ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "grid_dimensions": [
+            1,
+            5
+        ],
+        "collection_name": "armor_items",
+        "$asa_renderer_collection_name": "armor_items",
+        "$asa_item_count_visible": false,
+        "controls": [
+            {
+                "head_grid_item@asa_armor_renderer": {
+                    "grid_position": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "chest_grid_item@asa_armor_renderer": {
+                    "grid_position": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            {
+                "legs_grid_item@asa_armor_renderer": {
+                    "grid_position": [
+                        0,
+                        2
+                    ]
+                }
+            },
+            {
+                "feet_grid_item@asa_armor_renderer": {
+                    "grid_position": [
+                        0,
+                        3
+                    ]
+                }
+            },
+            {
+                "feet_grid_item@asa_armor_renderer": {
+                    "$asa_renderer_collection_name": "offhand_items",
+                    "$asa_item_count_visible": true,
+                    "grid_position": [
+                        0,
+                        4
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_armor_renderer": {
+        "type": "custom",
+        "renderer": "inventory_item_renderer",
+        "size": [ 18, 18 ],
+        "layer": 1,
+        "controls": [
+            {
+                "@asa_hud_content.asa_dura_panel_percent": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "left_middle",
+                    "layer": 2,
+                    "$percent_layer": 0,
+                    "offset": [ 1, 0 ]
+                }
+            },
+            {
+                "asa_item_stack": {
+                    "visible": "$asa_item_count_visible",
+                    "type": "label",
+                    "offset": [ 0, 1 ],
+                    "anchor_to": "bottom_right",
+                    "anchor_from": "bottom_right",
+                    "layer": 2,
+                    "shadow": true,
+                    "text": "#inventory_stack_count",
+                    "bindings": [
+                        {
+                            "binding_name": "#inventory_stack_count",
+                            "binding_type": "collection",
+                            "binding_collection_name": "offhand_items"
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#item_id_aux",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#charged_item",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#item_custom_color",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#item_pickup_time",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#banner_patterns",
+                "binding_condition": "visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#banner_colors",
+                "binding_condition": "visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#banner_type",
+                "binding_condition": "visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_type": "collection",
+                "binding_name": "#show_item",
+                "binding_name_override": "#visible",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#inactive_item",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name",
+                "binding_name_override": "#disabled_filter_visible"
+            },
+            {
+                "binding_name": "#shield_is_active",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            },
+            {
+                "binding_name": "#item_lodestone_tracking_handle",
+                "binding_condition": "visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$asa_renderer_collection_name"
+            }
+        ]
+    },
+
+    "asa_inventory_button_panel": {
+        "type": "stack_panel",
+        "size": [ "20", "100%c" ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+            {
+                "@asa_crafting_button.asa_exit_button": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ],
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "(not #is_creative_layout)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_crafting_button.asa_quick_craft_button": {
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "(not #is_creative_layout)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ],
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "delete_item@asa_crafting_button.asa_inventory_button_template": {
+                    "$button_type_panel": "asa_crafting_button.asa_quick_crafting_button_icon",
+                    "$pressed_button_name": "button.clear_hotbar_or_remove_one",
+                    "$button_icon": "textures/ui/icon_trash",
+                    "sound_name": "mob.zombie.woodbreak",
+                    "$button_hover_name_text": "Remove One",
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    "asa_inventory_mode_panel": {
+        "type": "stack_panel",
+        "size": [ 20, "100%c" ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "controls": [
+            {
+                "@asa_auto_place.asa_auto_place_toggle": {
+                    "$asa_toggle_bindings": "asa_inven_normal",
+                    "$button_hover_name_text": "Normal",
+                    "$button_content": "asa_crafting_button.asa_button_item_renderer_template",
+                    "$item_aux_id": 3538944,
+                    "$toggle_group": 0,
+                    "$asa_toggle_state_default": true,
+                    "$asa_icon_visible": false
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_auto_place.asa_auto_place_toggle": {
+                    "$asa_toggle_bindings": "asa_inven_drop_one",
+                    "$button_content": "asa_crafting_button.asa_button_item_renderer_template",
+                    "$button_hover_name_text": "Drop One",
+                    "$item_aux_id": 3538944,
+                    "$button_icon": "textures/ui/down_arrow",
+                    "$toggle_group": 2
+                }
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_auto_place.asa_auto_place_toggle": {
+                    "$asa_toggle_bindings": "asa_inven_auto_place",
+                    "$button_text": "Auto Place",
+                    "$button_content": "asa_auto_place.asa_auto_place_buttom_template",
+                    "$button_icon": "asa_textures/ui/asa_auto_place_button",
+                    "$toggle_group": 1
+                }
+            }
+        ]
+    },
+
+    "asa_trade_button_panel": {
+        "type": "stack_panel",
+        "size": [ "20", "100%c" ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+            {
+                "@asa_crafting_button.asa_exit_button": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_crafting_button.asa_quick_trade": {}
+            }
+        ]
+    },
+
+    "asa_stonecutter_button_panel": {
+        "type": "stack_panel",
+        "size": [ "20", "100%c" ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+            {
+                "@asa_crafting_button.asa_exit_button": {}
+            },
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [ 1, 1 ]
+                }
+            },
+            {
+                "@asa_crafting_button.asa_quick_cutter": {}
+            }
+        ]
+    },
+
+    "asa_custom_recipe_button": {
+        "type": "panel",
+        "controls": [
+            {
+                "creative_mode": {
+                    "type": "panel",
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "#is_creative_mode",
+                            "binding_name_override": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "@crafting.no_coalesce_container_slot_button": {
+                                "$button_take_all_place_all": "button.recipe_select",
+                                "$button_take_half_place_one": "button.recipe_secondary",
+                                "$button_auto_place": "button.recipe_tertiary",
+                                "button_mappings": [
+                                    {
+                                        "from_button_id": "button.menu_select",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_ok",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_back",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed",
+                                        "ignored": "(not $is_ps4)"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_secondary_select",
+                                        "to_button_id": "$button_take_half_place_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_select",
+                                        "to_button_id": "$button_auto_place",
+                                        "mapping_type": "double_pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_select",
+                                        "to_button_id": "$button_take_half_place_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_auto_place",
+                                        "to_button_id": "$button_auto_place",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_secondary_select",
+                                        "to_button_id": "$button_auto_place",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_inventory_drop",
+                                        "to_button_id": "button.drop_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_inventory_drop_all",
+                                        "to_button_id": "button.drop_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "to_button_id": "button.shape_drawing",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "to_button_id": "button.container_slot_hovered",
+                                        "mapping_type": "pressed"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "survival_mode": {
+                    "type": "panel",
+                    "bindings": [
+                        {
+                            "binding_type": "global",
+                            "binding_name": "(not #is_creative_mode)",
+                            "binding_name_override": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "@crafting.no_coalesce_container_slot_button": {
+                                "$button_take_all_place_all": "button.recipe_select",
+                                "$button_take_half_place_one": "button.recipe_secondary",
+                                "$button_auto_place": "button.recipe_tertiary",
+                                "button_mappings": [
+                                    {
+                                        "from_button_id": "button.menu_select",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_ok",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_back",
+                                        "to_button_id": "$button_take_all_place_all",
+                                        "mapping_type": "pressed",
+                                        "ignored": "(not $is_ps4)"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_secondary_select",
+                                        "to_button_id": "$button_take_half_place_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_select",
+                                        "to_button_id": "$button_take_half_place_one",
+                                        "mapping_type": "double_pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_select",
+                                        "to_button_id": "$button_take_half_place_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_auto_place",
+                                        "to_button_id": "$button_auto_place",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.controller_secondary_select",
+                                        "to_button_id": "$button_auto_place",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_inventory_drop",
+                                        "to_button_id": "button.drop_one",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_inventory_drop_all",
+                                        "to_button_id": "button.drop_all",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "to_button_id": "button.shape_drawing",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "to_button_id": "button.container_slot_hovered",
+                                        "mapping_type": "pressed"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

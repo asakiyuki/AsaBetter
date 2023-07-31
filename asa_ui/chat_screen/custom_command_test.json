@@ -1,0 +1,51 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_chat_command",
+
+    "asa_command_panel": {
+        "type": "panel",
+        "$asa_command_bindings": "asa_command_text",
+        "controls": [
+            {
+                "$asa_command_bindings@asa_command_text": {}
+            },
+            {
+                "command_test": {
+                    "type": "label",
+                    "text": "My test",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$asa_command_bindings",
+                            "source_property_name": "(#item_name = '//custom_command')",
+                            "resolve_sibling_scope": true,
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    //Chat Text For Bindings
+    "asa_command_text": {
+        "type": "label",
+        "max_size": [ "default", 50 ],
+        "offset": [ 0, 1000000000 ],
+        "text": "#item_name",
+        "bindings": [
+            {
+                "binding_name": "#message_text_box_content",
+                "binding_name_override": "#item_name"
+            }
+        ]
+    }
+}

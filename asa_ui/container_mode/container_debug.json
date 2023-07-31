@@ -1,0 +1,73 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_inventory_debug",
+
+    "asa_inventory_mode_debug": {
+        "type": "panel",
+        "size": [ "100%c", "100%c" ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "layer": 3,
+        "controls": [
+            {
+                "asa_normal_mode": {
+                    "type": "label",
+                    "size": [ "default", 10 ],
+                    "text": "Normal",
+                    "layer": 3,
+                    "color": "$title_text_color",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_inven_normal",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_auto_place": {
+                    "type": "label",
+                    "size": [ "default", 10 ],
+                    "text": "Auto Place",
+                    "layer": 3,
+                    "color": "$title_text_color",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_inven_auto_place",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "asa_drop_one": {
+                    "type": "label",
+                    "size": [ "default", 10 ],
+                    "text": "Drop One",
+                    "layer": 3,
+                    "color": "$title_text_color",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "asa_inven_drop_one",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

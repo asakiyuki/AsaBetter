@@ -1,0 +1,509 @@
+##Bản dịch này không thuộc về bất kì ai, đây chỉ là những thứ tôi dịch trong pack tôi và bạn vẫn phải cài gói tài nguyên Tiếng Việt để sử dụng!
+##Và bạn có thể tùy chỉnh nó theo ý muốn :)
+
+##Header
+Quick Settings=Cài đặt nhanh
+General Settings=Cài đặt chung
+Control Settings=Cài đặt điều khiển
+Key & Mouse=Phím & Chuột
+
+Camera Perspective=Thiết lập góc nhìn
+First Person=Góc nhìn thứ nhất
+Third Person Back=Góc nhìn thứ ba từ phía sau
+Third Person Front=Góc nhìn thứ ba từ phía trước
+Gameplay=Lối chơi
+Graphic=Đồ họa
+Touch | Controller | Keyboard & Mouse=Cảm ứng | Tay cầm | Bàn phím & Chuột
+World Settings=Cài đặt thế giới
+
+World Seed:=Hạt giống thế giới:
+- Worlds -=- Thế giới -
+
+Done=Xong
+
+##Toggles
+Paper Doll: ON=Búp bê giấy: BẬT
+Paper Doll: OFF=Búp bê giấy: TẮT
+
+Hand: ON=Tay: BẬT
+Hand: OFF=Tay: TẮT
+
+HUD: ON=HUD: BẬT
+HUD: OFF=HUD: TẮT
+
+Fullscreen: ON=Toàn màn hình: BẬT
+Fullscreen: OFF=Toàn màn hình: TẮT
+
+SEEMORE SETTINGS=XEM THÊM CÀI ĐẶT
+HIDE SETTINGS=ẨN CÀI ĐẶT
+
+Play=Chơi
+Marketplace=Cửa hàng
+Settings=Cài đặt
+Edge Panel=Bảng ở cạnh
+Quit Game=Rời trò chơi
+
+Manage Account=Quản lý tài khoản
+Dressing Room=Phòng thay đồ
+Realms Invitation=Lời mời realm
+Achievements=Thành tích
+Feedback=Nhận xét
+Music Player=Trình chơi nhạc
+Close=Đóng
+
+Go Back=Trở lại
+Worlds=Thế giới
+Multiplayer=Nhiều người chơi
+Servers=Máy chủ
+
+Resume=Tiếp tục
+Screenshot=Chụp màn hình
+Store=Cửa hàng
+Player List=Danh sách người chơi
+Save & Quit=Lưu & rời
+Leave World=Rời khỏi thế giới
+Are you sure you want to quit the world?=Bạn có chắc chắn rằng bạn muốn rời khỏi thế giới?
+Cancel=Hủy bỏ
+
+Device: Mobile=Thiết bị: Di động
+Device: Console=Thiết bị: Bàn điều khiển
+Device: Windows=Thiết bị: Windows
+
+Operating System: Android=Hệ điều hành: Android
+Operating System: iOS=Hệ điều hành:iOS
+
+Gamemode: Creative=Chế độ: Sáng tạo
+Gamemode: Survival=Chế độ: Sinh tồn
+Gamemode: Spectator=Chế độ: Khán giả
+
+Input: Touch=Đầu vào: Cảm ứng
+Input: Keyboard and Mouse=Đầu vào: Bàn phím và chuột
+Input: Controller=Đầu vào: Tay cầm
+
+Position: Disable=Tọa độ: Vô hiệu hóa
+
+Set to Classic UI=Đặt thành UI Cổ điển
+Need to set UI Profile to Classic=Cần đặt UI Trò chơi thành Cổ điển
+Since this resource pack does not support Pocket UI players, you need to set to Classic UI to avoid bugs!=Vì gói tài nguyên không hỗ trợ cho người chơi UI Pocket, bạn cần đặt thành UI Cổ điển để tránh những lỗi gây khó chịu!
+Open Settings=Mở cài đặt
+
+Quick Crafting=Chế tạo nhanh
+Quick Trade=Giao dịch nhanh
+Remove One=Xóa bỏ một
+Normal=Bình thường
+Drop One=Thả một
+Auto Place=Đặt vào địa điểm tự động
+
+Pause Menu=Menu tạm dừng
+WORLD NAME=TÊN THẾ GIỚI
+
+HIDE=ẨN
+SHOW=HIỆN
+
+All=Tất cả
+
+ON=BẬT
+OFF=TẮT
+
+Quit=Rời
+
+Mob Effects=Hiệu ứng Mobs
+Vignette=Làm mờ nét
+Scoreboard=Bảng điểm
+Chats=Trò chuyện
+Top Chat=Trò chuyện trên
+Bottom Chat=Trò chuyện dưới
+Coordinates=Tọa độ
+Mainhand Slot=Chỗ tay chính
+Offhand Slot=Chỗ tay phụ
+Utility=Tiện ích
+Status=Trạng thái
+Item Durability Percent=Phần trăm độ bền vật phẩm
+Armor HUD=Giáp HUD
+Connected Hotbar=Hotbar được kết nối
+Hide Inventory Button=Ẩn nút mở kho đồ
+
+Item Tools=Công cụ vật phẩm
+Enchant Glint=Ánh sáng phù phép
+Clock=Đồng hồ
+Compass=La bàn
+Add Recovery Compass to HUD=Thêm La bàn phục hồi vào HUD
+Recovery Compass=La bàn phục hồi
+
+Debug=Gỡ lỗi
+Devices=Thiết bị
+Gamemode=Chế độ
+Input=Đầu vào
+Operating System=Hệ điều hành
+
+Better Bossbar=Thanh boss tốt hơn
+Default Bossbar=Thanh boss mặc định
+Java Bossbar=Thanh boss Java
+Bossbar=Thanh boss
+Boss Face=Mặt boss
+Boss Name=Tên boss
+Bar Health=Thanh máu
+
+Item Name=Tên vật phẩm
+Bedrock Item Name=Tên vật phẩm Bedrock
+Java Item Name=Tên vật phẩm Java
+Item Name Background=Nền tên vật phẩm
+
+Experience Bar=Thanh kinh nghiệm
+Item Count=Số vật phẩm
+Creative Mode=Chế độ sáng tạo
+
+Active=Hiện hoạt
+Available=Có sẵn
+
+Cost:=Chi phí:
+Close Recipes=Đóng công thức
+
+Utility Section=Phần tiện ích
+F1 & F8 Button=Nút F1 và F8
+Hotbar Mode=Chế độ Hotbar
+Default Hotbar=Hotbar mặc định
+RGB Default Hotbar=Hotbar mặc định RGB
+3rd Crosshair=Tâm 3 góc nhìn
+Displays all information of the item name, such as the Enchant line contained in that item=Hiển thị toàn bộ thông tin vật phẩm, bao gồm cả dòng Phù phép của vật phẩm đó
+Show only item name=Chỉ hiển thị tên vật phẩm
+Mainhand Display=Hiển thị tay chính
+Offhand Display=Hiển thị phụ
+Used to see the remaining durability percentage of the item you are holding=Sử dụng để xem phần trăm độ bền còn lại của vật phẩm bạn đang cầm
+Item AUX Viewer=Xem AUX Vật phẩm
+Allows viewing the AUX ID of the item in hand=Cho phép xem AUX ID của vật phẩm bạn đang cầm
+Exp Bar Percent=Phần trăm thanh exp
+Used to see the exp progress bar percentage=Sử dụng để xem phần trăm thanh tiến trình exp
+Brighter=Sáng hơn
+Helps you see better in dark areas=Giúp bạn nhìn rõ hơn trong các khu vực tối
+Shiny Potions=Bóng sáng thuốc
+Add glint effect to potions on Hotbar and Mainhand Display=Thêm hiệu ứng lấp lánh lên lọ thuốc trên Hotbar và Hiển thị tay chính
+Potion Icons=Biểu tượng thuốc
+Show the potion icon you are holding on the HUD=Hiển thị biểu tượng thuốc bạn đang cầm lên HUD
+Allows viewing of Exp bar in creative mode=Cho phép xem thanh Exp trong chế độ sáng tạo
+Allows viewing Item Counter in creative mode=Cho phép xem bộ đếm vật phẩm trong chế độ sáng tạo
+Health Bar Percent=Phần trăm thanh sức khỏe
+Used to see the remaining health percentage of the top Bossbar=Sử dụng để xem phần trăm sức khỏe con lại của thanh boss trên cùng
+Label=Văn bản
+Score On Scoreboard=Điểm trên bảng điểm
+Title=Tiêu đề
+Subtitle=Tiêu đề con
+Actionbar=Thanh tác vụ
+Tip=Mẹo
+Make Item tools have an Enchant Glint effect=Làm công cụ vật phẩm có hiệu ứng lấp lánh phù phép
+Display the Clock on the screen=Hiển thị đồng hồ lên màn hình
+Display the Compass on the screen=Hiển thị la bàn lên màn hình
+Display the Recovery Compass on the screen (May cause your game to crash when you play in Featured Servers or Versions lower than 1.19)=Hiển thị la bàn khôi phục lên màn hình (Có thể làm trò chơi bị treo khi bạn chơi trong Máy chủ tính năng hoặc dưới phiên bản 1.19)
+Make the inventory button invisible=Làm cho nút mở kho đồ trở nên vô hình
+You can't set UI Profile as you want, the default of UI Profile will always be Classic=Bạn không thể tùy chỉnh giao diện người dùng của mình, mặc định sẽ luôn luôn là Cổ điển
+
+My packs=Các gói của tôi
+Get more packs=Nhận nhiều gói hơn
+Options=Tùy chọn
+Exit Game=Rời trò chơi
+Realm Invite=Lời mời realm
+Automation=Tự động hóa
+Automatically adjusts position to match your input=Tự động điều chỉnh vị trí để phù hợp với đầu vào của bạn
+Make screen border darker when in dark area=Làm cho viền màn hình tối hơn khi ở trong vùng tối
+Absorption Effect Viewer=Xem trước hiệu ứng sẽ hấp thụ
+Displays effect information such as Suspicious Soup, Potions you are holding on the screen=Hiển thị thông tin hiệu ứng của Súp đáng ngờ, Lọ thuốc bạn đang cầm lên màn hình
+Count 1 Item=Đếm 1 vật phẩm
+Count 1 of that item on the Hotbar and Main Hand Display when that slot has only 1 item (Useless :P)=Đếm 1 trong số đó trên Hotbar và Hiển thị tay chính khi vị trí đó chỉ có 1 vật phẩm (Vô dụng :P)
+Number Hotbars Select=Số Hotbar được chọn
+Display the number of remaining items and the number of hotbars currently selected on the HUD=Hiển thị số item còn lại và số hotbar được chọn lên HUD
+Crosshair Throwing Item=Tâm của vật phẩm có thể ném
+Show Crosshair when you hold Egg, Snowball, Fireball and Ender Pearl when you use touch input=Hiển thị tâm khi bạn giữ Trứng, Bóng tuyết, Ngọc Ender khi bạn sử dụng Đầu vào cảm ứng
+Label of Absorption Effect=Văn bản cho Hiệu ứng sẽ hấp thụ##Bản dịch này không thuộc về bất kì ai, đây chỉ là những thứ tôi dịch trong pack tôi và bạn vẫn phải cài gói tài nguyên Tiếng Việt để sử dụng!
+##Và bạn có thể tùy chỉnh nó theo ý muốn :)
+
+##Header
+Quick Settings=Cài đặt nhanh
+General Settings=Cài đặt chung
+Control Settings=Cài đặt điều khiển
+Key & Mouse=Phím & Chuột
+
+Camera Perspective=Thiết lập góc nhìn
+First Person=Góc nhìn thứ nhất
+Third Person Back=Góc nhìn thứ ba từ phía sau
+Third Person Front=Góc nhìn thứ ba từ phía trước
+Gameplay=Lối chơi
+Graphic=Đồ họa
+Touch | Controller | Keyboard & Mouse=Cảm ứng | Tay cầm | Bàn phím & Chuột
+World Settings=Cài đặt thế giới
+
+World Seed:=Hạt giống thế giới:
+- Worlds -=- Thế giới -
+
+Done=Xong
+
+##Toggles
+Paper Doll: ON=Búp bê giấy: BẬT
+Paper Doll: OFF=Búp bê giấy: TẮT
+
+Hand: ON=Tay: BẬT
+Hand: OFF=Tay: TẮT
+
+HUD: ON=HUD: BẬT
+HUD: OFF=HUD: TẮT
+
+Fullscreen: ON=Toàn màn hình: BẬT
+Fullscreen: OFF=Toàn màn hình: TẮT
+
+SEEMORE SETTINGS=XEM THÊM CÀI ĐẶT
+HIDE SETTINGS=ẨN CÀI ĐẶT
+
+Play=Chơi
+Marketplace=Cửa hàng
+Settings=Cài đặt
+Edge Panel=Bảng ở cạnh
+Quit Game=Rời trò chơi
+
+Manage Account=Quản lý tài khoản
+Dressing Room=Phòng thay đồ
+Realms Invitation=Lời mời realm
+Achievements=Thành tích
+Feedback=Nhận xét
+Music Player=Trình chơi nhạc
+Close=Đóng
+
+Go Back=Trở lại
+Worlds=Thế giới
+Multiplayer=Nhiều người chơi
+Servers=Máy chủ
+
+Resume=Tiếp tục
+Screenshot=Chụp màn hình
+Store=Cửa hàng
+Player List=Danh sách người chơi
+Save & Quit=Lưu & rời
+Leave World=Rời khỏi thế giới
+Are you sure you want to quit the world?=Bạn có chắc chắn rằng bạn muốn rời khỏi thế giới?
+Cancel=Hủy bỏ
+
+Device: Mobile=Thiết bị: Di động
+Device: Console=Thiết bị: Bàn điều khiển
+Device: Windows=Thiết bị: Windows
+
+Operating System: Android=Hệ điều hành: Android
+Operating System: iOS=Hệ điều hành:iOS
+
+Gamemode: Creative=Chế độ: Sáng tạo
+Gamemode: Survival=Chế độ: Sinh tồn
+Gamemode: Spectator=Chế độ: Khán giả
+
+Input: Touch=Đầu vào: Cảm ứng
+Input: Keyboard and Mouse=Đầu vào: Bàn phím và chuột
+Input: Controller=Đầu vào: Tay cầm
+
+Position: Disable=Tọa độ: Vô hiệu hóa
+
+Set to Classic UI=Đặt thành UI Cổ điển
+Need to set UI Profile to Classic=Cần đặt UI Trò chơi thành Cổ điển
+Since this resource pack does not support Pocket UI players, you need to set to Classic UI to avoid bugs!=Vì gói tài nguyên không hỗ trợ cho người chơi UI Pocket, bạn cần đặt thành UI Cổ điển để tránh những lỗi gây khó chịu!
+Open Settings=Mở cài đặt
+
+Quick Crafting=Chế tạo nhanh
+Quick Trade=Giao dịch nhanh
+Remove One=Xóa bỏ một
+Normal=Bình thường
+Drop One=Thả một
+Auto Place=Đặt vào địa điểm tự động
+
+Pause Menu=Menu tạm dừng
+WORLD NAME=TÊN THẾ GIỚI
+
+HIDE=ẨN
+SHOW=HIỆN
+
+All=Tất cả
+
+ON=BẬT
+OFF=TẮT
+
+Quit=Rời
+
+Mob Effects=Hiệu ứng Mobs
+Vignette=Làm mờ nét
+Scoreboard=Bảng điểm
+Chats=Trò chuyện
+Top Chat=Trò chuyện trên
+Bottom Chat=Trò chuyện dưới
+Coordinates=Tọa độ
+Mainhand Slot=Chỗ tay chính
+Offhand Slot=Chỗ tay phụ
+Utility=Tiện ích
+Status=Trạng thái
+Item Durability Percent=Phần trăm độ bền vật phẩm
+Armor HUD=Giáp HUD
+Connected Hotbar=Hotbar được kết nối
+Hide Inventory Button=Ẩn nút mở kho đồ
+
+Item Tools=Công cụ vật phẩm
+Enchant Glint=Ánh sáng phù phép
+Clock=Đồng hồ
+Compass=La bàn
+Add Recovery Compass to HUD=Thêm La bàn phục hồi vào HUD
+Recovery Compass=La bàn phục hồi
+
+Debug=Gỡ lỗi
+Devices=Thiết bị
+Gamemode=Chế độ
+Input=Đầu vào
+Operating System=Hệ điều hành
+
+Better Bossbar=Thanh boss tốt hơn
+Default Bossbar=Thanh boss mặc định
+Java Bossbar=Thanh boss Java
+Bossbar=Thanh boss
+Boss Face=Mặt boss
+Boss Name=Tên boss
+Bar Health=Thanh máu
+
+Item Name=Tên vật phẩm
+Bedrock Item Name=Tên vật phẩm Bedrock
+Java Item Name=Tên vật phẩm Java
+Item Name Background=Nền tên vật phẩm
+
+Experience Bar=Thanh kinh nghiệm
+Item Count=Số vật phẩm
+Creative Mode=Chế độ sáng tạo
+
+Active=Hiện hoạt
+Available=Có sẵn
+
+Cost:=Chi phí:
+Close Recipes=Đóng công thức
+
+Utility Section=Phần tiện ích
+F1 & F8 Button=Nút F1 và F8
+Hotbar Mode=Chế độ Hotbar
+Default Hotbar=Hotbar mặc định
+RGB Default Hotbar=Hotbar mặc định RGB
+3rd Crosshair=Tâm 3 góc nhìn
+Displays all information of the item name, such as the Enchant line contained in that item=Hiển thị toàn bộ thông tin vật phẩm, bao gồm cả dòng Phù phép của vật phẩm đó
+Show only item name=Chỉ hiển thị tên vật phẩm
+Mainhand Display=Hiển thị tay chính
+Offhand Display=Hiển thị phụ
+Used to see the remaining durability percentage of the item you are holding=Sử dụng để xem phần trăm độ bền còn lại của vật phẩm bạn đang cầm
+Item AUX Viewer=Xem AUX Vật phẩm
+Allows viewing the AUX ID of the item in hand=Cho phép xem AUX ID của vật phẩm bạn đang cầm
+Exp Bar Percent=Phần trăm thanh exp
+Used to see the exp progress bar percentage=Sử dụng để xem phần trăm thanh tiến trình exp
+Brighter=Sáng hơn
+Helps you see better in dark areas=Giúp bạn nhìn rõ hơn trong các khu vực tối
+Shiny Potions=Bóng sáng thuốc
+Add glint effect to potions on Hotbar and Mainhand Display=Thêm hiệu ứng lấp lánh lên lọ thuốc trên Hotbar và Hiển thị tay chính
+Potion Icons=Biểu tượng thuốc
+Show the potion icon you are holding on the HUD=Hiển thị biểu tượng thuốc bạn đang cầm lên HUD
+Allows viewing of Exp bar in creative mode=Cho phép xem thanh Exp trong chế độ sáng tạo
+Allows viewing Item Counter in creative mode=Cho phép xem bộ đếm vật phẩm trong chế độ sáng tạo
+Health Bar Percent=Phần trăm thanh sức khỏe
+Used to see the remaining health percentage of the top Bossbar=Sử dụng để xem phần trăm sức khỏe con lại của thanh boss trên cùng
+Label=Văn bản
+Score On Scoreboard=Điểm trên bảng điểm
+Title=Tiêu đề
+Subtitle=Tiêu đề con
+Actionbar=Thanh tác vụ
+Tip=Mẹo
+Make Item tools have an Enchant Glint effect=Làm công cụ vật phẩm có hiệu ứng lấp lánh phù phép
+Display the Clock on the screen=Hiển thị đồng hồ lên màn hình
+Display the Compass on the screen=Hiển thị la bàn lên màn hình
+Display the Recovery Compass on the screen (May cause your game to crash when you play in Featured Servers or Versions lower than 1.19)=Hiển thị la bàn khôi phục lên màn hình (Có thể làm trò chơi bị treo khi bạn chơi trong Máy chủ tính năng hoặc dưới phiên bản 1.19)
+Make the inventory button invisible=Làm cho nút mở kho đồ trở nên vô hình
+You can't set UI Profile as you want, the default of UI Profile will always be Classic=Bạn không thể tùy chỉnh giao diện người dùng của mình, mặc định sẽ luôn luôn là Cổ điển
+
+My packs=Các gói của tôi
+Get more packs=Nhận nhiều gói hơn
+Options=Tùy chọn
+Exit Game=Rời trò chơi
+Realm Invite=Lời mời realm
+Automation=Tự động hóa
+Automatically adjusts position to match your input=Tự động điều chỉnh vị trí để phù hợp với đầu vào của bạn
+Make screen border darker when in dark area=Làm cho viền màn hình tối hơn khi ở trong vùng tối
+Absorption Effect Viewer=Xem trước hiệu ứng sẽ hấp thụ
+Displays effect information such as Suspicious Soup, Potions you are holding on the screen=Hiển thị thông tin hiệu ứng của Súp đáng ngờ, Lọ thuốc bạn đang cầm lên màn hình
+Count 1 Item=Đếm 1 vật phẩm
+Count 1 of that item on the Hotbar and Main Hand Display when that slot has only 1 item (Useless :P)=Đếm 1 trong số đó trên Hotbar và Hiển thị tay chính khi vị trí đó chỉ có 1 vật phẩm (Vô dụng :P)
+Number Hotbars Select=Số Hotbar được chọn
+Display the number of remaining items and the number of hotbars currently selected on the HUD=Hiển thị số item còn lại và số hotbar được chọn lên HUD
+Crosshair Throwing Item=Tâm của vật phẩm có thể ném
+Show Crosshair when you hold Egg, Snowball, Fireball and Ender Pearl when you use touch input=Hiển thị tâm khi bạn giữ Trứng, Bóng tuyết, Ngọc Ender khi bạn sử dụng Đầu vào cảm ứng
+Label of Absorption Effect=Văn bản cho Hiệu ứng sẽ hấp thụ
+
+Sign in as:=Đăng nhập với tư cách:
+Search settings...=Tìm kiếm cài đặt...
+Regenerating the Overworld=Đang tái tạo Overworld
+Regenerating the Nether=Đang tái tạo Nether
+Regenerating The End=Đang tái tạo The End
+Debug (Dev)=Gỡ lối (Dev)
+Item Lodestone Tracking Handle Viewer=Xem vật phẩm theo dõi vị trí đá nam châm
+Shield Is Active Viewer=Xem khiên được kích hoạt
+Banned Type Viewer=Xem loại biểu ngữ
+Banned Colors Viewer=Xem màu biểu ngữ
+Banned Patterns Viewer=Xem mẫu biểu ngữ
+Show Item Pickup Viewer=Xem hiển thị nhặt vật phẩm
+Item Pickup Time Viewer=Thời gian nhặt vật phẩm
+Item Custom Color Viewer=Xem màu vật phẩm tùy chỉnh
+Charged Item Viewer=Xem thay đổi vật phẩm
+Item ID AUX Viewer=Xem AUX ID của vật phẩm
+Allows viewing the ID AUX of the item in hand=Cho phép xem AUX ID của vật phẩm đang cầm trên tay
+Item ID Viewer=Xem ID vật phẩm
+Allows you to view the Item ID and Item Data of the item you are holding=Cho phép xem ID vật phẩm và Dữ liệu vật phẩm bạn đang cầm trên tay
+Left Center=Ở giữa bên trái
+Left Bottom=Ở dưới bên trái
+Right Center=Ở giữa bên phải
+Right Bottom=Ở giữa bên phải
+Hunger Preview=Xem trước đói
+Hunger Prewiew Background=Nền xem trước đói
+Absorption Effect Background=Nền hiệu ứng được hấp thụ
+Durability Displayed When Less Than 26=Hiển thị độ bền khi còn dưới 26
+Item ID Offset Viewer=Xem ID vật phẩm bị bù lại
+View the offset ID number of the addon you are installing by holding the Stick=Xem ID vật phẩm bị bù lại khi bạn cài addon bằng gậy
+You can set this in the §d$asa_item_id_offset§f section of the §dAsaBetter/ui/_global_variables.json§f file=Bạn có thể đặt ở §d$asa_item_id_offset§f trong thư tệp §dAsaBetter/ui/_global_variables.json§f
+Addon Debug System=Hệ thống gỡ lỗi Addon
+PVP Hotbar System=Hệ thống Hotbar chiến đấu
+!0 Remaining=!Còn lại 0
+!1 Remaining=!Còn lại 1
+!2 Remaining=!Còn lại 2
+!3 Remaining=!Còn lại 3
+!4 Remaining=!Còn lại 4
+!5 Remaining=!Còn lại 5
+!6 Remaining=!Còn lại 6
+!7 Remaining=!Còn lại 7
+!8 Remaining=!Còn lại 8
+!9 Remaining=!Còn lại 9
+!10 Remaining=!Còn lại 10
+!11 Remaining=!Còn lại 11
+!12 Remaining=!Còn lại 12
+!13 Remaining=!Còn lại 13
+!14 Remaining=!Còn lại 14
+!15 Remaining=!Còn lại 15
+!16 Remaining=!Còn lại 16
+!17 Remaining=!Còn lại 17
+!18 Remaining=!Còn lại 18
+!19 Remaining=!Còn lại 19
+!20 Remaining=!Còn lại 20
+!21 Remaining=!Còn lại 21
+!22 Remaining=!Còn lại 22
+!23 Remaining=!Còn lại 23
+!24 Remaining=!Còn lại 24
+!25 Remaining=!Còn lại 25
+Banner Preview=Xem trước biểu ngữ
+* Banner Colors:=* Màu biểu ngữ:
+Use with Banner Item Data Value (From 0 to 15) to change Banner color=Sử dụng Giá trị liệu vật phẩm của Banner (Từ 0 đến 15) để thay đổi Màu biểu ngữ
+Enter Item Data Value...=Nhập Giá trị liệu vật phẩm...
+* Banner Patterns:=* Mẫu biểu ngữ:
+Use the Banner Patterns ID (Presented in the recipe book) and arrange them to create your own Banner image=Sử dụng ID Mẫu biểu ngữ (Xem trong sách công thức) và tạo ra Ảnh biểu ngữ của riêng bạn
+Use _ after ID for correct sorting and display=Sử dụng _ sau mỗi ID để sắp xếp và hiển thị
+Example: 20_6_3_1_=Ví dụ: 20_6_3_1_
+* Banner Colors:=* Màu biểu ngữ:
+Usage is the same as Banner Patterns, but instead of Banner Patterns ID, you use Colors ID=Cách dùng giống như mẫu biểu ngữ, chỉ khác là bạn sử dụng ID màu thay vì Mẫu biểu ngữ
+Example: 3_9_3_7_=Ví dụ: 3_9_3_7_
+Preview your Banner=Xem trước biểu ngữ của bạn
+Search available musics...=Tìm kiếm nhạc có sẵn...
+Custom Music (Total: 30)=Nhạc tùy chỉnh (Tông cộng: 30)
+You can customize the music in:=Bạn có thể tùy chỉnh nhạc trong:
+Music has been played=Nhạc đã được chơi
+Music has been stopped=Nhạc đã dừng
+Anime Music=Nhạc Anime
+Default Music=Nhạc mặc định

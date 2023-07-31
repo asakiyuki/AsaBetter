@@ -1,0 +1,116 @@
+{
+    "asa_command_list": {
+        "type": "stack_panel", "size": [ "100%", "100%c" ],
+        "$command_start_type": "+",
+        "controls": [
+            {
+                "@asa_custom_command_name": {
+                    "$command_type": "help",
+                    "$command_description": "Output custom command list"
+                }
+            },
+            {
+                "@asa_custom_command_name": {
+                    "$command_type": "give",
+                    "$command_description": "Get items"
+                }
+            },
+            {
+                "@asa_custom_command_name": {
+                    "$command_type": "hobby",
+                    "$command_description": "Back to the lobby"
+                }
+            },
+            {
+                "@asa_custom_command_name": {
+                    "$command_type": "list",
+                    "$command_description": "Get a list of players"
+                }
+            },
+            {
+                "@asa_custom_command_name": {
+                    "$command_type": "exit",
+                    "$command_description": "Leaving the world"
+                }
+            }
+        ]
+    },
+
+    "asa_custom_command_name": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "$command_start_type|default": "",
+        "$command_type|default": "",
+        "$command_description|default": "",
+        "property_bag": {
+            "#asa_command_start": "$command_start_type",
+            "#asa_command_type": "$command_type"
+        },
+        "bindings": [
+            {
+                "binding_type": "global",
+                "binding_name": "#message_text_box_content"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z§z§z§z§z§z§z§z§z§z' + #asa_command_start)",
+                "target_property_name": "#cmd_type_start_detect"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z§z§z§z§z§z§z§z§z§z' + #message_text_box_content)",
+                "target_property_name": "#cmd_box_start_detect"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#cmd_box_start_detect - #cmd_type_start_detect) = #cmd_box_start_detect))",
+                "target_property_name": "#asa_cmd_1"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z§z§z§z§z§z§z§z§z§z' + (#cmd_box_start_detect - #cmd_type_start_detect))",
+                "target_property_name": "#asa_cmd_type_box"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z§z§z§z§z§z§z§z§z§z' + #asa_command_type)",
+                "target_property_name": "#asa_cmd_type"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#asa_cmd_type - #asa_cmd_type_box) = #asa_cmd_type))",
+                "target_property_name": "#asa_cmd_2"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(#cmd_box_start_detect - #cmd_type_start_detect)",
+                "target_property_name": "#asa_cmd_type_box_2"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#asa_command_type - #asa_cmd_type_box_2) = #asa_command_type))",
+                "target_property_name": "#asa_cmd_3"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(#asa_cmd_1 and (#asa_cmd_2 or #asa_cmd_3))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "asa_command_name": {
+                    "type": "label",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "text": "( '§7' + $command_start_type + '' + $command_type + ' - ' + $command_description )"
+                }
+            }
+        ]
+    },
+
+    "namespace": "asa_custom_command_list"
+}

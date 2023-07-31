@@ -1,0 +1,34 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+  "resource_pack_name": "vanilla", "texture_name": "atlas.terrain", "padding": 8, "num_mip_levels": 4, "texture_data": {
+    "rotate_barrel_side": {
+      "textures": "asa_textures/blocks/rotate_barrel_side"
+    },
+    "barrel_top": {
+      "textures": [
+        "asa_textures/blocks/barrel_top",
+        "asa_textures/blocks/barrel_top_open"
+      ]
+    },
+    "barrel_bottom": {
+      "textures": [
+        "asa_textures/blocks/barrel_bottom",
+        "asa_textures/blocks/barrel_bottom"
+      ]
+    },
+    "barrel_side": {
+      "textures": [
+        "asa_textures/blocks/barrel_side",
+        "asa_textures/blocks/barrel_side"
+      ]
+    }
+  }
+}

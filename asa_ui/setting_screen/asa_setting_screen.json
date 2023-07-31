@@ -1,0 +1,54 @@
+{
+    "namespace": "asa_setting_screen",
+
+    "asa_general_selected_stack": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "1@asa_setting_toggle_common.asa_toggle_template_panel": {
+                    "$asa_toggle_default": true,
+                    "$asa_toggle_texture_outline": "textures/ui/video_glyph",
+                    "$asa_toggle_texture_icon": "textures/ui/video_glyph_color",
+                    "$asa_button_text": "options.video",
+                    "$asa_toggle_binding_name": "video_button_toggle",
+                    "$asa_toggle_group": 0,
+                    "$toggle_size": [ 12, 12 ]
+                }
+            },
+            {
+                "2@asa_setting_toggle_common.asa_toggle_template_panel": {
+                    "$asa_toggle_texture_outline": "textures/ui/sound_glyph",
+                    "$asa_toggle_texture_icon": "textures/ui/sound_glyph_color",
+                    "$asa_button_text": "options.sounds",
+                    "$asa_toggle_binding_name": "sound_button_toggle",
+                    "$asa_toggle_group": 1,
+                    "$toggle_size": [ 12, 12 ]
+                }
+            },
+            {
+                "3@asa_setting_toggle_common.asa_toggle_template_panel": {
+                    "$asa_toggle_texture_outline": "textures/ui/language_glyph",
+                    "$asa_toggle_texture_icon": "textures/ui/language_glyph_color",
+                    "$asa_button_text": "options.language",
+                    "$asa_toggle_binding_name": "language_button_toggle",
+                    "$asa_toggle_group": 2,
+                    "$toggle_size": [ 12, 12 ]
+                }
+            },
+            {
+                "4@asa_setting_toggle_common.asa_toggle_template_panel": {
+                    "$asa_toggle_texture_outline": "textures/ui/creator_glyph",
+                    "$asa_toggle_texture_icon": "textures/ui/creator_glyph_color",
+                    "$asa_button_text": "options.creator",
+                    "$asa_toggle_binding_name": "creator_button_toggle",
+                    "$asa_toggle_group": 3,
+                    "$toggle_size": [ 12, 12 ]
+                }
+            }
+        ]
+    }
+}

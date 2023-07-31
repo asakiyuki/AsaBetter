@@ -1,0 +1,239 @@
+/*
+
+©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
+Youtube: https://www.youtube.com/c/AsakiZuki
+Facebook: https://facebook.com/asakizuki
+Discord: Kotori Itsuka#6038
+
+*/
+
+{
+    "namespace": "asa_recipe_panel",
+
+    "asa_recipe_panel": {
+        "type": "panel",
+        "size": [ "100%cm", "100%" ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "controls": [
+            {
+                "potion_stack": {
+                    "type": "stack_panel",
+                    "size": [ "100%cm", "100%c" ],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "controls": [
+                        {
+                            "potion_line_1": {
+                                "type": "stack_panel",
+                                "size": [ "100%c", "100%cm" ],
+                                "orientation": "horizontal",
+                                "controls": [
+                                    {
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918337,
+                                            "$asa_gr_recipe_index": 1,
+                                            "$asa_item_name": "potion.awkward.name",
+                                            "$brewing_selected": "asa_awkward_potion"
+                                        }
+                                    },
+                                    {
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918341,
+                                            "$asa_gr_recipe_index": 2,
+                                            "$asa_item_name": "potion.nightVision.name",
+                                            "$asa_effect_name_1": "potion.nightVision",
+                                            "$brewing_selected": "asa_night_vision_potion"
+                                        }
+                                    },
+                                    {
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918343,
+                                            "$asa_gr_recipe_index": 3,
+                                            "$asa_item_name": "potion.invisibility.name",
+                                            "$asa_effect_name_1": "potion.invisibility",
+                                            "$brewing_selected": "asa_invisibility_potion"
+                                        }
+                                    },
+                                    {
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918345,
+                                            "$asa_gr_recipe_index": 4,
+                                            "$asa_item_name": "potion.jump.name",
+                                            "$asa_effect_name_1": "potion.jump",
+                                            "$brewing_selected": "asa_jump_potion"
+                                        }
+                                    },
+                                    {
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918348,
+                                            "$asa_gr_recipe_index": 5,
+                                            "$asa_item_name": "potion.fireResistance.name",
+                                            "$asa_effect_name_1": "potion.fireResistance",
+                                            "$brewing_selected": "asa_fire_resistance_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918350,
+                                            "$asa_gr_recipe_index": 6,
+                                            "$asa_item_name": "potion.moveSpeed.name",
+                                            "$asa_effect_name_1": "potion.moveSpeed",
+                                            "$brewing_selected": "asa_move_speed_potion"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "potion_line_2": {
+                                "type": "stack_panel",
+                                "size": [ "100%c", "100%cm" ],
+                                "orientation": "horizontal",
+                                "controls": [
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918353,
+                                            "$asa_gr_recipe_index": 7,
+                                            "$asa_item_name": "potion.moveSlowdown.name",
+                                            "$asa_effect_name_1": "potion.moveSlowdown",
+                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$brewing_selected": "asa_move_slowdown_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918356,
+                                            "$asa_gr_recipe_index": 8,
+                                            "$asa_item_name": "potion.waterBreathing.name",
+                                            "$asa_effect_name_1": "potion.waterBreathing",
+                                            "$brewing_selected": "asa_water_breathing_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918358,
+                                            "$asa_gr_recipe_index": 9,
+                                            "$asa_item_name": "potion.heal.name",
+                                            "$asa_effect_name_1": "potion.heal",
+                                            "$brewing_selected": "asa_heal_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918360,
+                                            "$asa_gr_recipe_index": 10,
+                                            "$asa_item_name": "potion.harm.name",
+                                            "$asa_effect_name_1": "potion.harm",
+                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$brewing_selected": "asa_harm_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918362,
+                                            "$asa_gr_recipe_index": 11,
+                                            "$asa_item_name": "potion.poison.name",
+                                            "$asa_effect_name_1": "potion.poison",
+                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$brewing_selected": "asa_poison_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918365,
+                                            "$asa_gr_recipe_index": 12,
+                                            "$asa_item_name": "potion.regeneration.name",
+                                            "$asa_effect_name_1": "potion.regeneration",
+                                            "$brewing_selected": "asa_regeneration_potion"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "potion_line_3": {
+                                "type": "stack_panel",
+                                "size": [ "100%c", "100%cm" ],
+                                "orientation": "horizontal",
+                                "controls": [
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918368,
+                                            "$asa_gr_recipe_index": 13,
+                                            "$asa_item_name": "potion.damageBoost.name",
+                                            "$asa_effect_name_1": "potion.damageBoost",
+                                            "$brewing_selected": "asa_damageBoost_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918370,
+                                            "$asa_gr_recipe_index": 14,
+                                            "$asa_item_name": "potion.weakness.name",
+                                            "$asa_effect_name_1": "potion.weakness",
+                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$brewing_selected": "asa_weakness_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918373,
+                                            "$asa_gr_recipe_index": 15,
+                                            "$no_show_effect_2th": false,
+                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$asa_item_name": "potion.turtleMaster.name",
+                                            "$asa_effect_name_1": "potion.turtleMaster",
+                                            "$asa_effect_name_2": "potion.turtleMaster2",
+                                            "$brewing_selected": "asa_turtleMaster_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 27918376,
+                                            "$asa_gr_recipe_index": 16,
+                                            "$asa_item_name": "potion.slowFalling.name",
+                                            "$asa_effect_name_1": "potion.slowFalling",
+                                            "$brewing_selected": "asa_slowFalling_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 36765696,
+                                            "$asa_gr_recipe_index": 17,
+                                            "$asa_item_name": "Splash Potion",
+                                            "$is_not_potions": true,
+                                            "$brewing_selected": "asa_splash_potion"
+                                        }
+                                    },
+                                    {
+                                        
+                                        "@asa_brewing_recipe.asa_brewing_selected_panel": {
+                                            "$asa_item_id": 36831232,
+                                            "$asa_gr_recipe_index": 18,
+                                            "$asa_item_name": "Lingering Potion",
+                                            "$is_not_potions": true,
+                                            "$brewing_selected": "asa_lingering_potion"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
