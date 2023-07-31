@@ -1,27 +1,21 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
-
 {
     "namespace": "asa_play_anims",
-
     //Arrow Animation
     "asa_open_bottom_panel": {
         "anim_type": "offset",
         "easing": "in_back",
         "duration": 0.6,
-        "from": [ 0, -10 ],
-        "to": [ 0, 45 ],
+        "from": [
+            0,
+            -10
+        ],
+        "to": [
+            0,
+            45
+        ],
         "play_event": "button.open_bottom_panel",
         "reset_event": "button.close_bottom_panel"
     },
-
     "asa_open_wait_panel": {
         "anim_type": "wait",
         "duration": 0.5,
@@ -29,272 +23,407 @@ Discord: Kotori Itsuka#6038
         "play_event": "button.open_bottom_panel",
         "reset_event": "button.close_bottom_panel"
     },
-
     "asa_open_bottom_panel2": {
         "anim_type": "offset",
         "easing": "out_back",
         "duration": 1.8,
-        "from": [ 0, 75 ],
-        "to": [ 0, -10 ]
+        "from": [
+            0,
+            75
+        ],
+        "to": [
+            0,
+            -10
+        ]
     },
-
     "asa_close_bottom_panel": {
         "anim_type": "offset",
         "easing": "out_bounce",
         "duration": 2.5,
-        "from": [ 0, 45 ],
-        "to": [ 0, -10 ]
+        "from": [
+            0,
+            45
+        ],
+        "to": [
+            0,
+            -10
+        ]
     },
-
     "asa_close_bottom_panel2": {
         "anim_type": "offset",
         "easing": "in_back",
         "duration": 0.6,
-        "from": [ 0, -10 ],
-        "to": [ 0, 75 ]
+        "from": [
+            0,
+            -10
+        ],
+        "to": [
+            0,
+            75
+        ]
     },
-
     //pause
     "asa_play_panel_copyright_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.4,
-        "from": [ 0, "100%" ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_play_panel_copyright_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.4,
-        "from": [ 0, "100%" ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_play_panel_copyright_exit": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 0, 0 ],
-        "to": [ 0, "100%" ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            "100%"
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_play_panel_copyright_exit_2": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 0, 0 ],
-        "to": [ 0, "100%" ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            "100%"
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //Header
     "asa_header_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 0.8,
-        "from": [ 0, -30 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            -30
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_header_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 0.8,
-        "from": [ 0, -30 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            -30
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_header_anims_exit": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 0.4,
-        "from": [ 0, 0 ],
-        "to": [ 0, -30 ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            -30
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_header_anims_exit_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 0.4,
-        "from": [ 0, 0 ],
-        "to": [ 0, -30 ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            -30
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     "asa_header_text_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 0.8,
-        "from": [ 0, -30 ],
-        "to": [ 0, 5 ],
+        "from": [
+            0,
+            -30
+        ],
+        "to": [
+            0,
+            5
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_header_text_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 0.8,
-        "from": [ 0, -30 ],
-        "to": [ 0, 5 ],
+        "from": [
+            0,
+            -30
+        ],
+        "to": [
+            0,
+            5
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_header_text_anims_exit": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 0.4,
-        "from": [ 0, 5 ],
-        "to": [ 0, -30 ],
+        "from": [
+            0,
+            5
+        ],
+        "to": [
+            0,
+            -30
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_header_text_anims_exit_2": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 0.4,
-        "from": [ 0, 5 ],
-        "to": [ 0, -30 ],
+        "from": [
+            0,
+            5
+        ],
+        "to": [
+            0,
+            -30
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //Button Panel
     "asa_button_panel_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ 0, 50 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            50
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_button_panel_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ 0, 50 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            50
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_button_panel_stack_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 1.2,
-        "from": [ 0, 50 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            50
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_button_panel_stack_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": 1.2,
-        "from": [ 0, 50 ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            50
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     //Section Panel
     "asa_section_panel_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ "100%", -13 ],
-        "to": [ 0, -13 ],
+        "from": [
+            "100%",
+            -13
+        ],
+        "to": [
+            0,
+            -13
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_section_panel_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ "-100%", -13 ],
-        "to": [ 0, -13 ],
+        "from": [
+            "-100%",
+            -13
+        ],
+        "to": [
+            0,
+            -13
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_section_panel_anims_exit": {
         "anim_type": "offset",
         "easing": "in_sine",
         "duration": 0.6,
-        "from": [ 0, -13 ],
-        "to": [ "-100%", -13 ],
+        "from": [
+            0,
+            -13
+        ],
+        "to": [
+            "-100%",
+            -13
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_section_panel_anims_exit_2": {
         "anim_type": "offset",
         "easing": "in_sine",
         "duration": 0.6,
-        "from": [ 0, -13 ],
-        "to": [ "100%", -13 ],
+        "from": [
+            0,
+            -13
+        ],
+        "to": [
+            "100%",
+            -13
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //World Template
     "asa_world_template_panel_anims_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ "100%", 0 ],
-        "to": [ 0, 0 ],
+        "from": [
+            "100%",
+            0
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_world_template_panel_anims_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.2,
-        "from": [ "-100%", 0 ],
-        "to": [ 0, 0 ],
+        "from": [
+            "-100%",
+            0
+        ],
+        "to": [
+            0,
+            0
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_world_template_panel_anims_exit": {
         "anim_type": "offset",
         "easing": "in_sine",
         "duration": 0.6,
-        "from": [ 0, 0 ],
-        "to": [ "-100%", 0 ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            "-100%",
+            0
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_world_template_panel_anims_exit_2": {
         "anim_type": "offset",
         "easing": "in_sine",
         "duration": 0.6,
-        "from": [ 0, 0 ],
-        "to": [ "100%", 0 ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            "100%",
+            0
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     }

@@ -1,21 +1,17 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_enchant_screen_content",
-
     "asa_item_viewer_stack": {
         "type": "stack_panel",
-        "size": [ "100%cm", "100%c" ],
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
         "anchor_from": "left_middle",
         "anchor_to": "left_middle",
-        "offset": [ 2, 0 ],
+        "offset": [
+            2,
+            0
+        ],
         "controls": [
             /*{
                 "@asa_item_name_text_viewer": {}
@@ -31,7 +27,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Item Name
     "asa_item_name_text_viewer": {
         "type": "label",
@@ -48,19 +43,26 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Enchant viewer
     "asa_enchant_viewer_gird": {
         "type": "grid",
         "collection_name": "#enchant_buttons",
-        "size": [ "100%cm", "100%c" ],
-        "grid_dimensions": [ 1, 3 ],
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
+        "grid_dimensions": [
+            1,
+            3
+        ],
         "grid_item_template": "asa_enchant_screen_content.asa_enchant_viewer_panel"
     },
-
     "asa_enchant_viewer_panel": {
         "type": "panel",
-        "size": [ "100%cm", 15 ],
+        "size": [
+            "100%cm",
+            15
+        ],
         "anchor_from": "left_middle",
         "anchor_to": "left_middle",
         "controls": [
@@ -78,13 +80,15 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_enchant_viewer": {
         "type": "stack_panel",
         "orientation": "horizontal",
         "anchor_from": "left_middle",
         "anchor_to": "left_middle",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "bindings": [
             {
                 "binding_name": "$enchant_bindings",
@@ -125,11 +129,16 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_enchant_name_panel": {
         "type": "panel",
-        "size": [ "100%cm + 4px", "100%c" ],
-        "max_size": [ "100%cm + 4px", 11 ],
+        "size": [
+            "100%cm + 4px",
+            "100%c"
+        ],
+        "max_size": [
+            "100%cm + 4px",
+            11
+        ],
         "clips_children": true,
         "controls": [
             {
@@ -137,7 +146,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_enchant_name": {
         "type": "label",
         "text": "#text",
@@ -158,7 +166,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_enchant_cost": {
         "type": "label",
         "text": "#text",

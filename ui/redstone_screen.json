@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "hopper_screen": {
         "force_render_below": true,
@@ -15,15 +6,12 @@ Discord: Kotori Itsuka#6038
             -18
         ]
     },
-
     "dispenser_screen": {
         "force_render_below": true
     },
-
     "dropper_screen": {
         "force_render_below": true
     },
-
     "panel/root_panel": {
         "controls": [
             {

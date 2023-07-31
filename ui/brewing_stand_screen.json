@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "asa_custon_brewing_screen": {
         "type": "panel",
@@ -41,7 +32,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "brewing_stand_screen": {
         "force_render_below": true,
         "variables": [
@@ -56,7 +46,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "brewing_stand_panel/root_panel": {
         "controls": [
             {
@@ -65,8 +54,15 @@ Discord: Kotori Itsuka#6038
             {
                 "fuel_percent@asa_percent_template.asa_percent_template": {
                     "$asa_binding_name": "#brewing_fuel_ratio",
-                    "$percent_color": [ 0.8, 0.567, 0.0 ],
-                    "offset": [ -35, -24.5 ],
+                    "$percent_color": [
+                        0.8,
+                        0.567,
+                        0.0
+                    ],
+                    "offset": [
+                        -35,
+                        -24.5
+                    ],
                     "$percent_layer": 20,
                     "$percent_shadow": false,
                     "anchor_from": "center",
@@ -77,8 +73,15 @@ Discord: Kotori Itsuka#6038
             {
                 "aroow_percent@asa_percent_template.asa_percent_template": {
                     "$asa_binding_name": "#brewing_arrow_ratio",
-                    "$percent_color": [ 0.3, 0.3, 0.3 ],
-                    "offset": [ 22, -56 ],
+                    "$percent_color": [
+                        0.3,
+                        0.3,
+                        0.3
+                    ],
+                    "offset": [
+                        22,
+                        -56
+                    ],
                     "$percent_layer": 20,
                     "$percent_shadow": false,
                     "anchor_from": "center",

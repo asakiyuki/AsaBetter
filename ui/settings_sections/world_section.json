@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "game_section": {
         "modifications": [
@@ -36,19 +27,31 @@ Discord: Kotori Itsuka#6038
                     {
                         "game_option_1": {
                             "type": "stack_panel",
-                            "size": [ "100%", 45 ],
+                            "size": [
+                                "100%",
+                                45
+                            ],
                             "controls": [
                                 {
-                                    "option_header": { 
+                                    "option_header": {
                                         "type": "label",
-                                        "size": [ "default", 10 ],
-                                        "max_size": [ "100%", 10 ],
+                                        "size": [
+                                            "default",
+                                            10
+                                        ],
+                                        "max_size": [
+                                            "100%",
+                                            10
+                                        ],
                                         "text": "createWorldScreen.gameMode.default"
                                     }
                                 },
                                 {
                                     "setting_panel": {
-                                        "size": [ "100%", "100%cm" ],
+                                        "size": [
+                                            "100%",
+                                            "100%cm"
+                                        ],
                                         "type": "stack_panel",
                                         "orientation": "horizontal",
                                         "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
@@ -57,7 +60,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "1@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_game_mode_radio_survival",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.survival",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -65,7 +71,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "2@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_game_mode_radio_creative",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.creative",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -73,7 +82,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "3@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_game_mode_radio_adventure",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.adventure",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -86,7 +98,6 @@ Discord: Kotori Itsuka#6038
                     }
                 ]
             },
-
             {
                 "array_name": "controls",
                 "operation": "replace",
@@ -116,7 +127,10 @@ Discord: Kotori Itsuka#6038
                     {
                         "game_option_2": {
                             "type": "stack_panel",
-                            "size": [ "100%", 45 ],
+                            "size": [
+                                "100%",
+                                45
+                            ],
                             "bindings": [
                                 {
                                     "binding_name": "#player_game_mode_dropdown_visible",
@@ -125,16 +139,25 @@ Discord: Kotori Itsuka#6038
                             ],
                             "controls": [
                                 {
-                                    "option_header": { 
+                                    "option_header": {
                                         "type": "label",
-                                        "size": [ "default", 10 ],
-                                        "max_size": [ "100%", 10 ],
+                                        "size": [
+                                            "default",
+                                            10
+                                        ],
+                                        "max_size": [
+                                            "100%",
+                                            10
+                                        ],
                                         "text": "createWorldScreen.gameMode.personal"
                                     }
                                 },
                                 {
                                     "setting_panel": {
-                                        "size": [ "100%", "100%cm" ],
+                                        "size": [
+                                            "100%",
+                                            "100%cm"
+                                        ],
                                         "type": "stack_panel",
                                         "orientation": "horizontal",
                                         "$option_enabled_binding_name": "#player_game_mode_dropdown_enabled",
@@ -143,7 +166,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "1@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#player_game_mode_radio_default",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.serverDefault",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -151,7 +177,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "2@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#player_game_mode_radio_survival",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.survival",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -159,7 +188,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "3@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#player_game_mode_radio_creative",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.creative",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -167,7 +199,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "4@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#player_game_mode_radio_adventure",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "createWorldScreen.gameMode.adventure",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -180,7 +215,6 @@ Discord: Kotori Itsuka#6038
                     }
                 ]
             },
-
             {
                 "array_name": "controls",
                 "operation": "replace",
@@ -203,19 +237,31 @@ Discord: Kotori Itsuka#6038
                     {
                         "game_option_3": {
                             "type": "stack_panel",
-                            "size": [ "100%", 45 ],
+                            "size": [
+                                "100%",
+                                45
+                            ],
                             "controls": [
                                 {
-                                    "option_header": { 
+                                    "option_header": {
                                         "type": "label",
-                                        "size": [ "default", 10 ],
-                                        "max_size": [ "100%", 10 ],
+                                        "size": [
+                                            "default",
+                                            10
+                                        ],
+                                        "max_size": [
+                                            "100%",
+                                            10
+                                        ],
                                         "text": "createWorldScreen.gameMode.personal"
                                     }
                                 },
                                 {
                                     "setting_panel": {
-                                        "size": [ "100%", "100%cm" ],
+                                        "size": [
+                                            "100%",
+                                            "100%cm"
+                                        ],
                                         "type": "stack_panel",
                                         "orientation": "horizontal",
                                         "$option_enabled_binding_name": "#world_difficulty_dropdown_enabled",
@@ -224,7 +270,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "1@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_difficulty_radio_peaceful",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "options.difficulty.peaceful",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -232,7 +281,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "2@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_difficulty_radio_easy",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "options.difficulty.easy",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -240,7 +292,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "3@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_difficulty_radio_normal",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "options.difficulty.normal",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }
@@ -248,7 +303,10 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "4@asa_toggle_common.asa_toggle_nav_template": {
                                                     "$asa_state_toggle": "#world_difficulty_radio_hard",
-                                                    "size": [ "fill", 30 ],
+                                                    "size": [
+                                                        "fill",
+                                                        30
+                                                    ],
                                                     "$button_text": "options.difficulty.hard",
                                                     "$button_type_panel": "asa_toggle_common.button_text_panel"
                                                 }

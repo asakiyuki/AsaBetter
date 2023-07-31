@@ -1,17 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     //Banner tutorial
     "asa_banner_patterns_renderer": {
         "type": "panel",
-        "size": [ 14, 14 ],
+        "size": [
+            14,
+            14
+        ],
         "bindings": "$asa_bindings",
         "visible": false,
         "controls": [
@@ -32,10 +26,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_banner_empty_slot_debug": {
         "type": "panel",
-        "size": [ 1, 1 ],
+        "size": [
+            1,
+            1
+        ],
         "bindings": [
             {
                 "binding_name": "#banner_patterns",
@@ -54,11 +50,13 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "banner_patterns_icon_panel": {
         "type": "panel",
         "layer": 20,
-        "size": [ 18, 18 ],
+        "size": [
+            18,
+            18
+        ],
         "$asa_bindings|default": [
             {
                 "binding_type": "view",
@@ -81,7 +79,6 @@ Discord: Kotori Itsuka#6038
                 "source_property_name": "(not ((#debug_text_temp - $asa_patterns_ids) = #debug_text_temp))",
                 "target_property_name": "#visible"
             },
-
             {
                 "binding_type": "view",
                 "source_control_name": "28402543_input_slot",
@@ -342,7 +339,10 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_custom_banner_help": {
                     "type": "stack_panel",
-                    "size": [ "100%cm", "100%c" ],
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
                     "layer": 1,
                     "controls": "$asa_stack_controls"
                 }
@@ -350,29 +350,36 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_banner_background": {
                     "type": "image",
-                    "size": [ 18, 18 ],
+                    "size": [
+                        18,
+                        18
+                    ],
                     "layer": -1,
                     "texture": "textures/ui/cell_image"
                 }
             }
         ]
     },
-
     "asa_dye_item_renderer": {
         "type": "custom",
         "renderer": "inventory_item_renderer",
-        "size": [ 16, 16 ],
+        "size": [
+            16,
+            16
+        ],
         "visible": false,
         "bindings": "$asa_bindings",
         "property_bag": {
             "#item_id_aux": "$dye_id"
         }
     },
-
     "banner_colors_icon_panel": {
         "type": "panel",
         "layer": 20,
-        "size": [ 18, 18 ],
+        "size": [
+            18,
+            18
+        ],
         "$asa_bindings|default": [
             {
                 "binding_type": "view",
@@ -395,7 +402,6 @@ Discord: Kotori Itsuka#6038
                 "source_property_name": "(not ((#debug_text_temp - $asa_colors_ids) = #debug_text_temp))",
                 "target_property_name": "#visible"
             },
-
             {
                 "binding_type": "view",
                 "source_control_name": "28402543_input_slot",
@@ -512,7 +518,10 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_custom_banner_help": {
                     "type": "stack_panel",
-                    "size": [ "100%cm", "100%c" ],
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
                     "layer": 1,
                     "controls": "$asa_stack_controls"
                 }
@@ -520,21 +529,29 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_banner_background": {
                     "type": "image",
-                    "size": [ 18, 18 ],
+                    "size": [
+                        18,
+                        18
+                    ],
                     "layer": -1,
                     "texture": "textures/ui/cell_image"
                 }
             }
         ]
     },
-
     "asa_banner_crafting_help": {
         "type": "stack_panel",
         "orientation": "horizontal",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "anchor_from": "center",
         "anchor_to": "left_middle",
-        "offset": [ 8, -16.5 ],
+        "offset": [
+            8,
+            -16.5
+        ],
         "controls": [
             {
                 "1@banner_patterns_icon_panel": {}
@@ -542,7 +559,10 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_ampty": {
                     "type": "panel",
-                    "size": [ 2, 2 ]
+                    "size": [
+                        2,
+                        2
+                    ]
                 }
             },
             {
@@ -550,7 +570,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Banner Preview
     "loom_panel": {
         "modifications": [
@@ -564,7 +583,10 @@ Discord: Kotori Itsuka#6038
                     {
                         "banner_preview_and_toggle_pnl": {
                             "type": "stack_panel",
-                            "size": [ "100%c", "100%" ],
+                            "size": [
+                                "100%c",
+                                "100%"
+                            ],
                             "orientation": "horizontal",
                             "layer": 50,
                             "anchor_from": "top_right",
@@ -573,11 +595,17 @@ Discord: Kotori Itsuka#6038
                                 {
                                     "asa_arrow_button": {
                                         "type": "panel",
-                                        "size": [ 18, "100%" ],
+                                        "size": [
+                                            18,
+                                            "100%"
+                                        ],
                                         "controls": [
                                             {
                                                 "asa_banner_preview_toggle@arrow_toggle": {
-                                                    "size": [ 18, 18 ]
+                                                    "size": [
+                                                        18,
+                                                        18
+                                                    ]
                                                 }
                                             }
                                         ]
@@ -586,7 +614,10 @@ Discord: Kotori Itsuka#6038
                                 {
                                     "asa_background_panel": {
                                         "type": "image",
-                                        "size": [ "100%cm + 4px", "100%" ],
+                                        "size": [
+                                            "100%cm + 4px",
+                                            "100%"
+                                        ],
                                         "texture": "textures/ui/Black",
                                         "alpha": 0.65,
                                         "bindings": [
@@ -601,10 +632,16 @@ Discord: Kotori Itsuka#6038
                                             {
                                                 "asa_banner_preview_stack": {
                                                     "type": "stack_panel",
-                                                    "size": [ "100%cm", "100%c" ],
+                                                    "size": [
+                                                        "100%cm",
+                                                        "100%c"
+                                                    ],
                                                     "anchor_from": "top_middle",
                                                     "anchor_to": "top_middle",
-                                                    "offset": [ 0, 1 ],
+                                                    "offset": [
+                                                        0,
+                                                        1
+                                                    ],
                                                     "controls": [
                                                         {
                                                             "asa_text_preview": {
@@ -618,14 +655,20 @@ Discord: Kotori Itsuka#6038
                                                         {
                                                             "asa_empty_1": {
                                                                 "type": "panel",
-                                                                "size": [ 1, 2 ]
+                                                                "size": [
+                                                                    1,
+                                                                    2
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "asa_text_1": {
                                                                 "type": "label",
                                                                 "text": "* Banner Colors:",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "shadow": true
                                                             }
                                                         },
@@ -633,14 +676,20 @@ Discord: Kotori Itsuka#6038
                                                             "asa_description_1": {
                                                                 "type": "label",
                                                                 "text": "Use with Banner Item Data Value (From 0 to 15) to change Banner color",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
                                                         },
                                                         {
                                                             "item_data_value@common.text_edit_box": {
-                                                                "size": [ 155, 15 ],
+                                                                "size": [
+                                                                    155,
+                                                                    15
+                                                                ],
                                                                 "layer": 1,
                                                                 "max_length": 2,
                                                                 "$text_edit_text_control": "18256728_asa_item_data_value_change",
@@ -650,14 +699,20 @@ Discord: Kotori Itsuka#6038
                                                         {
                                                             "asa_empty_2": {
                                                                 "type": "panel",
-                                                                "size": [ 1, 2 ]
+                                                                "size": [
+                                                                    1,
+                                                                    2
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "asa_text_2": {
                                                                 "type": "label",
                                                                 "text": "* Banner Patterns:",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "shadow": true
                                                             }
                                                         },
@@ -665,7 +720,10 @@ Discord: Kotori Itsuka#6038
                                                             "asa_description_2": {
                                                                 "type": "label",
                                                                 "text": "Use the Banner Patterns ID (Presented in the recipe book) and arrange them to create your own Banner image",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
@@ -674,7 +732,10 @@ Discord: Kotori Itsuka#6038
                                                             "asa_description_2sub": {
                                                                 "type": "label",
                                                                 "text": "Use _ after ID for correct sorting and display",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
@@ -683,14 +744,20 @@ Discord: Kotori Itsuka#6038
                                                             "asa_example_1": {
                                                                 "type": "label",
                                                                 "text": "Example: 20_6_3_1_",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
                                                         },
                                                         {
                                                             "banner_patterns@common.text_edit_box": {
-                                                                "size": [ 155, 15 ],
+                                                                "size": [
+                                                                    155,
+                                                                    15
+                                                                ],
                                                                 "layer": 1,
                                                                 "max_length": 100,
                                                                 "$text_edit_text_control": "18256728_asa_banner_patterns",
@@ -700,14 +767,20 @@ Discord: Kotori Itsuka#6038
                                                         {
                                                             "asa_empty_12": {
                                                                 "type": "panel",
-                                                                "size": [ 1, 2 ]
+                                                                "size": [
+                                                                    1,
+                                                                    2
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "asa_text_3": {
                                                                 "type": "label",
                                                                 "text": "* Banner Colors:",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "shadow": true
                                                             }
                                                         },
@@ -715,7 +788,10 @@ Discord: Kotori Itsuka#6038
                                                             "asa_description_3": {
                                                                 "type": "label",
                                                                 "text": "Usage is the same as Banner Patterns, but instead of Banner Patterns ID, you use Colors ID",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
@@ -724,14 +800,20 @@ Discord: Kotori Itsuka#6038
                                                             "asa_example_2": {
                                                                 "type": "label",
                                                                 "text": "Example: 3_9_3_7_",
-                                                                "max_size": [ 155, "default" ],
+                                                                "max_size": [
+                                                                    155,
+                                                                    "default"
+                                                                ],
                                                                 "font_type": "smooth",
                                                                 "shadow": true
                                                             }
                                                         },
                                                         {
                                                             "banner_colors@common.text_edit_box": {
-                                                                "size": [ 155, 15 ],
+                                                                "size": [
+                                                                    155,
+                                                                    15
+                                                                ],
                                                                 "layer": 1,
                                                                 "max_length": 100,
                                                                 "$text_edit_text_control": "18256728_asa_banner_colors",
@@ -741,19 +823,28 @@ Discord: Kotori Itsuka#6038
                                                         {
                                                             "asa_empty_banner_preview": {
                                                                 "type": "panel",
-                                                                "size": [ 1, 2 ]
+                                                                "size": [
+                                                                    1,
+                                                                    2
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "preview_banner_text": {
                                                                 "type": "panel",
-                                                                "size": [ "100%sm", "100%cm" ],
+                                                                "size": [
+                                                                    "100%sm",
+                                                                    "100%cm"
+                                                                ],
                                                                 "controls": [
                                                                     {
                                                                         "asa_text": {
                                                                             "type": "label",
                                                                             "text": "Preview your Banner",
-                                                                            "max_size": [ 155, "default" ],
+                                                                            "max_size": [
+                                                                                155,
+                                                                                "default"
+                                                                            ],
                                                                             "font_type": "MinecraftTen",
                                                                             "shadow": true
                                                                         }
@@ -764,19 +855,28 @@ Discord: Kotori Itsuka#6038
                                                         {
                                                             "asa_empty_banner_preview_2": {
                                                                 "type": "panel",
-                                                                "size": [ 1, 1 ]
+                                                                "size": [
+                                                                    1,
+                                                                    1
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "asa_banner_preview": {
                                                                 "type": "panel",
-                                                                "size": [ "100%sm", "100%cm" ],
+                                                                "size": [
+                                                                    "100%sm",
+                                                                    "100%cm"
+                                                                ],
                                                                 "controls": [
                                                                     {
                                                                         "asa_banner_inventory": {
                                                                             "type": "custom",
                                                                             "renderer": "inventory_item_renderer",
-                                                                            "size": [ 50, 50 ],
+                                                                            "size": [
+                                                                                50,
+                                                                                50
+                                                                            ],
                                                                             "bindings": [
                                                                                 {
                                                                                     "binding_type": "view",
@@ -800,14 +900,12 @@ Discord: Kotori Itsuka#6038
                                                                                     "source_property_name": "(#asa_item_data_value + (#asa_item_clear * 37158912))",
                                                                                     "target_property_name": "#item_id_aux"
                                                                                 },
-                        
                                                                                 {
                                                                                     "binding_type": "view",
                                                                                     "source_control_name": "18256728_asa_banner_patterns",
                                                                                     "source_property_name": "#item_name",
                                                                                     "target_property_name": "#banner_patterns"
                                                                                 },
-                        
                                                                                 {
                                                                                     "binding_type": "view",
                                                                                     "source_control_name": "18256728_asa_banner_colors",
@@ -820,7 +918,10 @@ Discord: Kotori Itsuka#6038
                                                                     {
                                                                         "52389762_clear_item_aux_id": {
                                                                             "type": "panel",
-                                                                            "size": [ 0, 0 ],
+                                                                            "size": [
+                                                                                0,
+                                                                                0
+                                                                            ],
                                                                             "bindings": [
                                                                                 {
                                                                                     "binding_name": "#item_id_aux",
@@ -849,12 +950,11 @@ Discord: Kotori Itsuka#6038
                     },
                     {
                         "28402543_input_slot@asa_banner_empty_slot_debug": {}
-                    }                    
+                    }
                 ]
             }
         ]
     },
-
     "pattern_button": {
         "modifications": [
             {
@@ -869,7 +969,10 @@ Discord: Kotori Itsuka#6038
                             "shadow": true,
                             "anchor_from": "top_right",
                             "anchor_to": "top_right",
-                            "offset": [ -1, 1 ],
+                            "offset": [
+                                -1,
+                                1
+                            ],
                             "font_scale_factor": 0.6,
                             "color": "$6_color_format",
                             "bindings": [
@@ -895,32 +998,25 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "loom_screen": {
         "force_render_below": true
     },
-    
     "toolbar_panel/toolbar_background": {
         "ignored": true
     },
-
     "arrow_toggle": {
         "type": "toggle",
         "toggle_default_state": false,
-
         "property_bag": {
             "#toggle_state": true
         },
-
         "unchecked_control": "asa_disable",
         "checked_control": "asa_enable",
         "unchecked_hover_control": "asa_disable_hover",
         "checked_hover_control": "asa_enable_hover",
-        
         "sound_name": "random.click",
         "sound_volume": 1.0,
         "sound_pitch": 1.0,
-
         "button_mappings": [
             {
                 "from_button_id": "button.menu_select",
@@ -933,7 +1029,6 @@ Discord: Kotori Itsuka#6038
                 "mapping_type": "focused"
             }
         ],
-
         "controls": [
             {
                 "asa_disable": {
@@ -944,7 +1039,10 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_disable_hover": {
                     "type": "image",
-                    "offset": [ 0, 1 ],
+                    "offset": [
+                        0,
+                        1
+                    ],
                     "texture": "textures/ui/arrowLeft"
                 }
             },
@@ -957,13 +1055,15 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_enable_hover": {
                     "type": "image",
-                    "offset": [ 0, 1 ],
+                    "offset": [
+                        0,
+                        1
+                    ],
                     "texture": "textures/ui/arrowRight"
                 }
             }
         ]
     },
-
     "right_panel@common.root_panel": {
         "layer": 1,
         "controls": [

@@ -1,31 +1,30 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_start_screen",
-
     //Label panel
     "asa_copyright_and_version_panel": {
         "type": "stack_panel",
-        "size": [ "100%cm", "100%c" ],
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
         "anchor_from": "bottom_left",
         "anchor_to": "bottom_left",
         "controls": [
             {
                 "minecraft_version": {
                     "type": "panel",
-                    "size": [ "100%c", 10 ],
+                    "size": [
+                        "100%c",
+                        10
+                    ],
                     "controls": [
                         {
                             "minecraft_version": {
                                 "type": "stack_panel",
-                                "size": [ "100%c", "100%cm" ],
+                                "size": [
+                                    "100%c",
+                                    "100%cm"
+                                ],
                                 "orientation": "horizontal",
                                 "$asa_duration": 0.3,
                                 "animation_reset_name": "screen_animation_reset",
@@ -39,7 +38,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "minecraft_text": {
                                             "type": "label",
-                                            "size": [ "default", 10 ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ],
                                             "shadow": true,
                                             "localize": false,
                                             "text": "Minecraft"
@@ -48,21 +50,33 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 5, 1 ]
+                                            "size": [
+                                                5,
+                                                1
+                                            ]
                                         }
                                     },
                                     {
                                         "version": {
                                             "type": "panel",
-                                            "size": [ "100%c - 5px", 10 ],
+                                            "size": [
+                                                "100%c - 5px",
+                                                10
+                                            ],
                                             "clips_children": true,
                                             "controls": [
                                                 {
                                                     "minecraft_text": {
                                                         "type": "label",
-                                                        "size": [ "default", 10 ],
+                                                        "size": [
+                                                            "default",
+                                                            10
+                                                        ],
                                                         "shadow": true,
-                                                        "offset": [ -3.6, 0 ],
+                                                        "offset": [
+                                                            -3.6,
+                                                            0
+                                                        ],
                                                         "text": "#version",
                                                         "bindings": [
                                                             {
@@ -83,12 +97,18 @@ Discord: Kotori Itsuka#6038
             {
                 "minecraft_version": {
                     "type": "panel",
-                    "size": [ "100%c", 10 ],
+                    "size": [
+                        "100%c",
+                        10
+                    ],
                     "controls": [
                         {
                             "mojang_copyright": {
                                 "type": "label",
-                                "size": [ "default", 10 ],
+                                "size": [
+                                    "default",
+                                    10
+                                ],
                                 "shadow": true,
                                 "text": "Copyright Mojang AB. Do not distribute!",
                                 "localize": false,
@@ -107,10 +127,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_better_copyright": {
         "type": "panel",
-        "size": [ "100%cm", "100%c" ],
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
         "anchor_from": "bottom_right",
         "anchor_to": "bottom_right",
         "$asa_developer": "(#gamertag_label = 'AsakiZukiYT')",
@@ -121,15 +143,24 @@ Discord: Kotori Itsuka#6038
             {
                 "watermark_released": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "('AsaBetter ' + $asa_better_version)",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -11 ],
-                    "$asa_to": [ -3, -11 ],
+                    "$asa_from": [
+                        "100%",
+                        -11
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -11
+                    ],
                     "$asa_duration": 0.3,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -169,19 +200,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "watermark_dev": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "('AsaBetter ' + $asa_better_version + ' (Developer)')",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -11 ],
-                    "$asa_to": [ -3, -11 ],
+                    "$asa_from": [
+                        "100%",
+                        -11
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -11
+                    ],
                     "$asa_duration": 0.3,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -201,19 +240,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "watermark_beta_tester": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "('AsaBetter ' + $asa_better_version + ' (Beta Access)')",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -11 ],
-                    "$asa_to": [ -3, -11 ],
+                    "$asa_from": [
+                        "100%",
+                        -11
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -11
+                    ],
                     "$asa_duration": 0.3,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -233,19 +280,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "watermark_ytb": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "('AsaBetter ' + $asa_better_version + ' (Youtuber)')",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -11 ],
-                    "$asa_to": [ -3, -11 ],
+                    "$asa_from": [
+                        "100%",
+                        -11
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -11
+                    ],
                     "$asa_duration": 0.3,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -265,19 +320,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "watermark_why": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "('AsaBetter ' + $asa_better_version + ' (Meaningless Competition)')",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -11 ],
-                    "$asa_to": [ -3, -11 ],
+                    "$asa_from": [
+                        "100%",
+                        -11
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -11
+                    ],
                     "$asa_duration": 0.3,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -297,19 +360,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "discord_server_url": {
                     "type": "label",
-                    "size": [ "default", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
                     "shadow": true,
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
                     "text": "Copyright belongs to Asaki Zuki",
                     "localize": false,
                     "animation_reset_name": "screen_animation_reset",
-                    "$asa_from": [ "100%", -1 ],
-                    "$asa_to": [ -3, -1 ],
+                    "$asa_from": [
+                        "100%",
+                        -1
+                    ],
+                    "$asa_to": [
+                        -3,
+                        -1
+                    ],
                     "$asa_duration": 0.1,
                     "anims": [
                         "@asa_start_anims.asa_better_copyright_entrance_wait",
@@ -321,7 +392,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //middle_panel
     "asa_start_middle_panel": {
         "type": "panel",
@@ -340,11 +410,17 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_game_title": {
                     "type": "image",
-                    "size": [ 148, 60 ],
+                    "size": [
+                        148,
+                        60
+                    ],
                     "texture": "asa_textures/ui/title",
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
-                    "offset": [ 0, -12 ],
+                    "offset": [
+                        0,
+                        -12
+                    ],
                     "animation_reset_name": "screen_animation_reset",
                     "anims": [
                         "@asa_start_anims.asa_title_panel_copyright_entrance",
@@ -352,14 +428,20 @@ Discord: Kotori Itsuka#6038
                         "@asa_start_anims.asa_title_panel_copyright_exit",
                         "@asa_start_anims.asa_title_panel_copyright_exit_2"
                     ]
-                } 
+                }
             },
             {
                 "gamertag@asa_start_button_template.asa_start_gamertag_button": {
-                    "size": [ 25, 25 ],
+                    "size": [
+                        25,
+                        25
+                    ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
-                    "offset": [ 2, 2 ],
+                    "offset": [
+                        2,
+                        2
+                    ],
                     "$asa_pressed_action": "button.menu_open_uri",
                     "animation_reset_name": "screen_animation_reset",
                     "anims": [
@@ -381,10 +463,16 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "login_button@asa_start_button_template.asa_start_login_button": {
-                    "size": [ 25, 25 ],
+                    "size": [
+                        25,
+                        25
+                    ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
-                    "offset": [ 2, 2 ],
+                    "offset": [
+                        2,
+                        2
+                    ],
                     "$asa_pressed_action": "button.signin",
                     "animation_reset_name": "screen_animation_reset",
                     "anims": [
@@ -404,8 +492,14 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_button_stack": {
                     "type": "stack_panel",
-                    "size": [ 225, "100%c" ],
-                    "offset": [ 0, 15 ],
+                    "size": [
+                        225,
+                        "100%c"
+                    ],
+                    "offset": [
+                        0,
+                        15
+                    ],
                     "animation_reset_name": "screen_animation_reset",
                     "anims": [
                         "@asa_start_anims.asa_play_panel_copyright_entrance",
@@ -417,33 +511,48 @@ Discord: Kotori Itsuka#6038
                         {
                             "@asa_start_button_template.asa_start_button_text": {
                                 "$asa_button_text": "Play",
-                                "size": [ "100%", 22 ],
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
                                 "$asa_pressed_action": "button.menu_play"
                             }
                         },
                         {
                             "empty": {
                                 "type": "panel",
-                                "size": [ 4, 2.5 ]
+                                "size": [
+                                    4,
+                                    2.5
+                                ]
                             }
                         },
                         {
                             "@asa_start_button_template.asa_start_button_text": {
                                 "$asa_button_text": "Dressing Room",
-                                "size": [ "100%", 22 ],
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
                                 "$asa_pressed_action": "button.to_profile_screen"
                             }
                         },
                         {
                             "empty": {
                                 "type": "panel",
-                                "size": [ 4, 2.5 ]
+                                "size": [
+                                    4,
+                                    2.5
+                                ]
                             }
                         },
                         {
                             "@asa_start_button_template.asa_start_button_text": {
                                 "$asa_button_text": "Options",
-                                "size": [ "100%", 22 ],
+                                "size": [
+                                    "100%",
+                                    22
+                                ],
                                 "$asa_pressed_action": "button.menu_settings"
                             }
                         }
@@ -452,7 +561,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //bottom_panel
     "asa_start_bottom_panel": {
         "type": "panel",
@@ -467,10 +575,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_bottom_panel_content": {
         "type": "panel",
-        "offset": [ 0, -2 ],
+        "offset": [
+            0,
+            -2
+        ],
         "animation_reset_name": "screen_animation_reset",
         "anims": [
             "@asa_start_anims.asa_bottom_panel_entrance_1",
@@ -484,7 +594,10 @@ Discord: Kotori Itsuka#6038
                     "anchor_from": "bottom_middle",
                     "anchor_to": "bottom_middle",
                     "$button_arrow_texture": "textures/ui/chevron_white_up",
-                    "offset": [ 0, -5 ],
+                    "offset": [
+                        0,
+                        -5
+                    ],
                     "$asa_pressed_action": "button.open_bottom_panel",
                     "animation_reset_name": "button.close_bottom_panel",
                     "anims": [
@@ -496,10 +609,16 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_bottom_panel": {
                     "type": "panel",
-                    "size": [ "100%cm", "100%c" ],
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
                     "anchor_from": "bottom_middle",
                     "anchor_to": "bottom_middle",
-                    "offset": [ 0, 45 ],
+                    "offset": [
+                        0,
+                        45
+                    ],
                     "animation_reset_name": "button.close_bottom_panel",
                     "anims": [
                         "@asa_play_anims.asa_open_wait_panel",
@@ -510,7 +629,10 @@ Discord: Kotori Itsuka#6038
                             "@asa_start_button_template.asa_arrow_button": {
                                 "anchor_from": "top_middle",
                                 "anchor_to": "top_middle",
-                                "offset": [ 0, -2.5 ],
+                                "offset": [
+                                    0,
+                                    -2.5
+                                ],
                                 "$button_arrow_texture": "textures/ui/chevron_white_down",
                                 "$asa_pressed_action": "button.close_bottom_panel"
                             }
@@ -519,7 +641,10 @@ Discord: Kotori Itsuka#6038
                             "asa_button_bg_image": {
                                 "type": "image",
                                 "texture": "textures/ui/Black",
-                                "size": [ "100%cm + 8px", "100%c + 8px" ],
+                                "size": [
+                                    "100%cm + 8px",
+                                    "100%c + 8px"
+                                ],
                                 "alpha": 0.75,
                                 "layer": 2,
                                 "anchor_from": "bottom_middle",
@@ -528,12 +653,18 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "asa_button_stack": {
                                             "type": "stack_panel",
-                                            "size": [ "100%c", "100%cm" ],
+                                            "size": [
+                                                "100%c",
+                                                "100%cm"
+                                            ],
                                             "orientation": "horizontal",
                                             "controls": [
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_open_uri",
                                                         "$asa_button_icon": "textures/ui/Feedback",
                                                         "$asa_button_text": "Feedback",
@@ -545,12 +676,18 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "empty": {
                                                         "type": "panel",
-                                                        "size": [ 4, 4 ]
+                                                        "size": [
+                                                            4,
+                                                            4
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_store",
                                                         "$asa_button_text": "Marketplace",
                                                         "$asa_button_icon": "textures/ui/sidebar_icons/marketplace"
@@ -559,12 +696,18 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "empty": {
                                                         "type": "panel",
-                                                        "size": [ 4, 4 ]
+                                                        "size": [
+                                                            4,
+                                                            4
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_achievements",
                                                         "$asa_button_text": "Achievements",
                                                         "$asa_button_icon": "textures/ui/achievements"
@@ -573,12 +716,18 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "empty": {
                                                         "type": "panel",
-                                                        "size": [ 4, 4 ]
+                                                        "size": [
+                                                            4,
+                                                            4
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_buy_game",
                                                         "$asa_button_text": "Music Player",
                                                         "$asa_button_icon": "textures/blocks/jukebox_top"
@@ -587,12 +736,18 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "empty": {
                                                         "type": "panel",
-                                                        "size": [ 4, 4 ]
+                                                        "size": [
+                                                            4,
+                                                            4
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_invite_notification",
                                                         "$asa_button_text": "Realm Invite",
                                                         "$asa_button_icon": "textures/ui/mail_icon"
@@ -601,12 +756,18 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "empty": {
                                                         "type": "panel",
-                                                        "size": [ 4, 4 ]
+                                                        "size": [
+                                                            4,
+                                                            4
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "@asa_start_button_template.asa_start_button_image": {
-                                                        "size": [ 24, 24 ],
+                                                        "size": [
+                                                            24,
+                                                            24
+                                                        ],
                                                         "$asa_pressed_action": "button.menu_exit",
                                                         "$asa_button_text": "Exit Game",
                                                         "$asa_button_icon": "textures/ui/close_button_default_light"
@@ -623,7 +784,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_start_top_panel": {
         "type": "panel",
         "animation_reset_name": "screen_animation_reset",
@@ -640,7 +800,10 @@ Discord: Kotori Itsuka#6038
                     "anchor_to": "top_middle",
                     "$button_arrow_texture": "textures/ui/chevron_white_up",
                     "$asa_pressed_action": "button.hide_start_screen",
-                    "offset": [ 0, 5 ],
+                    "offset": [
+                        0,
+                        5
+                    ],
                     "animation_reset_name": "button.show_start_screen",
                     "anims": [
                         "@asa_start_anims.asa_arrow_open_action",
@@ -655,7 +818,10 @@ Discord: Kotori Itsuka#6038
                     "$button_arrow_texture": "textures/ui/chevron_white_down",
                     "$asa_pressed_action": "button.show_start_screen",
                     "animation_reset_name": "button.show_start_screen",
-                    "offset": [ 0, -50 ],
+                    "offset": [
+                        0,
+                        -50
+                    ],
                     "anims": [
                         "@asa_start_anims.asa_arrow_close_action_1",
                         "@asa_start_anims.asa_arrow_close_action_2"
@@ -664,11 +830,13 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Start Screen Content
     "asa_start_content": {
         "type": "screen",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "clips_children": true,
         "$asa_pass|default": "",
         "variables": [

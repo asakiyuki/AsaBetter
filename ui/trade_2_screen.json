@@ -1,17 +1,7 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "trade_screen": {
         "force_render_below": true
     },
-
     "exp_progress_bar": {
         "type": "panel",
         "size": [
@@ -59,12 +49,18 @@ Discord: Kotori Itsuka#6038
             {
                 "progress_bar_stack": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%" ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
                     "controls": [
                         {
                             "offset_panel": {
                                 "type": "panel",
-                                "size": [ 1, 6 ],
+                                "size": [
+                                    1,
+                                    6
+                                ],
                                 "bindings": [
                                     {
                                         "binding_name": "#exp_progress",
@@ -82,7 +78,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "offset_panel_2": {
                                 "type": "panel",
-                                "size": [ 1, 2 ]
+                                "size": [
+                                    1,
+                                    2
+                                ]
                             }
                         },
                         {
@@ -132,7 +131,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-    
     "hover_button": {
         "bindings": [
             {
@@ -144,31 +142,34 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_trade@trade2.toggle_content": {
-        "offset": [0, 4],
-		"layer": 11,
-		"$template_toggle": "trade2.toggle_content"
-	},
-
+        "offset": [
+            0,
+            4
+        ],
+        "layer": 11,
+        "$template_toggle": "trade2.toggle_content"
+    },
     "trade_toggle_holder": {
-		"size": ["100%", "60%c - 1px"],
-		"modifications": [
-			{
-				"array_name": "controls",
-				"operation": "insert_back",
-				"value": [
-					{
-						"asa_trade@trade2.asa_trade": {
-							"anchor_from": "top_middle",
-							"anchor_to": "top_middle"
-						}
-					}
-				]
-			}
-		]
-	},
-
+        "size": [
+            "100%",
+            "60%c - 1px"
+        ],
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "asa_trade@trade2.asa_trade": {
+                            "anchor_from": "top_middle",
+                            "anchor_to": "top_middle"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     "tier_stack_panel": {
         "bindings": [
             {
@@ -180,19 +181,18 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "top_half_stack_panel/how_to_play_button_holder": {
         "ignored": true
     },
-
     "toolbar_panel/toolbar_background/toolbar_stack_panel": {
         "ignored": true
     },
-
     "top_half_stack_panel": {
-        "offset": [ 4, 0 ]
+        "offset": [
+            4,
+            0
+        ]
     },
-
     "right_panel@common.root_panel": {
         "layer": 1,
         "controls": [
@@ -203,7 +203,10 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "asa_quick_trade@asa_crafting_panel.asa_trade_button_panel": {
-                    "offset": [ 2, 0 ]
+                    "offset": [
+                        2,
+                        0
+                    ]
                 }
             },
             {

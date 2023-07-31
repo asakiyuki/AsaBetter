@@ -1,19 +1,12 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_notification",
-
     "set_to_classic": {
         "type": "screen",
         "layer": 500,
-        "size": [ "120%", "120%" ],
+        "size": [
+            "120%",
+            "120%"
+        ],
         "ignored": "$desktop_screen",
         "bindings": [
             {
@@ -27,14 +20,20 @@ Discord: Kotori Itsuka#6038
             {
                 "classic_button@asa_light_button_text_toggle": {
                     "$button_text": "Set to Classic UI",
-                    "size": [ 250, 30 ],
+                    "size": [
+                        250,
+                        30
+                    ],
                     "layer": 501
                 }
             },
             {
                 "background": {
                     "type": "image",
-                    "size": [ "100%", "100%" ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
                     "texture": "textures/ui/Black",
                     "layer": 500,
                     "alpha": 0.6
@@ -42,16 +41,17 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_light_button_text_toggle@asa_light_ui_toggle": {
         "$button_type_panel": "common_buttons.button_content_panel",
         "$button_content": "asa_exit_world_confirm.asa_button_template",
-        "$button_offset": [ 0, 0 ],
+        "$button_offset": [
+            0,
+            0
+        ],
         "$toggle_name": "#ui_profile_radio_classic",
         "$pressed_button_name": "button.menu_exit",
         "$toggle_view_binding_name": "asa_close_panel"
     },
-
     "asa_light_ui_toggle": {
         "type": "panel",
         "$toggle_view_binding_name|default": "this_toggle",
@@ -62,11 +62,13 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_use_classic_ui_notication": {
         "type": "screen",
         "layer": 100,
-        "size": [ "120%", "120%" ],
+        "size": [
+            "120%",
+            "120%"
+        ],
         "ignored": "$desktop_screen",
         "anims": [
             "@asa_pressed_anims.asa_start_notication_close_panel"
@@ -75,7 +77,10 @@ Discord: Kotori Itsuka#6038
             {
                 "background": {
                     "type": "image",
-                    "size": [ "100%", "100%" ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
                     "texture": "textures/ui/Black",
                     "alpha": 0.6
                 }
@@ -83,7 +88,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 265, 100 ],
+                    "size": [
+                        265,
+                        100
+                    ],
                     "controls": [
                         {
                             "common_panel@common.common_panel": {
@@ -95,10 +103,16 @@ Discord: Kotori Itsuka#6038
                         {
                             "text_1": {
                                 "type": "label",
-                                "size": [ "default", "default" ],
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
                                 "anchor_to": "top_middle",
                                 "anchor_from": "top_middle",
-                                "offset": [ 0, 9 ],
+                                "offset": [
+                                    0,
+                                    9
+                                ],
                                 "layer": 120,
                                 "color": "$title_text_color",
                                 "text": "Need to set UI Profile to Classic"
@@ -107,23 +121,38 @@ Discord: Kotori Itsuka#6038
                         {
                             "des_text": {
                                 "type": "label",
-                                "size": [ "default", "default" ],
-                                "max_size": [ "100% - 22px", 30 ],
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
+                                "max_size": [
+                                    "100% - 22px",
+                                    30
+                                ],
                                 "layer": 120,
                                 "anchor_to": "top_left",
                                 "anchor_from": "top_left",
                                 "text_alignment": "left",
                                 "text": "Since this resource pack does not support Pocket UI players, you need to set to Classic UI to avoid bugs!",
-                                "offset": [ 11, 25 ]
+                                "offset": [
+                                    11,
+                                    25
+                                ]
                             }
                         },
                         {
                             "quit_button@pause.pause_button_template": {
                                 "$pressed_button_name": "button.menu_settings",
                                 "$button_text": "Open Settings",
-                                "size": [ "100% - 14px", 30 ],
+                                "size": [
+                                    "100% - 14px",
+                                    30
+                                ],
                                 "layer": 120,
-                                "offset": [ 0, -7 ],
+                                "offset": [
+                                    0,
+                                    -7
+                                ],
                                 "anchor_to": "bottom_middle",
                                 "anchor_from": "bottom_middle"
                             }

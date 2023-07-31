@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_exit_world_confirm_panel",
-
     "asa_pause_background": {
         "type": "panel",
         "bindings": [
@@ -26,15 +16,17 @@ Discord: Kotori Itsuka#6038
                     "type": "image",
                     "texture": "textures/ui/screen_background",
                     "layer": -10,
-                    "alpha":  0.75
+                    "alpha": 0.75
                 }
             }
         ]
     },
-
     "asa_exit_confirm_screen": {
         "type": "screen",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "layer": 100,
         "bindings": [
             {
@@ -48,7 +40,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 200, 100 ],
+                    "size": [
+                        200,
+                        100
+                    ],
                     "controls": [
                         {
                             "common_panel@common.common_panel": {
@@ -60,10 +55,16 @@ Discord: Kotori Itsuka#6038
                         {
                             "text_1": {
                                 "type": "label",
-                                "size": [ "default", "default" ],
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
                                 "anchor_to": "top_middle",
                                 "anchor_from": "top_middle",
-                                "offset": [ 0, 9 ],
+                                "offset": [
+                                    0,
+                                    9
+                                ],
                                 "layer": 120,
                                 "color": "$title_text_color",
                                 "text": "Leave World"
@@ -72,29 +73,47 @@ Discord: Kotori Itsuka#6038
                         {
                             "des_text": {
                                 "type": "label",
-                                "size": [ "default", "default" ],
-                                "max_size": [ "100% - 22px", 30 ],
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
+                                "max_size": [
+                                    "100% - 22px",
+                                    30
+                                ],
                                 "layer": 120,
                                 "anchor_to": "top_left",
                                 "anchor_from": "top_left",
                                 "text_alignment": "left",
                                 "text": "Are you sure you want to quit the world?",
-                                "offset": [ 11, 25 ]
+                                "offset": [
+                                    11,
+                                    25
+                                ]
                             }
                         },
                         {
                             "button_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100% - 14px", 30 ],
+                                "size": [
+                                    "100% - 14px",
+                                    30
+                                ],
                                 "anchor_to": "bottom_middle",
                                 "anchor_from": "bottom_middle",
                                 "layer": 120,
-                                "offset": [ 0, -7 ],
+                                "offset": [
+                                    0,
+                                    -7
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
                                         "not_now@asa_exit_world_confirm.asa_light_button_text_toggle": {
-                                            "size": [ "50%", 30 ],
+                                            "size": [
+                                                "50%",
+                                                30
+                                            ],
                                             "layer": 120,
                                             "$button_text": "Cancel"
                                         }
@@ -103,7 +122,10 @@ Discord: Kotori Itsuka#6038
                                         "quit_button@pause.pause_button_template": {
                                             "$pressed_button_name": "button.menu_quit",
                                             "$button_text": "pauseScreen.quit",
-                                            "size": [ "50%", 30 ],
+                                            "size": [
+                                                "50%",
+                                                30
+                                            ],
                                             "layer": 120
                                         }
                                     }

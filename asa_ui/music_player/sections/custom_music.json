@@ -1,18 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_mp_secs_custom_music",
-
     "sections_panel": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "$asa_bindings": [
             {
                 "binding_type": "view",
@@ -37,360 +30,390 @@ Discord: Kotori Itsuka#6038
         "controls": [
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_1",
                     "$asa_author_name": "$music_author_1",
                     "$time_duration": "$music_duration_1",
-
                     "$asa_music_play": "asa_music.custom_music.songs_1",
                     "$asa_music_thumbnail": "$music_thumbnail_1"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_2",
                     "$asa_author_name": "$music_author_2",
                     "$time_duration": "$music_duration_2",
-
                     "$asa_music_play": "asa_music.custom_music.songs_2",
                     "$asa_music_thumbnail": "$music_thumbnail_2"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_3",
                     "$asa_author_name": "$music_author_3",
                     "$time_duration": "$music_duration_3",
-
                     "$asa_music_play": "asa_music.custom_music.songs_3",
                     "$asa_music_thumbnail": "$music_thumbnail_3"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_4",
                     "$asa_author_name": "$music_author_4",
                     "$time_duration": "$music_duration_4",
-
                     "$asa_music_play": "asa_music.custom_music.songs_4",
                     "$asa_music_thumbnail": "$music_thumbnail_4"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_5",
                     "$asa_author_name": "$music_author_5",
                     "$time_duration": "$music_duration_5",
-
                     "$asa_music_play": "asa_music.custom_music.songs_5",
                     "$asa_music_thumbnail": "$music_thumbnail_5"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_6",
                     "$asa_author_name": "$music_author_6",
                     "$time_duration": "$music_duration_6",
-
                     "$asa_music_play": "asa_music.custom_music.songs_6",
                     "$asa_music_thumbnail": "$music_thumbnail_6"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_7",
                     "$asa_author_name": "$music_author_7",
                     "$time_duration": "$music_duration_7",
-
                     "$asa_music_play": "asa_music.custom_music.songs_7",
                     "$asa_music_thumbnail": "$music_thumbnail_7"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_8",
                     "$asa_author_name": "$music_author_8",
                     "$time_duration": "$music_duration_8",
-
                     "$asa_music_play": "asa_music.custom_music.songs_8",
                     "$asa_music_thumbnail": "$music_thumbnail_8"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_9",
                     "$asa_author_name": "$music_author_9",
                     "$time_duration": "$music_duration_9",
-
                     "$asa_music_play": "asa_music.custom_music.songs_9",
                     "$asa_music_thumbnail": "$music_thumbnail_9"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_10",
                     "$asa_author_name": "$music_author_10",
                     "$time_duration": "$music_duration_10",
-
                     "$asa_music_play": "asa_music.custom_music.songs_10",
                     "$asa_music_thumbnail": "$music_thumbnail_10"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_11",
                     "$asa_author_name": "$music_author_11",
                     "$time_duration": "$music_duration_11",
-
                     "$asa_music_play": "asa_music.custom_music.songs_11",
                     "$asa_music_thumbnail": "$music_thumbnail_11"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_12",
                     "$asa_author_name": "$music_author_12",
                     "$time_duration": "$music_duration_12",
-
                     "$asa_music_play": "asa_music.custom_music.songs_12",
                     "$asa_music_thumbnail": "$music_thumbnail_12"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_13",
                     "$asa_author_name": "$music_author_13",
                     "$time_duration": "$music_duration_13",
-
                     "$asa_music_play": "asa_music.custom_music.songs_13",
                     "$asa_music_thumbnail": "$music_thumbnail_13"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_14",
                     "$asa_author_name": "$music_author_14",
                     "$time_duration": "$music_duration_14",
-
                     "$asa_music_play": "asa_music.custom_music.songs_14",
                     "$asa_music_thumbnail": "$music_thumbnail_14"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_15",
                     "$asa_author_name": "$music_author_15",
                     "$time_duration": "$music_duration_15",
-
                     "$asa_music_play": "asa_music.custom_music.songs_15",
                     "$asa_music_thumbnail": "$music_thumbnail_15"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_16",
                     "$asa_author_name": "$music_author_16",
                     "$time_duration": "$music_duration_16",
-
                     "$asa_music_play": "asa_music.custom_music.songs_16",
                     "$asa_music_thumbnail": "$music_thumbnail_16"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_17",
                     "$asa_author_name": "$music_author_17",
                     "$time_duration": "$music_duration_17",
-
                     "$asa_music_play": "asa_music.custom_music.songs_17",
                     "$asa_music_thumbnail": "$music_thumbnail_17"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_18",
                     "$asa_author_name": "$music_author_18",
                     "$time_duration": "$music_duration_18",
-
                     "$asa_music_play": "asa_music.custom_music.songs_18",
                     "$asa_music_thumbnail": "$music_thumbnail_18"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_19",
                     "$asa_author_name": "$music_author_19",
                     "$time_duration": "$music_duration_19",
-
                     "$asa_music_play": "asa_music.custom_music.songs_19",
                     "$asa_music_thumbnail": "$music_thumbnail_19"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_20",
                     "$asa_author_name": "$music_author_20",
                     "$time_duration": "$music_duration_20",
-
                     "$asa_music_play": "asa_music.custom_music.songs_20",
                     "$asa_music_thumbnail": "$music_thumbnail_20"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_21",
                     "$asa_author_name": "$music_author_21",
                     "$time_duration": "$music_duration_21",
-
                     "$asa_music_play": "asa_music.custom_music.songs_21",
                     "$asa_music_thumbnail": "$music_thumbnail_21"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_22",
                     "$asa_author_name": "$music_author_22",
                     "$time_duration": "$music_duration_22",
-
                     "$asa_music_play": "asa_music.custom_music.songs_22",
                     "$asa_music_thumbnail": "$music_thumbnail_22"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_23",
                     "$asa_author_name": "$music_author_23",
                     "$time_duration": "$music_duration_23",
-
                     "$asa_music_play": "asa_music.custom_music.songs_23",
                     "$asa_music_thumbnail": "$music_thumbnail_23"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_24",
                     "$asa_author_name": "$music_author_24",
                     "$time_duration": "$music_duration_24",
-
                     "$asa_music_play": "asa_music.custom_music.songs_24",
                     "$asa_music_thumbnail": "$music_thumbnail_24"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_25",
                     "$asa_author_name": "$music_author_25",
                     "$time_duration": "$music_duration_25",
-
                     "$asa_music_play": "asa_music.custom_music.songs_25",
                     "$asa_music_thumbnail": "$music_thumbnail_25"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_26",
                     "$asa_author_name": "$music_author_26",
                     "$time_duration": "$music_duration_26",
-
                     "$asa_music_play": "asa_music.custom_music.songs_26",
                     "$asa_music_thumbnail": "$music_thumbnail_26"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_27",
                     "$asa_author_name": "$music_author_27",
                     "$time_duration": "$music_duration_27",
-
                     "$asa_music_play": "asa_music.custom_music.songs_27",
                     "$asa_music_thumbnail": "$music_thumbnail_27"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_28",
                     "$asa_author_name": "$music_author_28",
                     "$time_duration": "$music_duration_28",
-
                     "$asa_music_play": "asa_music.custom_music.songs_28",
                     "$asa_music_thumbnail": "$music_thumbnail_28"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_29",
                     "$asa_author_name": "$music_author_29",
                     "$time_duration": "$music_duration_29",
-
                     "$asa_music_play": "asa_music.custom_music.songs_29",
                     "$asa_music_thumbnail": "$music_thumbnail_29"
                 }
             },
             {
                 "@asa_music_button_common.asa_music_name_author_and_thumbnail": {
-                    "size": [ "100%", 40 ],
-
+                    "size": [
+                        "100%",
+                        40
+                    ],
                     "$asa_music_name": "$music_title_30",
                     "$asa_author_name": "$music_author_30",
                     "$time_duration": "$music_duration_30",
-
                     "$asa_music_play": "asa_music.custom_music.songs_30",
                     "$asa_music_thumbnail": "$music_thumbnail_30"
                 }

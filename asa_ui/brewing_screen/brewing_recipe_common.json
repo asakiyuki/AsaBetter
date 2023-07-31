@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_brewing_recipe",
-
     //Recipe Tab Toggle Template
     "asa_tab_panel": {
         "type": "panel",
@@ -30,8 +20,14 @@ Discord: Kotori Itsuka#6038
         "controls": [
             {
                 "left_tab@asa_toggle_tab_panel": {
-                    "size": [ "100%y", "100%" ],
-                    "offset": [ 8, 0 ],
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "offset": [
+                        8,
+                        0
+                    ],
                     "anchor_from": "left_middle",
                     "anchor_to": "left_middle",
                     "$asa_button_textures": "textures/ui/arrowLeft",
@@ -43,8 +39,14 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "right_tab@asa_toggle_tab_panel": {
-                    "size": [ "100%y", "100%" ],
-                    "offset": [ -8, 0 ],
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "offset": [
+                        -8,
+                        0
+                    ],
                     "anchor_from": "right_middle",
                     "anchor_to": "right_middle",
                     "$asa_button_textures": "textures/ui/arrowRight",
@@ -55,7 +57,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_toggle_tab_panel": {
         "type": "panel",
         "$asa_tab_binding_name|default": "null",
@@ -65,34 +66,29 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_arrow_tab_toggle_template": {
         "type": "toggle",
-        
         "unchecked_control": "recipe_unselected",
         "unchecked_hover_control": "recipe_unselected_hover",
         "checked_control": "recipe_selected",
         "checked_hover_control": "recipe_selected_hover",
-
         "radio_toggle_group": true,
         "toggle_name": "$toggle_tab_name",
         "toggle_group_forced_index": "$asa_tab_next",
         "toggle_group_default_selected": 0,
-
         "sound_name": "random.click",
         "sound_volume": 1.0,
         "sound_pitch": 1.0,
         "toggle_default_state": "$asa_tab_bugfix",
-
         "$toggle_enable|default": true,
         "enabled": "$toggle_enable",
-
-        "$asa_button_textures|default": [ "100%y", "100% - 8px" ],
-
+        "$asa_button_textures|default": [
+            "100%y",
+            "100% - 8px"
+        ],
         "property_bag": {
             "#toggle_state": true
         },
-
         "button_mappings": [
             {
                 "from_button_id": "button.menu_select",
@@ -105,7 +101,6 @@ Discord: Kotori Itsuka#6038
                 "mapping_type": "focused"
             }
         ],
-
         "controls": [
             {
                 "recipe_unselected": {
@@ -120,7 +115,11 @@ Discord: Kotori Itsuka#6038
                     "type": "image",
                     "size": "$button_image_size",
                     "layer": 10,
-                    "color": [ 0, 1, 1 ],
+                    "color": [
+                        0,
+                        1,
+                        1
+                    ],
                     "texture": "$asa_button_textures"
                 }
             },
@@ -137,18 +136,23 @@ Discord: Kotori Itsuka#6038
                     "type": "image",
                     "size": "$button_image_size",
                     "layer": 10,
-                    "color": [ 0, 1, 1 ],
+                    "color": [
+                        0,
+                        1,
+                        1
+                    ],
                     "texture": "$asa_button_textures"
                 }
             }
         ]
     },
-
     //Recipe Toggle Template
     "asa_brewing_selected_panel": {
         "type": "panel",
-        "size": [ 20, 20 ],
-
+        "size": [
+            20,
+            20
+        ],
         "$brewing_selected|default": "no_recipe_selected",
         "$asa_item_id|default": 65536,
         "$asa_item_name|default": "Stone",
@@ -158,14 +162,12 @@ Discord: Kotori Itsuka#6038
         "$is_not_potions": false,
         "$asa_effect_duration_1|default": "",
         "$asa_effect_duration_2|default": "",
-
         "controls": [
             {
                 "$brewing_selected@asa_brewing_recipe_toggles": {}
             }
-        ]  
+        ]
     },
-
     "asa_brewing_recipe_toggles": {
         "type": "toggle",
         "radio_toggle_group": true,
@@ -173,20 +175,16 @@ Discord: Kotori Itsuka#6038
         "toggle_group_forced_index": "$asa_gr_recipe_index",
         "toggle_default_state": "$asa_toggle_rcp_default",
         "toggle_group_default_selected": 0,
-
         "unchecked_control": "recipe_unselected",
         "unchecked_hover_control": "recipe_unselected_hover",
         "checked_control": "recipe_selected",
         "checked_hover_control": "recipe_selected_hover",
-
         "$asa_gr_recipe_index|default": 0,
         "$asa_toggle_rcp_default|default": false,
         "$asa_recipe_template|default": "asa_item_renderer_and_text",
-
         "property_bag": {
             "#toggle_state": true
         },
-
         "button_mappings": [
             {
                 "from_button_id": "button.menu_select",
@@ -199,7 +197,6 @@ Discord: Kotori Itsuka#6038
                 "mapping_type": "focused"
             }
         ],
-
         "controls": [
             {
                 "recipe_unselected@$asa_recipe_template": {
@@ -221,7 +218,10 @@ Discord: Kotori Itsuka#6038
                 "item_renderer": {
                     "type": "custom",
                     "renderer": "inventory_item_renderer",
-                    "size": [ 16, 16 ],
+                    "size": [
+                        16,
+                        16
+                    ],
                     "layer": 10,
                     "property_bag": {
                         "#item_id_aux": "($asa_item_id + (65536 * $asa_item_id_offset))"
@@ -230,10 +230,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_item_renderer_and_text": {
         "type": "panel",
-        "size": [ 16, 16 ],
+        "size": [
+            16,
+            16
+        ],
         "$asa_this_potion_when|default": true,
         "controls": [
             {
@@ -241,9 +243,15 @@ Discord: Kotori Itsuka#6038
                     "type": "image",
                     "layer": 50,
                     "texture": "textures/ui/purpleBorder",
-                    "size": [ "100%cm + 6px", "100%c + 4px" ],
+                    "size": [
+                        "100%cm + 6px",
+                        "100%c + 4px"
+                    ],
                     "$asa_hover_anchor|default": "top_right",
-                    "$asa_hover_offset|default": [ -8, 8 ],
+                    "$asa_hover_offset|default": [
+                        -8,
+                        8
+                    ],
                     "anchor_from": "$asa_hover_anchor",
                     "anchor_to": "$asa_hover_anchor",
                     "offset": "$asa_hover_offset",
@@ -252,14 +260,28 @@ Discord: Kotori Itsuka#6038
                         {
                             "text_stack": {
                                 "type": "stack_panel",
-                                "size": [ "100%cm", "100%c" ],
-                                "$effect_color_1|default": [ 0.7, 0.7, 0.7 ],
-                                "$effect_color_2|default": [ 0.7, 0.7, 0.7 ],
+                                "size": [
+                                    "100%cm",
+                                    "100%c"
+                                ],
+                                "$effect_color_1|default": [
+                                    0.7,
+                                    0.7,
+                                    0.7
+                                ],
+                                "$effect_color_2|default": [
+                                    0.7,
+                                    0.7,
+                                    0.7
+                                ],
                                 "controls": [
                                     {
                                         "asa_item_name": {
                                             "type": "label",
-                                            "max_size": [ "default", 10 ],
+                                            "max_size": [
+                                                "default",
+                                                10
+                                            ],
                                             "layer": 51,
                                             "text": "$asa_item_name"
                                         }
@@ -267,7 +289,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "asa_effect": {
                                             "type": "stack_panel",
-                                            "size": [ "100%c", "100%cm" ],
+                                            "size": [
+                                                "100%c",
+                                                "100%cm"
+                                            ],
                                             "orientation": "horizontal",
                                             "ignored": "$is_not_potions",
                                             "controls": [
@@ -275,7 +300,10 @@ Discord: Kotori Itsuka#6038
                                                     "asa_effect_name_1": {
                                                         "type": "label",
                                                         "color": "$effect_color_1",
-                                                        "max_size": [ "default", 10 ],
+                                                        "max_size": [
+                                                            "default",
+                                                            10
+                                                        ],
                                                         "layer": 51,
                                                         "text": "$asa_effect_name_1"
                                                     }
@@ -284,7 +312,10 @@ Discord: Kotori Itsuka#6038
                                                     "asa_effect_duration_1": {
                                                         "type": "label",
                                                         "color": "$effect_color_1",
-                                                        "max_size": [ "default", 10 ],
+                                                        "max_size": [
+                                                            "default",
+                                                            10
+                                                        ],
                                                         "layer": 51,
                                                         "text": "$asa_effect_duration_1",
                                                         "localize": false
@@ -296,7 +327,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "asa_effect_2": {
                                             "type": "stack_panel",
-                                            "size": [ "100%c", "100%cm" ],
+                                            "size": [
+                                                "100%c",
+                                                "100%cm"
+                                            ],
                                             "orientation": "horizontal",
                                             "ignored": "$no_show_effect_2th",
                                             "controls": [
@@ -304,7 +338,10 @@ Discord: Kotori Itsuka#6038
                                                     "asa_effect_name": {
                                                         "type": "label",
                                                         "color": "$effect_color_2",
-                                                        "max_size": [ "default", 10 ],
+                                                        "max_size": [
+                                                            "default",
+                                                            10
+                                                        ],
                                                         "layer": 51,
                                                         "text": "$asa_effect_name_2"
                                                     }
@@ -313,7 +350,10 @@ Discord: Kotori Itsuka#6038
                                                     "asa_effect_duration": {
                                                         "type": "label",
                                                         "color": "$effect_color_2",
-                                                        "max_size": [ "default", 10 ],
+                                                        "max_size": [
+                                                            "default",
+                                                            10
+                                                        ],
                                                         "layer": 51,
                                                         "text": "$asa_effect_duration_2",
                                                         "localize": false
@@ -325,13 +365,19 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "when": {
                                             "type": "stack_panel",
-                                            "size": [ "100%cm", "100%c" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%c"
+                                            ],
                                             "ignored": "$asa_this_potion_when",
                                             "controls": [
                                                 {
                                                     "pnl": {
                                                         "type": "panel",
-                                                        "size": [ 10, 10 ]
+                                                        "size": [
+                                                            10,
+                                                            10
+                                                        ]
                                                     }
                                                 },
                                                 {
@@ -345,14 +391,20 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "asa_effect_2": {
                                                         "type": "stack_panel",
-                                                        "size": [ "100%c", "100%cm" ],
+                                                        "size": [
+                                                            "100%c",
+                                                            "100%cm"
+                                                        ],
                                                         "orientation": "horizontal",
                                                         "controls": [
                                                             {
                                                                 "asa_effect_name": {
                                                                     "type": "label",
                                                                     "color": "$this_potion_when_drank_color",
-                                                                    "max_size": [ "default", 10 ],
+                                                                    "max_size": [
+                                                                        "default",
+                                                                        10
+                                                                    ],
                                                                     "layer": 51,
                                                                     "text": "$this_potion_drank_type",
                                                                     "localize": false
@@ -362,7 +414,10 @@ Discord: Kotori Itsuka#6038
                                                                 "asa_effect_duration": {
                                                                     "type": "label",
                                                                     "color": "$this_potion_when_drank_color",
-                                                                    "max_size": [ "default", 10 ],
+                                                                    "max_size": [
+                                                                        "default",
+                                                                        10
+                                                                    ],
                                                                     "layer": 51,
                                                                     "text": "$this_potion_drank_add"
                                                                 }
@@ -381,38 +436,55 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_recipe_button": {
         "type": "button",
         "default_control": "asa_default",
         "hover_control": "asa_hover",
         "pressed_control": "asa_pressed",
         "layer": 1,
-        "size": [ 18, 18 ],
+        "size": [
+            18,
+            18
+        ],
         "controls": [
             {
                 "asa_default": {
                     "type": "image",
                     "texture": "textures/ui/item_cell",
-                    "size": [ "100%", "100%" ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
                     "layer": 3,
                     "$not_hover_panel": true,
-                    "controls": [ {"@asa_item_renderer_and_text": {}} ]
+                    "controls": [
+                        {
+                            "@asa_item_renderer_and_text": {}
+                        }
+                    ]
                 }
             },
             {
                 "asa_hover": {
                     "type": "image",
                     "texture": "textures/ui/highlight_slot",
-                    "size": [ "100% - 2px", "100% - 2px" ],
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
                     "layer": 2,
                     "controls": [
-                        {"@asa_item_renderer_and_text": {}},
+                        {
+                            "@asa_item_renderer_and_text": {}
+                        },
                         {
                             "border": {
                                 "type": "image",
                                 "layer": 3,
-                                "size": [ "100% + 2px", "100% + 2px" ],
+                                "size": [
+                                    "100% + 2px",
+                                    "100% + 2px"
+                                ],
                                 "texture": "textures/ui/focus_border_white"
                             }
                         }
@@ -423,15 +495,23 @@ Discord: Kotori Itsuka#6038
                 "asa_pressed": {
                     "type": "image",
                     "texture": "textures/ui/highlight_slot",
-                    "size": [ "100% - 2px", "100% - 2px" ],
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
                     "layer": 2,
                     "controls": [
-                        {"@asa_item_renderer_and_text": {}},
+                        {
+                            "@asa_item_renderer_and_text": {}
+                        },
                         {
                             "border": {
                                 "type": "image",
                                 "layer": 3,
-                                "size": [ "100% + 2px", "100% + 2px" ],
+                                "size": [
+                                    "100% + 2px",
+                                    "100% + 2px"
+                                ],
                                 "texture": "textures/ui/focus_border_white"
                             }
                         }
@@ -442,7 +522,10 @@ Discord: Kotori Itsuka#6038
                 "item_renderer": {
                     "type": "custom",
                     "renderer": "inventory_item_renderer",
-                    "size": [ 16, 16 ],
+                    "size": [
+                        16,
+                        16
+                    ],
                     "layer": 10,
                     "property_bag": {
                         "#item_id_aux": "($asa_item_id + (65536 * $asa_item_id_offset))"
@@ -451,21 +534,35 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "brewing_output_slots": {
         "type": "grid",
-        "size": [ 54, 18 ],
-        "offset": [ 0, 23 ],
-        "grid_dimensions": [ 3, 1 ],
+        "size": [
+            54,
+            18
+        ],
+        "offset": [
+            0,
+            23
+        ],
+        "grid_dimensions": [
+            3,
+            1
+        ],
         "controls": [
             {
                 "left_offset": {
                     "type": "panel",
-                    "grid_position": [ 0, 0 ],
+                    "grid_position": [
+                        0,
+                        0
+                    ],
                     "controls": [
                         {
                             "output_grid_item1@asa_recipe_button": {
-                                "offset": [ -5, -7 ]
+                                "offset": [
+                                    -5,
+                                    -7
+                                ]
                             }
                         }
                     ]
@@ -473,17 +570,26 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "output_grid_item2@asa_recipe_button": {
-                    "grid_position": [ 1, 0 ]
+                    "grid_position": [
+                        1,
+                        0
+                    ]
                 }
             },
             {
                 "right_offset": {
                     "type": "panel",
-                    "grid_position": [ 2, 0 ],
+                    "grid_position": [
+                        2,
+                        0
+                    ],
                     "controls": [
                         {
                             "output_grid_item3@asa_recipe_button": {
-                                "offset": [ 5, -7 ]
+                                "offset": [
+                                    5,
+                                    -7
+                                ]
                             }
                         }
                     ]
@@ -491,14 +597,16 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "recipe_root_panel": {
         "type": "panel",
         "controls": [
             {
                 "root_panel": {
                     "type": "panel",
-                    "size": [ 176, "100%cm" ],
+                    "size": [
+                        176,
+                        "100%cm"
+                    ],
                     "layer": 1,
                     "controls": [
                         {
@@ -509,14 +617,24 @@ Discord: Kotori Itsuka#6038
                                 "type": "image",
                                 "layer": 0,
                                 "texture": "textures/ui/dialog_background_opaque",
-                                "size": [ "100%", "100%sm + 12px" ]
+                                "size": [
+                                    "100%",
+                                    "100%sm + 12px"
+                                ]
                             }
                         },
                         {
                             "brewing_stand_pictogram": {
                                 "type": "panel",
-                                "size": [ "100%", "100%c" ],
-                                "controls": [{ "@asa_recipe_section.asa_section_panel": {}}]
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "@asa_recipe_section.asa_section_panel": {}
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -524,11 +642,16 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "recipe_button_panel": {
         "type": "stack_panel",
-        "size": [ "100%cm", "100%c" ],
-        "offset": [ 22, 0 ],
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
+        "offset": [
+            22,
+            0
+        ],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
         "controls": [
@@ -538,13 +661,19 @@ Discord: Kotori Itsuka#6038
             {
                 "": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "@asa_auto_place.asa_auto_place_toggle": {
                     "$asa_toggle_name": "asa_brewing_recipe_selected",
-                    "offset": [ 0, 24 ],
+                    "offset": [
+                        0,
+                        24
+                    ],
                     "$asa_toggle_bindings": "no_recipe_selected",
                     "$asa_toggle_state_default": true,
                     "$button_text": "Close Recipes",
@@ -555,24 +684,51 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_potion_recipe_template": {
         "type": "panel",
-        "size": [ "100%", 65 ],
+        "size": [
+            "100%",
+            65
+        ],
         "$asa_hover_anchor": "top_left",
-        "$asa_hover_offset": [ 8, 8 ],
-        "$input_hover_offset|default": [ 8, 8 ],
-        "$output_effect_name_color_1|default": [ 0.7, 0.7, 0.7 ],
-        "$output_effect_name_color_2|default": [ 0.7, 0.7, 0.7 ],
-        "$input_effect_name_color_1|default": [ 0.7, 0.7, 0.7 ],
-        "$input_effect_name_color_2|default": [ 0.7, 0.7, 0.7 ],
+        "$asa_hover_offset": [
+            8,
+            8
+        ],
+        "$input_hover_offset|default": [
+            8,
+            8
+        ],
+        "$output_effect_name_color_1|default": [
+            0.7,
+            0.7,
+            0.7
+        ],
+        "$output_effect_name_color_2|default": [
+            0.7,
+            0.7,
+            0.7
+        ],
+        "$input_effect_name_color_1|default": [
+            0.7,
+            0.7,
+            0.7
+        ],
+        "$input_effect_name_color_2|default": [
+            0.7,
+            0.7,
+            0.7
+        ],
         "$asa_this_potion_when|default": true,
         "$this_not_output_drank|default": true,
         "$this_not_input_drank|default": true,
         "controls": [
             {
                 "@asa_recipe_button": {
-                    "offset": [ 45, 0 ],
+                    "offset": [
+                        45,
+                        0
+                    ],
                     "$asa_item_id": "$item_id_output",
                     "$asa_effect_name_1": "$effect_output_name_1",
                     "$asa_effect_name_2": "$effect_output_name_2",
@@ -583,7 +739,6 @@ Discord: Kotori Itsuka#6038
                     "$effect_color_1": "$output_effect_name_color_1",
                     "$effect_color_2": "$output_effect_name_color_2",
                     "$is_not_potions": "$potion_output_is_not_potion",
-
                     "$asa_this_potion_when": "$this_not_output_drank",
                     "$this_potion_when_drank_color": "$output_drank_color",
                     "$this_potion_drank_type": "$output_drank_type",
@@ -593,11 +748,17 @@ Discord: Kotori Itsuka#6038
             {
                 "all_slot_panel": {
                     "type": "panel",
-                    "offset": [ -20, 0 ],
+                    "offset": [
+                        -20,
+                        0
+                    ],
                     "controls": [
                         {
                             "@asa_recipe_button": {
-                                "offset": [ 0, -18 ],
+                                "offset": [
+                                    0,
+                                    -18
+                                ],
                                 "$is_not_potions": true,
                                 "$asa_item_id": "$item_id_input",
                                 "$asa_item_name": "$item_name_input",
@@ -616,12 +777,10 @@ Discord: Kotori Itsuka#6038
                                 "$asa_effect_duration_2": "$input_potion_effect_duration_2",
                                 "$effect_color_1": "$input_effect_name_color_1",
                                 "$effect_color_2": "$input_effect_name_color_2",
-
                                 "$asa_this_potion_when": "$this_not_input_drank",
                                 "$this_potion_when_drank_color": "$input_drank_color",
                                 "$this_potion_drank_type": "$input_drank_type",
                                 "$this_potion_drank_add": "$input_drank_add",
-
                                 "$asa_hover_offset": "$input_hover_offset"
                             }
                         },

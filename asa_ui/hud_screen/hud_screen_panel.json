@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_hud_screen",
-    
     //Custom Panel
     "asa_custom_root_panel": {
         "type": "panel",
@@ -113,7 +103,6 @@ Discord: Kotori Itsuka#6038
                                 ]
                             }
                         },
-
                         {
                             "not_touch_input@asa_hud_debug.asa_offhand_hud_2": {
                                 "bindings": [
@@ -129,19 +118,27 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "position_chat_panel": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
-                    "offset": [ 1, 1 ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "offset": [
+                        1,
+                        1
+                    ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
                     "controls": [
                         {
                             "paper_doll_padding": {
                                 "type": "panel",
-                                "size": [ "100%", 42 ],
+                                "size": [
+                                    "100%",
+                                    42
+                                ],
                                 "bindings": [
                                     {
                                         "binding_name": "#paper_doll_visible",
@@ -164,7 +161,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "panel": {
-                                "type": "panel", "size": [ 1, 1 ],
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    1
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -178,7 +179,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "auto_chat_settings": {
                                 "type": "panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -191,7 +195,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "touch_chat": {
                                             "type": "panel",
-                                            "size": [ "100%", "100%c" ],
+                                            "size": [
+                                                "100%",
+                                                "100%c"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_condition": "always",
@@ -222,7 +229,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "chat_panel": {
                                 "type": "panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -250,14 +260,19 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "auto_chat_settings": {
                     "type": "panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "anchor_from": "bottom_left",
                     "anchor_to": "bottom_left",
-                    "offset": [ 0, -50 ],
+                    "offset": [
+                        0,
+                        -50
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -270,7 +285,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "k&m": {
                                 "type": "panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -298,7 +316,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "controller": {
                                 "type": "panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -326,14 +347,19 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "chat_panel": {
                     "type": "panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "anchor_from": "bottom_left",
                     "anchor_to": "bottom_left",
-                    "offset": [ 0, -50 ],
+                    "offset": [
+                        0,
+                        -50
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -358,12 +384,14 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "boss_health_panel": {
                     "type": "stack_panel",
                     "orientation": "vertical",
-                    "size": [ "100%", "100%" ],
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -376,7 +404,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "boss_hud_padding": {
                                 "type": "panel",
-                                "size": [ "100%", 20 ],
+                                "size": [
+                                    "100%",
+                                    20
+                                ],
                                 "visible": "#boss_hud_padding",
                                 "bindings": [
                                     {
@@ -392,7 +423,10 @@ Discord: Kotori Itsuka#6038
                                 "controls": [
                                     {
                                         "better_bossbar_gird@asa_better_bossbar.asa_boss_health_gird": {
-                                            "offset": [ 0, 2 ],
+                                            "offset": [
+                                                0,
+                                                2
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -405,7 +439,10 @@ Discord: Kotori Itsuka#6038
                                     },
                                     {
                                         "java_bossbar_gird@asa_better_bossbar.asa_java_boss_health_gird": {
-                                            "offset": [ 0, 2 ],
+                                            "offset": [
+                                                0,
+                                                2
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -418,7 +455,10 @@ Discord: Kotori Itsuka#6038
                                     },
                                     {
                                         "normal_bossbar_gird@hud.boss_health_grid": {
-                                            "offset": [ 0, 2 ],
+                                            "offset": [
+                                                0,
+                                                2
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -437,7 +477,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-    
     //Full Screen Panel
     "asa_full_screen_root_panel": {
         "type": "panel",
@@ -459,7 +498,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Mojang Default Panel
     "asa_default_root_panel": {
         "type": "panel",

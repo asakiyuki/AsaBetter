@@ -1,21 +1,21 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "background_gradient": {
         "type": "custom",
         "renderer": "gradient_renderer",
-        "color1": [ 0, 0, 0, 0.7 ],
-        "color2": [ 0, 0, 0, 0.7 ],
+        "color1": [
+            0,
+            0,
+            0,
+            0.7
+        ],
+        "color2": [
+            0,
+            0,
+            0,
+            0.7
+        ],
         "ignored": false
     },
-
     "death_screen@common.base_screen": {
         "$screen_content": "asa_death_screen.asa_death_screen_content",
         "force_render_below": true

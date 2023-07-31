@@ -1,21 +1,10 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "stonecutter_screen": {
         "force_render_below": true
     },
-    
     "toolbar_panel/toolbar_background/toolbar_stack_panel": {
         "ignored": true
     },
-
     "right_panel@common.root_panel": {
         "layer": 1,
         "controls": [
@@ -42,7 +31,10 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "asa_quick_craft@asa_crafting_panel.asa_stonecutter_button_panel": {
-                    "offset": [ 2, 0 ]
+                    "offset": [
+                        2,
+                        0
+                    ]
                 }
             },
             {

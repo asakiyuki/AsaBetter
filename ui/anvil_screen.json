@@ -1,17 +1,7 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "text_edit_control": {
         "max_length": 100
     },
-    
     "anvil_panel/root_panel": {
         "modifications": [
             {
@@ -41,7 +31,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "anvil_screen": {
         "force_render_below": true
     }

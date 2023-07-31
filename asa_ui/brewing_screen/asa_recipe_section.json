@@ -1,31 +1,34 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_recipe_section",
-
     "asa_section_panel": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "controls": [
             {
                 "asa_header": {
                     "type": "panel",
-                    "size": [ "100%", 12 ],
+                    "size": [
+                        "100%",
+                        12
+                    ],
                     "controls": [
                         {
                             "asa_label": {
                                 "type": "label",
-                                "max_size": ["default", 10 ],
+                                "max_size": [
+                                    "default",
+                                    10
+                                ],
                                 "text": "Recipes",
                                 "layer": 2,
-                                "color": [ 0.3, 0.3, 0.3 ]
+                                "color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ]
                             }
                         },
                         {
@@ -37,7 +40,10 @@ Discord: Kotori Itsuka#6038
             {
                 "awkward": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -51,7 +57,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 19267584,
                                 "$item_name_input": "tile.nether_wart.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.emptyPotion.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -60,7 +65,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918337,
                                 "$item_name_output": "potion.awkward.name",
                                 "$effect_output_name_1": "potion.empty",
@@ -73,11 +77,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "night_vision": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -91,7 +97,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 18546688,
                                 "$item_name_input": "item.golden_carrot.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -99,7 +104,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918341,
                                 "$item_name_output": "potion.nightVision.name",
                                 "$effect_output_name_1": "potion.nightVision",
@@ -109,12 +113,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918341,
                                 "$item_name_potion_input": "potion.nightVision.name",
                                 "$effect_potion_input_name_1": "potion.nightVision",
@@ -122,7 +124,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918341,
                                 "$item_name_output": "potion.nightVision.name",
                                 "$effect_output_name_1": "potion.nightVision",
@@ -135,11 +136,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "invisibility": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -159,7 +162,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_input_extra_effect": true,
                                 "$input_effect_duration_1": "",
                                 "$input_effect_duration_2": "",
-
                                 "$item_potion_input_id": 27918341,
                                 "$item_name_potion_input": "potion.nightVision.name",
                                 "$effect_potion_input_name_1": "potion.nightVision",
@@ -167,7 +169,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918343,
                                 "$item_name_output": "potion.invisibility.name",
                                 "$effect_output_name_1": "potion.invisibility",
@@ -187,7 +188,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_input_extra_effect": true,
                                 "$input_effect_duration_1": "",
                                 "$input_effect_duration_2": "",
-
                                 "$item_potion_input_id": 27918343,
                                 "$item_name_potion_input": "potion.invisibility.name",
                                 "$effect_potion_input_name_1": "potion.invisibility",
@@ -195,7 +195,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918343,
                                 "$item_name_output": "potion.invisibility.name",
                                 "$effect_output_name_1": "potion.invisibility",
@@ -215,7 +214,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_input_extra_effect": true,
                                 "$input_effect_duration_1": "",
                                 "$input_effect_duration_2": "",
-
                                 "$item_potion_input_id": 27918341,
                                 "$item_name_potion_input": "potion.nightVision.name",
                                 "$effect_potion_input_name_1": "potion.nightVision",
@@ -223,7 +221,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (8:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918343,
                                 "$item_name_output": "potion.invisibility.name",
                                 "$effect_output_name_1": "potion.invisibility",
@@ -236,11 +233,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "jump": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -254,7 +253,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 34603008,
                                 "$item_name_input": "item.rabbit_foot.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -263,7 +261,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918345,
                                 "$item_name_output": "potion.jump.name",
                                 "$effect_output_name_1": "potion.jump",
@@ -273,12 +270,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918345,
                                 "$item_name_potion_input": "potion.jump.name",
                                 "$effect_potion_input_name_1": "potion.jump",
@@ -287,7 +282,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918345,
                                 "$item_name_output": "potion.jump.name",
                                 "$effect_output_name_1": "potion.jump",
@@ -297,12 +291,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918345,
                                 "$item_name_potion_input": "potion.jump.name",
                                 "$effect_potion_input_name_1": "potion.jump",
@@ -311,7 +303,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918345,
                                 "$item_name_output": "potion.jump.name",
                                 "$effect_output_name_1": "potion.jump",
@@ -324,11 +315,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "fire_resistance": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -342,7 +335,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 28180480,
                                 "$item_name_input": "item.magma_cream.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -351,7 +343,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918348,
                                 "$item_name_output": "potion.fireResistance.name",
                                 "$effect_output_name_1": "potion.fireResistance",
@@ -361,12 +352,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918348,
                                 "$item_name_potion_input": "potion.fireResistance.name",
                                 "$effect_potion_input_name_1": "potion.fireResistance",
@@ -375,7 +364,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918348,
                                 "$item_name_output": "potion.fireResistance.name",
                                 "$effect_output_name_1": "potion.fireResistance",
@@ -388,11 +376,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "speed": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -406,7 +396,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 27262976,
                                 "$item_name_input": "item.sugar.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -415,7 +404,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918350,
                                 "$item_name_output": "potion.moveSpeed.name",
                                 "$effect_output_name_1": "potion.moveSpeed",
@@ -423,19 +411,20 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (3:00}",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+20% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918350,
                                 "$item_name_potion_input": "potion.moveSpeed.name",
                                 "$effect_potion_input_name_1": "potion.moveSpeed",
@@ -444,7 +433,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918350,
                                 "$item_name_output": "potion.moveSpeed.name",
                                 "$effect_output_name_1": "potion.moveSpeed",
@@ -452,24 +440,28 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (8:00}",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$input_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$input_drank_type": "+20% ",
                                 "$input_drank_add": "attribute.name.minecraft:movement",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+20% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918350,
                                 "$item_name_potion_input": "potion.moveSpeed.name",
                                 "$effect_potion_input_name_1": "potion.moveSpeed",
@@ -478,7 +470,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918350,
                                 "$item_name_output": "potion.moveSpeed.name",
                                 "$effect_output_name_1": "potion.moveSpeed",
@@ -486,28 +477,38 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " II (1:30}",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$input_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$input_drank_type": "+20% ",
                                 "$input_drank_add": "attribute.name.minecraft:movement",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+40% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement",
-
-                                "$input_hover_offset": [ 8, 0 ]
+                                "$input_hover_offset": [
+                                    8,
+                                    0
+                                ]
                             }
                         }
                     ]
                 }
             },
-
             {
                 "slowdown": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -520,14 +521,23 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_potion_page_1": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
-                                "bindings": [ { "source_control_name": "slowness_1_0", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "source_control_name": "slowness_1_0",
+                                        "binding_type": "view",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
                                 "controls": [
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918350,
                                             "$item_name_potion_input": "potion.moveSpeed.name",
                                             "$effect_potion_input_name_1": "potion.moveSpeed",
@@ -536,9 +546,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (3:00)",
                                             "$input_potion_effect_duration_2": "",
-
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -546,19 +558,20 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " (1:30}",
                                             "$output_effect_duration_2": "",
-
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-15% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement"
                                         }
                                     },
-
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918345,
                                             "$item_name_potion_input": "potion.jump.name",
                                             "$effect_potion_input_name_1": "potion.jump",
@@ -567,8 +580,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (3:00)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -576,20 +592,25 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " (1:30}",
                                             "$output_effect_duration_2": "",
-                                            
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-15% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement"
                                         }
                                     },
-
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 24444928,
                                             "$item_name_input": "item.redstone.name",
-            
-                                            "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$input_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_potion_input_id": 27918353,
                                             "$item_name_potion_input": "potion.moveSlowdown.name",
                                             "$effect_potion_input_name_1": "potion.moveSlowdown",
@@ -598,8 +619,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (1:30)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -607,14 +631,20 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " (4:00}",
                                             "$output_effect_duration_2": "",
-
                                             "$this_not_input_drank": false,
-                                            "$input_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$input_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$input_drank_type": "-15% ",
                                             "$input_drank_add": "attribute.name.minecraft:movement",
-
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-15% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement"
                                         }
@@ -622,18 +652,26 @@ Discord: Kotori Itsuka#6038
                                 ]
                             }
                         },
-
                         {
                             "asa_potion_page_1": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
-                                "bindings": [ { "source_control_name": "slowness_0_1", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "source_control_name": "slowness_0_1",
+                                        "binding_type": "view",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
                                 "controls": [
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918350,
                                             "$item_name_potion_input": "potion.moveSpeed.name",
                                             "$effect_potion_input_name_1": "potion.moveSpeed",
@@ -642,8 +680,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (8:00)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -651,9 +692,12 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " (4:00}",
                                             "$output_effect_duration_2": "",
-
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-15% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement"
                                         }
@@ -662,7 +706,6 @@ Discord: Kotori Itsuka#6038
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918345,
                                             "$item_name_potion_input": "potion.jump.name",
                                             "$effect_potion_input_name_1": "potion.jump",
@@ -671,8 +714,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (8:00)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -680,20 +726,25 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " (4:00}",
                                             "$output_effect_duration_2": "",
-
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-15% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement"
                                         }
                                     },
-
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 25821184,
                                             "$item_name_input": "item.glowstone_dust.name",
-            
-                                            "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$input_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_potion_input_id": 27918353,
                                             "$item_name_potion_input": "potion.moveSlowdown.name",
                                             "$effect_potion_input_name_1": "potion.moveSlowdown",
@@ -702,8 +753,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (1:30)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918353,
                                             "$item_name_output": "potion.moveSlowdown.name",
                                             "$effect_output_name_1": "potion.moveSlowdown",
@@ -711,18 +765,26 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_output_extra_effect": true,
                                             "$output_effect_duration_1": " IV (0:20}",
                                             "$output_effect_duration_2": "",
-
                                             "$this_not_input_drank": false,
-                                            "$input_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$input_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$input_drank_type": "-15% ",
                                             "$input_drank_add": "attribute.name.minecraft:movement",
-
                                             "$this_not_output_drank": false,
-                                            "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                            "$output_drank_color": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$output_drank_type": "-60% ",
                                             "$output_drank_add": "attribute.name.minecraft:movement",
-
-                                            "$input_hover_offset": [ 8, 0 ]
+                                            "$input_hover_offset": [
+                                                8,
+                                                0
+                                            ]
                                         }
                                     }
                                 ]
@@ -731,11 +793,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "waterBreathing": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -749,7 +813,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 17498112,
                                 "$item_name_input": "item.pufferfish.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -758,7 +821,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918356,
                                 "$item_name_output": "potion.waterBreathing.name",
                                 "$effect_output_name_1": "potion.waterBreathing",
@@ -768,12 +830,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918356,
                                 "$item_name_potion_input": "potion.waterBreathing.name",
                                 "$effect_potion_input_name_1": "potion.waterBreathing",
@@ -782,7 +842,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918356,
                                 "$item_name_output": "potion.waterBreathing.name",
                                 "$effect_output_name_1": "potion.waterBreathing",
@@ -795,11 +854,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "heal": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -813,7 +874,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 28442624,
                                 "$item_name_input": "item.speckled_melon.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -822,7 +882,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918358,
                                 "$item_name_output": "potion.heal.name",
                                 "$effect_output_name_1": "potion.heal",
@@ -832,12 +891,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918358,
                                 "$item_name_potion_input": "potion.heal.name",
                                 "$effect_potion_input_name_1": "potion.heal",
@@ -846,7 +903,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918358,
                                 "$item_name_output": "potion.heal.name",
                                 "$effect_output_name_1": "potion.heal",
@@ -859,11 +915,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "heal": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -876,14 +934,23 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_potion_page_1": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
-                                "bindings": [ { "source_control_name": "harm_1_0", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "source_control_name": "harm_1_0",
+                                        "binding_type": "view",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
                                 "controls": [
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918358,
                                             "$item_name_potion_input": "potion.heal.name",
                                             "$effect_potion_input_name_1": "potion.heal",
@@ -892,8 +959,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": "",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918360,
                                             "$item_name_output": "potion.harm.name",
                                             "$effect_output_name_1": "potion.harm",
@@ -903,13 +973,15 @@ Discord: Kotori Itsuka#6038
                                             "$output_effect_duration_2": ""
                                         }
                                     },
-            
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
-                                            "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$input_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_potion_input_id": 27918362,
                                             "$item_name_potion_input": "potion.poison.name",
                                             "$effect_potion_input_name_1": "potion.poison",
@@ -918,8 +990,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " (0:45)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918360,
                                             "$item_name_output": "potion.harm.name",
                                             "$effect_output_name_1": "potion.harm",
@@ -929,12 +1004,10 @@ Discord: Kotori Itsuka#6038
                                             "$output_effect_duration_2": ""
                                         }
                                     },
-            
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 25821184,
                                             "$item_name_input": "item.glowstone_dust.name",
-            
                                             "$item_potion_input_id": 27918360,
                                             "$item_name_potion_input": "potion.harm.name",
                                             "$effect_potion_input_name_1": "potion.harm",
@@ -943,8 +1016,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": "",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918360,
                                             "$item_name_output": "potion.harm.name",
                                             "$effect_output_name_1": "potion.harm",
@@ -957,18 +1033,26 @@ Discord: Kotori Itsuka#6038
                                 ]
                             }
                         },
-
                         {
                             "asa_potion_page_1": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
-                                "bindings": [ { "source_control_name": "harm_0_1", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "bindings": [
+                                    {
+                                        "source_control_name": "harm_0_1",
+                                        "binding_type": "view",
+                                        "source_property_name": "#toggle_state",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
                                 "controls": [
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
                                             "$item_potion_input_id": 27918358,
                                             "$item_name_potion_input": "potion.heal.name",
                                             "$effect_potion_input_name_1": "potion.heal",
@@ -977,8 +1061,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " II",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918360,
                                             "$item_name_output": "potion.harm.name",
                                             "$effect_output_name_1": "potion.harm",
@@ -988,13 +1075,15 @@ Discord: Kotori Itsuka#6038
                                             "$output_effect_duration_2": ""
                                         }
                                     },
-            
                                     {
                                         "@asa_brewing_recipe.asa_potion_recipe_template": {
                                             "$item_id_input": 28049408,
                                             "$item_name_input": "item.fermented_spider_eye.name",
-            
-                                            "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$input_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_potion_input_id": 27918362,
                                             "$item_name_potion_input": "potion.poison.name",
                                             "$effect_potion_input_name_1": "potion.poison",
@@ -1003,8 +1092,11 @@ Discord: Kotori Itsuka#6038
                                             "$no_show_potion_input_extra_effect": true,
                                             "$input_potion_effect_duration_1": " II (0:22)",
                                             "$input_potion_effect_duration_2": "",
-            
-                                            "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                            "$output_effect_name_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$item_id_output": 27918360,
                                             "$item_name_output": "potion.harm.name",
                                             "$effect_output_name_1": "potion.harm",
@@ -1020,11 +1112,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "poison": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1038,7 +1132,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 18219008,
                                 "$item_name_input": "item.spider_eye.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1047,8 +1140,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918362,
                                 "$item_name_output": "potion.poison.name",
                                 "$effect_output_name_1": "potion.poison",
@@ -1058,13 +1154,15 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
-                                "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$input_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_potion_input_id": 27918362,
                                 "$item_name_potion_input": "potion.poison.name",
                                 "$effect_potion_input_name_1": "potion.poison",
@@ -1073,8 +1171,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (0:45)",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918362,
                                 "$item_name_output": "potion.poison.name",
                                 "$effect_output_name_1": "potion.poison",
@@ -1084,13 +1185,15 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
-                                "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$input_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_potion_input_id": 27918362,
                                 "$item_name_potion_input": "potion.poison.name",
                                 "$effect_potion_input_name_1": "potion.poison",
@@ -1099,8 +1202,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (0:45)",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918362,
                                 "$item_name_output": "potion.poison.name",
                                 "$effect_output_name_1": "potion.poison",
@@ -1113,11 +1219,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "regeneration": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1131,7 +1239,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 27787264,
                                 "$item_name_input": "item.ghast_tear.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1140,7 +1247,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918365,
                                 "$item_name_output": "potion.regeneration.name",
                                 "$effect_output_name_1": "potion.regeneration",
@@ -1150,12 +1256,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918365,
                                 "$item_name_potion_input": "potion.regeneration.name",
                                 "$effect_potion_input_name_1": "potion.regeneration",
@@ -1164,7 +1268,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (0:45)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918365,
                                 "$item_name_output": "potion.regeneration.name",
                                 "$effect_output_name_1": "potion.regeneration",
@@ -1174,12 +1277,10 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_2": ""
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918365,
                                 "$item_name_potion_input": "potion.regeneration.name",
                                 "$effect_potion_input_name_1": "potion.regeneration",
@@ -1188,7 +1289,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (0:45)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918365,
                                 "$item_name_output": "potion.regeneration.name",
                                 "$effect_output_name_1": "potion.regeneration",
@@ -1201,11 +1301,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "damageBoost": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1219,7 +1321,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 28114944,
                                 "$item_name_input": "item.blaze_powder.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1228,7 +1329,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918368,
                                 "$item_name_output": "potion.damageBoost.name",
                                 "$effect_output_name_1": "potion.damageBoost",
@@ -1236,19 +1336,20 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (3:00)",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+1.3% ",
                                 "$output_drank_add": "attribute.name.minecraft:attack_damage"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918368,
                                 "$item_name_potion_input": "potion.damageBoost.name",
                                 "$effect_potion_input_name_1": "potion.damageBoost",
@@ -1257,7 +1358,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918368,
                                 "$item_name_output": "potion.damageBoost.name",
                                 "$effect_output_name_1": "potion.damageBoost",
@@ -1265,24 +1365,28 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (8:00)",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$input_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$input_drank_type": "+1.3% ",
                                 "$input_drank_add": "attribute.name.minecraft:attack_damage",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+1.3% ",
                                 "$output_drank_add": "attribute.name.minecraft:attack_damage"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
                                 "$item_potion_input_id": 27918368,
                                 "$item_name_potion_input": "potion.damageBoost.name",
                                 "$effect_potion_input_name_1": "potion.damageBoost",
@@ -1291,7 +1395,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (3:00)",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918368,
                                 "$item_name_output": "potion.damageBoost.name",
                                 "$effect_output_name_1": "potion.damageBoost",
@@ -1299,14 +1402,20 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " II (1:30)",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$input_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$input_drank_type": "+1.3% ",
                                 "$input_drank_add": "attribute.name.minecraft:attack_damage",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 0.333, 0.333, 1.0 ],
+                                "$output_drank_color": [
+                                    0.333,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$output_drank_type": "+2.99% ",
                                 "$output_drank_add": "attribute.name.minecraft:attack_damage"
                             }
@@ -1314,11 +1423,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "damageBoost": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1332,7 +1443,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 28049408,
                                 "$item_name_input": "item.fermented_spider_eye.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1341,8 +1451,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918370,
                                 "$item_name_output": "potion.weakness.name",
                                 "$effect_output_name_1": "potion.weakness",
@@ -1350,20 +1463,25 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (0:30)",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                "$output_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$output_drank_type": "-0.7% ",
                                 "$output_drank_add": "attribute.name.minecraft:attack_damage"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
-                                "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$input_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_potion_input_id": 27918370,
                                 "$item_name_potion_input": "potion.weakness.name",
                                 "$effect_potion_input_name_1": "potion.weakness",
@@ -1372,8 +1490,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (1:30)",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918370,
                                 "$item_name_output": "potion.weakness.name",
                                 "$effect_output_name_1": "potion.weakness",
@@ -1381,14 +1502,20 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": true,
                                 "$output_effect_duration_1": " (3:00)",
                                 "$output_effect_duration_2": "",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 1, 0.3, 0.3 ],
+                                "$input_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$input_drank_type": "-0.7% ",
                                 "$input_drank_add": "attribute.name.minecraft:attack_damage",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                "$output_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$output_drank_type": "-0.7% ",
                                 "$output_drank_add": "attribute.name.minecraft:attack_damage"
                             }
@@ -1396,11 +1523,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "turtleMaster": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1414,7 +1543,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 37552128,
                                 "$item_name_input": "item.turtle_helmet.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1423,8 +1551,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918373,
                                 "$item_name_output": "potion.turtleMaster.name",
                                 "$effect_output_name_1": "potion.turtleMaster",
@@ -1432,20 +1563,25 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": false,
                                 "$output_effect_duration_1": " IV (0:20)",
                                 "$output_effect_duration_2": " III (0:20)",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                "$output_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$output_drank_type": "-60% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
-                                "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$input_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_potion_input_id": 27918373,
                                 "$item_name_potion_input": "potion.turtleMaster.name",
                                 "$effect_potion_input_name_1": "potion.turtleMaster",
@@ -1454,8 +1590,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": false,
                                 "$input_potion_effect_duration_1": " IV (0:20)",
                                 "$input_potion_effect_duration_2": " III (0:20)",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918373,
                                 "$item_name_output": "potion.turtleMaster.name",
                                 "$effect_output_name_1": "potion.turtleMaster",
@@ -1463,25 +1602,33 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": false,
                                 "$output_effect_duration_1": " IV (0:40)",
                                 "$output_effect_duration_2": " III (0:40)",
-                                
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 1, 0.3, 0.3 ],
+                                "$input_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$input_drank_type": "-60% ",
                                 "$input_drank_add": "attribute.name.minecraft:movement",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                "$output_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$output_drank_type": "-60% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 25821184,
                                 "$item_name_input": "item.glowstone_dust.name",
-
-                                "$input_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$input_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_potion_input_id": 27918373,
                                 "$item_name_potion_input": "potion.turtleMaster.name",
                                 "$effect_potion_input_name_1": "potion.turtleMaster",
@@ -1490,8 +1637,11 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": false,
                                 "$input_potion_effect_duration_1": " IV (0:20)",
                                 "$input_potion_effect_duration_2": " III (0:20)",
-
-                                "$output_effect_name_color_1": [ 1, 0.3, 0.3 ],
+                                "$output_effect_name_color_1": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$item_id_output": 27918373,
                                 "$item_name_output": "potion.turtleMaster.name",
                                 "$effect_output_name_1": "potion.turtleMaster",
@@ -1499,28 +1649,38 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_output_extra_effect": false,
                                 "$output_effect_duration_1": " VI (0:20)",
                                 "$output_effect_duration_2": " IV (0:20)",
-
                                 "$this_not_input_drank": false,
-                                "$input_drank_color": [ 1, 0.3, 0.3 ],
+                                "$input_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$input_drank_type": "-60% ",
                                 "$input_drank_add": "attribute.name.minecraft:movement",
-
                                 "$this_not_output_drank": false,
-                                "$output_drank_color": [ 1, 0.3, 0.3 ],
+                                "$output_drank_color": [
+                                    1,
+                                    0.3,
+                                    0.3
+                                ],
                                 "$output_drank_type": "-90% ",
                                 "$output_drank_add": "attribute.name.minecraft:movement",
-
-                                "$input_hover_offset": [ 8, -8 ]
+                                "$input_hover_offset": [
+                                    8,
+                                    -8
+                                ]
                             }
                         }
                     ]
                 }
             },
-
             {
                 "turtleMaster": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1534,7 +1694,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 37617664,
                                 "$item_name_input": "item.phantom_membrane.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "potion.awkward.name",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1543,7 +1702,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 27918376,
                                 "$item_name_output": "potion.slowFalling.name",
                                 "$effect_output_name_1": "potion.slowFalling",
@@ -1551,19 +1709,16 @@ Discord: Kotori Itsuka#6038
                                 "$output_effect_duration_1": " (1:30)"
                             }
                         },
-
                         {
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 24444928,
                                 "$item_name_input": "item.redstone.name",
-
                                 "$item_potion_input_id": 27918376,
                                 "$item_name_potion_input": "potion.slowFalling.name",
                                 "$effect_potion_input_name_1": "potion.slowFalling",
                                 "$potion_input_is_not_potion": false,
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": " (1:30)",
-
                                 "$item_id_output": 27918376,
                                 "$item_name_output": "potion.slowFalling.name",
                                 "$effect_output_name_1": "potion.slowFalling",
@@ -1574,11 +1729,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "splash": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1592,7 +1749,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 21495808,
                                 "$item_name_input": "item.gunpowder.name",
-
                                 "$item_potion_input_id": 27918337,
                                 "$item_name_potion_input": "Potion",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1601,7 +1757,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 36765696,
                                 "$item_name_output": "Splash Potion",
                                 "$effect_output_name_1": "potion.empty",
@@ -1615,11 +1770,13 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "lingering": {
                     "type": "stack_panel",
-                    "size": [ "100%", "100%c" ],
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1633,7 +1790,6 @@ Discord: Kotori Itsuka#6038
                             "@asa_brewing_recipe.asa_potion_recipe_template": {
                                 "$item_id_input": 36700160,
                                 "$item_name_input": "item.dragon_breath.name",
-
                                 "$item_potion_input_id": 36765696,
                                 "$item_name_potion_input": "Splash Potion",
                                 "$effect_potion_input_name_1": "potion.empty",
@@ -1642,7 +1798,6 @@ Discord: Kotori Itsuka#6038
                                 "$no_show_potion_input_extra_effect": true,
                                 "$input_potion_effect_duration_1": "",
                                 "$input_potion_effect_duration_2": "",
-
                                 "$item_id_output": 36831232,
                                 "$item_name_output": "Lingering Potion",
                                 "$effect_output_name_1": "potion.empty",
@@ -1658,7 +1813,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_tab_panel": {
         "type": "panel",
         "controls": [
@@ -1666,18 +1820,23 @@ Discord: Kotori Itsuka#6038
                 "slowness": {
                     "type": "panel",
                     "$toggle_tab_name": "slowness_page",
-                    "bindings": [ { "source_control_name": "asa_move_slowdown_potion", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                    "bindings": [
+                        {
+                            "source_control_name": "asa_move_slowdown_potion",
+                            "binding_type": "view",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
                     "controls": [
                         {
                             "page_1@asa_brewing_recipe.asa_tab_panel": {
                                 "$toggle_enable_left": false,
                                 "$asa_tab_left_bindings": "asa_null",
                                 "$left_tab_page": 100,
-
                                 "$toggle_enable_right": true,
                                 "$asa_tab_right_bindings": "slowness_0_1",
                                 "$right_tab_page": 1,
-
                                 "$asa_page_bindings_1": "slowness_1_0"
                             }
                         },
@@ -1686,11 +1845,9 @@ Discord: Kotori Itsuka#6038
                                 "$toggle_enable_left": true,
                                 "$asa_tab_left_bindings": "slowness_1_0",
                                 "$left_tab_page": 0,
-
                                 "$toggle_enable_right": false,
                                 "$asa_tab_right_bindings": "asa_null",
                                 "$right_tab_page": 100,
-
                                 "$asa_page_bindings_1": "slowness_0_1",
                                 "$is_toggle_bugs": true
                             }
@@ -1702,18 +1859,23 @@ Discord: Kotori Itsuka#6038
                 "harm": {
                     "type": "panel",
                     "$toggle_tab_name": "harm_page",
-                    "bindings": [ { "source_control_name": "asa_harm_potion", "binding_type": "view", "source_property_name": "#toggle_state", "target_property_name": "#visible" } ],
+                    "bindings": [
+                        {
+                            "source_control_name": "asa_harm_potion",
+                            "binding_type": "view",
+                            "source_property_name": "#toggle_state",
+                            "target_property_name": "#visible"
+                        }
+                    ],
                     "controls": [
                         {
                             "page_1@asa_brewing_recipe.asa_tab_panel": {
                                 "$toggle_enable_left": false,
                                 "$asa_tab_left_bindings": "asa_null",
                                 "$left_tab_page": 100,
-
                                 "$toggle_enable_right": true,
                                 "$asa_tab_right_bindings": "harm_0_1",
                                 "$right_tab_page": 1,
-
                                 "$asa_page_bindings_1": "harm_1_0"
                             }
                         },
@@ -1722,11 +1884,9 @@ Discord: Kotori Itsuka#6038
                                 "$toggle_enable_left": true,
                                 "$asa_tab_left_bindings": "harm_1_0",
                                 "$left_tab_page": 0,
-
                                 "$toggle_enable_right": false,
                                 "$asa_tab_right_bindings": "asa_null",
                                 "$right_tab_page": 100,
-
                                 "$asa_page_bindings_1": "harm_0_1",
                                 "$is_toggle_bugs": true
                             }

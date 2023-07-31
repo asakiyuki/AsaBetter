@@ -1,30 +1,25 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "structure_editor_content/title": {
         "font_type": "MinecraftTen",
-        "color": [ 0, 0, 0 ],
+        "color": [
+            0,
+            0,
+            0
+        ],
         "anchor_from": "top_middle",
         "anchor_to": "top_middle",
-        "offset": [ 0, 1.5 ],
+        "offset": [
+            0,
+            1.5
+        ],
         "font_scale_factor": 1.25
     },
-
     "button_panel_wrapper/panel/save_panel": {
         "ignored": false
     },
-
     "button_panel_wrapper/panel/save_panel_no_export": {
         "ignored": true
     },
-
     "load_mode_panel/animation_mode": {
         "controls": [
             {
@@ -98,15 +93,21 @@ Discord: Kotori Itsuka#6038
                             }
                         }
                     ]
-                } 
+                }
             }
         ]
     },
-
     "asa_mod_state": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
-        "$mode_color": [ 1, 1 ,1 ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$mode_color": [
+            1,
+            1,
+            1
+        ],
         "bindings": [
             {
                 "binding_name": "$binding_view",
@@ -124,7 +125,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "help_button_panel": {
         "bindings": [
             {
@@ -141,12 +141,14 @@ Discord: Kotori Itsuka#6038
                     "$toggle_group_forced_index": 1,
                     "reset_on_focus_lost": false,
                     "$asa_icon_texture": "textures/ui/icon_preview",
-                    "size": [ 30, 30 ]
+                    "size": [
+                        30,
+                        30
+                    ]
                 }
             }
         ]
     },
-
     "scroll_panel_content/content_stack_panel/mode_panel": {
         "controls": [
             {
@@ -258,7 +260,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "save_mode_panel/redstone_save_mode": {
         "controls": [
             {
@@ -314,11 +315,10 @@ Discord: Kotori Itsuka#6038
                             }
                         }
                     ]
-                } 
+                }
             }
         ]
     },
-
     "structure_editor_content": {
         "type": "panel",
         "controls": [
@@ -370,10 +370,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_structure_renderer": {
         "type": "panel",
-        "size": [ "100%", "100% - 31px" ],
+        "size": [
+            "100%",
+            "100% - 31px"
+        ],
         "anchor_from": "bottom_left",
         "anchor_to": "bottom_left",
         "controls": [
@@ -403,37 +405,55 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_zoom_stack": {
                     "type": "stack_panel",
-                    "size": [ "100%c", "100%cm" ],
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
                     "orientation": "horizontal",
                     "anchor_from": "bottom_right",
                     "anchor_to": "bottom_right",
-                    "offset": [ -3, -3 ],
+                    "offset": [
+                        -3,
+                        -3
+                    ],
                     "controls": [
                         {
                             "verticle_stack_panel": {
                                 "type": "panel",
-                                "size": [ "100%cm", 22 ],
+                                "size": [
+                                    "100%cm",
+                                    22
+                                ],
                                 "controls": [
                                     {
                                         "slider_stack": {
                                             "type": "stack_panel",
-                                            "size": [ "100%cm", "100%c" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%c"
+                                            ],
                                             "anchor_from": "bottom_middle",
                                             "anchor_to": "bottom_middle",
                                             "controls": [
                                                 {
                                                     "x_slider": {
                                                         "type": "panel",
-                                                        "size": [ 103, 22 ],
+                                                        "size": [
+                                                            103,
+                                                            22
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "asa_x_slider@asa_slider": {
-                                                                    "size": [ 90, 8 ],
+                                                                    "size": [
+                                                                        90,
+                                                                        8
+                                                                    ],
                                                                     "layer": 50,
                                                                     "$asa_slider_steps": 21,
                                                                     "bindings": [
                                                                         {
-                                                                            "binding_name":"#slider_steps"
+                                                                            "binding_name": "#slider_steps"
                                                                         },
                                                                         {
                                                                             "binding_type": "view",
@@ -450,7 +470,10 @@ Discord: Kotori Itsuka#6038
                                                                     "anchor_to": "left_middle",
                                                                     "shadow": true,
                                                                     "text": "Horizontal",
-                                                                    "offset": [ 0, 0 ]
+                                                                    "offset": [
+                                                                        0,
+                                                                        0
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -459,16 +482,22 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "y_slider": {
                                                         "type": "panel",
-                                                        "size": [ 103, 22 ],
+                                                        "size": [
+                                                            103,
+                                                            22
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "asa_y_slider@asa_slider": {
-                                                                    "size": [ 90, 8 ],
+                                                                    "size": [
+                                                                        90,
+                                                                        8
+                                                                    ],
                                                                     "layer": 50,
                                                                     "$asa_slider_steps": 21,
                                                                     "bindings": [
                                                                         {
-                                                                            "binding_name":"#slider_steps"
+                                                                            "binding_name": "#slider_steps"
                                                                         },
                                                                         {
                                                                             "binding_type": "view",
@@ -485,7 +514,10 @@ Discord: Kotori Itsuka#6038
                                                                     "anchor_to": "left_middle",
                                                                     "shadow": true,
                                                                     "text": "Vertical",
-                                                                    "offset": [ 0, 0 ]
+                                                                    "offset": [
+                                                                        0,
+                                                                        0
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -494,11 +526,17 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "zoom_slider_panel": {
                                                         "type": "panel",
-                                                        "size": [ 138, 22 ],
+                                                        "size": [
+                                                            138,
+                                                            22
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "asa_zoom_slider@asa_slider": {
-                                                                    "size": [ 125, 8 ],
+                                                                    "size": [
+                                                                        125,
+                                                                        8
+                                                                    ],
                                                                     "layer": 50,
                                                                     "$asa_slider_steps": 21
                                                                 }
@@ -521,7 +559,10 @@ Discord: Kotori Itsuka#6038
                                 "reset_on_focus_lost": false,
                                 "layer": 50,
                                 "$asa_icon_texture": "textures/ui/close_button_default",
-                                "size": [ 22, 22 ]
+                                "size": [
+                                    22,
+                                    22
+                                ]
                             }
                         }
                     ]
@@ -529,7 +570,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_custom_structure_renderer": {
         "type": "input_panel",
         "focus_enabled": true,
@@ -553,298 +593,423 @@ Discord: Kotori Itsuka#6038
             {
                 "vertical_stack_panel": {
                     "type": "stack_panel",
-                    "size": [ "750%", "750%" ],
+                    "size": [
+                        "750%",
+                        "750%"
+                    ],
                     "controls": [
                         {
                             "1274583@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 1)"
                             }
                         },
                         {
                             "141523@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 2)"
                             }
                         },
                         {
                             "12sdgbas3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 3)"
                             }
                         },
                         {
                             "12sdgweq3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 4)"
                             }
                         },
                         {
                             "12saetge4y3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 5)"
                             }
                         },
                         {
                             "1sdgdrj23@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 6)"
                             }
                         },
                         {
                             "1325123623@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 7)"
                             }
                         },
                         {
                             "1sdhrti23@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 8)"
                             }
                         },
                         {
                             "12sagrti78p3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 9)"
                             }
                         },
                         {
                             "1212412423@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 10)"
                             }
                         },
                         {
                             "126347624374583@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 11)"
                             }
                         },
                         {
                             "14114`252`523@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 12)"
                             }
                         },
                         {
                             "12sd458756842gbas3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 13)"
                             }
                         },
                         {
                             "12sd254136gweq3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 14)"
                             }
                         },
                         {
                             "12sa53426134etge4y3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 15)"
                             }
                         },
                         {
                             "1sdgdr542356231j23@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 16)"
                             }
                         },
                         {
                             "13251236342723623@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 17)"
                             }
                         },
                         {
                             "1sdhrt2153125i23@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 18)"
                             }
                         },
                         {
                             "12sa3463474278grti78p3@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 19)"
                             }
                         },
                         {
                             "123@asa_empty": {
-                                "size": [ "100%", "1.666666666666666666666666666666666666666666666666666%" ],
+                                "size": [
+                                    "100%",
+                                    "1.666666666666666666666666666666666666666666666666666%"
+                                ],
                                 "$scroll_controls": "asa_y_slider",
                                 "$slider_bindings": "(#slider_value < 20)"
                             }
                         },
                         {
                             "structure@horizontal_stack_panel": {}
-                        }                    
+                        }
                     ]
                 }
             }
         ]
     },
-
     "horizontal_stack_panel": {
         "type": "stack_panel",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "orientation": "horizontal",
         "controls": [
             {
                 "123@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 0)"
                 }
             },
             {
                 "1274583@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 1)"
                 }
             },
             {
                 "141523@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 2)"
                 }
             },
             {
                 "12sdgbas3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 3)"
                 }
             },
             {
                 "12sdgweq3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 4)"
                 }
             },
             {
                 "12saetge4y3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 5)"
                 }
             },
             {
                 "1sdgdrj23@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 6)"
                 }
             },
             {
                 "1325123623@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 7)"
                 }
             },
             {
                 "1sdhrti23@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 8)"
                 }
             },
             {
                 "12sagrti78p3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 9)"
                 }
             },
             {
                 "1212412423@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 10)"
                 }
             },
             {
                 "126347624374583@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 11)"
                 }
             },
             {
                 "14114`252`523@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 12)"
                 }
             },
             {
                 "12sd458756842gbas3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 13)"
                 }
             },
             {
                 "12sd254136gweq3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 14)"
                 }
             },
             {
                 "12sa53426134etge4y3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 15)"
                 }
             },
             {
                 "1sdgdr542356231j23@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 16)"
                 }
             },
             {
                 "13251236342723623@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 17)"
                 }
             },
             {
                 "1sdhrt2153125i23@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 18)"
                 }
             },
             {
                 "12sa3463474278grti78p3@asa_empty": {
-                    "size": [ "1.666666666666666666666666666666666666666666666666666%", "100%" ],
+                    "size": [
+                        "1.666666666666666666666666666666666666666666666666666%",
+                        "100%"
+                    ],
                     "$scroll_controls": "asa_x_slider",
                     "$slider_bindings": "(#slider_value > 19)"
                 }
@@ -856,135 +1021,200 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_zoom_stack_panel": {
         "type": "stack_panel",
-        "size": [ "66.6666666666666666666666666666666666666666666666%", "66.6666666666666666666666666666666666666666666666%" ],
+        "size": [
+            "66.6666666666666666666666666666666666666666666666%",
+            "66.6666666666666666666666666666666666666666666666%"
+        ],
         "controls": [
             {
                 "123@asa_empty": {
-                    "size": [ "100%", "2%" ],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 1)"
                 }
             },
             {
                 "214@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 2)"
                 }
             },
             {
                 "235@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 3)"
                 }
             },
             {
                 "234@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 4)"
                 }
             },
             {
                 "567@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 5)"
                 }
             },
             {
                 "4563@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 6)"
                 }
             },
             {
                 "74136@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 7)"
                 }
             },
             {
                 "47247@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 8)"
                 }
             },
             {
                 "25136@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 9)"
                 }
             },
             {
                 "235216@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 10)"
                 }
             },
             {
                 "14253223@asa_empty": {
-                    "size": [ "100%", "2%" ],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 11)"
                 }
             },
             {
                 "247548714@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 12)"
                 }
             },
             {
                 "23253745@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 13)"
                 }
             },
             {
                 "2384562524@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 14)"
                 }
             },
             {
                 "564586797@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 15)"
                 }
             },
             {
                 "456216373@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 16)"
                 }
             },
             {
                 "235123674136@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 17)"
                 }
             },
             {
                 "473478247@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 18)"
                 }
             },
             {
                 "25123645836@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 19)"
                 }
             },
             {
                 "2355236458216@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 20)"
                 }
             },
             {
                 "asa_structure_view_panel": {
                     "type": "panel",
-                    "size": [ "100%", "fill" ],
+                    "size": [
+                        "100%",
+                        "fill"
+                    ],
                     "controls": [
                         {
                             "main@asa_zoom_hoz_stack_panel": {}
@@ -994,380 +1224,564 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "1265485683@asa_empty": {
-                    "size": [ "100%", "2%" ],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 1)"
                 }
             },
             {
                 "213463474@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 2)"
                 }
             },
             {
                 "23568658245@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 3)"
                 }
             },
             {
                 "23251254@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 4)"
                 }
             },
             {
                 "563467277@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 5)"
                 }
             },
             {
                 "45346134763@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 6)"
                 }
             },
             {
                 "741251236136@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 7)"
                 }
             },
             {
                 "4724347645787@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 8)"
                 }
             },
             {
                 "251151367234636@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 9)"
                 }
             },
             {
                 "235347247213216@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 10)"
                 }
             },
             {
                 "15613476234723@asa_empty": {
-                    "size": [ "100%", "2%" ],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 11)"
                 }
             },
             {
                 "2236346214@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 12)"
                 }
             },
             {
                 "23525123632467@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 13)"
                 }
             },
             {
                 "2351236342764@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 14)"
                 }
             },
             {
                 "5634634277@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 15)"
                 }
             },
             {
                 "42136543758563@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 16)"
                 }
             },
             {
                 "7568604136@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 17)"
                 }
             },
             {
                 "472476546784357@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 18)"
                 }
             },
             {
                 "251352365548776@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 19)"
                 }
             },
             {
                 "23521532745216@asa_empty": {
-                    "size": [ "100%", "2%"],
+                    "size": [
+                        "100%",
+                        "2%"
+                    ],
                     "$slider_bindings": "(#slider_value < 20)"
                 }
             }
         ]
     },
-
     "asa_zoom_hoz_stack_panel": {
         "type": "stack_panel",
         "orientation": "horizontal",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "controls": [
             {
                 "123@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 1)"
                 }
             },
             {
                 "214@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 2)"
                 }
             },
             {
                 "235@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 3)"
                 }
             },
             {
                 "234@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 4)"
                 }
             },
             {
                 "567@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 5)"
                 }
             },
             {
                 "4563@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 6)"
                 }
             },
             {
                 "74136@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 7)"
                 }
             },
             {
                 "47247@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 8)"
                 }
             },
             {
                 "25136@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 9)"
                 }
             },
             {
                 "235216@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 10)"
                 }
             },
             {
                 "14253223@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 11)"
                 }
             },
             {
                 "247548714@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 12)"
                 }
             },
             {
                 "23253745@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 13)"
                 }
             },
             {
                 "2384562524@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 14)"
                 }
             },
             {
                 "564586797@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 15)"
                 }
             },
             {
                 "456216373@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 16)"
                 }
             },
             {
                 "235123674136@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 17)"
                 }
             },
             {
                 "473478247@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 18)"
                 }
             },
             {
                 "25123645836@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 19)"
                 }
             },
             {
                 "2355236458216@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 20)"
                 }
             },
             {
                 "main@asa_zoom_structure_panel": {
-                    "size": [ "fill", "100%"]
+                    "size": [
+                        "fill",
+                        "100%"
+                    ]
                 }
             },
             {
                 "1265485683@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 1)"
                 }
             },
             {
                 "213463474@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 2)"
                 }
             },
             {
                 "23568658245@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 3)"
                 }
             },
             {
                 "23251254@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 4)"
                 }
             },
             {
                 "563467277@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 5)"
                 }
             },
             {
                 "45346134763@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 6)"
                 }
             },
             {
                 "741251236136@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 7)"
                 }
             },
             {
                 "4724347645787@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 8)"
                 }
             },
             {
                 "251151367234636@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 9)"
                 }
             },
             {
                 "235347247213216@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 10)"
                 }
             },
             {
                 "15613476234723@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 11)"
                 }
             },
             {
                 "2236346214@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 12)"
                 }
             },
             {
                 "23525123632467@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 13)"
                 }
             },
             {
                 "2351236342764@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 14)"
                 }
             },
             {
                 "5634634277@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 15)"
                 }
             },
             {
                 "42136543758563@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 16)"
                 }
             },
             {
                 "7568604136@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 17)"
                 }
             },
             {
                 "472476546784357@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 18)"
                 }
             },
             {
                 "251352365548776@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 19)"
                 }
             },
             {
                 "23521532745216@asa_empty": {
-                    "size": [ "2%", "100%" ],
+                    "size": [
+                        "2%",
+                        "100%"
+                    ],
                     "$slider_bindings": "(#slider_value < 20)"
                 }
             }
         ]
     },
-
     "asa_empty": {
         "type": "panel",
         "$scroll_controls|default": "asa_zoom_slider",
@@ -1380,7 +1794,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_zoom_structure_panel": {
         "type": "panel",
         "controls": [
@@ -1389,7 +1802,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "structure_renderer_template": {
         "type": "custom",
         "renderer": "3d_structure_renderer",
@@ -1467,30 +1879,34 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_slider@common.slider": {
-        "$slider_name":"asa_zoom_slider",
+        "$slider_name": "asa_zoom_slider",
         "property_bag": {
             "#slider_steps": "$asa_slider_steps"
         },
         "bindings": [
             {
-				"binding_name":"#slider_steps"
-			},
-			{
-				"binding_type": "view",
-				"source_property_name": "#slider_value",
-				"target_property_name": "#slider_value"
-			}
+                "binding_name": "#slider_steps"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "#slider_value",
+                "target_property_name": "#slider_value"
+            }
         ]
     },
-
     "asa_zoom_percent": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "anchor_from": "bottom_left",
         "anchor_to": "bottom_left",
-        "offset": [ 3, -3 ],
+        "offset": [
+            3,
+            -3
+        ],
         "controls": [
             {
                 "1@zoom_text_template": {
@@ -1620,7 +2036,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "zoom_text_template": {
         "type": "label",
         "localize": false,

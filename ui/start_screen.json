@@ -1,20 +1,9 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "start_screen": {
         "$screen_bg_content": "asa_background_common.start_bg",
         "$screen_content": "asa_start_screen.asa_start_content",
-
         "$asa_better_version": "v4",
         "$asa_is_dev_version": "beta"
-
         /*
         beta: For Beta Testers
         official: Released Version

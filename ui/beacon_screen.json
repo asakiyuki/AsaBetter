@@ -1,17 +1,7 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "beacon_screen": {
         "force_render_below": true
     },
-    
     "beacon_panel": {
         "type": "panel",
         "controls": [
@@ -35,7 +25,10 @@ Discord: Kotori Itsuka#6038
                 "auto_place_panel": {
                     "layer": 1,
                     "type": "panel",
-                    "size": [ 256, 219 ],
+                    "size": [
+                        256,
+                        219
+                    ],
                     "controls": [
                         {
                             "invcentory_mode@asa_crafting_panel.asa_inventory_mode_panel": {
@@ -59,7 +52,10 @@ Discord: Kotori Itsuka#6038
             {
                 "root_panel@common.root_panel": {
                     "layer": 1,
-                    "size": [ 256, 219 ],
+                    "size": [
+                        256,
+                        219
+                    ],
                     "$show_close_button": false,
                     "controls": [
                         {

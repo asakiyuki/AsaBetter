@@ -1,24 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_common_button",
-
     //Button Asset
-
     "asa_button_asset@common.button": {
-
         "$default_button_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
         "$hover_button_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
         "$pressed_button_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
         "$locked_button_texture|default": "asa_textures/ui/button_and_toggle/asa_button",
-
         "$default_content_alpha|default": 1,
         "$hover_content_alpha|default": 1,
         "locked_control": "locked",
@@ -28,48 +15,74 @@ Discord: Kotori Itsuka#6038
         "button_mappings": "$asa_button_mappings",
         "$asa_button_mappings|default": [
             {
-              "from_button_id": "button.menu_select",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "pressed"
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "pressed"
             },
             {
-              "from_button_id": "button.menu_ok",
-              "to_button_id": "$pressed_button_name",
-              "mapping_type": "focused"
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$pressed_button_name",
+                "mapping_type": "focused"
             }
         ]
     },
-
     "asa_text_button@asa_button_asset": {
-        "$button_offset|default": [ 0, 0 ],
-        "$button_pressed_offset|default": [ 0, 1 ],
+        "$button_offset|default": [
+            0,
+            0
+        ],
+        "$button_pressed_offset|default": [
+            0,
+            1
+        ],
         "$button_text|default": "",
         "$button_font_size|default": "normal",
         "$button_font_scale_factor|default": 1.0,
-        
         "$pressed_alpha|default": 1,
         "$default_button_alpha|default": 1,
         "$hover_button_alpha|default": 1,
         "$pressed_button_alpha|default": 1,
-
-        "$default_button_pressed_offset|default": [ 0, 1 ],
-
-        "$default_text_color|default": [ 1, 1, 1 ],
-        "$hover_text_color|default": [ 1, 1, 1 ],
-        "$pressed_text_color|default": [ 1, 1, 1 ],
-        "$locked_text_color|default": [ 1, 1, 1 ],
-
+        "$default_button_pressed_offset|default": [
+            0,
+            1
+        ],
+        "$default_text_color|default": [
+            1,
+            1,
+            1
+        ],
+        "$hover_text_color|default": [
+            1,
+            1,
+            1
+        ],
+        "$pressed_text_color|default": [
+            1,
+            1,
+            1
+        ],
+        "$locked_text_color|default": [
+            1,
+            1,
+            1
+        ],
         "$button_text_binding_type|default": "none",
         "$button_binding_condition|default": "none",
         "$button_text_grid_collection_name|default": "",
         "$button_type_panel|default": "asa_common_button.asa_button_binding_and_label",
         "$button_state_panel|default": "asa_common_button.asa_clear_button_panel",
-
-        "$button_image_color_default|default": [ 0, 0, 0 ],
+        "$button_image_color_default|default": [
+            0,
+            0,
+            0
+        ],
         "$button_image_color_hover|default": "@asa_button_animation.asa_button_color_1",
         "$button_image_color_pressed|default": "@asa_button_animation.asa_button_color_1",
-        "$button_image_color_locked|default": [ 0, 0, 0 ],
-
+        "$button_image_color_locked|default": [
+            0,
+            0,
+            0
+        ],
         "$default_state|default": false,
         "$hover_state|default": false,
         "$pressed_state|default": false,
@@ -128,9 +141,7 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Button Label
-
     "asa_button_binding_and_label": {
         "type": "label",
         "layer": 2,
@@ -172,25 +183,37 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_clear_button_panel": {
         "type": "panel",
         "$button_alpha|default": 1,
         "layer": 1,
-        "$button_size_override|default": [ "100%", "100%" ],
+        "$button_size_override|default": [
+            "100%",
+            "100%"
+        ],
         "size": "$button_size_override",
         "$content_alpha|default": 1,
         "$button_image|default": "asa_common_button.button_image",
         "$button_image_visible|default": true,
-        "$button_image_size|default": [ "100%", "100%" ],
+        "$button_image_size|default": [
+            "100%",
+            "100%"
+        ],
         "$image_anchor|default": "center",
-        "$image_offset|default": [ 0, 0 ],
+        "$image_offset|default": [
+            0,
+            0
+        ],
         "$button_anchor_to|default": "center",
         "$button_anchor_from|default": "center",
         "anchor_to": "$button_anchor_to",
         "anchor_from": "$button_anchor_from",
         "$button_image_fill|default": false,
-        "$button_image_color|default": [ 1.0, 1.0, 1.0 ],
+        "$button_image_color|default": [
+            1.0,
+            1.0,
+            1.0
+        ],
         "controls": [
             {
                 "$button_image@$button_image": {
@@ -207,7 +230,10 @@ Discord: Kotori Itsuka#6038
             {
                 "button_content": {
                     "type": "panel",
-                    "$button_content_size|default": [ "100% - 6px", "100% - 6px" ],
+                    "$button_content_size|default": [
+                        "100% - 6px",
+                        "100% - 6px"
+                    ],
                     "size": "$button_content_size",
                     "controls": [
                         {
@@ -220,7 +246,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "button_image": {
         "type": "image",
         "layer": 1,

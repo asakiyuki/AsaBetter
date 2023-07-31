@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
   /*"inventory_screen": {
     "force_render_below": true
@@ -15,7 +6,6 @@ Discord: Kotori Itsuka#6038
   "crafting_screen": {
     "force_render_below": true
   },*/
-
   //Tab left
   "tab_left@common_tabs.tab_left": {
     "$toggle_focus_enabled": false,
@@ -23,125 +13,139 @@ Discord: Kotori Itsuka#6038
     "$toggle_group_default_selected": "$construction_index",
     "$tab_content": "crafting.empty_tab_panel"
   },
-
   "asa_search_tab@crafting.tab_left": {
     "$is_bottom_most_tab": true,
     "$tab_view_binding_name": "search_tab_toggle",
     "$tab_icon": "crafting.search_icon",
     "$toggle_group_forced_index": "$search_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_search",
-
     "$focus_id": "search_tab",
     "$focus_override_left": "nature_tab",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
-
   "asa_construction_tab@crafting.tab_left": {
     "$is_top_most_tab": true,
     "$tab_view_binding_name": "construction_tab_toggle",
     "$tab_icon": "crafting.construction_icon",
     "$toggle_group_forced_index": "$construction_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_construct",
-
     "$focus_id": "construction_tab",
     "$focus_override_left": "help_button",
     "$focus_override_right": "equipment_tab",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
-
   "asa_equipment_tab@crafting.tab_left": {
     "$tab_view_binding_name": "equipment_tab_toggle",
     "$tab_icon": "crafting.equipment_icon",
     "$toggle_group_forced_index": "$equipment_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_equipment",
-
     "$focus_id": "equipment_tab",
     "$focus_override_left": "construction_tab",
     "$focus_override_right": "items_tab",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
-
   "asa_nature_tab@crafting.tab_left": {
     "$tab_view_binding_name": "nature_tab_toggle",
     "$tab_icon": "crafting.nature_icon",
     "$toggle_group_forced_index": "$nature_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_nature",
-
     "$focus_id": "nature_tab",
     "$focus_override_left": "items_tab",
     "$focus_override_right": "search_tab",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
-
   "asa_items_tab@crafting.tab_left": {
     "$tab_view_binding_name": "items_tab_toggle",
     "$tab_icon": "crafting.miscellaneous_icon",
     "$toggle_group_forced_index": "$items_index",
-
     "$toggle_binding_type": "global",
     "$toggle_state_binding_name": "#is_left_tab_items",
-
     "$focus_id": "items_tab",
     "$focus_override_left": "equipment_tab",
     "$focus_override_right": "nature_tab",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP"
   },
-
   "tab_navigation_panel_layout": {
     "type": "stack_panel",
     "orientation": "horizontal",
-    "size": [ "100%", 27 ],
+    "size": [
+      "100%",
+      27
+    ],
     "controls": [
       {
         "navigation_tabs": {
           "type": "panel",
-          "size": [ "fill", "100%" ],
+          "size": [
+            "fill",
+            "100%"
+          ],
           "controls": [
             {
               "content": {
                 "type": "stack_panel",
-                "size": [ "100%", "100% + 4px" ],
+                "size": [
+                  "100%",
+                  "100% + 4px"
+                ],
                 "anchor_to": "top_left",
                 "anchor_from": "top_left",
-                "offset": [ -30, 23 ],
+                "offset": [
+                  -30,
+                  23
+                ],
                 "controls": [
                   {
                     "construction_tab@crafting.asa_construction_tab": {
-                      "size": [ 35, "100%" ]
+                      "size": [
+                        35,
+                        "100%"
+                      ]
                     }
                   },
                   {
                     "equipment_tab@crafting.asa_equipment_tab": {
-                      "size": [ 35, "100%" ]
+                      "size": [
+                        35,
+                        "100%"
+                      ]
                     }
                   },
                   {
                     "items_tab@crafting.asa_items_tab": {
-                      "size": [ 35, "100%" ]
+                      "size": [
+                        35,
+                        "100%"
+                      ]
                     }
                   },
                   {
                     "nature_tab@crafting.asa_nature_tab": {
-                      "size": [ 35, "100%" ]
+                      "size": [
+                        35,
+                        "100%"
+                      ]
                     }
                   },
                   {
                     "asa_panel": {
                       "type": "panel",
-                      "size": [ 35, 31 ]
+                      "size": [
+                        35,
+                        31
+                      ]
                     }
                   },
                   {
                     "search_tab@crafting.asa_search_tab": {
-                      "size": [ 35, "100%" ]
+                      "size": [
+                        35,
+                        "100%"
+                      ]
                     }
                   }
                 ]
@@ -152,16 +156,13 @@ Discord: Kotori Itsuka#6038
       }
     ]
   },
-
   //
   "toolbar_panel/toolbar_background/toolbar_stack_panel/help_button_panel": {
     "ignored": true
   },
-
   "toolbar_panel/toolbar_background/toolbar_stack_panel/close_button_panel": {
     "ignored": true
   },
-
   "recipe_book@crafting.crafting_root_panel": {
     "layer": 2,
     "controls": [
@@ -172,7 +173,10 @@ Discord: Kotori Itsuka#6038
       },
       {
         "quick@asa_crafting_panel.asa_inventory_button_panel": {
-          "offset": [ 2, 0 ],
+          "offset": [
+            2,
+            0
+          ],
           "bindings": [
             {
               "binding_type": "global",
@@ -184,18 +188,26 @@ Discord: Kotori Itsuka#6038
       },
       {
         "gamepad_helper_bumpers@crafting.gamepad_helper_bumpers": {
-          "size": [ 146, 16 ],
-          "offset": [ 0, -5 ],
+          "size": [
+            146,
+            16
+          ],
+          "offset": [
+            0,
+            -5
+          ],
           "anchor_from": "top_left",
           "anchor_to": "bottom_left"
         }
       },
       {
         "tab_navigation_panel@crafting.tab_navigation_panel_layout": {
-          "size": [ 146, 23 ],
+          "size": [
+            146,
+            23
+          ],
           "anchor_from": "top_left",
           "anchor_to": "bottom_left",
-
           "$is_search_right_most_tab": "#is_recipe_book_layout",
           "bindings": [
             {
@@ -207,7 +219,10 @@ Discord: Kotori Itsuka#6038
       },
       {
         "tab_content_panel@crafting.tab_content": {
-          "size": [ "100%", "100%" ],
+          "size": [
+            "100%",
+            "100%"
+          ],
           "layer": 2,
           "$scrolling_pane_control": "crafting.recipe_book_scroll_panel"
         }
@@ -215,7 +230,10 @@ Discord: Kotori Itsuka#6038
       {
         "creative_hotbar_panel@crafting.creative_hotbar_panel": {
           "layer": 3,
-          "offset": [ 0, -5 ],
+          "offset": [
+            0,
+            -5
+          ],
           "anchor_from": "bottom_middle",
           "anchor_to": "top_middle",
           "bindings": [
@@ -229,7 +247,6 @@ Discord: Kotori Itsuka#6038
       }
     ]
   },
-
   "player_inventory": {
     "modifications": [
       {
@@ -238,26 +255,34 @@ Discord: Kotori Itsuka#6038
         "value": [
           {
             "quick@asa_crafting_panel.asa_inventory_button_panel": {
-              "offset": [ 2, 0 ]
+              "offset": [
+                2,
+                0
+              ]
             }
           },
           {
             "invcentory_mode@asa_crafting_panel.asa_inventory_mode_panel": {
-              "offset": [ 22, 0 ]
+              "offset": [
+                22,
+                0
+              ]
             }
           },
           {
             "inven_debug@asa_inventory_debug.asa_inventory_mode_debug": {
-              "offset": [ -6, -2 ]
+              "offset": [
+                -6,
+                -2
+              ]
             }
           }
         ]
       }
     ]
   },
-
   "grid_item_for_recipe_book": {
-    "$button_ref": "asa_crafting_panel.asa_custom_recipe_button"/*,
+    "$button_ref": "asa_crafting_panel.asa_custom_recipe_button" /*,
     "modifications": [
       {
         "array_name": "controls",
@@ -353,13 +378,18 @@ Discord: Kotori Itsuka#6038
       }
     ]*/
   },
-
   "item_id_viewer": {
     "type": "panel",
-    "size": [ "100%cm", "100%cm" ],
+    "size": [
+      "100%cm",
+      "100%cm"
+    ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "offset": [ 0.2, 0 ],
+    "offset": [
+      0.2,
+      0
+    ],
     "controls": [
       {
         "asa_item_id_viewer": {

@@ -1,18 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_chat_utility",
-
     "chat_auto_complete_stack": {
         "type": "stack_panel",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "orientation": "horizontal",
         "controls": [
             {
@@ -29,12 +22,17 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "chat_message_stack": {
         "type": "stack_panel",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "orientation": "horizontal",
-        "$button_size": [ 12, 12 ],
+        "$button_size": [
+            12,
+            12
+        ],
         "controls": [
             {
                 "@chat_button_template": {
@@ -50,19 +48,23 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "chat_button_template@common_buttons.light_content_button": {
         "$button_type_panel": "asa_chat_utility.asa_chat_button_template",
-        "size": [ 27, 27 ]
+        "size": [
+            27,
+            27
+        ]
     },
-
     "asa_chat_button_template": {
         "type": "panel",
         "controls": [
             {
                 "button_icon": {
                     "type": "image",
-                    "$button_size|default": [ 16, 16 ],
+                    "$button_size|default": [
+                        16,
+                        16
+                    ],
                     "size": "$button_size",
                     "texture": "$asa_button_icon",
                     "layer": 5,

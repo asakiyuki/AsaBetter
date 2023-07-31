@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_percent_template",
-
     "asa_percent_bindings": {
         "type": "label",
         "color": "$percent_color",
@@ -36,10 +26,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_percent_template": {
         "type": "stack_panel",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "orientation": "horizontal",
         "$reverser_percent_count|default": false,
         "$asa_percent|default": "asa_percent_number",
@@ -63,10 +55,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_percent_number": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "controls": [
             {
                 "101@asa_percent_bindings": {
@@ -777,10 +771,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_percent_number_reverse": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "controls": [
             {
                 "101@asa_percent_bindings": {

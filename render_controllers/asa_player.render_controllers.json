@@ -1,16 +1,6 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "format_version": "1.10.0",
     "render_controllers": {
-        
         "controller.render.player.asa_first_person": {
             "geometry": "Geometry.default",
             "materials": [
@@ -22,7 +12,7 @@ Discord: Kotori Itsuka#6038
                 "Texture.default"
             ],
             "is_hurt_color": {},
-			"on_fire_color": {},
+            "on_fire_color": {},
             "part_visibility": [
                 {
                     "*": false
@@ -41,7 +31,6 @@ Discord: Kotori Itsuka#6038
                 }
             ]
         },
-
         "controller.render.player.asa_third_person": {
             "geometry": "Geometry.default",
             "materials": [
@@ -91,7 +80,6 @@ Discord: Kotori Itsuka#6038
                 }
             ]
         },
-
         "controller.render.player.asa_map": {
             "geometry": "Geometry.default",
             "materials": [

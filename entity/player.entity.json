@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
   "format_version": "1.10.0",
-
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:player",
@@ -17,18 +7,15 @@ Discord: Kotori Itsuka#6038
         "default": "entity_alphatest",
         "cape": "entity_alphatest",
         "animated": "player_animated",
-
         "armor": "armor",
         "enchanted": "armor_enchanted",
         "penetration": "asa_alpha",
         "player_xray": "asa_entity_xray",
         "alpha_opacity": "entity_alphablend"
       },
-
       "textures": {
         "default": "textures/entity/steve",
         "cape": "textures/entity/cape_invisible",
-
         "empty_helmet": "textures/ui/empty_armor_slot_helmet",
         "leather_helmet": "asa_textures/ui/armor_hud/leather_helmet",
         "chain_helmet": "textures/items/chainmail_helmet",
@@ -38,7 +25,6 @@ Discord: Kotori Itsuka#6038
         "turtle_helmet": "textures/items/turtle_helmet",
         "pumpkin": "asa_textures/ui/armor_hud/pumpkin",
         "netherite_helmet": "textures/items/netherite_helmet",
-
         "empty_chestplate": "textures/ui/empty_armor_slot_chestplate",
         "leather_chestplate": "asa_textures/ui/armor_hud/leather_chestplate",
         "chain_chestplate": "textures/items/chainmail_chestplate",
@@ -47,7 +33,6 @@ Discord: Kotori Itsuka#6038
         "diamond_chestplate": "textures/items/diamond_chestplate",
         "elytra": "textures/items/elytra",
         "netherite_chestplate": "textures/items/netherite_chestplate",
-
         "empty_leggings": "textures/ui/empty_armor_slot_leggings",
         "leather_leggings": "asa_textures/ui/armor_hud/leather_leggings",
         "chain_leggings": "textures/items/chainmail_leggings",
@@ -55,7 +40,6 @@ Discord: Kotori Itsuka#6038
         "gold_leggings": "textures/items/gold_leggings",
         "diamond_leggings": "textures/items/diamond_leggings",
         "netherite_leggings": "textures/items/netherite_leggings",
-
         "empty_boots": "textures/ui/empty_armor_slot_boots",
         "leather_boots": "asa_textures/ui/armor_hud/leather_boots",
         "chain_boots": "textures/items/chainmail_boots",
@@ -63,9 +47,7 @@ Discord: Kotori Itsuka#6038
         "gold_boots": "textures/items/gold_boots",
         "diamond_boots": "textures/items/diamond_boots",
         "netherite_boots": "textures/items/netherite_boots",
-
         "armor_icon": "textures/ui/armor_full",
-
         "number_0": "asa_textures/ui/asa_number/number_0",
         "number_1": "asa_textures/ui/asa_number/number_1",
         "number_2": "asa_textures/ui/asa_number/number_2",
@@ -76,7 +58,6 @@ Discord: Kotori Itsuka#6038
         "number_7": "asa_textures/ui/asa_number/number_7",
         "number_8": "asa_textures/ui/asa_number/number_8",
         "number_9": "asa_textures/ui/asa_number/number_9",
-
         "item_background": "asa_textures/ui/offhand_slot_bg",
         "totem": "textures/items/totem",
         "arrow": "textures/items/arrow",
@@ -85,20 +66,16 @@ Discord: Kotori Itsuka#6038
         "map_filled": "textures/items/map_filled",
         "shield": "asa_textures/ui/asa_shield"
       },
-      
       "geometry": {
         "default": "geometry.humanoid.custom",
         "cape": "geometry.cape",
-
         "offhand_slot": "geometry.offhand_slot",
         "offhand_slot_bg": "geometry.offhand_slot_bg",
-
         "helmet_hud": "geometry.helmet_hud",
         "chestplate_hud": "geometry.chest_hud",
         "leggings_hud": "geometry.legging_hud",
         "boots_hud": "geometry.boot_hud"
       },
-
       "scripts": {
         "scale": "0.9375",
         "initialize": [
@@ -116,18 +93,14 @@ Discord: Kotori Itsuka#6038
           "variable.tcos0 = (math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
           "variable.first_person_rotation_factor = math.sin((1 - variable.attack_time) * 180.0);",
           "variable.hand_bob = query.life_time < 0.01 ? 0.0 : variable.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - variable.hand_bob) * 0.02;",
-
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);",
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
-
           "v.asa_in_ui = q.is_alive && q.is_in_ui && !q.is_riding;",
           "v.hp = q.health;",
           "v.hold_axe = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:wooden_axe') || query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:stone_axe') || query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:iron_axe') || query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:golden_axe') || query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:diamond_axe') || query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:netherite_axe');",
-
           "v.force_coor_x_template = ((math.floor(math.abs(query.position(0))) + query.position(0) / 99999 ) + 2);;",
           "v.force_coor_y_template = ((math.floor(math.abs(query.position(1))) + query.position(1) / 64 ) + 3);",
           "v.force_coor_z_template = ((math.floor(math.abs(query.position(2))) + query.position(2) / 99999 ) + 2);;",
-
           "v.force_coor_x = ((query.position(0) < 0 ? v.force_coor_x_template) + (query.position(0) >= 1 ? ((math.floor(math.abs(query.position(0))) + query.position(0)) * 0.5)));",
           "v.force_coor_y = ((query.position(1) <= 1 ? (v.force_coor_y_template + (query.position(1) >= 0 ? -2))) + (query.position(1) >= 1 ? ((math.floor(math.abs(query.position(1))) + query.position(1)) * 0.5 - 1)));",
           "v.force_coor_z = ((query.position(2) < 0 ? v.force_coor_z_template) + (query.position(2) >= 1 ? ((math.floor(math.abs(query.position(2))) + query.position(2)) * 0.5)));"
@@ -138,7 +111,6 @@ Discord: Kotori Itsuka#6038
           "asa_first_person_root"
         ]
       },
-
       "animations": {
         "root": "controller.animation.player.root",
         "base_controller": "controller.animation.player.base",
@@ -192,29 +164,42 @@ Discord: Kotori Itsuka#6038
         "shield_block_main_hand": "animation.player.shield_block_main_hand",
         "shield_block_off_hand": "animation.player.shield_block_off_hand",
         "blink": "controller.animation.persona.blink",
-
         "better_armor_hud": "animation.player.armor_hud",
         "asa_first_person_mainhand_totem": "animation.asa_totem.first_person_mainhand",
         "asa_first_person_offhand_totem": "animation.asa_totem.first_person_offhand",
         "asa_first_person_root": "controller.animation.player.asa_first_person",
-
         "asa_hold_axe": "animation.player.hold_axe",
         "asa_hold_axe_attack": "animation.player.hold_axe_attack"
       },
-
       "render_controllers": [
-        { "controller.render.player.first_person": "variable.is_first_person" },
-        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon" },
-        { "controller.render.player.map": "variable.map_face_icon" },
-
-        { "controller.render.asa_offhand_slots": "v.asa_in_ui" },
-        { "controller.render.asa_offhand_slots_background": "v.asa_in_ui" },
-        { "controller.render.asa_armor_hud_helmet": "v.asa_in_ui" },
-        { "controller.render.asa_armor_hud_chest": "v.asa_in_ui" },
-        { "controller.render.asa_armor_hud_leggings": "v.asa_in_ui" },
-        { "controller.render.asa_armor_hud_boots": "v.asa_in_ui" }
+        {
+          "controller.render.player.first_person": "variable.is_first_person"
+        },
+        {
+          "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon"
+        },
+        {
+          "controller.render.player.map": "variable.map_face_icon"
+        },
+        {
+          "controller.render.asa_offhand_slots": "v.asa_in_ui"
+        },
+        {
+          "controller.render.asa_offhand_slots_background": "v.asa_in_ui"
+        },
+        {
+          "controller.render.asa_armor_hud_helmet": "v.asa_in_ui"
+        },
+        {
+          "controller.render.asa_armor_hud_chest": "v.asa_in_ui"
+        },
+        {
+          "controller.render.asa_armor_hud_leggings": "v.asa_in_ui"
+        },
+        {
+          "controller.render.asa_armor_hud_boots": "v.asa_in_ui"
+        }
       ],
-
       "enable_attachables": true
     }
   }

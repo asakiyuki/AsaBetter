@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_mega_mod_menu",
-
     //Mod Menu Option
     "asa_mega_mod_menu_option": {
         "type": "panel",
@@ -141,7 +131,7 @@ Discord: Kotori Itsuka#6038
                     "$asa_middle_menu": "asa_mod_menu_panel.asa_saturation_screen_panel",
                     "$asa_header_text": "Saturation Screen"
                 }
-            }/*,
+            } /*,
             {
                 "@asa_mod_menu.asa_menu_screen": {
                     "$asa_toggle_binding_screen": "asa_addon_compatible_screen",
@@ -152,18 +142,15 @@ Discord: Kotori Itsuka#6038
             }*/
         ]
     },
-
     //Asa Slider
     "asa_slider@common.slider": {
         "$option_enabled_binding_name": "slider_enabled",
-        "$slider_name":"asa_slider",
-
-        "$slider_box_layout":"asa_mega_mod_menu.asa_slider_button_layout",
+        "$slider_name": "asa_slider",
+        "$slider_box_layout": "asa_mega_mod_menu.asa_slider_button_layout",
         "$slider_box_hover_layout": "asa_mega_mod_menu.asa_slider_button_layout",
         "$slider_box_indent_layout": "asa_mega_mod_menu.asa_slider_button_layout",
         "$slider_box_locked_layout": "asa_mega_mod_menu.asa_slider_button_layout",
-
-        "$option_label":"",
+        "$option_label": "",
         "$asa_slider_step_enable|default": 0,
         "$asa_slider_steps|default": 1,
         "$asa_slider_value_bindings|default": "(((#slider_steps * 0) + $asa_slider_step_enable) * 10)",
@@ -172,15 +159,14 @@ Discord: Kotori Itsuka#6038
         },
         "bindings": [
             {
-				"binding_name":"#slider_steps"
-			},
-			{
-				"binding_type": "view",
-				"source_property_name": "$asa_slider_value_bindings",
-				"target_property_name": "#slider_value"
-			}
+                "binding_name": "#slider_steps"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$asa_slider_value_bindings",
+                "target_property_name": "#slider_value"
+            }
         ],
-
         "factory": "$asa_factory",
         "$asa_factory|default": {
             "name": "slider_step_factory",
@@ -191,7 +177,6 @@ Discord: Kotori Itsuka#6038
                 "slider_step_progress_hover": "@asa_mega_mod_menu.asa_step"
             }
         },
-
         "controls": [
             {
                 "slider_box@common.slider_box": {}
@@ -204,34 +189,35 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_slider_background": {
         "type": "image",
         "layer": 9,
         "texture": "asa_textures/ui/button_and_toggle/square_button",
         "color": "$asa_slider_color"
     },
-
     "asa_step": {
         "type": "image",
-        "size": [ 1, 10 ],
+        "size": [
+            1,
+            10
+        ],
         "layer": 15,
         "offset": "$step_offset",
         "texture": "asa_textures/ui/button_and_toggle/square_button"
     },
-
     "asa_slider_progress": {
         "type": "image",
         "color": "$asa_slider_progress_color",
         "layer": 10,
         "texture": "asa_textures/ui/button_and_toggle/square_button"
     },
-
     "asa_slider_button_layout@common.slider_button_state": {
-        "size": [ 4, 17 ],
+        "size": [
+            4,
+            17
+        ],
         "texture": "asa_textures/ui/button_and_toggle/square_button"
     },
-
     "asa_slider_panel": {
         "type": "panel",
         "layer": 100,
@@ -239,37 +225,57 @@ Discord: Kotori Itsuka#6038
         "controls": [
             {
                 "$asa_slider_binding_controls_name@asa_slider": {
-                    "size": [ "100% - 2px", "100% - 2px" ]
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ]
                 }
             },
             {
                 "@common.slider_border": {
-                    "color": [ 0, 0, 0 ]
+                    "color": [
+                        0,
+                        0,
+                        0
+                    ]
                 }
             }
         ]
     },
-
     "asa_slider_bar_default@asa_slider_bar": {
         "color": "$slider_hover_border_color",
         "$background_control": "asa_mega_mod_menu.asa_slider_background",
         "$progress_control": "asa_mega_mod_menu.asa_slider_progress",
         "$background_control_name": "slider_background",
-        "$asa_slider_color": [ 0.1, 0.1, 0.1 ],
-        "$asa_slider_progress_color": [ 0.3, 0.8, 0.8 ],
+        "$asa_slider_color": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$asa_slider_progress_color": [
+            0.3,
+            0.8,
+            0.8
+        ],
         "$progress_control_name": "slider_progress"
     },
-
     "asa_slider_bar_hover@asa_slider_bar": {
         "color": "$slider_hover_border_color",
         "$background_control": "asa_mega_mod_menu.asa_slider_background",
         "$progress_control": "asa_mega_mod_menu.asa_slider_progress",
         "$background_control_name": "slider_background_hover",
-        "$asa_slider_color": [ 0.05, 0.05, 0.05 ],
-        "$asa_slider_progress_color": [ 0.3, 0.65, 0.65 ],
+        "$asa_slider_color": [
+            0.05,
+            0.05,
+            0.05
+        ],
+        "$asa_slider_progress_color": [
+            0.3,
+            0.65,
+            0.65
+        ],
         "$progress_control_name": "slider_progress_hover"
     },
-
     "asa_slider_bar": {
         "type": "panel",
         "controls": [
@@ -294,17 +300,22 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_slider_text": {
         "type": "panel",
-        "size": [ "100%", "100%cm" ],
+        "size": [
+            "100%",
+            "100%cm"
+        ],
         "controls": [
             {
                 "asa_label": {
                     "type": "label",
                     "text": "$asa_text",
                     "font_scale_factor": 0.8,
-                    "offset": [ 1, 0 ],
+                    "offset": [
+                        1,
+                        0
+                    ],
                     "anchor_from": "left_middle",
                     "anchor_to": "left_middle",
                     "bindings": [
@@ -319,15 +330,24 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Other Toggle
     "asa_mega_double_toggle": {
         "type": "stack_panel",
-        "size": [ "100%", 15 ],
+        "size": [
+            "100%",
+            15
+        ],
         "orientation": "horizontal",
-        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
-        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
-
+        "$asa_default_button_color": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$asa_hover_button_color": [
+            0.05,
+            0.05,
+            0.05
+        ],
         "$asa_toggle_tags_bindings|default": "198387_asa_button_tab_null",
         "$asa_locked_alpha": 1,
         "controls": [
@@ -337,13 +357,19 @@ Discord: Kotori Itsuka#6038
                     "$button_content": "asa_is_mod_button",
                     "enabled": "$not_tab_button",
                     "$asa_texture_alpha": 1,
-                    "size": [ "fill", 15 ]
+                    "size": [
+                        "fill",
+                        15
+                    ]
                 }
             },
             {
                 "asa_toggle_panel": {
                     "type": "panel",
-                    "size": [ 15, 15 ],
+                    "size": [
+                        15,
+                        15
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -358,9 +384,16 @@ Discord: Kotori Itsuka#6038
                                 "toggle_name": "$asa_radio_tab",
                                 "radio_toggle_group": true,
                                 "toggle_group_forced_index": 1,
-                                "size": [ 15, 15 ],
+                                "size": [
+                                    15,
+                                    15
+                                ],
                                 "$button_content": "asa_is_mod_list",
-                                "$asa_mod_toggle_color": [ 1, 1, 1 ],
+                                "$asa_mod_toggle_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
                                 "toggle_group_default_selected": false
                             }
                         }
@@ -369,18 +402,17 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-    
     //Toggle Panel
     "asa_header_toggle": {
         "type": "panel",
-
         "$asa_toggle_tags_bindings|default": "null",
         "$button_content": "asa_is_header_button",
         "$asa_toggle_tags|default": true,
-
         "$asa_button_color": "@asa_extra_animation.rgb_1",
-        "size": [ "100%", 15 ],
-
+        "size": [
+            "100%",
+            15
+        ],
         "controls": [
             {
                 "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
@@ -389,17 +421,24 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_mod_toggle": {
         "type": "panel",
-
         "$asa_toggle_tags_bindings|default": "null",
         "$button_content": "asa_is_mod_button",
-
-        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
-        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
-        "size": [ "100%", 15 ],
-
+        "$asa_default_button_color": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$asa_hover_button_color": [
+            0.05,
+            0.05,
+            0.05
+        ],
+        "size": [
+            "100%",
+            15
+        ],
         "controls": [
             {
                 "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
@@ -408,19 +447,30 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_mod_radio_toggle": {
         "type": "panel",
-
         "$asa_toggle_tags_bindings|default": "null",
         "$button_content": "asa_is_mod_button",
-
-        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
-        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
-        "size": [ "100%", 15 ],
-        "$asa_toggle_group_enable|default": 0, 
-        "$asa_mod_toggle_color": [ 0.5, 1.0, 0.5 ],
-
+        "$asa_default_button_color": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$asa_hover_button_color": [
+            0.05,
+            0.05,
+            0.05
+        ],
+        "size": [
+            "100%",
+            15
+        ],
+        "$asa_toggle_group_enable|default": 0,
+        "$asa_mod_toggle_color": [
+            0.5,
+            1.0,
+            0.5
+        ],
         "controls": [
             {
                 "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
@@ -432,16 +482,24 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_mod_list_toggle": {
         "type": "panel",
-
         "$asa_toggle_tags_bindings|default": "null",
         "$button_content": "asa_is_mod_list_button",
-        "size": [ "100%", 15 ],
-        "$asa_default_button_color": [ 0.1, 0.1, 0.1 ],
-        "$asa_hover_button_color": [ 0.05, 0.05, 0.05 ],
-
+        "size": [
+            "100%",
+            15
+        ],
+        "$asa_default_button_color": [
+            0.1,
+            0.1,
+            0.1
+        ],
+        "$asa_hover_button_color": [
+            0.05,
+            0.05,
+            0.05
+        ],
         "controls": [
             {
                 "$asa_toggle_tags_bindings@mega_hack_toggle_template": {
@@ -450,37 +508,33 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Toggle Template
-
     "mega_hack_toggle_template": {
         "type": "toggle",
-
         "toggle_default_state": "$asa_toggle_tags",
-
         "unchecked_control": "toggle_disable",
         "unchecked_hover_control": "toggle_disable_hover",
         "checked_control": "toggle_enable",
         "checked_hover_control": "toggle_enable_hover",
-
         "unchecked_locked_control": "toggle_disable_lock",
         "unchecked_locked_hover_control": "toggle_disable_hover_lock",
         "checked_locked_control": "toggle_enable_lock",
         "checked_locked_hover_control": "toggle_enable_hover_lock",
-
         "$toggle_strings": "asa_toggle_content",
-
         "sound_name": "random.click",
         "sound_volume": 1.0,
         "sound_pitch": 1.0,
-
         "controls": [
             {
                 "toggle_disable@$toggle_strings": {
                     "$is_disable": true,
                     "$asa_button_color|default": "$asa_default_button_color",
                     "$asa_mod_toggle_color": "$asa_mod_disable_color",
-                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                    "$asa_mod_disable_color": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -489,7 +543,11 @@ Discord: Kotori Itsuka#6038
                     "$is_hover": true,
                     "$asa_button_color|default": "$asa_hover_button_color",
                     "$asa_mod_toggle_color": "$asa_mod_disable_color",
-                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                    "$asa_mod_disable_color": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -507,13 +565,16 @@ Discord: Kotori Itsuka#6038
                     "$asa_mod_toggle_color|default": "@asa_extra_animation.rgb_1"
                 }
             },
-
             {
                 "toggle_disable_lock@$toggle_strings": {
                     "$is_disable": true,
                     "$asa_button_color|default": "$asa_default_button_color",
                     "$asa_mod_toggle_color": "$asa_mod_disable_color",
-                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                    "$asa_mod_disable_color": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -522,7 +583,11 @@ Discord: Kotori Itsuka#6038
                     "$is_hover": true,
                     "$asa_button_color|default": "$asa_hover_button_color",
                     "$asa_mod_toggle_color": "$asa_mod_disable_color",
-                    "$asa_mod_disable_color": [ 1, 1, 1 ]
+                    "$asa_mod_disable_color": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -541,11 +606,22 @@ Discord: Kotori Itsuka#6038
                 }
             }
         ],
-
-        "property_bag": { "#toggle_state": true },
-        "button_mappings": [{ "from_button_id": "button.menu_select", "to_button_id": "button.menu_select", "mapping_type": "pressed" },{ "from_button_id": "button.menu_ok", "to_button_id": "button.menu_ok", "mapping_type": "focused" }]
+        "property_bag": {
+            "#toggle_state": true
+        },
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.menu_ok",
+                "mapping_type": "focused"
+            }
+        ]
     },
-
     "asa_toggle_content": {
         "type": "image",
         "texture": "asa_textures/ui/button_and_toggle/square_button",
@@ -558,23 +634,31 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_menu_space_line": {
         "type": "image",
         "texture": "asa_textures/ui/button_and_toggle/square_button",
-        "color": [ 1, 1, 1 ],
-        "size": [ "100%", 1 ],
+        "color": [
+            1,
+            1,
+            1
+        ],
+        "size": [
+            "100%",
+            1
+        ],
         "layer": "$asa_content_layer",
         "$asa_content_layer|default": 99
     },
-
     "asa_is_header_button": {
         "type": "panel",
         "controls": [
             {
                 "button_text": {
                     "type": "label",
-                    "max_size": [ "100% - 25px", 10 ],
+                    "max_size": [
+                        "100% - 25px",
+                        10
+                    ],
                     "text": "$asa_button_text",
                     "color": "$asa_button_text_color",
                     "font_scale_factor": 0.8,
@@ -584,16 +668,25 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "button_texture": {
-                    "size": [ "100%y", "100% - 8px" ],
+                    "size": [
+                        "100%y",
+                        "100% - 8px"
+                    ],
                     "type": "panel",
                     "anchor_from": "right_middle",
                     "anchor_to": "right_middle",
-                    "offset": [ -4, 0 ],
+                    "offset": [
+                        -4,
+                        0
+                    ],
                     "controls": [
                         {
                             "is_hide": {
                                 "type": "image",
-                                "size": [ "100%", "100%" ],
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
                                 "texture": "asa_textures/ui/button_and_toggle/close_button",
                                 "layer": "$asa_panel_content_layer",
                                 "$asa_panel_content_layer|default": 100,
@@ -603,7 +696,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "is_show": {
                                 "type": "image",
-                                "size": [ "100%", "100%" ],
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
                                 "texture": "asa_textures/ui/button_and_toggle/open_button",
                                 "layer": "$asa_panel_content_layer",
                                 "$asa_panel_content_layer|default": 100,
@@ -615,22 +711,26 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_is_mod_button": {
         "type": "panel",
         "controls": [
             {
                 "button_text": {
                     "type": "label",
-                    "max_size": [ "100% - 5px", 10 ],
+                    "max_size": [
+                        "100% - 5px",
+                        10
+                    ],
                     "text": "$asa_button_text",
                     "color": "$asa_button_text_color",
                     "font_scale_factor": 0.8,
                     "anchor_from": "left_middle",
                     "anchor_to": "left_middle",
-                    "offset": [ 2, 0 ],
+                    "offset": [
+                        2,
+                        0
+                    ],
                     "layer": "$asa_panel_content_layer",
-                    
                     "locked_alpha": "$asa_locked_alpha",
                     "$asa_locked_alpha|default": 0.25,
                     "$asa_panel_content_layer|default": 100
@@ -639,15 +739,20 @@ Discord: Kotori Itsuka#6038
             {
                 "toggle_tabs": {
                     "type": "image",
-                    "size": [ 2, "100% - 4px" ],
-                    "offset": [ -2, 0 ],
+                    "size": [
+                        2,
+                        "100% - 4px"
+                    ],
+                    "offset": [
+                        -2,
+                        0
+                    ],
                     "color": "$asa_mod_toggle_color",
                     "anchor_from": "right_middle",
                     "anchor_to": "right_middle",
                     "texture": "asa_textures/ui/button_and_toggle/square_button",
                     "layer": "$asa_panel_content_layer",
                     "visible": "$not_tab_button",
-                    
                     "locked_alpha": "$asa_locked_alpha",
                     "$asa_locked_alpha|default": 0.25,
                     "$asa_panel_content_layer|default": 100
@@ -658,21 +763,29 @@ Discord: Kotori Itsuka#6038
                     "$open_mod_description|default": false,
                     "ignored": "(not $open_mod_description)",
                     "type": "panel",
-                    "$asa_description_text|default": "Mod Descriptions", 
+                    "$asa_description_text|default": "Mod Descriptions",
                     "layer": 300,
-                    "size": [ "100%cm", "100%cm" ],
+                    "size": [
+                        "100%cm",
+                        "100%cm"
+                    ],
                     "anchor_from": "$description_anchor_from",
                     "anchor_to": "$description_anchor_to",
                     "offset": "$description_offset",
-
                     "$description_anchor_from|default": "right_middle",
                     "$description_anchor_to|default": "left_middle",
-                    "$description_offset|default": [ 2, 0 ],
+                    "$description_offset|default": [
+                        2,
+                        0
+                    ],
                     "controls": [
                         {
                             "toggle_tabs_border": {
                                 "type": "image",
-                                "size": [ "100%cm + 1px", "100%cm + 1px" ],
+                                "size": [
+                                    "100%cm + 1px",
+                                    "100%cm + 1px"
+                                ],
                                 "texture": "asa_textures/ui/button_and_toggle/square_button",
                                 "layer": 299,
                                 "ignored": "(not $is_hover)",
@@ -680,16 +793,29 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "toggle_tabs": {
                                             "type": "image",
-                                            "size": [ "100%cm + 3px", "100%cm + 3px" ],
-                                            "color": [ 0, 0, 0 ],
+                                            "size": [
+                                                "100%cm + 3px",
+                                                "100%cm + 3px"
+                                            ],
+                                            "color": [
+                                                0,
+                                                0,
+                                                0
+                                            ],
                                             "texture": "asa_textures/ui/button_and_toggle/square_button",
                                             "layer": 300,
                                             "controls": [
                                                 {
                                                     "mod_des": {
                                                         "type": "label",
-                                                        "size": [ "default", "default" ],
-                                                        "max_size": [ 150, "default" ],
+                                                        "size": [
+                                                            "default",
+                                                            "default"
+                                                        ],
+                                                        "max_size": [
+                                                            150,
+                                                            "default"
+                                                        ],
                                                         "layer": 301,
                                                         "font_scale_factor": 0.8,
                                                         "text": "$asa_description_text"
@@ -706,21 +832,25 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_is_mod_list_button": {
         "type": "panel",
         "controls": [
             {
                 "button_text": {
                     "type": "label",
-                    "max_size": [ "100% - 25px", 10 ],
+                    "max_size": [
+                        "100% - 25px",
+                        10
+                    ],
                     "text": "$asa_button_text",
                     "color": "$asa_button_text_color",
                     "font_scale_factor": 0.8,
                     "anchor_from": "left_middle",
                     "anchor_to": "left_middle",
-                    "offset": [ 2, 0 ],
-                    
+                    "offset": [
+                        2,
+                        0
+                    ],
                     "locked_alpha": "$asa_locked_alpha",
                     "$asa_locked_alpha|default": 0.25,
                     "layer": 100
@@ -729,13 +859,18 @@ Discord: Kotori Itsuka#6038
             {
                 "toggle_tabs": {
                     "type": "image",
-                    "size": [ "100%y", "100% - 4px" ],
-                    "offset": [ -2, 0 ],
+                    "size": [
+                        "100%y",
+                        "100% - 4px"
+                    ],
+                    "offset": [
+                        -2,
+                        0
+                    ],
                     "color": "$asa_mod_toggle_color",
                     "anchor_from": "right_middle",
                     "anchor_to": "right_middle",
                     "texture": "asa_textures/ui/button_and_toggle/list_button",
-                    
                     "locked_alpha": "$asa_locked_alpha",
                     "$asa_locked_alpha|default": 0.25,
                     "layer": 100
@@ -743,7 +878,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_is_mod_list": {
         "type": "panel",
         "controls": [
@@ -752,8 +886,14 @@ Discord: Kotori Itsuka#6038
                     "type": "image",
                     "locked_alpha": "$asa_locked_alpha",
                     "$asa_locked_alpha|default": 0.25,
-                    "size": [ "100%y", "100% - 4px" ],
-                    "offset": [ -2, 0 ],
+                    "size": [
+                        "100%y",
+                        "100% - 4px"
+                    ],
+                    "offset": [
+                        -2,
+                        0
+                    ],
                     "color": "$asa_mod_toggle_color",
                     "anchor_from": "right_middle",
                     "anchor_to": "right_middle",
@@ -763,7 +903,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_done": {
         "type": "label",
         "text": "Done",

@@ -1,32 +1,31 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_recipe_panel",
-
     "asa_recipe_panel": {
         "type": "panel",
-        "size": [ "100%cm", "100%" ],
+        "size": [
+            "100%cm",
+            "100%"
+        ],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
         "controls": [
             {
                 "potion_stack": {
                     "type": "stack_panel",
-                    "size": [ "100%cm", "100%c" ],
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
                     "anchor_from": "top_right",
                     "anchor_to": "top_right",
                     "controls": [
                         {
                             "potion_line_1": {
                                 "type": "stack_panel",
-                                "size": [ "100%c", "100%cm" ],
+                                "size": [
+                                    "100%c",
+                                    "100%cm"
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
@@ -74,7 +73,6 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918350,
                                             "$asa_gr_recipe_index": 6,
@@ -89,22 +87,27 @@ Discord: Kotori Itsuka#6038
                         {
                             "potion_line_2": {
                                 "type": "stack_panel",
-                                "size": [ "100%c", "100%cm" ],
+                                "size": [
+                                    "100%c",
+                                    "100%cm"
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918353,
                                             "$asa_gr_recipe_index": 7,
                                             "$asa_item_name": "potion.moveSlowdown.name",
                                             "$asa_effect_name_1": "potion.moveSlowdown",
-                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$effect_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$brewing_selected": "asa_move_slowdown_potion"
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918356,
                                             "$asa_gr_recipe_index": 8,
@@ -114,7 +117,6 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918358,
                                             "$asa_gr_recipe_index": 9,
@@ -124,29 +126,34 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918360,
                                             "$asa_gr_recipe_index": 10,
                                             "$asa_item_name": "potion.harm.name",
                                             "$asa_effect_name_1": "potion.harm",
-                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$effect_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$brewing_selected": "asa_harm_potion"
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918362,
                                             "$asa_gr_recipe_index": 11,
                                             "$asa_item_name": "potion.poison.name",
                                             "$asa_effect_name_1": "potion.poison",
-                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$effect_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$brewing_selected": "asa_poison_potion"
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918365,
                                             "$asa_gr_recipe_index": 12,
@@ -161,11 +168,13 @@ Discord: Kotori Itsuka#6038
                         {
                             "potion_line_3": {
                                 "type": "stack_panel",
-                                "size": [ "100%c", "100%cm" ],
+                                "size": [
+                                    "100%c",
+                                    "100%cm"
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918368,
                                             "$asa_gr_recipe_index": 13,
@@ -175,23 +184,29 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918370,
                                             "$asa_gr_recipe_index": 14,
                                             "$asa_item_name": "potion.weakness.name",
                                             "$asa_effect_name_1": "potion.weakness",
-                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$effect_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$brewing_selected": "asa_weakness_potion"
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918373,
                                             "$asa_gr_recipe_index": 15,
                                             "$no_show_effect_2th": false,
-                                            "$effect_color_1": [ 1, 0.3, 0.3 ],
+                                            "$effect_color_1": [
+                                                1,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "$asa_item_name": "potion.turtleMaster.name",
                                             "$asa_effect_name_1": "potion.turtleMaster",
                                             "$asa_effect_name_2": "potion.turtleMaster2",
@@ -199,7 +214,6 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 27918376,
                                             "$asa_gr_recipe_index": 16,
@@ -209,7 +223,6 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 36765696,
                                             "$asa_gr_recipe_index": 17,
@@ -219,7 +232,6 @@ Discord: Kotori Itsuka#6038
                                         }
                                     },
                                     {
-                                        
                                         "@asa_brewing_recipe.asa_brewing_selected_panel": {
                                             "$asa_item_id": 36831232,
                                             "$asa_gr_recipe_index": 18,

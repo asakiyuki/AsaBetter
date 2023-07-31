@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_crafting_panel",
-
     "asa_armor_render_gird": {
         "type": "grid",
         "layer": 1,
@@ -71,11 +61,13 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_armor_renderer": {
         "type": "custom",
         "renderer": "inventory_item_renderer",
-        "size": [ 18, 18 ],
+        "size": [
+            18,
+            18
+        ],
         "layer": 1,
         "controls": [
             {
@@ -84,14 +76,20 @@ Discord: Kotori Itsuka#6038
                     "anchor_to": "left_middle",
                     "layer": 2,
                     "$percent_layer": 0,
-                    "offset": [ 1, 0 ]
+                    "offset": [
+                        1,
+                        0
+                    ]
                 }
             },
             {
                 "asa_item_stack": {
                     "visible": "$asa_item_count_visible",
                     "type": "label",
-                    "offset": [ 0, 1 ],
+                    "offset": [
+                        0,
+                        1
+                    ],
                     "anchor_to": "bottom_right",
                     "anchor_from": "bottom_right",
                     "layer": 2,
@@ -175,10 +173,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_inventory_button_panel": {
         "type": "stack_panel",
-        "size": [ "20", "100%c" ],
+        "size": [
+            "20",
+            "100%c"
+        ],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
         "controls": [
@@ -188,7 +188,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ],
+                    "size": [
+                        1,
+                        1
+                    ],
                     "bindings": [
                         {
                             "binding_type": "global",
@@ -201,7 +204,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -218,13 +224,19 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ],
+                    "size": [
+                        1,
+                        1
+                    ],
                     "bindings": [
                         {
                             "binding_type": "global",
@@ -252,10 +264,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_inventory_mode_panel": {
         "type": "stack_panel",
-        "size": [ 20, "100%c" ],
+        "size": [
+            20,
+            "100%c"
+        ],
         "anchor_from": "bottom_right",
         "anchor_to": "bottom_right",
         "controls": [
@@ -273,7 +287,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -289,7 +306,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -303,10 +323,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_trade_button_panel": {
         "type": "stack_panel",
-        "size": [ "20", "100%c" ],
+        "size": [
+            "20",
+            "100%c"
+        ],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
         "controls": [
@@ -316,7 +338,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -324,10 +349,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_stonecutter_button_panel": {
         "type": "stack_panel",
-        "size": [ "20", "100%c" ],
+        "size": [
+            "20",
+            "100%c"
+        ],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
         "controls": [
@@ -337,7 +364,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
@@ -345,7 +375,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_custom_recipe_button": {
         "type": "panel",
         "controls": [

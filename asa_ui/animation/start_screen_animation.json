@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_start_anims",
-
     "asa_wrong_pass": {
         "anim_type": "alpha",
         "duration": 0,
@@ -17,340 +7,514 @@ Discord: Kotori Itsuka#6038
         "to": 1,
         "play_event": "asa_button.verified_password_wrong"
     },
-
     //Background
     "asa_start_background_color_in": {
         "anim_type": "color",
         "easing": "out_sine",
-        "from": [ 1, 1, 1 ],
-        "to": [ 0.65, 0.65, 0.65 ],
+        "from": [
+            1,
+            1,
+            1
+        ],
+        "to": [
+            0.65,
+            0.65,
+            0.65
+        ],
         "duration": 1.3
     },
-
     "asa_start_background_size_in": {
         "anim_type": "size",
         "easing": "out_sine",
-        "from": [ "100%", "100%" ],
-        "to": [ "116%", "116%" ],
+        "from": [
+            "100%",
+            "100%"
+        ],
+        "to": [
+            "116%",
+            "116%"
+        ],
         "duration": 1.3
     },
-
     "asa_start_background_offset_in": {
         "anim_type": "offset",
         "easing": "out_sine",
-        "from": [ 0, 0 ],
-        "to": [ 0, "8%" ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            "8%"
+        ],
         "duration": 1.3
     },
-
     "asa_start_background_color_out": {
         "anim_type": "color",
         "easing": "out_sine",
-        "from": [ 0.65, 0.65, 0.65 ],
-        "to": [ 1, 1, 1 ],
+        "from": [
+            0.65,
+            0.65,
+            0.65
+        ],
+        "to": [
+            1,
+            1,
+            1
+        ],
         "duration": 1.3,
         "play_event": "button.hide_start_screen"
     },
-
     "asa_start_background_size_out": {
         "anim_type": "size",
         "easing": "out_sine",
-        "from": [ "116%", "116%" ],
-        "to": [ "100%", "100%" ],
+        "from": [
+            "116%",
+            "116%"
+        ],
+        "to": [
+            "100%",
+            "100%"
+        ],
         "duration": 1.3,
         "play_event": "button.hide_start_screen"
     },
-
     "asa_start_background_offset_out": {
         "anim_type": "offset",
         "easing": "out_back",
-        "from": [ 0, "8%" ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            "8%"
+        ],
+        "to": [
+            0,
+            0
+        ],
         "duration": 1.3,
         "play_event": "button.hide_start_screen"
     },
-
-
     //Middle Panel Anims
     "asa_middle_panel_action": {
         "anim_type": "offset",
         "easing": "in_quart",
-        "from": [ 0, 0 ],
-        "to": [ 0, "-110%" ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            0,
+            "-110%"
+        ],
         "duration": 0.8,
         "play_event": "button.hide_start_screen"
     },
-
     "asa_middle_panel_show_action": {
         "anim_type": "offset",
         "easing": "out_sine",
-        "from": [ 0, "-110%" ],
-        "to": [ 0, 0 ],
+        "from": [
+            0,
+            "-110%"
+        ],
+        "to": [
+            0,
+            0
+        ],
         "duration": 1.6
     },
-
     //Bottom Panel
     "asa_bottom_panel_start_hide": {
         "anim_type": "offset",
         "easing": "in_sine",
-        "from": [ 0, -2 ],
-        "to": [ 0, 150 ],
+        "from": [
+            0,
+            -2
+        ],
+        "to": [
+            0,
+            150
+        ],
         "duration": 0.8,
         "play_event": "button.hide_start_screen"
     },
-
     "asa_bottom_panel_start_show": {
         "anim_type": "offset",
         "easing": "out_sine",
-        "from": [ 0, 150 ],
-        "to": [ 0, -2 ],
+        "from": [
+            0,
+            150
+        ],
+        "to": [
+            0,
+            -2
+        ],
         "duration": 1.8
     },
-
     //Arrow Top
     "asa_arrow_close_action_2": {
         "anim_type": "offset",
         "easing": "in_quart",
-        "from": [ 0, 5 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            5
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.8
     },
-
     "asa_arrow_open_action": {
         "anim_type": "offset",
         "easing": "in_quart",
-        "from": [ 0, 5 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            5
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.8,
         "play_event": "button.hide_start_screen"
     },
-
     "asa_arrow_close_action_1": {
         "anim_type": "offset",
         "easing": "out_bounce",
-        "from": [ 0, -50 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.75,
         "play_event": "button.hide_start_screen",
         "next": "@asa_start_anims.asa_arrow_close_action"
     },
-
     "asa_arrow_close_action": {
         "anim_type": "offset",
         "easing": "out_bounce",
-        "from": [ 0, -50 ],
-        "to": [ 0, 5 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            5
+        ],
         "duration": 1.2
     },
-
     "asa_arrow_open_action_show": {
         "anim_type": "offset",
         "easing": "in_quart",
-        "from": [ 0, -50 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.75,
         "next": "@asa_start_anims.asa_arrow_close_action"
     },
-
     "asa_arrow_top_entrance_1": {
         "anim_type": "offset",
-        "from": [ 0, -50 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.6,
         "play_event": "screen.entrance_pop",
         "next": "@asa_start_anims.asa_arrow_top_entrance"
     },
-
     "asa_arrow_top_entrance_2": {
         "anim_type": "offset",
-        "from": [ 0, -50 ],
-        "to": [ 0, -50 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            -50
+        ],
         "duration": 0.6,
         "play_event": "screen.entrance_push",
         "next": "@asa_start_anims.asa_arrow_top_entrance"
     },
-
     "asa_arrow_top_entrance": {
         "anim_type": "offset",
         "easing": "out_bounce",
-        "from": [ 0, -50 ],
-        "to": [ 0, 10 ],
+        "from": [
+            0,
+            -50
+        ],
+        "to": [
+            0,
+            10
+        ],
         "duration": 1.2
     },
-
     "asa_arrow_top_exit_1": {
         "anim_type": "offset",
         "easing": "in_sine",
-        "from": [ 0, 10 ],
-        "to": [ 0, -150 ],
+        "from": [
+            0,
+            10
+        ],
+        "to": [
+            0,
+            -150
+        ],
         "duration": 0.6,
         "play_event": "screen.exit_push"
     },
-
     "asa_arrow_top_exit_2": {
         "anim_type": "offset",
         "easing": "in_sine",
-        "from": [ 0, 10 ],
-        "to": [ 0, -150 ],
+        "from": [
+            0,
+            10
+        ],
+        "to": [
+            0,
+            -150
+        ],
         "duration": 0.6,
         "play_event": "screen.exit_pop"
     },
-
     //Bottom Panel
     "asa_bottom_panel_entrance_1": {
         "anim_type": "offset",
-        "from": [ 0, 150 ],
-        "to": [ 0, 150 ],
+        "from": [
+            0,
+            150
+        ],
+        "to": [
+            0,
+            150
+        ],
         "duration": 0.7,
         "play_event": "screen.entrance_pop",
         "next": "@asa_start_anims.asa_bottom_panel_entrance"
     },
-
     "asa_bottom_panel_entrance_2": {
         "anim_type": "offset",
-        "from": [ 0, 150 ],
-        "to": [ 0, 150 ],
+        "from": [
+            0,
+            150
+        ],
+        "to": [
+            0,
+            150
+        ],
         "duration": 0.7,
         "play_event": "screen.entrance_push",
         "next": "@asa_start_anims.asa_bottom_panel_entrance"
     },
-
     "asa_bottom_panel_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
-        "from": [ 0, 150 ],
-        "to": [ 0, -2 ],
+        "from": [
+            0,
+            150
+        ],
+        "to": [
+            0,
+            -2
+        ],
         "duration": 1.2
     },
-
     "asa_bottom_panel_exit_1": {
         "anim_type": "offset",
         "easing": "in_sine",
-        "from": [ 0, -2 ],
-        "to": [ 0, 150 ],
+        "from": [
+            0,
+            -2
+        ],
+        "to": [
+            0,
+            150
+        ],
         "duration": 0.6,
         "play_event": "screen.exit_push"
     },
-
     "asa_bottom_panel_exit_2": {
         "anim_type": "offset",
         "easing": "in_sine",
-        "from": [ 0, -2 ],
-        "to": [ 0, 150 ],
+        "from": [
+            0,
+            -2
+        ],
+        "to": [
+            0,
+            150
+        ],
         "duration": 0.6,
         "play_event": "screen.exit_pop"
     },
-
     //Start Gamertag Anims
     "asa_start_gamertag_entrance_1": {
         "anim_type": "offset",
         "duration": 1.2,
         "easing": "out_back",
-        "from": [ -75, 2 ],
-        "to": [ 2, 2 ],
+        "from": [
+            -75,
+            2
+        ],
+        "to": [
+            2,
+            2
+        ],
         "play_event": "screen.entrance_pop"
     },
-
     "asa_start_gamertag_entrance_2": {
         "anim_type": "offset",
         "duration": 1.2,
         "easing": "out_back",
-        "from": [ -75, 2 ],
-        "to": [ 2, 2 ],
+        "from": [
+            -75,
+            2
+        ],
+        "to": [
+            2,
+            2
+        ],
         "play_event": "screen.entrance_push"
     },
-
     "asa_start_gamertag_exit_1": {
         "anim_type": "offset",
         "duration": 0.7,
         "easing": "in_sine",
-        "from": [ 2, 2 ],
-        "to": [ -32, 2 ],
+        "from": [
+            2,
+            2
+        ],
+        "to": [
+            -32,
+            2
+        ],
         "play_event": "screen.exit_pop"
     },
-
     "asa_start_gamertag_exit_2": {
         "anim_type": "offset",
         "duration": 0.7,
         "easing": "in_sine",
-        "from": [ 2, 2 ],
-        "to": [ -32, 2 ],
+        "from": [
+            2,
+            2
+        ],
+        "to": [
+            -32,
+            2
+        ],
         "play_event": "screen.exit_push"
     },
-
     //Start BG Screen
     "asa_start_bg_1": {
         "anim_type": "wait",
         "duration": 5,
         "next": "@asa_start_anims.asa_start_bg_1_1"
     },
-
     "asa_start_bg_1_1": {
         "anim_type": "offset",
         "duration": 2.5,
-        "from": [ 0, 0 ],
-        "to": [ "5%", 0 ],
+        "from": [
+            0,
+            0
+        ],
+        "to": [
+            "5%",
+            0
+        ],
         "easing": "in_sine",
         "next": "@asa_start_anims.asa_start_bg_2"
     },
-
     "asa_start_bg_2": {
         "anim_type": "offset",
         "duration": 2.5,
-        "from": [ "5%", 0 ],
-        "to": [ "10%", 0 ],
+        "from": [
+            "5%",
+            0
+        ],
+        "to": [
+            "10%",
+            0
+        ],
         "easing": "out_sine",
         "next": "@asa_start_anims.asa_bg_wait"
     },
-
     "asa_bg_wait": {
         "anim_type": "wait",
         "duration": 1,
         "next": "@asa_start_anims.asa_start_bg_3"
     },
-
     "asa_start_bg_3": {
         "anim_type": "offset",
         "duration": 5,
-        "from": [ "10%", 0 ],
-        "to": [ "0%", 0 ],
+        "from": [
+            "10%",
+            0
+        ],
+        "to": [
+            "0%",
+            0
+        ],
         "easing": "in_sine",
         "next": "@asa_start_anims.asa_start_bg_4"
     },
-
     "asa_start_bg_4": {
         "anim_type": "offset",
         "duration": 5,
-        "from": [ "0%", 0 ],
-        "to": [ "-10%", 0 ],
+        "from": [
+            "0%",
+            0
+        ],
+        "to": [
+            "-10%",
+            0
+        ],
         "easing": "out_sine",
         "next": "@asa_start_anims.asa_bg_wait_2"
     },
-
     "asa_bg_wait_2": {
         "anim_type": "wait",
         "duration": 1,
         "next": "@asa_start_anims.asa_start_bg_5"
     },
-
     "asa_start_bg_5": {
         "anim_type": "offset",
         "duration": 5,
-        "from": [ "-10%", 0 ],
-        "to": [ "0%", 0 ],
+        "from": [
+            "-10%",
+            0
+        ],
+        "to": [
+            "0%",
+            0
+        ],
         "easing": "in_sine",
         "next": "@asa_start_anims.asa_start_bg_6"
     },
-
     "asa_start_bg_6": {
         "anim_type": "offset",
         "duration": 5,
-        "from": [ "0%", 0 ],
-        "to": [ "10%", 0 ],
+        "from": [
+            "0%",
+            0
+        ],
+        "to": [
+            "10%",
+            0
+        ],
         "easing": "out_sine",
         "next": "@asa_start_anims.asa_bg_wait"
     },
-
     //Copyright
     "asa_better_copyright_entrance_wait": {
         "anim_type": "offset",
@@ -361,7 +525,6 @@ Discord: Kotori Itsuka#6038
         "play_event": "screen.entrance_pop",
         "next": "@asa_start_anims.asa_better_copyright_entrance"
     },
-
     "asa_better_copyright_entrance_wait_2": {
         "anim_type": "offset",
         "easing": "out_sine",
@@ -371,7 +534,6 @@ Discord: Kotori Itsuka#6038
         "play_event": "screen.entrance_push",
         "next": "@asa_start_anims.asa_better_copyright_entrance_2"
     },
-
     "asa_better_copyright_entrance": {
         "anim_type": "offset",
         "easing": "out_back",
@@ -380,7 +542,6 @@ Discord: Kotori Itsuka#6038
         "to": "$asa_to",
         "end_event": "screen.entrance_end"
     },
-
     "asa_better_copyright_entrance_2": {
         "anim_type": "offset",
         "easing": "out_sine",
@@ -389,172 +550,245 @@ Discord: Kotori Itsuka#6038
         "to": "$asa_to",
         "end_event": "screen.entrance_end"
     },
-
     "asa_better_copyright_exit": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  "$asa_to",
+        "from": "$asa_to",
         "to": "$asa_from",
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_better_copyright_exit_2": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  "$asa_to",
+        "from": "$asa_to",
         "to": "$asa_from",
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //Mojang Copyright
     "asa_mojang_copyright_entrance_wait": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": "$asa_duration",
-        "from": [ -200, -1 ],
-        "to": [ -200, -1 ],
+        "from": [
+            -200,
+            -1
+        ],
+        "to": [
+            -200,
+            -1
+        ],
         "play_event": "screen.entrance_pop",
         "next": "@asa_start_anims.asa_mojang_copyright_entrance"
     },
-
     "asa_mojang_copyright_entrance_wait_2": {
         "anim_type": "offset",
         "easing": "out_sine",
         "duration": "$asa_duration",
-        "from": [ -200, -1 ],
-        "to": [ -200, -1 ],
+        "from": [
+            -200,
+            -1
+        ],
+        "to": [
+            -200,
+            -1
+        ],
         "play_event": "screen.entrance_push",
         "next": "@asa_start_anims.asa_mojang_copyright_entrance_2"
     },
-
     "asa_mojang_copyright_entrance": {
         "anim_type": "offset",
         "easing": "out_back",
         "duration": 1.2,
-        "from": [ -200, -1 ],
-        "to": [ 3, -1 ],
+        "from": [
+            -200,
+            -1
+        ],
+        "to": [
+            3,
+            -1
+        ],
         "end_event": "screen.entrance_end"
     },
-
     "asa_mojang_copyright_entrance_2": {
         "anim_type": "offset",
         "easing": "out_back",
         "duration": 1.2,
-        "from": [ -200, -1 ],
-        "to": [ 3, -1 ],
+        "from": [
+            -200,
+            -1
+        ],
+        "to": [
+            3,
+            -1
+        ],
         "end_event": "screen.entrance_end"
     },
-
     "asa_mojang_copyright_exit": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 3, -1 ],
-        "to": [ -200, -1 ],
+        "from": [
+            3,
+            -1
+        ],
+        "to": [
+            -200,
+            -1
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_mojang_copyright_exit_2": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 3, -1 ],
-        "to": [ -200, -1 ],
+        "from": [
+            3,
+            -1
+        ],
+        "to": [
+            -200,
+            -1
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //Play Panel
     "asa_play_panel_copyright_entrance": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.4,
-        "from": [ 0, "100%" ],
-        "to": [ 0, 8 ],
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            0,
+            8
+        ],
         "play_event": "screen.entrance_pop",
         "end_event": "screen.entrance_end"
     },
-
     "asa_play_panel_copyright_entrance_2": {
         "anim_type": "offset",
         "easing": "out_circ",
         "duration": 1.4,
-        "from": [ 0, "100%" ],
-        "to": [ 0, 8 ],
+        "from": [
+            0,
+            "100%"
+        ],
+        "to": [
+            0,
+            8
+        ],
         "play_event": "screen.entrance_push",
         "end_event": "screen.entrance_end"
     },
-
     "asa_play_panel_copyright_exit": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 0, 8 ],
-        "to": [ 0, "100%" ],
+        "from": [
+            0,
+            8
+        ],
+        "to": [
+            0,
+            "100%"
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_play_panel_copyright_exit_2": {
         "anim_type": "offset",
         "easing": "linear",
         "duration": 0.6,
-        "from":  [ 0, 8 ],
-        "to": [ 0, "100%" ],
+        "from": [
+            0,
+            8
+        ],
+        "to": [
+            0,
+            "100%"
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     },
-
     //Game Title
     "asa_title_panel_copyright_entrance": {
         "anim_type": "offset",
         "easing": "out_cubic",
         "duration": 0.8,
-        "from": [ 200, -12 ],
-        "to": [ 200, -12 ],
+        "from": [
+            200,
+            -12
+        ],
+        "to": [
+            200,
+            -12
+        ],
         "next": "@asa_start_anims.asa_title_panel_copyright_entrance_no_2",
         "play_event": "screen.entrance_pop"
     },
-
     "asa_title_panel_copyright_entrance_no_2": {
         "anim_type": "offset",
         "easing": "out_cubic",
         "duration": 1.6,
-        "from": [ 200, -12 ],
-        "to": [ 12, -12 ]
+        "from": [
+            200,
+            -12
+        ],
+        "to": [
+            12,
+            -12
+        ]
     },
-
     "asa_title_panel_copyright_entrance_2": {
         "anim_type": "offset",
         "easing": "out_cubic",
         "duration": 0.8,
-        "from": [ 200, -12 ],
-        "to": [ 200, -12 ],
+        "from": [
+            200,
+            -12
+        ],
+        "to": [
+            200,
+            -12
+        ],
         "next": "@asa_start_anims.asa_title_panel_copyright_entrance_no_2",
         "play_event": "screen.entrance_push"
     },
-
     "asa_title_panel_copyright_exit": {
         "anim_type": "offset",
         "easing": "in_cubic",
         "duration": 0.6,
-        "from":  [ 12, -12 ],
-        "to": [ 200, -12 ],
+        "from": [
+            12,
+            -12
+        ],
+        "to": [
+            200,
+            -12
+        ],
         "play_event": "screen.exit_pop",
         "end_event": "screen.exit_end"
     },
-
     "asa_title_panel_copyright_exit_2": {
         "anim_type": "offset",
         "easing": "in_cubic",
         "duration": 0.6,
-        "from":  [ 12, -12 ],
-        "to": [ 200, -12 ],
+        "from": [
+            12,
+            -12
+        ],
+        "to": [
+            200,
+            -12
+        ],
         "play_event": "screen.exit_push",
         "end_event": "screen.exit_end"
     }

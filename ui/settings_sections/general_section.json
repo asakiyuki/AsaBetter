@@ -1,16 +1,10 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
   "sound_section": {
     "type": "stack_panel",
-    "size": [ "100%", "100%c" ],
+    "size": [
+      "100%",
+      "100%c"
+    ],
     "anchor_from": "top_left",
     "anchor_to": "top_left",
     "bindings": [
@@ -22,13 +16,21 @@ Discord: Kotori Itsuka#6038
       }
     ],
     "controls": [
-    
-        { "MainVolume": { "type": "panel", "size": ["100%", 15]}},
-        
-        {
+      {
+        "MainVolume": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
+      {
         "Main@settings_common.option_slider": {
-	      "size": [ "95%", 16 ],
-	
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#main_volume_slider_label",
           "$slider_name": "main_volume",
           "$slider_value_binding_name": "#main_volume",
@@ -42,48 +44,67 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-      
-      { "panel_1": { "type": "panel", "size": ["100%", 15]}},
-      
       {
-      "stack_1": {
-        "type": "stack_panel",
-        "size": [ "95%", 16 ],
-        "orientation": "horizontal",
-        "controls": [
+        "panel_1": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
+      {
+        "stack_1": {
+          "type": "stack_panel",
+          "size": [
+            "95%",
+            16
+          ],
+          "orientation": "horizontal",
+          "controls": [
             {
               "slider_1@settings_common.option_slider": {
-                "size": [ "50% - 1px", 16 ],
-                
+                "size": [
+                  "50% - 1px",
+                  16
+                ],
                 "$option_label": "#music_volume_slider_label",
                 "$slider_name": "music_volume",
                 "$slider_value_binding_name": "#music_volume",
                 "$slider_tts_text_value": "#music_volume_text_value",
                 "$option_enabled_binding_name": "#music_volume_enabled",
-                
                 "$focus_override_up": "FOCUS_OVERRIDE_STOP",
                 "$label_bindings": [
                   {
-                  "binding_name": "$option_label"
+                    "binding_name": "$option_label"
                   }
                 ]
               }
             },
-            { "panel": { "type": "panel", "size": [2, 16]}},
+            {
+              "panel": {
+                "type": "panel",
+                "size": [
+                  2,
+                  16
+                ]
+              }
+            },
             {
               "slider_2@settings_common.option_slider": {
-                "size": [ "50% - 1px", 16 ],
-                
+                "size": [
+                  "50% - 1px",
+                  16
+                ],
                 "$option_label": "#sound_volume_slider_label",
                 "$slider_name": "sound_volume",
                 "$slider_value_binding_name": "#sound_volume",
                 "$slider_tts_text_value": "#sound_volume_text_value",
                 "$option_enabled_binding_name": "#sound_volume_enabled",
-                
                 "$focus_override_up": "FOCUS_OVERRIDE_STOP",
                 "$label_bindings": [
                   {
-                  "binding_name": "$option_label"
+                    "binding_name": "$option_label"
                   }
                 ]
               }
@@ -91,16 +112,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
       {
         "line": {
           "type": "panel",
-          "size": [ "100%", "100%c + 14px" ],
+          "size": [
+            "100%",
+            "100%c + 14px"
+          ],
           "controls": [
             {
               "test": {
                 "type": "image",
-                "size": [ "100% - 30px", 1 ],
+                "size": [
+                  "100% - 30px",
+                  1
+                ],
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "layer": 1,
@@ -110,12 +136,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-      
-      { "panel_2": { "type": "panel", "size": ["100%", 4]}},
-
+      {
+        "panel_2": {
+          "type": "panel",
+          "size": [
+            "100%",
+            4
+          ]
+        }
+      },
       {
         "option_slider_4@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#block_volume_slider_label",
           "$slider_name": "block_volume",
           "$slider_value_binding_name": "#block_volume",
@@ -128,12 +163,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "458724824": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "458724824": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_5@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#hostile_volume_slider_label",
           "$slider_name": "hostile_volume",
           "$slider_value_binding_name": "#hostile_volume",
@@ -146,12 +190,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "584577": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "584577": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_6@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#neutral_volume_slider_label",
           "$slider_name": "neutral_volume",
           "$slider_value_binding_name": "#neutral_volume",
@@ -164,12 +217,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "325236347": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "325236347": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_7@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#player_volume_slider_label",
           "$slider_name": "player_volume",
           "$slider_value_binding_name": "#player_volume",
@@ -180,15 +242,23 @@ Discord: Kotori Itsuka#6038
               "binding_name": "$option_label"
             }
           ]
-
         }
       },
-
-      { "45745845": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "45745845": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_8@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#record_volume_slider_label",
           "$slider_name": "record_volume",
           "$slider_value_binding_name": "#record_volume",
@@ -201,12 +271,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "2352362376": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "2352362376": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_9@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#weather_volume_slider_label",
           "$slider_name": "weather_volume",
           "$slider_value_binding_name": "#weather_volume",
@@ -219,12 +298,21 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "6346347": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "6346347": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "option_slider_10@settings_common.option_slider": {
-          "size": [ "95%", 16 ],
+          "size": [
+            "95%",
+            16
+          ],
           "$option_label": "#texttospeech_volume_slider_label",
           "$slider_name": "texttospeech_volume",
           "$slider_value_binding_name": "#texttospeech_volume",
@@ -237,9 +325,15 @@ Discord: Kotori Itsuka#6038
           ]
         }
       },
-
-      { "1221423": { "type": "panel", "size": ["100%", 15]}},
-
+      {
+        "1221423": {
+          "type": "panel",
+          "size": [
+            "100%",
+            15
+          ]
+        }
+      },
       {
         "reset_button@settings_common.action_button": {
           "ignored": "(not $is_pregame)",
@@ -253,15 +347,12 @@ Discord: Kotori Itsuka#6038
       }
     ]
   },
-
   "gamertag_controls/sign_out": {
     "ignored": false
   },
-
   "video_section/max_framerate_slider": {
     "ignored": false
   },
-
   "video_section/ui_profile_dropdown": {
     "$option_label": "options.uiprofile",
     "$dropdown_content": "general_section.asa_no",
@@ -271,15 +362,20 @@ Discord: Kotori Itsuka#6038
     "$options_dropdown_toggle_label_binding": "#ui_profile_dropdown_toggle_label",
     "$dropdown_scroll_content_size": ""
   },
-
   "asa_no": {
     "type": "panel",
-    "size": [ "100%", "100%" ],
+    "size": [
+      "100%",
+      "100%"
+    ],
     "controls": [
       {
         "text": {
           "type": "label",
-          "max_size": [ "100% - 12px", "default" ],
+          "max_size": [
+            "100% - 12px",
+            "default"
+          ],
           "shadow": true,
           "text": "You can't set UI Profile as you want, the default of UI Profile will always be Classic"
         }

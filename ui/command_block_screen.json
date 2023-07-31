@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     /*"command_block_screen": {
         "force_render_below": true,
@@ -19,14 +10,15 @@ Discord: Kotori Itsuka#6038
             "@common.screen_entrance_animation_pop_fade"
         ]
     }*/
-
     "command_block_screen": {
         "force_render_below": true
     },
-
     "asa_mods_text_template": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "bindings": [
             {
                 "binding_name": "$binding_view",
@@ -47,14 +39,20 @@ Discord: Kotori Itsuka#6038
                     "type": "label",
                     "text": "$asa_des",
                     "font_scale_factor": 0.75,
-                    "max_size": [ "100%", "default" ],
+                    "max_size": [
+                        "100%",
+                        "default"
+                    ],
                     "font_type": "smooth",
-                    "color": [ 0.667, 0.667, 0.667 ]
+                    "color": [
+                        0.667,
+                        0.667,
+                        0.667
+                    ]
                 }
             }
         ]
     },
-
     "left_scroll_panel_content": {
         "type": "panel",
         "anchor_from": "top_left",
@@ -130,7 +128,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "impulse@asa_mods_text_template": {
-                                "$mode_color": [ 1.0, 0.667, 0.0 ],
+                                "$mode_color": [
+                                    1.0,
+                                    0.667,
+                                    0.0
+                                ],
                                 "$binding_view": "#command_impulse_mode",
                                 "$asa_text": "commandBlockScreen.blockType.impulse",
                                 "$asa_des": "Command Blocks only activate once"
@@ -138,7 +140,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "chain@asa_mods_text_template": {
-                                "$mode_color": [ 0.333, 1.0, 0.333 ],
+                                "$mode_color": [
+                                    0.333,
+                                    1.0,
+                                    0.333
+                                ],
                                 "$binding_view": "#command_chain_mode",
                                 "$asa_text": "commandBlockScreen.blockType.chain",
                                 "$asa_des": "Command Blocks are activated when a command block pointing into it is activated"
@@ -146,7 +152,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "repeat@asa_mods_text_template": {
-                                "$mode_color": [ 1.0, 0.333, 1.0 ],
+                                "$mode_color": [
+                                    1.0,
+                                    0.333,
+                                    1.0
+                                ],
                                 "$binding_view": "#command_repeat_mode",
                                 "$asa_text": "commandBlockScreen.blockType.repeat",
                                 "$asa_des": "Command Blocks are activated once every in-game tick"
@@ -155,26 +165,38 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_block_type_stack": {
                                 "type": "stack_panel",
-                                "size": [ "100%", 30 ],
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
                                         "1@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_impulse_mode",
                                             "$asa_icon_texture": "textures/blocks/command_block_back_mipmap"
                                         }
                                     },
                                     {
                                         "2@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_chain_mode",
                                             "$asa_icon_texture": "textures/blocks/chain_command_block_back_mipmap"
                                         }
                                     },
                                     {
                                         "3@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_repeat_mode",
                                             "$asa_icon_texture": "textures/blocks/repeating_command_block_back_mipmap"
                                         }
@@ -193,7 +215,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "unconditional@asa_mods_text_template": {
-                                "$mode_color": [ 1.0, 1.0, 1.0 ],
+                                "$mode_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
                                 "$binding_view": "#command_unconditional_mode",
                                 "$asa_text": "commandBlockScreen.condition.unconditional",
                                 "$asa_des": "Will execute regardless if the previous block was successful or not"
@@ -201,7 +227,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "conditional@asa_mods_text_template": {
-                                "$mode_color": [ 1.0, 1.0, 1.0 ],
+                                "$mode_color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ],
                                 "$binding_view": "#command_conditional_mode",
                                 "$asa_text": "commandBlockScreen.condition.conditional",
                                 "$asa_des": "Will only execute if the previous block in a chain was successful"
@@ -210,33 +240,69 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_condition_mode": {
                                 "type": "stack_panel",
-                                "size": [ "100%", 30 ],
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
                                         "1@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_unconditional_mode",
                                             "$asa_controls": [
                                                 {
                                                     "1": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/command_block_side_mipmap",
-                                                        "bindings": [{"binding_name": "#command_impulse_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_impulse_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "2": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/chain_command_block_side_mipmap",
-                                                        "bindings": [{"binding_name": "#command_chain_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_chain_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "3": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/repeating_command_block_side_mipmap",
-                                                        "bindings": [{"binding_name": "#command_repeat_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_repeat_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -244,28 +310,61 @@ Discord: Kotori Itsuka#6038
                                     },
                                     {
                                         "2@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_conditional_mode",
                                             "$asa_controls": [
                                                 {
                                                     "1": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/command_block_conditional_mipmap",
-                                                        "bindings": [{"binding_name": "#command_impulse_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_impulse_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "2": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/chain_command_block_conditional_mipmap",
-                                                        "bindings": [{"binding_name": "#command_chain_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_chain_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "3": {
-                                                        "type": "image", "size": [ 16, 16 ], "layer": 4,
+                                                        "type": "image",
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "layer": 4,
                                                         "texture": "textures/blocks/repeating_command_block_conditional_mipmap",
-                                                        "bindings": [{"binding_name": "#command_repeat_mode", "binding_name_override": "#visible"}]
+                                                        "bindings": [
+                                                            {
+                                                                "binding_name": "#command_repeat_mode",
+                                                                "binding_name_override": "#visible"
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -285,7 +384,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "need_redstone@asa_mods_text_template": {
-                                "$mode_color": [ 1.0, 0.0, 0.0 ],
+                                "$mode_color": [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ],
                                 "$binding_view": "#command_needs_redstone_mode",
                                 "$asa_text": "commandBlockScreen.redstone.needs_redstone",
                                 "$asa_des": "Will set the Command Block to only activate when it has Redstone power"
@@ -293,7 +396,11 @@ Discord: Kotori Itsuka#6038
                         },
                         {
                             "always@asa_mods_text_template": {
-                                "$mode_color": [ 0.0, 1.0, 0.0 ],
+                                "$mode_color": [
+                                    0.0,
+                                    1.0,
+                                    0.0
+                                ],
                                 "$binding_view": "#command_always_on_mode",
                                 "$asa_text": "commandBlockScreen.redstone.always_on",
                                 "$asa_des": "Will set the Command Block always active without Redstone power"
@@ -302,19 +409,28 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_redstone_mode_stack": {
                                 "type": "stack_panel",
-                                "size": [ "100%", 30 ],
+                                "size": [
+                                    "100%",
+                                    30
+                                ],
                                 "orientation": "horizontal",
                                 "controls": [
                                     {
                                         "1@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_needs_redstone_mode",
                                             "$asa_icon_texture": "textures/blocks/redstone_lamp_off"
                                         }
                                     },
                                     {
                                         "2@asa_toggle_common.asa_toggle_nav_with_icon_template": {
-                                            "size": [ "fill", 30 ],
+                                            "size": [
+                                                "fill",
+                                                30
+                                            ],
                                             "$asa_state_toggle": "#command_always_on_mode",
                                             "$asa_icon_texture": "textures/blocks/redstone_lamp_on"
                                         }
@@ -359,7 +475,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_delay_in_first": {
                                 "type": "panel",
-                                "size": [ "100%", "100%cm" ],
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_name": "#execute_on_first_tick_enabled",
@@ -457,7 +576,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "right_scroll_panel_content": {
         "type": "stack_panel",
         "orientation": "vertical",

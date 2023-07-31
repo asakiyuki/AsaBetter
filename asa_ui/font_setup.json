@@ -1,27 +1,26 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
-{ 
+{
     "namespace": "asa_font_setup",
-
     "text_and_background": {
         "type": "image",
         "$asa_header_bg_color|default": "@asa_header_bg_anim.header_1",
         "color": "$asa_header_bg_color",
         "texture": "asa_textures/ui/header_bg",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "controls": [
             {
                 "text": {
                     "type": "label",
-                    "size": [ "default", 10 ],
-                    "max_size": [ "100% - 8px", 10 ],
+                    "size": [
+                        "default",
+                        10
+                    ],
+                    "max_size": [
+                        "100% - 8px",
+                        10
+                    ],
                     "text": "$header_text",
                     "color": "$asa_header_text_color",
                     "layer": 10

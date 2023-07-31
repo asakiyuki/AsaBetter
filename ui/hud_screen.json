@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "hud_tip_text": {
         "bindings": [
@@ -18,7 +9,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hud_actionbar_text": {
         "bindings": [
             {
@@ -29,7 +19,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hud_title_text/title_frame": {
         "bindings": [
             {
@@ -40,7 +29,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hud_title_text/subtitle_frame": {
         "bindings": [
             {
@@ -51,7 +39,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "cursor_renderer": {
         "bindings": [
             {
@@ -62,7 +49,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "start_cap_image": {
         "bindings": [
             {
@@ -73,7 +59,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hotbar_slot_selected_image": {
         "type": "panel",
         "layer": 2,
@@ -82,7 +67,10 @@ Discord: Kotori Itsuka#6038
                 "hotbar_slot_selected_image": {
                     "type": "image",
                     "texture": "textures/ui/selected_hotbar_slot",
-                    "size": [ 24, 24 ],
+                    "size": [
+                        24,
+                        24
+                    ],
                     "layer": 50,
                     "bindings": [
                         {
@@ -98,7 +86,10 @@ Discord: Kotori Itsuka#6038
                 "hotbar__rgb_slot_selected_image": {
                     "type": "image",
                     "texture": "asa_textures/ui/asa_default_hotbar_selected",
-                    "size": [ 21, 23 ],
+                    "size": [
+                        21,
+                        23
+                    ],
                     "layer": 2,
                     "alpha": 0.5,
                     "bindings": [
@@ -113,7 +104,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hotbar_renderer": {
         "bindings": [
             {
@@ -124,27 +114,30 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "inventory_button_right": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "controls": [
             {
                 "button@hotbar_elipses_panel_right_content": {}
             }
         ]
     },
-
     "inventory_button_left": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "controls": [
             {
                 "button@hotbar_elipses_panel_left_content": {}
             }
         ]
     },
-
     "hotbar_panel": {
         "type": "stack_panel",
         "orientation": "horizontal",
@@ -191,16 +184,25 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_hotbar_empty_1": {
                     "type": "panel",
-                    "size": [ 0, 22 ],
+                    "size": [
+                        0,
+                        22
+                    ],
                     "controls": [
                         {
                             "asa_stack": {
                                 "type": "stack_panel",
-                                "size": [ 0, 22 ],
+                                "size": [
+                                    0,
+                                    22
+                                ],
                                 "orientation": "horizontal",
                                 "anchor_from": "left_middle",
                                 "anchor_to": "left_middle",
-                                "offset": [ 10, 0 ],
+                                "offset": [
+                                    10,
+                                    0
+                                ],
                                 "controls": [
                                     {
                                         "a@asa_hud_content.asa_mainhand_stack": {
@@ -226,7 +228,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "asa_hotbar_empty_1": {
                                             "type": "panel",
-                                            "size": [ "100%cm", 22 ],
+                                            "size": [
+                                                "100%cm",
+                                                22
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -253,28 +258,30 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "gui_hotbar_grid_item/hotbar_parent/item_icon": {
         "layer": 10
     },
-
     "gui_hotbar_grid_item/hotbar_parent/item_dura": {
         "layer": 11
     },
-
     "gui_hotbar_grid_item/cooldown_renderer": {
         "layer": 12
     },
-
     "gui_hotbar_grid_item/hotbar_parent/item_count": {
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "bindings": [],
         "controls": [
             {
                 "asa_one_item_count": {
                     "type": "panel",
-                    "size": [ "100%cm", "100%cm" ],
+                    "size": [
+                        "100%cm",
+                        "100%cm"
+                    ],
                     "anchor_to": "bottom_right",
                     "anchor_from": "bottom_right",
                     "bindings": [
@@ -289,7 +296,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "survival_only": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "anchor_to": "bottom_right",
                                 "anchor_from": "bottom_right",
                                 "bindings": [
@@ -304,7 +314,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "anchor_to": "bottom_right",
                                             "anchor_from": "bottom_right",
                                             "bindings": [
@@ -319,7 +332,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "asa_one_item_count_panel": {
                                                         "type": "panel",
-                                                        "size": [ "100%cm", "100%cm" ],
+                                                        "size": [
+                                                            "100%cm",
+                                                            "100%cm"
+                                                        ],
                                                         "anchor_to": "bottom_right",
                                                         "anchor_from": "bottom_right",
                                                         "bindings": [
@@ -360,7 +376,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "both": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "anchor_to": "bottom_right",
                                 "anchor_from": "bottom_right",
                                 "bindings": [
@@ -375,14 +394,20 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "anchor_to": "bottom_right",
                                             "anchor_from": "bottom_right",
                                             "controls": [
                                                 {
                                                     "asa_one_item_count_panel": {
                                                         "type": "panel",
-                                                        "size": [ "100%cm", "100%cm" ],
+                                                        "size": [
+                                                            "100%cm",
+                                                            "100%cm"
+                                                        ],
                                                         "anchor_to": "bottom_right",
                                                         "anchor_from": "bottom_right",
                                                         "bindings": [
@@ -426,8 +451,14 @@ Discord: Kotori Itsuka#6038
             {
                 "creative_item_count": {
                     "type": "panel",
-                    "size": [ "100%cm", "100%cm" ],
-                    "offset": [ 0, -1 ],
+                    "size": [
+                        "100%cm",
+                        "100%cm"
+                    ],
+                    "offset": [
+                        0,
+                        -1
+                    ],
                     "layer": 11,
                     "bindings": [
                         {
@@ -464,8 +495,14 @@ Discord: Kotori Itsuka#6038
             {
                 "default_item_count": {
                     "type": "panel",
-                    "size": [ "100%cm", "100%cm" ],
-                    "offset": [ 0, -1 ],
+                    "size": [
+                        "100%cm",
+                        "100%cm"
+                    ],
+                    "offset": [
+                        0,
+                        -1
+                    ],
                     "layer": 11,
                     "bindings": [
                         {
@@ -501,7 +538,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "centered_gui_elements_at_bottom_middle": {
         "bindings": [
             {
@@ -523,8 +559,14 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_elements": {
                     "type": "stack_panel",
-                    "size": [ "100%c", 50 ],
-                    "offset": [ -1, 0 ],
+                    "size": [
+                        "100%c",
+                        50
+                    ],
+                    "offset": [
+                        -1,
+                        0
+                    ],
                     "orientation": "horizontal",
                     "anchor_from": "bottom_middle",
                     "anchor_to": "bottom_middle",
@@ -532,7 +574,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_empty_panel_left": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -545,7 +590,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -558,7 +606,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 20, 1 ],
+                                                        "size": [
+                                                            20,
+                                                            1
+                                                        ],
                                                         "bindings": [
                                                             {
                                                                 "binding_name": "#hotbar_elipses_left_visible",
@@ -705,7 +756,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_empty_panel_right": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -718,7 +772,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -731,7 +788,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 20, 1 ],
+                                                        "size": [
+                                                            20,
+                                                            1
+                                                        ],
                                                         "bindings": [
                                                             {
                                                                 "binding_name": "#hotbar_elipses_right_visible",
@@ -750,13 +810,17 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-            { "exp_rend@exp_progress_bar_and_hotbar": {} }
+            {
+                "exp_rend@exp_progress_bar_and_hotbar": {}
+            }
         ]
     },
-
     "exp_progress_bar_and_hotbar": {
         "type": "panel",
-        "size": [ "100%c", 31 ],
+        "size": [
+            "100%c",
+            31
+        ],
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "offset": "$xp_control_offset",
@@ -764,14 +828,23 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_exp_bar": {
                     "type": "stack_panel",
-                    "size": [ "100%c", 5 ],
-                    "offset": [ -1, 0 ],
+                    "size": [
+                        "100%c",
+                        5
+                    ],
+                    "offset": [
+                        -1,
+                        0
+                    ],
                     "orientation": "horizontal",
                     "controls": [
                         {
                             "asa_empty_panel_left": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -784,7 +857,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -797,7 +873,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 20, 1 ],
+                                                        "size": [
+                                                            20,
+                                                            1
+                                                        ],
                                                         "bindings": [
                                                             {
                                                                 "binding_name": "#hotbar_elipses_left_visible",
@@ -816,23 +895,41 @@ Discord: Kotori Itsuka#6038
                         {
                             "resizing_xp_bar_with_hotbar_survival": {
                                 "type": "panel",
-                                "size": [ "100%c", 5 ],
+                                "size": [
+                                    "100%c",
+                                    5
+                                ],
                                 "controls": [
                                     {
                                         "empty_progress_bar@empty_progress_bar": {
-                                            "size": [ "100%c", 5 ],
+                                            "size": [
+                                                "100%c",
+                                                5
+                                            ],
                                             "layer": 1,
-                                            "offset": [ 0.5, 0.5 ],
+                                            "offset": [
+                                                0.5,
+                                                0.5
+                                            ],
                                             "controls": [
                                                 {
                                                     "full_progress_bar@full_progress_bar": {
-                                                        "size": [ "100%cm + 10px", 5 ],
+                                                        "size": [
+                                                            "100%cm + 10px",
+                                                            5
+                                                        ],
                                                         "layer": 2,
                                                         "controls": [
                                                             {
                                                                 "progress_bar_nub@progress_bar_nub": {
-                                                                    "size": [ 173, 5 ],
-                                                                    "max_size": [ 190, 5 ],
+                                                                    "size": [
+                                                                        173,
+                                                                        5
+                                                                    ],
+                                                                    "max_size": [
+                                                                        190,
+                                                                        5
+                                                                    ],
                                                                     "layer": 3,
                                                                     "controls": [
                                                                         {
@@ -852,9 +949,12 @@ Discord: Kotori Itsuka#6038
                                                                                     },
                                                                                     {
                                                                                         "progress_text_label@progress_text_label": {
-                                                                                            "offset": [ "100%x + 7px", -1 ],
+                                                                                            "offset": [
+                                                                                                "100%x + 7px",
+                                                                                                -1
+                                                                                            ],
                                                                                             "anchor_from": "right_middle",
-                                                                                            "anchor_to": "right_middle", 
+                                                                                            "anchor_to": "right_middle",
                                                                                             "layer": 7,
                                                                                             "bindings": [
                                                                                                 {
@@ -878,7 +978,10 @@ Discord: Kotori Itsuka#6038
                                                             {
                                                                 "level_nummber": {
                                                                     "type": "panel",
-                                                                    "size": [ "100%cm", "100%cm" ],
+                                                                    "size": [
+                                                                        "100%cm",
+                                                                        "100%cm"
+                                                                    ],
                                                                     "anchor_from": "top_middle",
                                                                     "anchor_to": "bottom_middle",
                                                                     "bindings": [
@@ -892,7 +995,10 @@ Discord: Kotori Itsuka#6038
                                                                     "controls": [
                                                                         {
                                                                             "progress_text_label@progress_text_label": {
-                                                                                "offset": [ 0, 0 ],
+                                                                                "offset": [
+                                                                                    0,
+                                                                                    0
+                                                                                ],
                                                                                 "layer": 7,
                                                                                 "anchor_from": "center",
                                                                                 "anchor_to": "center"
@@ -932,7 +1038,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_empty_panel_right": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_condition": "always",
@@ -945,7 +1054,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -958,7 +1070,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 20, 1 ],
+                                                        "size": [
+                                                            20,
+                                                            1
+                                                        ],
                                                         "bindings": [
                                                             {
                                                                 "binding_name": "#hotbar_elipses_right_visible",
@@ -979,14 +1094,14 @@ Discord: Kotori Itsuka#6038
             },
             {
                 "hotbar@hotbar_chooser": {
-                    "offset": [ 4, 16 ]
+                    "offset": [
+                        4,
+                        16
+                    ]
                 }
             }
         ]
     },
-    
-    
-
     "root_panel": {
         "type": "panel",
         "controls": [
@@ -999,20 +1114,28 @@ Discord: Kotori Itsuka#6038
             {
                 "save_icon": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "hud_actionbar_text_area": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             }
         ]
     },
-
     "hud_content": {
-        "$hud_player_rend_desktop_offset": [ 7, 7 ],
+        "$hud_player_rend_desktop_offset": [
+            7,
+            7
+        ],
         "controls": [
             {
                 "root_panel@hud.root_panel": {}
@@ -1028,12 +1151,10 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "hud_screen": {
         "$screen_bg_content": "asa_hud_screen.asa_full_screen_root_panel",
         "always_accepts_input": true
     },
-
     "boss_name_panel": {
         "bindings": [
             {
@@ -1044,7 +1165,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "boss_health_panel/progress_bar_for_collections": {
         "bindings": [
             {
@@ -1067,7 +1187,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "mob_effects_renderer": {
         "bindings": [
             {
@@ -1078,7 +1197,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "vignette_renderer": {
         "layer": -10,
         "bindings": [
@@ -1090,7 +1208,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "item_name_text_root": {
         "$asa_item_binding_viewer": "(not (#item_id_aux = -1))",
         "bindings": [
@@ -1266,25 +1383,27 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
-
     "asa_juke_text_root": {
         "$text_color": "$jukebox_text_color",
         "$text_binding": "#jukebox_text",
         "type": "panel",
-        "size": [ "100%cm", "100%cm" ],
-
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
         "$wait_duration|default": 1,
         "$destroy_id|default": "item_name_text",
         "$show_interact_padding|default": false,
         "$show_survival_padding|default": false,
         "$show_text_background|default": false,
-
         "controls": [
             {
                 "item_name_text_stack": {
                     "type": "stack_panel",
-                    "size": [ "100%cm", "100%c" ],
+                    "size": [
+                        "100%cm",
+                        "100%c"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "view",
@@ -1297,12 +1416,18 @@ Discord: Kotori Itsuka#6038
                         {
                             "item_name_text_panel": {
                                 "type": "panel",
-                                "size": [ "100%cm", "100%cm" ],
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
                                 "controls": [
                                     {
                                         "item_text_background": {
                                             "type": "image",
-                                            "size": [ "100%sm + 12px", "100%sm + 5px" ],
+                                            "size": [
+                                                "100%sm + 12px",
+                                                "100%sm + 5px"
+                                            ],
                                             "texture": "textures/ui/hud_tip_text_background",
                                             "alpha": "@hud.anim_item_name_background_alpha_in",
                                             "bindings": [
@@ -1318,7 +1443,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "item_name_text_with_background": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -1328,11 +1456,13 @@ Discord: Kotori Itsuka#6038
                                                 }
                                             ],
                                             "controls": [
-                                                
                                                 {
                                                     "item_name_label": {
                                                         "type": "label",
-                                                        "max_size": [ 200, "default" ],
+                                                        "max_size": [
+                                                            200,
+                                                            "default"
+                                                        ],
                                                         "text_alignment": "center",
                                                         "layer": 31,
                                                         "color": "$text_color",
@@ -1349,11 +1479,13 @@ Discord: Kotori Itsuka#6038
                                             ]
                                         }
                                     },
-            
                                     {
                                         "item_name_text_without_background": {
                                             "type": "panel",
-                                            "size": [ "100%cm", "100%cm" ],
+                                            "size": [
+                                                "100%cm",
+                                                "100%cm"
+                                            ],
                                             "bindings": [
                                                 {
                                                     "binding_type": "view",
@@ -1366,7 +1498,10 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "item_name_label": {
                                                         "type": "label",
-                                                        "max_size": [ 200, "default" ],
+                                                        "max_size": [
+                                                            200,
+                                                            "default"
+                                                        ],
                                                         "text_alignment": "center",
                                                         "layer": 31,
                                                         "color": "$text_color",
@@ -1392,7 +1527,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-    
     "gui_hotbar_grid_item/hotbar_parent": {
         "controls": [
             {
@@ -1440,7 +1574,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "gui_hotbar_grid_item": {
         "modifications": [
             {
@@ -1462,7 +1595,10 @@ Discord: Kotori Itsuka#6038
                                 {
                                     "asa_shity_potion": {
                                         "type": "panel",
-                                        "size": [ "100% + 2px", "100% + 2px" ],
+                                        "size": [
+                                            "100% + 2px",
+                                            "100% + 2px"
+                                        ],
                                         "bindings": [
                                             {
                                                 "binding_name": "#item_id_aux",
@@ -1487,7 +1623,11 @@ Discord: Kotori Itsuka#6038
                                                     "texture": "asa_textures/ui/stop_songs",
                                                     "layer": 9,
                                                     "alpha": 0.3,
-                                                    "color": [ 1.0, 0.333, 1.0 ],
+                                                    "color": [
+                                                        1.0,
+                                                        0.333,
+                                                        1.0
+                                                    ],
                                                     "bindings": [
                                                         {
                                                             "binding_name": "#item_id_aux",
@@ -1508,7 +1648,11 @@ Discord: Kotori Itsuka#6038
                                                     "texture": "asa_textures/ui/stop_songs",
                                                     "layer": 9,
                                                     "alpha": 0.3,
-                                                    "color": [ 1.0, 0.333, 1.0 ],
+                                                    "color": [
+                                                        1.0,
+                                                        0.333,
+                                                        1.0
+                                                    ],
                                                     "bindings": [
                                                         {
                                                             "binding_name": "#item_id_aux",

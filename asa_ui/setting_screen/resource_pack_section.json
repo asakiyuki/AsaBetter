@@ -1,18 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_resouce_packs_screen",
-
     "asa_resource_pack_screen": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "$selected_pack_items": "#selected_pack_items_global",
         "$available_pack_items": "#available_pack_items_global",
         "$realms_pack_items": "#realms_pack_items_global",
@@ -92,18 +85,27 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "rsp_panel": {
                     "type": "stack_panel",
-                    "size": [ "100% - 1px", "100%c" ],
+                    "size": [
+                        "100% - 1px",
+                        "100%c"
+                    ],
                     "controls": [
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -134,12 +136,18 @@ Discord: Kotori Itsuka#6038
                                         "asa_minecraft_default": {
                                             "type": "stack_panel",
                                             "orientation": "horizontal",
-                                            "size": [ "100%", "100%cm" ],
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
                                             "controls": [
                                                 {
                                                     "asa_minecraft_default_image": {
                                                         "type": "image",
-                                                        "size": [ 40, 40 ],
+                                                        "size": [
+                                                            40,
+                                                            40
+                                                        ],
                                                         "texture_file_system": "#icon_file_system",
                                                         "bindings": [
                                                             {
@@ -160,26 +168,42 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 2, 2 ]
+                                                        "size": [
+                                                            2,
+                                                            2
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "asa_pack_name_stack": {
                                                         "type": "stack_panel",
-                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "size": [
+                                                            "100% - 42px",
+                                                            "100%c"
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "text": "resourcePack.vanilla.name",
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "layer": 1
                                                                 }
                                                             },
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "layer": 1,
-                                                                    "color": [ 0.8, 0.8, 0.8 ],
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "color": [
+                                                                        0.8,
+                                                                        0.8,
+                                                                        0.8
+                                                                    ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "text": "resourcePack.vanilla.description",
                                                                     "font_type": "smooth"
                                                                 }
@@ -193,7 +217,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 1, 1 ]
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
                                         }
                                     },
                                     {
@@ -202,13 +229,19 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 2, 2 ]
+                                            "size": [
+                                                2,
+                                                2
+                                            ]
                                         }
                                     },
                                     {
                                         "white_label@resource_packs.white_label": {
                                             "text": "resourcePack.description.bottom.global",
-                                            "max_size": [ "100%", "default" ],
+                                            "max_size": [
+                                                "100%",
+                                                "default"
+                                            ],
                                             "layer": 1
                                         }
                                     }
@@ -218,7 +251,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -231,7 +267,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -244,13 +283,19 @@ Discord: Kotori Itsuka#6038
                                             "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
                                             "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
                                             "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
-                                            "size": [ "100%", 25 ]
+                                            "size": [
+                                                "100%",
+                                                25
+                                            ]
                                         }
                                     },
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -290,7 +335,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -303,18 +351,27 @@ Discord: Kotori Itsuka#6038
                                             "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
                                             "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
                                             "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
-                                            "size": [ "100%", 25 ]
+                                            "size": [
+                                                "100%",
+                                                25
+                                            ]
                                         }
                                     },
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
                                         "unowned_pack_grid@resource_packs.unowned_pack_grid": {
-                                            "size": [ "100%", "default" ],
+                                            "size": [
+                                                "100%",
+                                                "default"
+                                            ],
                                             "$unowned_grid_visible_binding_name": "(not #no_unowned_packs_visibility_global)",
                                             "$unowned_grid_visible_binding_type": "global",
                                             "$unowned_pack_items": "#unowned_pack_items_global",
@@ -335,7 +392,10 @@ Discord: Kotori Itsuka#6038
                                     },
                                     {
                                         "to_store_button@common_buttons.light_text_button": {
-                                            "size": [ "100%", 20 ],
+                                            "size": [
+                                                "100%",
+                                                20
+                                            ],
                                             "$button_text": "resourcePack.suggestedContent.button.viewMore",
                                             "$pressed_button_name": "button.more_suggested_content_offers_global",
                                             "bindings": [
@@ -356,10 +416,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_world_resource_pack_screen": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "$selected_pack_items": "#selected_pack_items_level",
         "$available_pack_items": "#available_pack_items_level",
         "$realms_pack_items": "#realms_pack_items_level",
@@ -440,18 +502,27 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "rsp_panel": {
                     "type": "stack_panel",
-                    "size": [ "100% - 1px", "100%c" ],
+                    "size": [
+                        "100% - 1px",
+                        "100%c"
+                    ],
                     "controls": [
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -482,12 +553,18 @@ Discord: Kotori Itsuka#6038
                                         "asa_minecraft_default": {
                                             "type": "stack_panel",
                                             "orientation": "horizontal",
-                                            "size": [ "100%", "100%cm" ],
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
                                             "controls": [
                                                 {
                                                     "asa_minecraft_default_image": {
                                                         "type": "image",
-                                                        "size": [ 40, 40 ],
+                                                        "size": [
+                                                            40,
+                                                            40
+                                                        ],
                                                         "texture_file_system": "#icon_file_system",
                                                         "bindings": [
                                                             {
@@ -508,26 +585,42 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 2, 2 ]
+                                                        "size": [
+                                                            2,
+                                                            2
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "asa_pack_name_stack": {
                                                         "type": "stack_panel",
-                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "size": [
+                                                            "100% - 42px",
+                                                            "100%c"
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "text": "menu.globalpacks",
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "layer": 1
                                                                 }
                                                             },
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "layer": 1,
-                                                                    "color": [ 0.8, 0.8, 0.8 ],
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "color": [
+                                                                        0.8,
+                                                                        0.8,
+                                                                        0.8
+                                                                    ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "text": "resourcePack.description.default.level",
                                                                     "font_type": "smooth"
                                                                 }
@@ -541,7 +634,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 1, 1 ]
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
                                         }
                                     },
                                     {
@@ -550,13 +646,19 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 2, 2 ]
+                                            "size": [
+                                                2,
+                                                2
+                                            ]
                                         }
                                     },
                                     {
                                         "white_label@resource_packs.white_label": {
                                             "text": "resourcePack.description.bottom.level",
-                                            "max_size": [ "100%", "default" ],
+                                            "max_size": [
+                                                "100%",
+                                                "default"
+                                            ],
                                             "layer": 1
                                         }
                                     }
@@ -566,7 +668,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -579,7 +684,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -592,13 +700,19 @@ Discord: Kotori Itsuka#6038
                                             "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
                                             "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
                                             "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
-                                            "size": [ "100%", 25 ]
+                                            "size": [
+                                                "100%",
+                                                25
+                                            ]
                                         }
                                     },
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -638,7 +752,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
@@ -651,18 +768,27 @@ Discord: Kotori Itsuka#6038
                                             "$pressed_no_hover_texture": "textures/ui/button_borderless_lighthover",
                                             "$light_toggle_checked_default_text_color": "$light_toggle_default_text_color",
                                             "$button_type_panel": "asa_resource_packs.asa_rsp_toggle_template",
-                                            "size": [ "100%", 25 ]
+                                            "size": [
+                                                "100%",
+                                                25
+                                            ]
                                         }
                                     },
                                     {
                                         "empty_panel": {
                                             "type": "panel",
-                                            "size": [ 1, 2.5 ]
+                                            "size": [
+                                                1,
+                                                2.5
+                                            ]
                                         }
                                     },
                                     {
                                         "unowned_pack_grid@resource_packs.unowned_pack_grid": {
-                                            "size": [ "100%", "default" ],
+                                            "size": [
+                                                "100%",
+                                                "default"
+                                            ],
                                             "$unowned_grid_visible_binding_name": "(not #no_unowned_packs_visibility_global)",
                                             "$unowned_grid_visible_binding_type": "global",
                                             "$unowned_pack_items": "#unowned_pack_items_global",
@@ -683,7 +809,10 @@ Discord: Kotori Itsuka#6038
                                     },
                                     {
                                         "to_store_button@common_buttons.light_text_button": {
-                                            "size": [ "100%", 20 ],
+                                            "size": [
+                                                "100%",
+                                                20
+                                            ],
                                             "$button_text": "resourcePack.suggestedContent.button.viewMore",
                                             "$pressed_button_name": "button.more_suggested_content_offers_global",
                                             "bindings": [
@@ -704,10 +833,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_addon_screen": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "$selected_pack_items": "#selected_pack_items_addon",
         "$available_pack_items": "#available_pack_items_addon",
         "$realms_pack_items": "#realms_pack_items_addon",
@@ -787,18 +918,27 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 1, 1 ]
+                    "size": [
+                        1,
+                        1
+                    ]
                 }
             },
             {
                 "rsp_panel": {
                     "type": "stack_panel",
-                    "size": [ "100% - 1px", "100%c" ],
+                    "size": [
+                        "100% - 1px",
+                        "100%c"
+                    ],
                     "controls": [
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -829,12 +969,18 @@ Discord: Kotori Itsuka#6038
                                         "asa_minecraft_default": {
                                             "type": "stack_panel",
                                             "orientation": "horizontal",
-                                            "size": [ "100%", "100%cm" ],
+                                            "size": [
+                                                "100%",
+                                                "100%cm"
+                                            ],
                                             "controls": [
                                                 {
                                                     "asa_minecraft_default_image": {
                                                         "type": "image",
-                                                        "size": [ 40, 40 ],
+                                                        "size": [
+                                                            40,
+                                                            40
+                                                        ],
                                                         "texture_file_system": "#icon_file_system",
                                                         "bindings": [
                                                             {
@@ -855,26 +1001,42 @@ Discord: Kotori Itsuka#6038
                                                 {
                                                     "panel": {
                                                         "type": "panel",
-                                                        "size": [ 2, 2 ]
+                                                        "size": [
+                                                            2,
+                                                            2
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "asa_pack_name_stack": {
                                                         "type": "stack_panel",
-                                                        "size": [ "100% - 42px", "100%c" ],
+                                                        "size": [
+                                                            "100% - 42px",
+                                                            "100%c"
+                                                        ],
                                                         "controls": [
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "text": "gui.default",
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "layer": 1
                                                                 }
                                                             },
                                                             {
                                                                 "white_label@resource_packs.white_label": {
                                                                     "layer": 1,
-                                                                    "color": [ 0.8, 0.8, 0.8 ],
-                                                                    "max_size": [ "100%", "default" ],
+                                                                    "color": [
+                                                                        0.8,
+                                                                        0.8,
+                                                                        0.8
+                                                                    ],
+                                                                    "max_size": [
+                                                                        "100%",
+                                                                        "default"
+                                                                    ],
                                                                     "text": "resourcePack.description.default.behaviorPacks",
                                                                     "font_type": "smooth"
                                                                 }
@@ -888,7 +1050,10 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 1, 1 ]
+                                            "size": [
+                                                1,
+                                                1
+                                            ]
                                         }
                                     },
                                     {
@@ -897,13 +1062,19 @@ Discord: Kotori Itsuka#6038
                                     {
                                         "panel": {
                                             "type": "panel",
-                                            "size": [ 2, 2 ]
+                                            "size": [
+                                                2,
+                                                2
+                                            ]
                                         }
                                     },
                                     {
                                         "white_label@resource_packs.white_label": {
                                             "text": "resourcePack.description.bottom.behaviorPacks",
-                                            "max_size": [ "100%", "default" ],
+                                            "max_size": [
+                                                "100%",
+                                                "default"
+                                            ],
                                             "layer": 1
                                         }
                                     }
@@ -913,7 +1084,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "rsp_panel": {
                                 "type": "stack_panel",
-                                "size": [ "100%", "100%c" ],
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
                                 "bindings": [
                                     {
                                         "binding_type": "view",
@@ -934,7 +1108,7 @@ Discord: Kotori Itsuka#6038
                                             "collection_name": "$available_pack_items",
                                             "$available_grid_visible_binding_name|default": "",
                                             "$available_grid_visible_binding_type|default": "none",
-                                            "bindings":[
+                                            "bindings": [
                                                 {
                                                     "binding_name": "$available_grid_dimensions",
                                                     "binding_name_override": "#collection_length"

@@ -1,44 +1,33 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
-	"format_version" : "1.10.0",
-	"animation_controllers" : {
-		"controller.animation.player.asa_first_person" : {
-			"initial_state" : "default",
-			"states" : {
-                "asa_third_person": {
-                    "transitions": [
-                        {
-                            "asa_first_person": "variable.is_first_person"
-                        }
-                    ]
-                },
-                
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.asa_first_person": {
+			"initial_state": "default",
+			"states": {
+				"asa_third_person": {
+					"transitions": [
+						{
+							"asa_first_person": "variable.is_first_person"
+						}
+					]
+				},
 				"asa_first_person": {
-                    "animations": [
-                        {
+					"animations": [
+						{
 							"asa_first_person_mainhand_totem": "query.get_equipped_item_name('main_hand') == 'totem_of_undying'"
 						},
 						{
 							"asa_first_person_offhand_totem": "query.get_equipped_item_name('off_hand') == 'totem_of_undying'"
 						}
-                    ],
-                    "transitions": [
-                        {
-                            "asa_third_person": "!variable.is_first_person"
-                        }
-                    ]
-                }
+					],
+					"transitions": [
+						{
+							"asa_third_person": "!variable.is_first_person"
+						}
+					]
+				}
 			}
 		}
-
 		/*/
         ,"controller.animation.player.root" : {
 			"initial_state" : "first_person",

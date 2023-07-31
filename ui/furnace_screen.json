@@ -1,17 +1,7 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "furnace_screen": {
         "force_render_below": true
     },
-
     "asa_furnace_tab_content": {
         "type": "panel",
         "layer": 1,
@@ -19,27 +9,43 @@ Discord: Kotori Itsuka#6038
             {
                 "asa_stack_panel": {
                     "type": "stack_panel",
-                    "size": [ "100% - 12px", "100% - 12px" ],
+                    "size": [
+                        "100% - 12px",
+                        "100% - 12px"
+                    ],
                     "controls": [
                         {
                             "vertical_padding_1@crafting.tab_content_padding": {
-                                "size": [ 0, 2 ]
+                                "size": [
+                                    0,
+                                    2
+                                ]
                             }
                         },
                         {
                             "creative_label": {
                                 "type": "panel",
-                                "size": [ "fill", 10 ],
+                                "size": [
+                                    "fill",
+                                    10
+                                ],
                                 "controls": [
                                     {
                                         "asa_tab_0": {
                                             "type": "label",
                                             "layer": 10,
-                                            "color": [ 0.3, 0.3, 0.3 ],
+                                            "color": [
+                                                0.3,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "text_alignment": "right",
                                             "anchor_from": "left_middle",
                                             "anchor_to": "left_middle",
-                                            "size": [ "default", 10 ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ],
                                             "text": "Foods",
                                             "bindings": [
                                                 {
@@ -55,11 +61,18 @@ Discord: Kotori Itsuka#6038
                                         "asa_tab_1": {
                                             "type": "label",
                                             "layer": 10,
-                                            "color": [ 0.3, 0.3, 0.3 ],
+                                            "color": [
+                                                0.3,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "text_alignment": "right",
                                             "anchor_from": "left_middle",
                                             "anchor_to": "left_middle",
-                                            "size": [ "default", 10 ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ],
                                             "text": "Blocks",
                                             "bindings": [
                                                 {
@@ -75,11 +88,18 @@ Discord: Kotori Itsuka#6038
                                         "asa_tab_2": {
                                             "type": "label",
                                             "layer": 10,
-                                            "color": [ 0.3, 0.3, 0.3 ],
+                                            "color": [
+                                                0.3,
+                                                0.3,
+                                                0.3
+                                            ],
                                             "text_alignment": "right",
                                             "anchor_from": "left_middle",
                                             "anchor_to": "left_middle",
-                                            "size": [ "default", 10 ],
+                                            "size": [
+                                                "default",
+                                                10
+                                            ],
                                             "text": "Items",
                                             "bindings": [
                                                 {
@@ -115,14 +135,15 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-    
     "furnace_panel/root_panel": {
         "type": "stack_panel",
-        "size": [ "100%c", "100%cm" ],
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
         "orientation": "horizontal",
         "controls": [
-
-            /*Top*//*/
+            /*Top*/ /*/
             {
                 "asa_empty": {
                     "type": "panel",
@@ -159,11 +180,13 @@ Discord: Kotori Itsuka#6038
                 }
             },/**/
             //Bottom
-
             {
                 "asa_furnace_panel": {
                     "type": "input_panel",
-                    "size": [ 176, 166 ],
+                    "size": [
+                        176,
+                        166
+                    ],
                     "button_mappings": [
                         {
                             "from_button_id": "button.menu_select",
@@ -208,8 +231,15 @@ Discord: Kotori Itsuka#6038
                         {
                             "aroow_percent@asa_percent_template.asa_percent_template": {
                                 "$asa_binding_name": "#furnace_flame_ratio",
-                                "$percent_color": [ 0.3, 0.3, 0.3 ],
-                                "offset": [ -40, -39.5 ],
+                                "$percent_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "offset": [
+                                    -40,
+                                    -39.5
+                                ],
                                 "$percent_layer": 20,
                                 "$percent_shadow": false,
                                 "anchor_from": "center",
@@ -220,8 +250,15 @@ Discord: Kotori Itsuka#6038
                         {
                             "arrow_percent@asa_percent_template.asa_percent_template": {
                                 "$asa_binding_name": "#furnace_arrow_ratio",
-                                "$percent_color": [ 0.3, 0.3, 0.3 ],
-                                "offset": [ 0, -21 ],
+                                "$percent_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "offset": [
+                                    0,
+                                    -21
+                                ],
                                 "$percent_layer": 20,
                                 "$percent_shadow": false,
                                 "anchor_from": "center",

@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "asa_cus_enchant_panel": {
         "type": "panel",
@@ -19,7 +10,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "enchanting_screen@common.inventory_screen_common": {
         "$close_on_player_hurt|default": true,
         "force_render_below": true,
@@ -36,7 +26,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "enchanting_panel/root_panel": {
         "controls": [
             {

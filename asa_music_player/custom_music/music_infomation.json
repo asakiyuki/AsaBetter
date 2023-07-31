@@ -1,167 +1,126 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 //You can customize music title, author name and thumbnail here
-
 {
     "custom_music_infomation@asa_mp_secs_custom_music.sections_panel": {
-
         "$music_title_1": "Custom Music 1",
         "$music_author_1": "/asa_music_player/custom_music/music_player/asa_music_1.ogg",
         "$music_duration_1": "00:00",
         "$music_thumbnail_1": "textures/blocks/grass_side_carried",
-
         "$music_title_2": "Custom Music 2",
         "$music_author_2": "/asa_music_player/custom_music/music_player/asa_music_2.ogg",
         "$music_duration_2": "00:00",
         "$music_thumbnail_2": "textures/blocks/grass_side_carried",
-
         "$music_title_3": "Custom Music 3",
         "$music_author_3": "/asa_music_player/custom_music/music_player/asa_music_3.ogg",
         "$music_duration_3": "00:00",
         "$music_thumbnail_3": "textures/blocks/grass_side_carried",
-
         "$music_title_4": "Custom Music 4",
         "$music_author_4": "/asa_music_player/custom_music/music_player/asa_music_4.ogg",
         "$music_duration_4": "00:00",
         "$music_thumbnail_4": "textures/blocks/grass_side_carried",
-
         "$music_title_5": "Custom Music 5",
         "$music_author_5": "/asa_music_player/custom_music/music_player/asa_music_5.ogg",
         "$music_duration_5": "00:00",
         "$music_thumbnail_5": "textures/blocks/grass_side_carried",
-
         "$music_title_6": "Custom Music 6",
         "$music_author_6": "/asa_music_player/custom_music/music_player/asa_music_6.ogg",
         "$music_duration_6": "00:00",
         "$music_thumbnail_6": "textures/blocks/grass_side_carried",
-        
         "$music_title_7": "Custom Music 7",
         "$music_author_7": "/asa_music_player/custom_music/music_player/asa_music_7.ogg",
         "$music_duration_7": "00:00",
         "$music_thumbnail_7": "textures/blocks/grass_side_carried",
-
         "$music_title_8": "Custom Music 8",
         "$music_author_8": "/asa_music_player/custom_music/music_player/asa_music_8.ogg",
         "$music_duration_8": "00:00",
         "$music_thumbnail_8": "textures/blocks/grass_side_carried",
-
         "$music_title_9": "Custom Music 9",
         "$music_author_9": "/asa_music_player/custom_music/music_player/asa_music_9.ogg",
         "$music_duration_9": "00:00",
         "$music_thumbnail_9": "textures/blocks/grass_side_carried",
-
         "$music_title_10": "Custom Music 10",
         "$music_author_10": "/asa_music_player/custom_music/music_player/asa_music_10.ogg",
         "$music_duration_10": "00:00",
         "$music_thumbnail_10": "textures/blocks/grass_side_carried",
-
         "$music_title_11": "Custom Music 11",
         "$music_author_11": "/asa_music_player/custom_music/music_player/asa_music_11.ogg",
         "$music_duration_11": "00:00",
         "$music_thumbnail_11": "textures/blocks/grass_side_carried",
-
         "$music_title_12": "Custom Music 12",
         "$music_author_12": "/asa_music_player/custom_music/music_player/asa_music_12.ogg",
         "$music_duration_12": "00:00",
         "$music_thumbnail_12": "textures/blocks/grass_side_carried",
-
         "$music_title_13": "Custom Music 13",
         "$music_author_13": "/asa_music_player/custom_music/music_player/asa_music_13.ogg",
         "$music_duration_13": "00:00",
         "$music_thumbnail_13": "textures/blocks/grass_side_carried",
-
         "$music_title_14": "Custom Music 14",
         "$music_author_14": "/asa_music_player/custom_music/music_player/asa_music_14.ogg",
         "$music_duration_14": "00:00",
         "$music_thumbnail_14": "textures/blocks/grass_side_carried",
-
         "$music_title_15": "Custom Music 15",
         "$music_author_15": "/asa_music_player/custom_music/music_player/asa_music_15.ogg",
         "$music_duration_15": "00:00",
         "$music_thumbnail_15": "textures/blocks/grass_side_carried",
-
         "$music_title_16": "Custom Music 16",
         "$music_author_16": "/asa_music_player/custom_music/music_player/asa_music_16.ogg",
         "$music_duration_16": "00:00",
         "$music_thumbnail_16": "textures/blocks/grass_side_carried",
-
         "$music_title_17": "Custom Music 17",
         "$music_author_17": "/asa_music_player/custom_music/music_player/asa_music_17.ogg",
         "$music_duration_17": "00:00",
         "$music_thumbnail_17": "textures/blocks/grass_side_carried",
-
         "$music_title_18": "Custom Music 18",
         "$music_author_18": "/asa_music_player/custom_music/music_player/asa_music_18.ogg",
         "$music_duration_18": "00:00",
         "$music_thumbnail_18": "textures/blocks/grass_side_carried",
-
         "$music_title_19": "Custom Music 19",
         "$music_author_19": "/asa_music_player/custom_music/music_player/asa_music_19.ogg",
         "$music_duration_19": "00:00",
         "$music_thumbnail_19": "textures/blocks/grass_side_carried",
-
         "$music_title_20": "Custom Music 20",
         "$music_author_20": "/asa_music_player/custom_music/music_player/asa_music_20.ogg",
         "$music_duration_20": "00:00",
         "$music_thumbnail_20": "textures/blocks/grass_side_carried",
-
         "$music_title_21": "Custom Music 21",
         "$music_author_21": "/asa_music_player/custom_music/music_player/asa_music_21.ogg",
         "$music_duration_21": "00:00",
         "$music_thumbnail_21": "textures/blocks/grass_side_carried",
-
         "$music_title_22": "Custom Music 22",
         "$music_author_22": "/asa_music_player/custom_music/music_player/asa_music_22.ogg",
         "$music_duration_22": "00:00",
         "$music_thumbnail_22": "textures/blocks/grass_side_carried",
-
         "$music_title_23": "Custom Music 23",
         "$music_author_23": "/asa_music_player/custom_music/music_player/asa_music_23.ogg",
         "$music_duration_23": "00:00",
         "$music_thumbnail_23": "textures/blocks/grass_side_carried",
-
         "$music_title_24": "Custom Music 24",
         "$music_author_24": "/asa_music_player/custom_music/music_player/asa_music_24.ogg",
         "$music_duration_24": "00:00",
         "$music_thumbnail_24": "textures/blocks/grass_side_carried",
-
         "$music_title_25": "Custom Music 25",
         "$music_author_25": "/asa_music_player/custom_music/music_player/asa_music_25.ogg",
         "$music_duration_25": "00:00",
         "$music_thumbnail_25": "textures/blocks/grass_side_carried",
-
         "$music_title_26": "Custom Music 26",
         "$music_author_26": "/asa_music_player/custom_music/music_player/asa_music_26.ogg",
         "$music_duration_26": "00:00",
         "$music_thumbnail_26": "textures/blocks/grass_side_carried",
-
         "$music_title_27": "Custom Music 27",
         "$music_author_27": "/asa_music_player/custom_music/music_player/asa_music_27.ogg",
         "$music_duration_27": "00:00",
         "$music_thumbnail_27": "textures/blocks/grass_side_carried",
-
         "$music_title_28": "Custom Music 28",
         "$music_author_28": "/asa_music_player/custom_music/music_player/asa_music_28.ogg",
         "$music_duration_28": "00:00",
         "$music_thumbnail_28": "textures/blocks/grass_side_carried",
-
         "$music_title_29": "Custom Music 29",
         "$music_author_29": "/asa_music_player/custom_music/music_player/asa_music_29.ogg",
         "$music_duration_29": "00:00",
         "$music_thumbnail_29": "textures/blocks/grass_side_carried",
-
         "$music_title_30": "Custom Music 30",
         "$music_author_30": "/asa_music_player/custom_music/music_player/asa_music_30.ogg",
         "$music_duration_30": "00:00",
         "$music_thumbnail_30": "textures/blocks/grass_side_carried"
     },
-
     "namespace": "asa_custom_music_infomation"
 }

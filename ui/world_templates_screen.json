@@ -1,12 +1,3 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
   "world_templates_screen": {
     "$screen_bg_content": "asa_background_common.play_bg",
@@ -17,7 +8,6 @@ Discord: Kotori Itsuka#6038
       "@common.screen_entrance_animation_pop_fade"
     ]
   },
-
   "template_scroll_content/scrolling_panel": {
     "anims": [
       "@asa_play_anims.asa_world_template_panel_anims_entrance",

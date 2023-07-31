@@ -1,22 +1,19 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_quick_setting_panel",
-
     //World Seed
     "asa_world_seed_label": {
-        "size": [ "default", 10 ],
+        "size": [
+            "default",
+            10
+        ],
         "text": "#item_name",
         "type": "label",
         "layer": 999,
-        "color": [ 0.3, 0.3, 0.3 ],
+        "color": [
+            0.3,
+            0.3,
+            0.3
+        ],
         "bindings": [
             {
                 "binding_name": "#world_seed",
@@ -24,14 +21,20 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_world_name_label": {
-        "size": [ "default", 10 ],
+        "size": [
+            "default",
+            10
+        ],
         "visible": false,
         "text": "#item_name",
         "type": "label",
         "layer": 999,
-        "color": [ 0.3, 0.3, 0.3 ],
+        "color": [
+            0.3,
+            0.3,
+            0.3
+        ],
         "bindings": [
             {
                 "binding_name": "#world_name",
@@ -39,18 +42,26 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_seed_text": {
-        "size": [ "default", 10 ],
+        "size": [
+            "default",
+            10
+        ],
         "text": "World Seed:",
         "type": "label",
-        "color": [ 0.3, 0.3, 0.3 ],
+        "color": [
+            0.3,
+            0.3,
+            0.3
+        ],
         "layer": 999
     },
-
     "asa_world_seed_panel": {
         "type": "stack_panel",
-        "size": [ "100%c", 10 ],
+        "size": [
+            "100%c",
+            10
+        ],
         "orientation": "horizontal",
         "bindings": [
             {
@@ -86,7 +97,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Setting Content
     "asa_stack_setting": {
         "type": "stack_panel",
@@ -338,7 +348,6 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-            
             {
                 "space": {
                     "type": "panel",
@@ -609,7 +618,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_setting_slider": {
                                 "type": "stack_panel",
-                                "size": [ "33.333333333333% - 0.5px", "100%c" ],
+                                "size": [
+                                    "33.333333333333% - 0.5px",
+                                    "100%c"
+                                ],
                                 "controls": [
                                     {
                                         "option_slider_0@settings_common.option_slider": {
@@ -663,7 +675,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_setting_slider": {
                                 "type": "stack_panel",
-                                "size": [ "33.333333333333% - 0.5px", "100%c" ],
+                                "size": [
+                                    "33.333333333333% - 0.5px",
+                                    "100%c"
+                                ],
                                 "controls": [
                                     {
                                         "option_slider_0@settings_common.option_slider": {
@@ -718,7 +733,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "asa_setting_slider": {
                                 "type": "stack_panel",
-                                "size": [ "fill", "100%c" ],
+                                "size": [
+                                    "fill",
+                                    "100%c"
+                                ],
                                 "controls": [
                                     {
                                         "option_slider_0@settings_common.option_slider": {
@@ -766,11 +784,13 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Screen Content
     "asa_quick_setting_panel": {
         "type": "panel",
-        "size": [ "100%", "100%" ],
+        "size": [
+            "100%",
+            "100%"
+        ],
         "bindings": [
             {
                 "binding_type": "view",
@@ -782,7 +802,10 @@ Discord: Kotori Itsuka#6038
         "controls": [
             {
                 "hide_ui@asa_toggle_common.asa_darkmode_toggle": {
-                    "size": [ 75, 20 ],
+                    "size": [
+                        75,
+                        20
+                    ],
                     "anchor_from": "top_left",
                     "anchor_to": "top_left",
                     "$toggle_view_binding_name": "asa_hide_quick",
@@ -916,22 +939,18 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Asa Toggle Template
     "asa_nav_toggle@common_toggles.light_ui_toggle": {
         "$radio_toggle_group": true,
         "$toggle_view_binding_name": "$asa_toggle_binding",
         "$toggle_name": "$asa_toggle_nav_name"
     },
-
     "asa_light_ui_text_toggle@asa_nav_toggle": {
         "$button_type_panel": "common_buttons.new_ui_binding_button_label"
     },
-
     "asa_light_ui_image_toggle@asa_nav_toggle": {
         "$button_type_panel": "asa_quick_setting_panel.asa_button_image_content"
     },
-
     "asa_button_image_content": {
         "type": "image",
         "size": [

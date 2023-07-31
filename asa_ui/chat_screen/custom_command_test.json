@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_chat_command",
-
     "asa_command_panel": {
         "type": "panel",
         "$asa_command_bindings": "asa_command_text",
@@ -34,12 +24,17 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Chat Text For Bindings
     "asa_command_text": {
         "type": "label",
-        "max_size": [ "default", 50 ],
-        "offset": [ 0, 1000000000 ],
+        "max_size": [
+            "default",
+            50
+        ],
+        "offset": [
+            0,
+            1000000000
+        ],
         "text": "#item_name",
         "bindings": [
             {

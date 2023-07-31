@@ -1,18 +1,11 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_auto_place",
-
     "asa_auto_place_buttom_template": {
         "type": "image",
-        "size": [ 16, 16 ],
+        "size": [
+            16,
+            16
+        ],
         "texture": "$button_icon",
         "layer": 2,
         "color": "$text_color",
@@ -20,9 +13,15 @@ Discord: Kotori Itsuka#6038
             {
                 "hover_text_bg": {
                     "type": "image",
-                    "size": [ "100%c + 6px", "100%c + 4px" ],
+                    "size": [
+                        "100%c + 6px",
+                        "100%c + 4px"
+                    ],
                     "texture": "textures/ui/purpleBorder",
-                    "$asa_hover_text_offset|default": [ 9, 9 ],
+                    "$asa_hover_text_offset|default": [
+                        9,
+                        9
+                    ],
                     "offset": "$asa_hover_text_offset",
                     "$button_anchor|default": "bottom_left",
                     "anchor_from": "$button_anchor",
@@ -33,7 +32,10 @@ Discord: Kotori Itsuka#6038
                         {
                             "hover_name_text_enable": {
                                 "type": "label",
-                                "size": [ "default", "default" ],
+                                "size": [
+                                    "default",
+                                    "default"
+                                ],
                                 "layer": 4,
                                 "text": "$button_text"
                             }
@@ -43,7 +45,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_auto_place_slot@common.container_slot_button_prototype": {
         "button_mappings": [
             {
@@ -58,7 +59,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_inventory_mode": {
         "type": "panel",
         "$button_content": "asa_auto_place.asa_auto_place_button_template",
@@ -68,8 +68,10 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_auto_place_toggle@asa_inventory_mode": {
-        "size": [ 20, 20 ]
+        "size": [
+            20,
+            20
+        ]
     }
 }

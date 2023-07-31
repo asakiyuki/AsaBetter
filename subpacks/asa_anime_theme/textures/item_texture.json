@@ -1,17 +1,7 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
   "resource_pack_name": "vanilla",
   "texture_name": "atlas.items",
   "texture_data": {
-
     //Waifu Bed asa_textures
     "bed": {
       "textures": [
@@ -32,7 +22,7 @@ Discord: Kotori Itsuka#6038
         "asa_textures/anime_theme/items/tokisaki_kurumi",
         "asa_textures/anime_theme/items/yatogami_tohka"
       ]
-    }/*,
+    } /*,
 
     "sword": {
       "textures": [

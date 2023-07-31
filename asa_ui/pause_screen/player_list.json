@@ -1,15 +1,5 @@
-/*
-
-©2022 by Asaki Zuki, please do not delete this text and steal any code without my permission!
-Youtube: https://www.youtube.com/c/AsakiZuki
-Facebook: https://facebook.com/asakizuki
-Discord: Kotori Itsuka#6038
-
-*/
-
 {
     "namespace": "asa_player_list",
-
     "asa_player_button_content": {
         "type": "stack_panel",
         "orientation": "horizontal",
@@ -33,7 +23,10 @@ Discord: Kotori Itsuka#6038
             {
                 "panel": {
                     "type": "panel",
-                    "size": [ 5, 1 ]
+                    "size": [
+                        5,
+                        1
+                    ]
                 }
             },
             {
@@ -52,7 +45,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_player_button@asa_common_button.asa_text_button": {
         "$button_type_panel": "asa_player_list.asa_player_button_content",
         "$default_button_texture": "asa_textures/ui/button_and_toggle/asa_button_white",
@@ -84,7 +76,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_player_bannel_button@asa_player_list.asa_player_button": {
         "bindings": [
             {
@@ -95,7 +86,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_permission_button@asa_common_button.asa_text_button": {
         "size": [
             28,
@@ -122,7 +112,6 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     //Panel
     "asa_player_gird_content": {
         "type": "panel",
@@ -130,7 +119,10 @@ Discord: Kotori Itsuka#6038
             {
                 "player_button_stack_panel": {
                     "type": "stack_panel",
-                    "size": [ "100% - 31px", "100% - 1px" ],
+                    "size": [
+                        "100% - 31px",
+                        "100% - 1px"
+                    ],
                     "orientation": "horizontal",
                     "anchor_from": "left_middle",
                     "anchor_to": "left_middle",
@@ -155,14 +147,19 @@ Discord: Kotori Itsuka#6038
                     ]
                 }
             },
-
             {
                 "player_permission_button_panel": {
                     "type": "panel",
                     "anchor_to": "right_middle",
                     "anchor_from": "right_middle",
-                    "offset": [ -2, 0 ],
-                    "size": [ "100%c", "100% - 1px" ],
+                    "offset": [
+                        -2,
+                        0
+                    ],
+                    "size": [
+                        "100%c",
+                        "100% - 1px"
+                    ],
                     "controls": [
                         {
                             "@asa_permission_button": {}
@@ -178,20 +175,24 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_player_gird_item": {
         "type": "panel",
-        "size": [ "100%", 27 ],
+        "size": [
+            "100%",
+            27
+        ],
         "controls": [
             {
                 "@asa_player_list.asa_player_gird_content": {}
             }
         ]
     },
-
     "asa_player_gird": {
         "type": "grid",
-        "size": [ "100%", "default" ],
+        "size": [
+            "100%",
+            "default"
+        ],
         "grid_item_template": "asa_player_list.asa_player_gird_item",
         "grid_dimension_binding": "#players_grid_dimension",
         "collection_name": "players_collection",
@@ -204,10 +205,12 @@ Discord: Kotori Itsuka#6038
             }
         ]
     },
-
     "asa_player_list_stack": {
         "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
+        "size": [
+            "100%",
+            "100%c"
+        ],
         "controls": [
             {
                 "@asa_player_gird": {}
